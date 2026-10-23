@@ -1,0 +1,209 @@
+{
+  "workshopId": "3825545131",
+  "nativeGame": "Project Zomboid 42.21.0",
+  "source": "Owned isolated native game framebuffer, 2026-10-23",
+  "sceneGeneratedByAI": false,
+  "processing": "16:9 crop where recorded, then JPEG encoding; no pixel retouching or resizing",
+  "dimensionPolicy": "Native screenshots retain 16:9 and their original pixel density; these are not ImageGen assets.",
+  "photoSettings": "Hidden HUD, daylight/ambient overrides, disabled radio devices, dressed photo character; staged scenes marked per image.",
+  "credits": [
+    "The Indie Stone: Project Zomboid",
+    "KI5 and original fleet creators: vehicle models",
+    "Integrated addon creators: police liveries, variants, camo and scene recipes; see CREDITS.md",
+    "Erika / prg299: integration and native capture session"
+  ],
+  "tinyPngCompression": "pending: official website rejected all seven valid JPEGs as INVALID with Something went wrong; no official API key configured",
+  "images": [
+    {
+      "file": "only-ki5-01-louisville-police.jpg",
+      "title": "Louisville police liveries",
+      "scene": "police",
+      "staged": true,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-01-louisville-police-native.png",
+      "masterSha256": "6326c76185c4bba9494cef45220268426fe4b98eacd8289a7bf0a992db027b9d",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        180,
+        15,
+        1108,
+        537
+      ],
+      "dimensions": [
+        928,
+        522
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 55767,
+      "sha256": "7115f32e721ae9a8dec53767d7939841174c90c538a6a89d81478fb2f0f3a6b3",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-02-silent-lightbars.jpg",
+      "title": "Flashing lightbars, sirens off",
+      "scene": "lightbars",
+      "staged": true,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-02-silent-lightbars-native.png",
+      "masterSha256": "5b932608ffe235dce3228f6d525918753f3ecfe9aaa9131ebef3725ac89c9366",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        180,
+        15,
+        1108,
+        537
+      ],
+      "dimensions": [
+        928,
+        522
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 33993,
+      "sha256": "d4827b32001753c50082f566da11fd83b89c0c20aaace0dd25ba89ea0db65ae7",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-03-military-checkpoint.jpg",
+      "title": "The Louisville checkpoint fleet",
+      "scene": "checkpoint",
+      "staged": false,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-03-military-checkpoint-native.png",
+      "masterSha256": "307508168e39ac83bc212b5fdcaaebbca3260dce876f9ea170078a4cd3aca586",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 196147,
+      "sha256": "fbb60feeb47fb88d40db961dcdd4097abe623ef459ecb9fc09e250b80f1258dd",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-04-military-blockpost.jpg",
+      "title": "Military roadside blockpost",
+      "scene": "blockpost",
+      "staged": true,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-04-military-blockpost-native.png",
+      "masterSha256": "74af82dc1888d6c46ccdb2276b8fcf9672186d1971ce89e4fcdf2fff4ab518e8",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 168261,
+      "sha256": "99680803ac1515997e1e7ebd0f874bc044caae65e5d9058cd935f51017fb3fd7",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-05-military-convoy.jpg",
+      "title": "Military convoy and matching camo",
+      "scene": "convoy",
+      "staged": true,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-05-military-convoy-native.png",
+      "masterSha256": "4420c4436a98786d3a768283a3f5c16ea5e39dd1ad86d7a43ca972b8742b8adc",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 157589,
+      "sha256": "f3abd8f81df9e7927b798cf1da8636f6f325265448f5e319ff678e99d10be418",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-06-highway-traffic.jpg",
+      "title": "KI5 highway traffic and trailer spawns",
+      "scene": "traffic",
+      "staged": false,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-06-highway-traffic-native.png",
+      "masterSha256": "d12bb8dcdf36fc7a58c7def517bf59302b36afa51050aa824a7235fccc06262a",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        280,
+        40,
+        1160,
+        535
+      ],
+      "dimensions": [
+        880,
+        495
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 64376,
+      "sha256": "cd3d02870b6bdcad79370b6fd573393b6667553fcb5f56f1b2afae498dd1b5c1",
+      "tinyPngCompression": "pending"
+    },
+    {
+      "file": "only-ki5-07-integrated-variants.jpg",
+      "title": "Integrated Commando and ambulance variants",
+      "scene": "variant-close",
+      "staged": true,
+      "captureRun": "gallery-20261023-a",
+      "master": "tools-src/gallery/only-ki5-07-integrated-variants-native.png",
+      "masterSha256": "e2da1553d196c944b3a99ed305cd53800a6b67b682fbe92cd240f8d753ad0831",
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": null,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 82,
+      "chromaSubsampling": "4:2:0",
+      "bytes": 150481,
+      "sha256": "46f06054c9d55fee1b5bc16e66277d03cdf8b94a9af6afa513ebfee9d05e91b1",
+      "tinyPngCompression": "pending"
+    }
+  ],
+  "totalBytes": 826614
+}

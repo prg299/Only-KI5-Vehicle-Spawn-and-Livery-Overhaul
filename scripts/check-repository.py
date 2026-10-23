@@ -85,11 +85,28 @@ description = (ROOT/'release/workshop/description.txt').read_text('utf-8')
 check('external dependency' in description and 'original author' in description, 'Missing author-contact/dependency statement')
 check('id=3808100388' in description and 'Highly recommended' in description, 'Missing requested optional recommendation')
 check('3808100388' not in {d['workshopId'] for d in dependencies}, 'Optional performance recommendation became mandatory')
-for wid in allowed_origins | {'3395145553', '3520758551', '3624971238', '3171167894'}:
+credits = (ROOT/'CREDITS.md').read_text('utf-8')
+for wid in allowed_origins:
+    check('id='+wid in credits, 'Missing full source attribution link: '+wid)
+# The owner requested the hotfix entry omitted from the short Workshop list.
+# Its author and actual imported source remain recorded in the full credits.
+for wid in (allowed_origins - {'3797166280'}) | {'3395145553', '3520758551', '3624971238', '3171167894'}:
     check('id='+wid in description, 'Missing Workshop description attribution link: '+wid)
 capture_record = json.loads((ROOT/'tools-src/art/capture-provenance.json').read_text('utf-8'))
 capture_path = ROOT/'tools-src/art'/capture_record['captureFile']
 check(hashlib.sha256(capture_path.read_bytes()).hexdigest() == capture_record['captureSha256'], 'Verified native artwork capture changed')
+gallery_path=ROOT/'release/workshop/gallery/manifest.json'
+if gallery_path.exists():
+    gallery=json.loads(gallery_path.read_text('utf-8'))
+    check(gallery['workshopId']=='3825545131' and gallery['sceneGeneratedByAI'] is False, 'Gallery identity/source drift')
+    check(len(gallery['images'])==7, 'Expected seven reviewed gallery frames')
+    check(sum(i['bytes'] for i in gallery['images'])==gallery['totalBytes'], 'Gallery size inventory drift')
+    for frame in gallery['images']:
+        path=gallery_path.parent/frame['file']
+        master=ROOT/frame['master']
+        check(path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==frame['sha256'], 'Gallery export drift: '+frame['file'])
+        check(master.is_file() and hashlib.sha256(master.read_bytes()).hexdigest()==frame['masterSha256'], 'Gallery native source drift: '+frame['file'])
+        check(frame['dimensions'][0]*9==frame['dimensions'][1]*16, 'Gallery aspect ratio drift')
 for required in ['README.md', 'CREDITS.md', 'THIRD_PARTY_NOTICES.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/release-readiness.md']:
     check((ROOT/required).is_file(), 'Missing '+required)
 

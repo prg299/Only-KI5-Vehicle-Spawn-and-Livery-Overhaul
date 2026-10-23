@@ -1,14 +1,12 @@
 {
-  "observedDate": "2026-10-23",
+  "verifiedUtc": "2026-10-23T21:12:55.174457+00:00",
   "workshopId": "3825545131",
   "steamcmdUploadConfirmed": true,
   "officialDownloadMatches": true,
   "visibilityConfigured": 3,
-  "visibilityOwnerVerified": false,
+  "visibilityOwnerVerified": true,
   "requiredWorkshopItems": 87,
-  "requiredItemsVerified": false,
-  "requiredItemsAttachedByThisTask": 0,
-  "descriptionObservedByAnonymousBrowser": true,
-  "descriptionVisibleThroughModIdFooter": true,
-  "blocker": "SteamCMD disconnected the owner Steam desktop session; reconnect it online to attach and verify requirements and query live unlisted visibility."
+  "requiredItemsVerified": true,
+  "descriptionVerifiedAgainstUpload": true,
+  "blocker": null
 }

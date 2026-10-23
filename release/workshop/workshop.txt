@@ -38,7 +38,7 @@ description=[*] KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfile
 description=[*] GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features[/url].
 description=[*] Пупсич - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url]. VMZ's original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]YAPZLib[/url] requirement is replaced here; no library source is bundled.
 description=[*] Branco - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo[/url]; Papa_Chad - supported vehicle families.
-description=[*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url]; Aurora - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280]B42 hotfix[/url].
+description=[*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url].
 description=[*] Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url] selection inspiration and duplicate-ID data.
 description=[*] The Indie Stone - Project Zomboid. Erika / prg299 - integration, authored helpers, tests and gameplay screenshot; ImageGen - title lettering.
 description=[/list]

@@ -1,0 +1,49 @@
+{
+  "workshopId": "3825545131",
+  "verifiedUtc": "2026-10-23T21:13:56.524490+00:00",
+  "allImagesMatch": true,
+  "images": [
+    {
+      "file": "only-ki5-01-louisville-police.jpg",
+      "bytes": 55767,
+      "sha256": "7115f32e721ae9a8dec53767d7939841174c90c538a6a89d81478fb2f0f3a6b3",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-02-silent-lightbars.jpg",
+      "bytes": 33993,
+      "sha256": "d4827b32001753c50082f566da11fd83b89c0c20aaace0dd25ba89ea0db65ae7",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-03-military-checkpoint.jpg",
+      "bytes": 196147,
+      "sha256": "fbb60feeb47fb88d40db961dcdd4097abe623ef459ecb9fc09e250b80f1258dd",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-04-military-blockpost.jpg",
+      "bytes": 168261,
+      "sha256": "99680803ac1515997e1e7ebd0f874bc044caae65e5d9058cd935f51017fb3fd7",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-05-military-convoy.jpg",
+      "bytes": 157589,
+      "sha256": "f3abd8f81df9e7927b798cf1da8636f6f325265448f5e319ff678e99d10be418",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-06-highway-traffic.jpg",
+      "bytes": 64376,
+      "sha256": "cd3d02870b6bdcad79370b6fd573393b6667553fcb5f56f1b2afae498dd1b5c1",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-07-integrated-variants.jpg",
+      "bytes": 150481,
+      "sha256": "46f06054c9d55fee1b5bc16e66277d03cdf8b94a9af6afa513ebfee9d05e91b1",
+      "matches": true
+    }
+  ]
+}

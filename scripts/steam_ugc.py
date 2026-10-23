@@ -180,3 +180,44 @@ class Steam:
                 raise RuntimeError('Dependency callback identity mismatch; query before retrying')
             present.add(child)
             completed(dict(operation='addDependency', workshopId=child, name=DEPENDENCIES[child], status='complete', result=result.result))
+
+    def upload_page(self, files, existing, description=None):
+        """RVI's preview updater, restricted to this already-unlisted item.
+
+        Does not set content, main cover, title, tags or visibility. Query before
+        retrying after an unknown SubmitItemUpdate outcome.
+        """
+        if existing['workshopId'] != ITEM or existing['visibility'] != 3:
+            raise ValueError('Page update requires the verified unlisted item')
+        handle = self.api.SteamAPI_ISteamUGC_StartItemUpdate(self.ugc, APP, ITEM)
+        if not handle or handle == 2**64 - 1:
+            raise RuntimeError('Invalid item update')
+        if description is not None and not self.api.SteamAPI_ISteamUGC_SetItemDescription(
+                self.ugc, handle, description.encode('utf-8')):
+            raise RuntimeError('Steam rejected description')
+        indexes = {p['name']: p['index'] for p in existing['previews']}
+        for path in files:
+            encoded = str(path).encode('utf-8')
+            if path.name in indexes:
+                ok = self.api.SteamAPI_ISteamUGC_UpdateItemPreviewFile(self.ugc, handle, indexes[path.name], encoded)
+            else:
+                ok = self.api.SteamAPI_ISteamUGC_AddItemPreviewFile(self.ugc, handle, encoded, 0)
+            if not ok:
+                raise RuntimeError('Steam rejected gallery image '+path.name)
+        result = self.call(self.api.SteamAPI_ISteamUGC_SubmitItemUpdate(self.ugc, handle, None), UpdateResult, 3404)
+        if result.item != ITEM:
+            raise RuntimeError('Update callback item mismatch; query before retrying')
+        if result.agreement:
+            raise RuntimeError('Owner must accept the Steam Workshop agreement')
+        return result.result
+
+    def cloud_quota(self):
+        """Read app preview staging capacity without changing any Cloud files."""
+        self.bind('SteamAPI_SteamRemoteStorage_v016', P)
+        self.bind('SteamAPI_ISteamRemoteStorage_GetQuota', BOOL, P, C.POINTER(U64), C.POINTER(U64))
+        total, available = U64(), U64()
+        storage = self.api.SteamAPI_SteamRemoteStorage_v016()
+        if not storage or not self.api.SteamAPI_ISteamRemoteStorage_GetQuota(
+                storage, C.byref(total), C.byref(available)):
+            raise RuntimeError('Steam Cloud quota query failed')
+        return dict(totalBytes=total.value, availableBytes=available.value)

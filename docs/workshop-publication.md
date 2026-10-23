@@ -29,4 +29,12 @@ SteamCMD created [item 3825545131](https://steamcommunity.com/sharedfiles/filede
 
 An official SteamCMD download matched all **289 files / 46,570,087 bytes**, manifest **3991554511248186453**. Per-file hashes are in [the download receipt](../release/workshop/download-verified.json). The browser's anonymous link view shows the complete RVI-style description through its Mod ID footer, including linked original-author credits, the author-contact conversion statement, AI disclosure, GitHub, Ko-fi and the highly recommended optional performance patch.
 
-The upload requested unlisted visibility 3. Live owner-query visibility and the 87 required Workshop relationships are pending: SteamCMD disconnected the owner's Steam desktop session. The existing client was started silently to restore IPC, but Steam reports that the account needs reconnecting online. The browser is signed out. No requirements have been added yet; use the recorded external list until the owner session is reconnected and verification completes. Do not treat the optional performance patch as a requirement.
+After the owner reconnected Steam, a fresh owner query confirmed unlisted visibility 3. All 87 required Workshop relationships were attached and independently queried again; the optional performance patch remains a recommendation. `verification-status.json` and `page-verified.json` record the completed checks.
+
+## Gallery and description update
+
+Seven reviewed native gameplay images were attached in their recorded order through the owner Steam client, without another SteamCMD login. The short Workshop credit list now omits the Aurora hotfix entry at the owner's request; full imported-file credits/provenance remain intact. The linked recommendation for KI5 Vehicle Performance Patch (Unofficial), 3808100388, remains visible in the verified description.
+
+`scripts/workshop_gallery.py --upload --description` changes only additional previews and the requested description. It verifies the item identity, unlisted flag and exact requirements before submission, then checks that title, main cover, visibility and dependencies remain unchanged. It never sets the content payload. The original 289-file download receipt and SteamCMD publication snapshot remain historical records; `page-update-verified.json` records the later description hash. The general verifier now recognizes that verified page update.
+
+`scripts/workshop_gallery.py --verify-images` read back all seven original images from Steam's CDN and matched their exact sizes and SHA-256 hashes, totalling 826,614 bytes. The 1,000,000-byte app staging quota was checked before submission. Gallery source/quality/compression and browser-review limits are documented in [Workshop gallery](workshop-gallery.md).

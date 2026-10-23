@@ -4,6 +4,8 @@ Put KI5 on Kentucky's roads. **Only KI5: Vehicle Spawn & Livery Overhaul** bring
 
 ![Only KI5: Vehicle Spawn & Livery Overhaul](release/workshop/only-ki5-overhaul-preview.png)
 
+The [Workshop gallery](https://steamcommunity.com/sharedfiles/filedetails/?id=3825545131) now has seven real gameplay images: police liveries, silent lightbars, the checkpoint fleet, blockpost, convoy, highway traffic/trailer and integrated variants. [Capture sources, framing and publication checks](docs/workshop-gallery.md) are recorded separately from gameplay acceptance.
+
 **0.3.1 — public source / unlisted Workshop testing candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Native single-player and two-client dedicated-server results are recorded in [native acceptance](docs/native-acceptance.md). [Unlisted Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3825545131); see [publication verification](docs/workshop-publication.md) before installation.
 
 ## What it does

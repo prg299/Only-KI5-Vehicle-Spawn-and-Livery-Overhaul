@@ -164,6 +164,12 @@ def verify(add_dependencies=False):
         after=steam.query() if add_dependencies else before
         publication=json.loads((RELEASE/'publication.json').read_text(encoding='utf-8'))
         if publication['workshopId']!=item:raise ValueError('Publication receipt targets another item')
+        page_update=RELEASE/'page-update-verified.json'
+        if page_update.exists():
+            latest=json.loads(page_update.read_text('utf-8'))
+            if latest['workshopId']!=item or not latest['verified']:
+                raise ValueError('Latest page-update receipt is not verified for this item')
+            publication=latest
         description_hash=hashlib.sha256(after['description'].replace('\r\n','\n').encode()).hexdigest()
         if description_hash!=publication['descriptionSha256']:raise ValueError('Live description differs from uploaded snapshot')
         if after['visibility']!=3 or after['missingDependencies']:raise ValueError('Unlisted visibility or dependency verification is incomplete')
