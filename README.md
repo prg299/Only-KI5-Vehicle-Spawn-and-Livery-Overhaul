@@ -4,7 +4,7 @@ Put KI5 on Kentucky's roads. **Only KI5: Vehicle Spawn & Livery Overhaul** bring
 
 ![Only KI5: Vehicle Spawn & Livery Overhaul](release/workshop/only-ki5-overhaul-preview.png)
 
-**0.3.0 — public source / Workshop release candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Workshop publication and native gameplay acceptance are pending.
+**0.3.1 — public source / Workshop release candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Native single-player and two-client dedicated-server results are recorded in [native acceptance](docs/native-acceptance.md). Workshop publication remains pending.
 
 ## What it does
 
@@ -12,7 +12,7 @@ Put KI5 on Kentucky's roads. **Only KI5: Vehicle Spawn & Livery Overhaul** bring
 - Routes police liveries by region, including Louisville city/county, Muldraugh, Meade, West Point, airport and prison roles.
 - Keeps the private Suite's defaults: 95% Humvee within military cars, 75% AM General within military trucks, a preferred M35A2 transport share and 95% white EMS F350 within ambulance choices. These are candidate-pool shares, not a promise that 95% of all spawned vehicles are military.
 - Requires More Car Features / WayMoreCars and preserves its highway aliases. Integrated Vehicle Military Zones supplies military locations, split pools, sandbox settings and four road-story recipes. Internal authored helpers use native game APIs for zones, angled parking and scene construction/scheduling.
-- On multiplayer servers, gives eligible newly spawned police vehicles a 50% silent flashing-lightbar chance outside dedicated emergency stations. Single-player lightbar parity is not claimed by this inherited server-only callback.
+- In single-player and multiplayer, gives eligible newly spawned police vehicles a 50% silent flashing-lightbar chance outside dedicated emergency stations. The spawn policy clears siren modes before every station, saved-decision and existing-light check.
 - Leaves existing saved vehicles/chunks unchanged. Changes affect newly generated vehicles.
 
 ## Install
@@ -43,7 +43,7 @@ After reviewing upstream changes, run `scripts/import-content.py` before regener
 
 CI runs the portable repository and PowerShell parser checks without proprietary game files. It cannot run the installed-game Lua/compiler or native gameplay checks. Other contributors can invoke those scripts with their own resource-management setup; the guard path above is specific to the author's workstation.
 
-`mod/` contains the deliverable. `scripts/` owns generation/check/stage tools; `tools-src/` holds authored harnesses and artwork masters; `config/` pins selected modules; `docs/` records architecture, source/rights evidence and acceptance gaps; `release/workshop/` contains fresh-item metadata. Build/test output remains ignored under `build/`.
+`mod/` contains the deliverable. `scripts/` owns generation/check/stage tools; `tools-src/` holds authored harnesses and artwork masters; `dev/` owns isolated native acceptance drivers; `config/` pins selected modules; `docs/` records architecture, source/rights evidence and acceptance gaps; `release/workshop/` contains fresh-item metadata. Build/test output remains ignored under `build/`.
 
 ## License and status
 

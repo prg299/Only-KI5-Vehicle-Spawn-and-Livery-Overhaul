@@ -593,7 +593,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_BiohazardCrash.lua",
-      "sha256": "5983db6da0d665fe427fa82232130215c4633517a189ee1767b77a778065229b",
+      "sha256": "fb0ebc17c4793a1f4733eef2fb6b1caeb1a7e8997f48cf2d42794ebf9207b188",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -638,7 +638,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryBlockade.lua",
-      "sha256": "80037d4a7227f06f43586d1502a91f4527bef2a33f36296bfe341c1903d32bb1",
+      "sha256": "0240a3f4c023b093655f3cc7ad9195f9b726c60734d5e046fc5db98abb23fef3",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -683,7 +683,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryConvoy.lua",
-      "sha256": "41c42496963306402c908491c5a961d25855dd21abbe02745d53188d15e4e3a2",
+      "sha256": "073fe80e458b4d6bfd113669a8afb0cd548fb26a8e066600aabec3af92127998",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -742,9 +742,9 @@
       ]
     },
     {
-      "targetPath": "42/media/lua/shared/Translate/EN/IG_UI_EN.txt",
-      "sha256": "a3d6a7443ded74ed4ec723e78db186640c1876f41dec290f7438037c3ca818d8",
-      "transform": "merged MCV localization",
+      "targetPath": "42/media/lua/shared/Translate/EN/IG_UI.json",
+      "sha256": "1d0b669254cdef926f6b5aba100311b9ead41c9a0d0f1f0f3c31e520ba5afa11",
+      "transform": "merged MCV localization / B42.21 JSON",
       "sources": [
         {
           "workshopId": "3455267136",

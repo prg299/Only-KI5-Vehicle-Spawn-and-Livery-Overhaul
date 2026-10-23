@@ -1,4 +1,4 @@
--- Server-authoritative silent police lightbars for the Only KI5: Vehicle Spawn & Livery Overhaul.
+-- Authority-only silent police lightbars for single-player and multiplayer.
 
 if isClient and isClient() then
     return
@@ -8,6 +8,15 @@ local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local LIGHTBAR_CHANCE_PERCENT = 50
 local MOD_DATA_KEY = "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1"
 local stationZoneTypes = { police = true, fire = true, ambulance = true, prison = true, ranger = true, military = true }
+local stationZoneNames = { policegarage = 'police', firegarage = 'fire', firetruck = 'fire' }
+
+local function stationType(value)
+    local name = value and string.lower(tostring(value))
+    if not name then return nil end
+    if stationZoneTypes[name] then return name end
+    if stationZoneNames[name] then return stationZoneNames[name] end
+    if string.find(name, '^military_') then return 'military' end
+end
 
 local function isPoliceScript(scriptName)
     if not scriptName then return false end
@@ -25,10 +34,16 @@ local function zoneTypeForVehicle(vehicle)
     if not getCell or not vehicle then return nil end
     local cell = getCell()
     if not cell then return nil end
-    local square = cell:getGridSquare(math.floor(vehicle:getX()), math.floor(vehicle:getY()), math.floor(vehicle:getZ()))
+    local x, y, z = math.floor(vehicle:getX()), math.floor(vehicle:getY()), math.floor(vehicle:getZ())
+    -- Emergency stalls are ParkingStall zones named police/military/etc. The
+    -- square's broader metadata zone is often TownZone, even at a station.
+    local parking = getVehicleZoneAt and getVehicleZoneAt(x, y, z)
+    local parkingType = parking and stationType(parking:getName())
+    if parkingType then return parkingType end
+    local square = cell:getGridSquare(x, y, z)
     local zone = square and square:getZone()
     local zoneType = zone and zone:getType()
-    return zoneType and zoneType ~= "" and string.lower(tostring(zoneType)) or nil
+    return stationType(zoneType)
 end
 
 local function applyLightbar(vehicle)
@@ -55,6 +70,6 @@ local function applyLightbar(vehicle)
     data[MOD_DATA_KEY] = "on"
 end
 
-if isServer and isServer() and Events and Events.OnSpawnVehicleEnd then
+if Events and Events.OnSpawnVehicleEnd then
     Events.OnSpawnVehicleEnd.Add(applyLightbar)
 end

@@ -18,7 +18,7 @@ root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
 check(b42['name'] == 'Only KI5: Vehicle Spawn & Livery Overhaul', 'Wrong display name')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.3.0' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(b42['modversion'] == '0.3.1' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')
@@ -69,8 +69,12 @@ for p in MOD.rglob('*'):
         check(p.relative_to(MOD).as_posix() in imported, f'Unmanifested content shipped {p.name}')
     if p.suffix.lower() not in {'.png', '.fbx'}:
         check('C:\\Users\\erika' not in p.read_text('utf-8', errors='ignore'), 'Private absolute path in payload')
-for p in (ROOT/'scripts').glob('*.py'):
+for p in [*(ROOT/'scripts').glob('*.py'), *(ROOT/'dev').glob('*.py')]:
     ast.parse(p.read_text('utf-8'), filename=str(p))
+names = json.loads((MOD/'42/media/lua/shared/Translate/EN/IG_UI.json').read_text('utf-8'))
+check(not (MOD/'42/media/lua/shared/Translate/EN/IG_UI_EN.txt').exists(), 'Legacy MCV translation table returned')
+for name in ('67commandoRanger', '86chevyM1010ambulance', '76chevyK10fossoil', '93fordF350fossoil'):
+    check(bool(names.get('IGUI_VehicleName'+name)), 'Missing native JSON variant name: '+name)
 dependencies = json.loads((ROOT/'release/workshop/dependencies.json').read_text('utf-8'))
 check({d['workshopId'] for d in dependencies} == set(profile['WorkshopItems'].split(';')), 'Workshop dependency drift')
 audit = json.loads((ROOT/'docs/permissions-audit.json').read_text('utf-8'))
@@ -93,7 +97,7 @@ former_names = ('ki5knoxcountyfleet', 'ki5-knox-county-fleet', 'knox county flee
                 'knox-fleet', 'knox_fleet', 'kcf_java_home')
 text_extensions = {'.md', '.lua', '.py', '.ps1', '.java', '.json', '.ini', '.info', '.txt', '.yml', '.yaml'}
 active_files = [p for p in ROOT.iterdir() if p.is_file()]
-for directory in ('.github', 'config', 'docs', 'mod', 'release', 'scripts', 'tools-src'):
+for directory in ('.github', 'config', 'docs', 'mod', 'release', 'scripts', 'tools-src', 'dev'):
     active_files.extend(p for p in (ROOT/directory).rglob('*')
                         if p.is_file() and 'archive' not in p.relative_to(ROOT).parts)
 for path in active_files:

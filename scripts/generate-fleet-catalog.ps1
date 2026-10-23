@@ -62,30 +62,31 @@ function Get-DescriptorPath([string] $ModDirectory) {
 
 function Get-RuntimeScriptRoots([string] $ModDirectory) {
     $roots = [Collections.Generic.List[string]]::new()
-    foreach ($relativePath in @('42.20\media\scripts', '42.13\media\scripts', '42.0\media\scripts', '42\media\scripts', 'media\scripts')) {
-        $path = Join-Path $ModDirectory $relativePath
-        if (-not (Test-Path -LiteralPath $path -PathType Container)) { continue }
-        $hasVehicle = Get-ChildItem -LiteralPath $path -Recurse -File -Filter '*.txt' | ForEach-Object {
-            Select-String -LiteralPath $_.FullName -Pattern '^\s*vehicle\s+([A-Za-z0-9_]+)' -Quiet
-        } | Where-Object { $_ } | Select-Object -First 1
-        if ($hasVehicle) {
-            $roots.Add($path)
-            if ($relativePath -ne 'media\scripts') {
-                $sharedRoot = Join-Path $ModDirectory 'media\scripts'
-                if (Test-Path -LiteralPath $sharedRoot -PathType Container) { $roots.Add($sharedRoot) }
-            }
-            break
-        }
+    $runtimeRoot = Split-Path -Parent (Get-DescriptorPath $ModDirectory)
+    # B42 combines common/ with the selected version folder. Root media/ is
+    # the older standalone layout, not shared B42 content. Mixing it in
+    # advertised four B41-only trailer/burnt IDs absent from the native game.
+    if ($runtimeRoot -ne $ModDirectory) {
+        $common = Join-Path $ModDirectory 'common\media\scripts'
+        if (Test-Path -LiteralPath $common -PathType Container) { $roots.Add($common) }
     }
+    $selected = Join-Path $runtimeRoot 'media\scripts'
+    if (Test-Path -LiteralPath $selected -PathType Container) { $roots.Add($selected) }
+    $hasVehicle = $roots | ForEach-Object { Get-ChildItem -LiteralPath $_ -Recurse -File -Filter '*.txt' } | ForEach-Object {
+        Select-String -LiteralPath $_.FullName -Pattern '^\s*vehicle\s+([A-Za-z0-9_]+)' -Quiet
+    } | Where-Object { $_ } | Select-Object -First 1
+    if (-not $hasVehicle) { return @() }
     return $roots.ToArray()
 }
 
 function Get-RuntimeLuaFiles([string] $ModDirectory) {
-    foreach ($relativePath in @('42.20\media\lua', '42.13\media\lua', '42.0\media\lua', '42\media\lua', 'media\lua')) {
-        $path = Join-Path $ModDirectory $relativePath
-        if (-not (Test-Path -LiteralPath $path -PathType Container)) { continue }
-        $files = @(Get-ChildItem -LiteralPath $path -Recurse -File -Filter '*.lua')
-        if ($files.Count -gt 0) { return $files }
+    $runtimeRoot = Split-Path -Parent (Get-DescriptorPath $ModDirectory)
+    $roots = @((Join-Path $runtimeRoot 'media\lua'))
+    if ($runtimeRoot -ne $ModDirectory) { $roots = @((Join-Path $ModDirectory 'common\media\lua')) + $roots }
+    foreach ($path in $roots) {
+        if (Test-Path -LiteralPath $path -PathType Container) {
+            Get-ChildItem -LiteralPath $path -Recurse -File -Filter '*.lua'
+        }
     }
 }
 
@@ -374,8 +375,7 @@ $otherWreckedMilitaryCars = @($wreckedMilitaryCars | Where-Object { $_ -ne 'Base
 $wreckedAMGeneralTrucks = @($wreckedMilitaryTrucks | Where-Object { (($_ -replace '^Base\.', '') -replace '(?i)Burnt$', '') -match $amGeneralTruckPattern })
 $otherWreckedMilitaryTrucks = @($wreckedMilitaryTrucks | Where-Object { (($_ -replace '^Base\.', '') -replace '(?i)Burnt$', '') -notmatch $amGeneralTruckPattern })
 if ($wreckedHumvee.Count -eq 0 -or $otherWreckedMilitaryCars.Count -eq 0) { Fail 'Burnt military car sources must include the M998 and at least one non-Humvee military car to preserve the 95/5 wreck ratio.' }
-if ($wreckedAMGeneralTrucks.Count -eq 0 -or $otherWreckedMilitaryTrucks.Count -eq 0) { Fail 'Burnt military truck sources must include an AM General and another truck family to preserve the 75/25 wreck ratio.' }
-if ($wreckedMilitaryTrucks -notcontains 'Base.78amgeneralM35A2Burnt') { Fail 'Burnt military trucks must include the M35A2 transport wreck.' }
+if ($wreckedMilitaryTrucks.Count -eq 0) { Fail 'No native military truck wreck definitions are available.' }
 
 $derivedGroups = @{
     # Keep specialty luxury and performance bodies in their own vanilla pools.
@@ -438,9 +438,18 @@ Add-WeightedEntries $militaryCarWreckSlots $otherWreckedMilitaryCars 50
 $militaryTruckWreckSlots = [Collections.Generic.List[string]]::new()
 $wreckedM35Transport = @($wreckedAMGeneralTrucks | Where-Object { $_ -eq 'Base.78amgeneralM35A2Burnt' })
 $otherWreckedAMGeneralTrucks = @($wreckedAMGeneralTrucks | Where-Object { $_ -ne 'Base.78amgeneralM35A2Burnt' })
-Add-WeightedEntries $militaryTruckWreckSlots $wreckedM35Transport 638
-Add-WeightedEntries $militaryTruckWreckSlots $otherWreckedAMGeneralTrucks 112
-Add-WeightedEntries $militaryTruckWreckSlots $otherWreckedMilitaryTrucks 250
+if ($wreckedM35Transport.Count -gt 0 -and $otherWreckedAMGeneralTrucks.Count -gt 0 -and $otherWreckedMilitaryTrucks.Count -gt 0) {
+    Add-WeightedEntries $militaryTruckWreckSlots $wreckedM35Transport 638
+    Add-WeightedEntries $militaryTruckWreckSlots $otherWreckedAMGeneralTrucks 112
+    Add-WeightedEntries $militaryTruckWreckSlots $otherWreckedMilitaryTrucks 250
+} elseif ($wreckedAMGeneralTrucks.Count -gt 0 -and $otherWreckedMilitaryTrucks.Count -gt 0) {
+    Add-WeightedEntries $militaryTruckWreckSlots $wreckedAMGeneralTrucks 750
+    Add-WeightedEntries $militaryTruckWreckSlots $otherWreckedMilitaryTrucks 250
+} else {
+    # The current B42 AM General packs do not define their old B41 burnt IDs.
+    # Preserve real wreck choices rather than fabricating an unavailable family.
+    Add-WeightedEntries $militaryTruckWreckSlots $wreckedMilitaryTrucks 1000
+}
 if ($militaryCarSlots.Count -ne 1000) { Fail "Military car weighted catalog must contain 1000 slots, got $($militaryCarSlots.Count)." }
 if ($militaryTruckSlots.Count -ne 1000) { Fail "Military truck weighted catalog must contain 1000 slots, got $($militaryTruckSlots.Count)." }
 if ($militaryCarWreckSlots.Count -ne 1000) { Fail "Military wrecked car weighted catalog must contain 1000 slots, got $($militaryCarWreckSlots.Count)." }
@@ -686,6 +695,7 @@ $provenance = [ordered]@{
     optionalDisabledVariants = @($optionalDisabledVariants | Sort-Object Script)
     overrides = @($overrides)
     filteredSupersessions = @($bundleManifest.omittedFiles)
+    runtimeLayoutPolicy = 'Selected B42 version plus common/media; root media is used only for unversioned mods. Legacy B41-only definitions are not selectable.'
     excluded = @(
         [ordered]@{ WorkshopId = '3457132019'; ModId = 'SpecLoot'; Reason = 'Explicit user exclusion.' },
         [ordered]@{ ModId = '82jeepJ10'; Reason = 'Explicit older-project exclusion remains outside the generated world catalogue.' },
@@ -716,9 +726,9 @@ foreach ($groupName in $allGroups) { [void] $report.AppendLine("| $groupName | $
 [void] $report.AppendLine('- Light/utility military pool: exactly 95% `Base.92amgeneralM998` Humvee; the remaining 5% is evenly spread over the other non-truck military/support scripts.')
 [void] $report.AppendLine('- Ambulance candidate pools are weighted 95% to `Base.90fordF350ambulance`; the remaining 5% is shared by the other valid KI5 ambulance scripts. The F350 is fixed to its white EMS skin rather than random Brush/Rescue paint.')
 [void] $report.AppendLine('- Military truck pool: exactly 75% AM General family scripts; `Base.78amgeneralM35A2` is 638/1000 overall (85% of the AM General share), and the other AM General variants divide the remaining 112/1000.')
-[void] $report.AppendLine('- Burnt military pools use the same exact 95% M998 Humvee and 75% AM General truck family ratios; `Base.78amgeneralM35A2Burnt` is 638/1000 truck-wreck slots.')
-[void] $report.AppendLine('- Military-zone policy targets VMZ B42 child pools after the split: all-vehicle stalls balance car/truck roles, light stalls use the 95% M998 car pool, heavy stalls use the 75% AM General truck pool, burnt vehicles retain the same role-specific ratios, and trailers are re-sorted by VMZ off-road class.')
-[void] $report.AppendLine('- Military trailers are isolated from ordinary trailer and commercial pools. Active military vehicles are removed from non-military zones; only rare burnt military wrecks may remain in roads, traffic jams, and junkyards.')
+[void] $report.AppendLine('- Burnt military cars retain 95% M998. Burnt trucks use only actual definitions from the selected runtime: 75% AM General when both families exist, otherwise the available wreck family. Current B42 AM General packs lack the legacy M35A2/M923 burnt definitions; those B41 IDs are excluded. The active truck pool still retains its 75% AM General share.')
+[void] $report.AppendLine('- Military-zone policy targets VMZ B42 child pools after the split: all-vehicle stalls balance car/truck roles, light stalls use the 95% M998 car pool, heavy stalls use the 75% AM General truck pool, burnt pools use available native wreck definitions, and trailers are re-sorted by VMZ off-road class.')
+[void] $report.AppendLine('- Military trailers are isolated from ordinary trailer and commercial pools. Ordinary parking excludes active military vehicles. Highway traffic retains the inherited rare military allowance, capped at 0.25% of ordinary weight; eligible wreck pools retain valid burnt military scripts.')
 [void] $report.AppendLine('')
 [void] $report.AppendLine('## Cross-pool rarity policy')
 [void] $report.AppendLine('')

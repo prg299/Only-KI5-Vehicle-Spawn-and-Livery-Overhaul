@@ -3,8 +3,8 @@
 - External vehicle providers: 89
 - Bundled MCV/police providers: 5
 - External support-only modules: 11
-- Final selectable non-burnt scripts: 529
-- Preserved burnt scripts: 6
+- Final selectable non-burnt scripts: 527
+- Preserved burnt scripts: 4
 - Excluded disabled optional vehicle variants: 9
 - Specific Loot is explicitly excluded from both bundle and dependency closure.
 
@@ -29,7 +29,7 @@
 | taxi | 3 |
 | militaryCar | 12 |
 | militaryTruck | 13 |
-| militaryTrailer | 11 |
+| militaryTrailer | 9 |
 | trailer | 14 |
 
 ## Military vehicle weighting
@@ -37,9 +37,9 @@
 - Light/utility military pool: exactly 95% `Base.92amgeneralM998` Humvee; the remaining 5% is evenly spread over the other non-truck military/support scripts.
 - Ambulance candidate pools are weighted 95% to `Base.90fordF350ambulance`; the remaining 5% is shared by the other valid KI5 ambulance scripts. The F350 is fixed to its white EMS skin rather than random Brush/Rescue paint.
 - Military truck pool: exactly 75% AM General family scripts; `Base.78amgeneralM35A2` is 638/1000 overall (85% of the AM General share), and the other AM General variants divide the remaining 112/1000.
-- Burnt military pools use the same exact 95% M998 Humvee and 75% AM General truck family ratios; `Base.78amgeneralM35A2Burnt` is 638/1000 truck-wreck slots.
-- Military-zone policy targets VMZ B42 child pools after the split: all-vehicle stalls balance car/truck roles, light stalls use the 95% M998 car pool, heavy stalls use the 75% AM General truck pool, burnt vehicles retain the same role-specific ratios, and trailers are re-sorted by VMZ off-road class.
-- Military trailers are isolated from ordinary trailer and commercial pools. Active military vehicles are removed from non-military zones; only rare burnt military wrecks may remain in roads, traffic jams, and junkyards.
+- Burnt military cars retain 95% M998. Burnt trucks use only actual definitions from the selected runtime: 75% AM General when both families exist, otherwise the available wreck family. Current B42 AM General packs lack the legacy M35A2/M923 burnt definitions; those B41 IDs are excluded. The active truck pool still retains its 75% AM General share.
+- Military-zone policy targets VMZ B42 child pools after the split: all-vehicle stalls balance car/truck roles, light stalls use the 95% M998 car pool, heavy stalls use the 75% AM General truck pool, burnt pools use available native wreck definitions, and trailers are re-sorted by VMZ off-road class.
+- Military trailers are isolated from ordinary trailer and commercial pools. Ordinary parking excludes active military vehicles. Highway traffic retains the inherited rare military allowance, capped at 0.25% of ordinary weight; eligible wreck pools retain valid burnt military scripts.
 
 ## Cross-pool rarity policy
 

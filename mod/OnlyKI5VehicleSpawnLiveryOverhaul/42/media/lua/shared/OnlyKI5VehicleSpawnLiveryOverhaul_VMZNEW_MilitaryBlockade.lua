@@ -84,7 +84,7 @@ MilitaryBlockade.spawn = function(self)
 		vehicle1:setGeneralPartCondition(ZombRandFloat(0.2, 0.7), ZombRand(40, 71))
 		if ZombRand(3) == 0 then
 			vehicle1:setHeadlightsOn(true)
-			vehicle1:setLightbarLightsMode(2)
+			self:enableVehicleLightbar(vehicle1)
 			local battery = vehicle1:getBattery()
 			if battery then
 				battery:setLastUpdated(0)
@@ -109,7 +109,7 @@ MilitaryBlockade.spawn = function(self)
 		vehicle2:setGeneralPartCondition(ZombRandFloat(0.2, 0.7), ZombRand(40, 71))
 		if ZombRand(3) == 0 then
 			vehicle2:setHeadlightsOn(true)
-			vehicle2:setLightbarLightsMode(2)
+			self:enableVehicleLightbar(vehicle2)
 			local battery = vehicle2:getBattery()
 			if battery then
 				battery:setLastUpdated(0)

@@ -9,6 +9,7 @@
 - **Kraz** — [No Vanilla Vehicles](https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640). Selection/profession/story behavior is reimplemented in the late registry, with its extracted duplicate-suppression data integrated and attributed separately from authored MIT code.
 - **GamestaMechanic** — external required [More Car Features + Spawn Zones Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551), module WayMoreCars. No source files from this mod are bundled.
 - **The Indie Stone** — Project Zomboid and its modding framework.
+- **Real Vehicle Interiors contributors** — [MIT developer endpoint, input/framebuffer adapter and inactive-desktop keeper](https://github.com/prg299/Real-Vehicle-Interiors), reused as read-only local inputs for isolated acceptance testing. Neither the RVI player mod nor the test-only ZombieBuddy adapter is bundled or required by this release.
 - **Erika / prg299** — native in-game screenshot from the 2026-10-01 isolated photo session. It depicts Project Zomboid's world, KI5 vehicles and the external regional police skins/light effects credited above. **OpenAI image_gen** generated only the separate ONLY KI5 title lettering. The unmodified source capture, title master, prompt and export record are in `tools-src/art/`.
 
 Independent community addon. It is not an official KI5 or The Indie Stone release and does not imply endorsement. Credit is not a transfer of rights or a substitute for permission. See [third-party notices](THIRD_PARTY_NOTICES.md) and [permissions](docs/permissions.md).

@@ -110,6 +110,14 @@ function Scene:addZombiesOnVehicle(vehicle, count, outfit, femaleChance)
     end
 end
 
+function Scene:enableVehicleLightbar(vehicle)
+    -- Native clients ignore lightbar modes on vehicles without that hardware.
+    -- Keep the authoritative state consistent for ordinary military vehicles.
+    if Support.isAuthority() and vehicle and vehicle:hasLightbar() then
+        vehicle:setLightbarLightsMode(2)
+    end
+end
+
 function Scene:addDeadBody(x, y, z, outfit, blood, direction, femaleChance, crawlerChance, align)
     if not Support.isAuthority() then return end
     local square = self:getSquare(x, y, z)

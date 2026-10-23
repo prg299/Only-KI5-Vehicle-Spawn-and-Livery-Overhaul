@@ -201,6 +201,7 @@ local function vehicleAt(name,x,y,z)
         getSquare=function() return square end,
         setAlarmed=function() end,setGeneralPartCondition=function() end,
         setHeadlightsOn=function() end,setLightbarLightsMode=function() end,
+        hasLightbar=function() return false end,
         getBattery=function() return {setLastUpdated=function() end} end,
         getAllSeatParts=function() return {size=function() return 3 end} end,
         getZombieType=function() return nil end,getRandomZombieType=function() return "ArmyCamoGreen" end,
@@ -229,6 +230,12 @@ end
 RandomizedWorldBase = {new=function() return nativeWorld end,
     createRandomDeadBody=function() sceneCalls.corpses=sceneCalls.corpses+1; return {} end}
 local Scene = require "OnlyKI5VehicleSpawnLiveryOverhaul_RoadScene"
+local enabledLightbar
+Scene:enableVehicleLightbar({hasLightbar=function() return false end,
+    setLightbarLightsMode=function() error('Cannot enable missing lightbar hardware') end})
+Scene:enableVehicleLightbar({hasLightbar=function() return true end,
+    setLightbarLightsMode=function(_,mode) enabledLightbar=mode end})
+assert(enabledLightbar==2,'Actual lightbar hardware must retain the recipe mode')
 local scene = setmetatable({spawnPoint={x=20.5,y=20.5,z=0},direction=IsoDirections.N}, {__index=Scene})
 local expected = {N={2,-3},E={-3,-2},S={-2,3},W={3,2}}
 for name, values in pairs(expected) do

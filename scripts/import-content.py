@@ -20,6 +20,8 @@ NATIVE_REQUIRES = {
     'YAPZLib/Utils': PREFIX + 'WorldSupport',
     'YAPZLib/RVSBase': PREFIX + 'RoadStories',
 }
+NATIVE_LIGHTBAR_CALLS = {'MilitaryConvoy.lua': 1, 'MilitaryBlockade.lua': 2,
+                       'BiohazardCrash.lua': 2}
 
 
 def sha(data):
@@ -178,6 +180,12 @@ def main():
                             text = text.replace(quote + original + quote, quote + replacement + quote)
                     if 'YAPZLib/' in text:
                         raise ValueError(f'Unreplaced military library contract: {relative}')
+                    expected = NATIVE_LIGHTBAR_CALLS.get(Path(suffix).name)
+                    if expected is not None:
+                        text, count = re.subn(r'(\bvehicle\d+):setLightbarLightsMode\(2\)',
+                                              r'self:enableVehicleLightbar(\1)', text)
+                        if count != expected:
+                            raise ValueError(f'Military lightbar call drift: {relative}: {count}')
                 for original, canonical in aliases.items():
                     for quote in ('"', "'"):
                         text = text.replace(quote + original + quote, quote + canonical + quote)
@@ -195,10 +203,11 @@ def main():
         raise ValueError(f'Expected/current MCV overlap drift: {actual_omissions ^ expected_omissions}')
     if not translations:
         raise ValueError('Missing MCV localization')
-    translation = 'IG_UI_EN = {\n' + ''.join(
-        f'    {key} = {value},\n' for key, value in sorted(translations.items())) + '}\n'
-    add('42/media/lua/shared/Translate/EN/IG_UI_EN.txt',
-        translation.encode('utf-8'), translation_inputs, 'merged MCV localization')
+    # Build 42.21 loads JSON translation files; the legacy TXT table is ignored.
+    translation = json.dumps({key: json.loads(value) for key, value in sorted(translations.items())},
+                             ensure_ascii=False, indent=2) + '\n'
+    add('42/media/lua/shared/Translate/EN/IG_UI.json',
+        translation.encode('utf-8'), translation_inputs, 'merged MCV localization / B42.21 JSON')
 
     duplicate_path = workshop / '2535461640/mods/NoDuplicateVehicles/42/media/lua/shared/NoDuplicateVehicles.lua'
     duplicate_data = duplicate_path.read_bytes()

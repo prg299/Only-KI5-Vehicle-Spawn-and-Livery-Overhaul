@@ -112,7 +112,7 @@ MilitaryConvoy.spawn = function(self)
 		vehicle3:setGeneralPartCondition(ZombRandFloat(0.15, 0.45), ZombRand(60, 91))
 		if ZombRand(3) == 0 then
 			vehicle3:setHeadlightsOn(true)
-			vehicle3:setLightbarLightsMode(2)
+			self:enableVehicleLightbar(vehicle3)
 			local battery = vehicle3:getBattery()
 			if battery then
 				battery:setLastUpdated(0)

@@ -1,0 +1,4307 @@
+{
+  "version": "0.3.1",
+  "date": "2026-10-23",
+  "game": {
+    "version": "42.21.0",
+    "revision": "4a0e9546ec",
+    "steamBuild": 25485521
+  },
+  "runs": {
+    "sp_initial": "full-fleet-20261023-c",
+    "mp_initial": "multiplayer-20261023-b",
+    "mp_police_reload": "multiplayer-20261023-c-reload",
+    "mp_military": "multiplayer-20261023-f-final",
+    "mp_military_reload": "multiplayer-20261023-g-acceptance-reload",
+    "sp_silent": "singleplayer-20261023-h-silent",
+    "sp_reload": "singleplayer-20261023-i-reload"
+  },
+  "catalog": {
+    "scripts": 531,
+    "missing": {},
+    "policeScripts": 89,
+    "pools": {
+      "modified_trfjm": {
+        "total": 930.8000396362698,
+        "military": 2,
+        "ordinary": 928.8000396362698,
+        "militaryToOrdinary": 0.002153316014912344,
+        "car": 2,
+        "humveeShare": 0.95,
+        "truck": 0,
+        "forbidden": {},
+        "spawnRate": 90
+      },
+      "trafficjams": {
+        "total": 930.8000396362698,
+        "military": 2,
+        "ordinary": 928.8000396362698,
+        "militaryToOrdinary": 0.002153316014912344,
+        "car": 2,
+        "humveeShare": 0.95,
+        "truck": 0,
+        "forbidden": {}
+      },
+      "parkingstall": {
+        "total": 459.9633795686313,
+        "military": 0,
+        "ordinary": 459.9633795686313,
+        "militaryToOrdinary": 0,
+        "car": 0,
+        "truck": 0,
+        "forbidden": {}
+      },
+      "military_vehicle_light": {
+        "total": 100.00000000000003,
+        "military": 100.00000000000003,
+        "ordinary": 0,
+        "car": 100.00000000000003,
+        "humveeShare": 0.9499999999999997,
+        "truck": 0,
+        "forbidden": {},
+        "spawnRate": 16
+      },
+      "military_vehicle_heavy": {
+        "total": 100,
+        "military": 100,
+        "ordinary": 0,
+        "car": 0,
+        "truck": 100,
+        "amGeneralShare": 0.75,
+        "forbidden": {},
+        "spawnRate": 16
+      }
+    },
+    "sharedHighway": true,
+    "armorKeys": {
+      "1": "byVehicleScript",
+      "2": "add"
+    },
+    "stories": {
+      "1": "BiohazardCrash",
+      "2": "MilitaryBlockade",
+      "3": "MilitaryBlockpost",
+      "4": "MilitaryConvoy"
+    },
+    "camoTextureLoaded": false
+  },
+  "militaryAcceptance": [
+    {
+      "area": "checkpoint",
+      "nativeVehicleCount": 8
+    },
+    {
+      "area": "checkpoint-approach",
+      "nativeVehicleCount": 14
+    },
+    {
+      "area": "city-highway",
+      "nativeVehicleCount": 26
+    },
+    {
+      "story": "MilitaryBlockade",
+      "selectionFixture": true,
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryBlockade",
+        "x": 10588.5,
+        "y": 9798.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 14,
+      "peerComparisons": [
+        {
+          "client": "a",
+          "id": 163,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 194,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 203,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 199,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 200,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 209,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 196,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 159,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 195,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 160,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 197,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 208,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 198,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 165,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 163,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 194,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 203,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 199,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 200,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 209,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 196,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 159,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 195,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 160,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 197,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 208,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 198,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 165,
+          "same": true
+        }
+      ]
+    },
+    {
+      "story": "MilitaryBlockpost",
+      "selectionFixture": true,
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryBlockpost",
+        "x": 12676.5,
+        "y": 5180.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 4,
+      "peerComparisons": [
+        {
+          "client": "a",
+          "id": 209,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 224,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 208,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 166,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 209,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 224,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 208,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 166,
+          "same": true
+        }
+      ]
+    },
+    {
+      "story": "MilitaryConvoy",
+      "selectionFixture": true,
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryConvoy",
+        "x": 10590.5,
+        "y": 9652.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 8,
+      "peerComparisons": [
+        {
+          "client": "a",
+          "id": 217,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 154,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 166,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 152,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 160,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 153,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 155,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 159,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 217,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 154,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 166,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 152,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 160,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 153,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 155,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 159,
+          "same": true
+        }
+      ]
+    },
+    {
+      "story": "BiohazardCrash",
+      "selectionFixture": true,
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "BiohazardCrash",
+        "x": 12619.5,
+        "y": 5575.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 2,
+      "peerComparisons": [
+        {
+          "client": "a",
+          "id": 207,
+          "same": true
+        },
+        {
+          "client": "a",
+          "id": 206,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 207,
+          "same": true
+        },
+        {
+          "client": "b",
+          "id": 206,
+          "same": true
+        }
+      ]
+    },
+    {
+      "variant": "Base.67commandoRanger",
+      "nativeInput": "Vehicle mechanics key",
+      "ui": {
+        "script": "Base.67commandoRanger",
+        "parts": 46
+      },
+      "registrations": {
+        "a": {
+          "armor": true,
+          "overlay": true
+        },
+        "b": {
+          "armor": true,
+          "overlay": true
+        }
+      }
+    },
+    {
+      "variant": "Base.86chevyM1010ambulance",
+      "nativeInput": "Vehicle mechanics key",
+      "ui": {
+        "script": "Base.86chevyM1010ambulance",
+        "parts": 50
+      },
+      "registrations": {
+        "a": {
+          "armor": true,
+          "overlay": true
+        },
+        "b": {
+          "armor": true,
+          "overlay": true
+        }
+      }
+    },
+    {
+      "variant": "Base.76chevyK10fossoil",
+      "nativeInput": "Vehicle mechanics key",
+      "ui": {
+        "script": "Base.76chevyK10fossoil",
+        "parts": 47
+      },
+      "registrations": {
+        "a": {
+          "armor": true,
+          "overlay": true
+        },
+        "b": {
+          "armor": true,
+          "overlay": true
+        }
+      }
+    },
+    {
+      "variant": "Base.93fordF350fossoil",
+      "nativeInput": "Vehicle mechanics key",
+      "ui": {
+        "script": "Base.93fordF350fossoil",
+        "parts": 60
+      },
+      "registrations": {
+        "a": {
+          "armor": true,
+          "overlay": true
+        },
+        "b": {
+          "armor": true,
+          "overlay": true
+        }
+      }
+    }
+  ],
+  "militaryReload": [
+    {
+      "story": "MilitaryBlockade",
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryBlockade",
+        "x": 10588.5,
+        "y": 9798.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 14,
+      "savedMatches": [
+        {
+          "sqlId": 195,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 192,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 177,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 187,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 186,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 174,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 190,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 207,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 191,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 208,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 189,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 173,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 188,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 197,
+          "matches": 1,
+          "same": true
+        }
+      ],
+      "peersMatch": true
+    },
+    {
+      "story": "MilitaryBlockpost",
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryBlockpost",
+        "x": 12676.5,
+        "y": 5180.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "nearbyVehicles": 4,
+      "savedMatches": [
+        {
+          "sqlId": 212,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 209,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 211,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 210,
+          "matches": 1,
+          "same": true
+        }
+      ],
+      "peersMatch": true
+    },
+    {
+      "story": "MilitaryConvoy",
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "MilitaryConvoy",
+        "x": 10590.5,
+        "y": 9652.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "baselineVehicles": 8,
+      "laterFixturesInView": 1,
+      "savedMatches": [
+        {
+          "sqlId": 230,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 231,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 222,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 233,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 213,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 234,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 232,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 214,
+          "matches": 1,
+          "same": true
+        }
+      ],
+      "peersMatch": true
+    },
+    {
+      "story": "BiohazardCrash",
+      "checkpoint": {
+        "version": 1,
+        "state": "done",
+        "story": "BiohazardCrash",
+        "x": 12619.5,
+        "y": 5575.5,
+        "z": 0,
+        "width": 14,
+        "direction": "N",
+        "acceptanceFixture": true
+      },
+      "baselineVehicles": 2,
+      "laterFixturesInView": 0,
+      "savedMatches": [
+        {
+          "sqlId": 237,
+          "matches": 1,
+          "same": true
+        },
+        {
+          "sqlId": 236,
+          "matches": 1,
+          "same": true
+        }
+      ],
+      "peersMatch": true
+    },
+    {
+      "variant": "Base.67commandoRanger",
+      "sqlId": 239,
+      "preserved": true,
+      "ui": {
+        "script": "Base.67commandoRanger",
+        "parts": 46
+      },
+      "name": "'67 M706 Cadillac Gage Commando Ranger"
+    },
+    {
+      "variant": "Base.86chevyM1010ambulance",
+      "sqlId": 240,
+      "preserved": true,
+      "ui": {
+        "script": "Base.86chevyM1010ambulance",
+        "parts": 50
+      },
+      "name": "'86 Chevrolet M1010 Ambulance"
+    },
+    {
+      "variant": "Base.76chevyK10fossoil",
+      "sqlId": 241,
+      "preserved": true,
+      "ui": {
+        "script": "Base.76chevyK10fossoil",
+        "parts": 47
+      },
+      "name": "'76 Chevrolet K10 Fossoil"
+    },
+    {
+      "variant": "Base.93fordF350fossoil",
+      "sqlId": 242,
+      "preserved": true,
+      "ui": {
+        "script": "Base.93fordF350fossoil",
+        "parts": 60
+      },
+      "name": "'93 Ford F-350 Crew Cab Fossoil"
+    }
+  ],
+  "policePeerComparison": [
+    {
+      "peer": "b-late-join",
+      "id": 255,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 240,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 244,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 152,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 151,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 150,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 149,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 148,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 147,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 146,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 145,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 144,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 143,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 142,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 141,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 140,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 139,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 138,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 137,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "b-late-join",
+      "id": 136,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 255,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 240,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 244,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 152,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 151,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 150,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 149,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 148,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 147,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 146,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 145,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 144,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 143,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 142,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 141,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 140,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 139,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 138,
+      "found": 1,
+      "serverLights": 2,
+      "clientLights": 2,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 137,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    },
+    {
+      "peer": "a-after-join",
+      "id": 136,
+      "found": 1,
+      "serverLights": 0,
+      "clientLights": 0,
+      "siren": 0,
+      "scriptSame": true,
+      "skinSame": true
+    }
+  ],
+  "policeSavedComparison": [
+    {
+      "oldId": 149,
+      "matches": 1,
+      "newId": 249,
+      "sqlId": 118,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 244,
+      "matches": 1,
+      "newId": 222,
+      "sqlId": 114,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 146,
+      "matches": 1,
+      "newId": 219,
+      "sqlId": 121,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 151,
+      "matches": 1,
+      "newId": 220,
+      "sqlId": 116,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 137,
+      "matches": 1,
+      "newId": 201,
+      "sqlId": 130,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 144,
+      "matches": 1,
+      "newId": 217,
+      "sqlId": 123,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 138,
+      "matches": 1,
+      "newId": 203,
+      "sqlId": 129,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 136,
+      "matches": 1,
+      "newId": 199,
+      "sqlId": 131,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 255,
+      "matches": 1,
+      "newId": 252,
+      "sqlId": 112,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 141,
+      "matches": 1,
+      "newId": 215,
+      "sqlId": 126,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 147,
+      "matches": 1,
+      "newId": 247,
+      "sqlId": 120,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 142,
+      "matches": 1,
+      "newId": 237,
+      "sqlId": 125,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 240,
+      "matches": 1,
+      "newId": 251,
+      "sqlId": 113,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 145,
+      "matches": 1,
+      "newId": 218,
+      "sqlId": 122,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 152,
+      "matches": 1,
+      "newId": 221,
+      "sqlId": 115,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 143,
+      "matches": 1,
+      "newId": 239,
+      "sqlId": 124,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 139,
+      "matches": 1,
+      "newId": 227,
+      "sqlId": 128,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 140,
+      "matches": 1,
+      "newId": 208,
+      "sqlId": 127,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 2,
+      "newLights": 2,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 148,
+      "matches": 1,
+      "newId": 248,
+      "sqlId": 119,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    },
+    {
+      "oldId": 150,
+      "matches": 1,
+      "newId": 250,
+      "sqlId": 117,
+      "script": "Base.92fordCVPILouisville",
+      "oldLights": 0,
+      "newLights": 0,
+      "oldSiren": 0,
+      "newSiren": 0,
+      "skinSame": true,
+      "decisionSame": true
+    }
+  ],
+  "policeRejoinedPeerComparison": [
+    {
+      "client": "a",
+      "id": 249,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 222,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 219,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 220,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 201,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 217,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 203,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 199,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 252,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 215,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 247,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 237,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 251,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 218,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 221,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 239,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 227,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 208,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 248,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "a",
+      "id": 250,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 249,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 222,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 219,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 220,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 201,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 217,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 203,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 199,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 252,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 215,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 247,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 237,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 251,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 218,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 221,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 239,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 227,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 208,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 248,
+      "matches": 1,
+      "same": true
+    },
+    {
+      "client": "b",
+      "id": 250,
+      "matches": 1,
+      "same": true
+    }
+  ],
+  "stationFixture": {
+    "id": 135,
+    "script": "Base.92fordCVPILouisville",
+    "x": 12538.5,
+    "y": 2027.5,
+    "vehicleZone": "policegarage",
+    "metaType": "TownZone",
+    "decision": "station:police",
+    "lights": 0,
+    "siren": 0
+  },
+  "singlePlayerSilentAudio": {
+    "singlePlayer": true,
+    "vehicles": 20,
+    "before": {
+      "sp": [
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 182,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 181,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 180,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 179,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 178,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 177,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 176,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 175,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 174,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 173,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 172,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 171,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 170,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 169,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 168,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 167,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 166,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 165,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 164,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "positiveControl": {
+      "sp": [
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 2,
+          "active": true,
+          "sounding": true,
+          "audioManagerPresent": true,
+          "emitterEmpty": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 182,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 181,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 180,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 179,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 178,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 177,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 176,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 175,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 174,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 173,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 172,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 171,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 170,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 169,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 168,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 167,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 166,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 165,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 164,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "after": {
+      "sp": [
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 182,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 181,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 180,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 179,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 178,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 177,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 176,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 175,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 174,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 173,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 172,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 171,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 170,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 169,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 168,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 167,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 166,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 165,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 164,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "outputMuted": true,
+    "hearingAcceptance": false,
+    "nativeSirenStateVerified": true,
+    "nativeAudioManagerVerified": true,
+    "audioEvidence": {
+      "positive": {
+        "managerPresent": true,
+        "sirenSounding": true,
+        "emitterEmpty": false
+      },
+      "after": {
+        "managerPresent": true,
+        "sirenSounding": false,
+        "emitterEmpty": true
+      }
+    }
+  },
+  "singlePlayerReload": {
+    "vehicles": 20,
+    "comparisons": [
+      {
+        "sqlId": 92,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 95,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 83,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 91,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 80,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 98,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 96,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 88,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 94,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 90,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 89,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 81,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 79,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 87,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 93,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 86,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 84,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 85,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 82,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      },
+      {
+        "sqlId": 97,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 0,
+        "siren": 0,
+        "savedDecisionPreserved": true,
+        "audio": {
+          "managerPresent": true,
+          "sirenSounding": false,
+          "emitterEmpty": true
+        }
+      }
+    ],
+    "output": {
+      "masterMuted": true,
+      "soundDisabled": false,
+      "soundVolume": 10
+    }
+  },
+  "multiplayerSilentSiren": {
+    "singlePlayer": false,
+    "vehicles": 20,
+    "before": {
+      "a": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ],
+      "b": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "positiveControl": {
+      "a": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 2,
+          "active": true,
+          "sounding": true,
+          "audioManagerPresent": true,
+          "emitterEmpty": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ],
+      "b": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 2,
+          "active": true,
+          "sounding": true,
+          "audioManagerPresent": true,
+          "emitterEmpty": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "after": {
+      "a": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ],
+      "b": [
+        {
+          "id": 203,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 239,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": true,
+          "emitterEmpty": true,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 214,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 201,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 185,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 206,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 192,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 202,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 187,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 250,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 238,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 228,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 204,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 199,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 2,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 205,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 215,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 213,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 183,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 211,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        },
+        {
+          "id": 242,
+          "script": "Base.92fordCVPILouisville",
+          "lights": 0,
+          "siren": 0,
+          "active": false,
+          "sounding": false,
+          "audioManagerPresent": false,
+          "engine": false,
+          "alarm": false
+        }
+      ]
+    },
+    "outputMuted": true,
+    "hearingAcceptance": false,
+    "nativeSirenStateVerified": true,
+    "nativeAudioManagerVerified": true
+  },
+  "multiplayerEmitterComparison": {
+    "a": {
+      "positiveControl": {
+        "id": 239,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 2,
+        "active": true,
+        "sounding": true,
+        "audioManagerPresent": true,
+        "emitterEmpty": false,
+        "engine": false,
+        "alarm": false
+      },
+      "afterPolicy": {
+        "id": 239,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "active": false,
+        "sounding": false,
+        "audioManagerPresent": true,
+        "emitterEmpty": true,
+        "engine": false,
+        "alarm": false
+      },
+      "nativeEmitterVerified": true
+    },
+    "b": {
+      "positiveControl": {
+        "id": 239,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 2,
+        "active": true,
+        "sounding": true,
+        "audioManagerPresent": true,
+        "emitterEmpty": false,
+        "engine": false,
+        "alarm": false
+      },
+      "afterPolicy": {
+        "id": 239,
+        "script": "Base.92fordCVPILouisville",
+        "lights": 2,
+        "siren": 0,
+        "active": false,
+        "sounding": false,
+        "audioManagerPresent": true,
+        "emitterEmpty": true,
+        "engine": false,
+        "alarm": false
+      },
+      "nativeEmitterVerified": true
+    }
+  },
+  "translations": {
+    "keys": 23,
+    "bothClientsMatch": true,
+    "names": {
+      "IGUI_VehicleName67commandoRanger": "'67 M706 Cadillac Gage Commando Ranger",
+      "IGUI_VehicleName76chevyK10calloway": "'76 Chevrolet K10 Calloway Landscaping",
+      "IGUI_VehicleName76chevyK10camille": "'76 Chevrolet K10 Welding by Camille",
+      "IGUI_VehicleName76chevyK10fossoil": "'76 Chevrolet K10 Fossoil",
+      "IGUI_VehicleName76chevyK10kentuckylumber": "'76 Chevrolet K10 Kentucky Lumber",
+      "IGUI_VehicleName76chevyK10yingswood": "'76 Chevrolet K10 Ying's Wood",
+      "IGUI_VehicleName76chevyK20brickingit": "'76 Chevrolet K20 Bricking It",
+      "IGUI_VehicleName76chevyK20helton": "'76 Chevrolet K20 Helton Metalworking",
+      "IGUI_VehicleName76chevyK20kimble": "'76 Chevrolet K20 Kimbles Konstruction",
+      "IGUI_VehicleName76chevyK20mccoy": "'76 Chevrolet K20 McCoy",
+      "IGUI_VehicleName76chevyK20mrc": "'76 Chevrolet K20 March Ridge Construction",
+      "IGUI_VehicleName76chevyK20utilityDpw": "'76 Chevrolet K20 Single Cab DPW Utility Truck",
+      "IGUI_VehicleName76chevyK20utilityFossoil": "'76 Chevrolet K20 Single Cab Fossoil Utility Truck",
+      "IGUI_VehicleName76chevyK20utilityMcCoy": "'76 Chevrolet K20 Single Cab McCoy Utility Truck",
+      "IGUI_VehicleName76chevyK30CCutilityDpw": "'76 Chevrolet K30 Crew Cab DPW Utility Truck",
+      "IGUI_VehicleName76chevyK30CCutilityFossoil": "'76 Chevrolet K30 Crew Cab Fossoil Utility Truck",
+      "IGUI_VehicleName76chevyK30CCutilityMcCoy": "'76 Chevrolet K30 Crew Cab McCoy Utility Truck",
+      "IGUI_VehicleName86chevyM1010ambulance": "'86 Chevrolet M1010 Ambulance",
+      "IGUI_VehicleName93fordF250jplandscaping": "'93 Ford F-250 Single Cab JP Landscaping",
+      "IGUI_VehicleName93fordF350airport": "'93 Ford F-350 Crew Cab Airport",
+      "IGUI_VehicleName93fordF350as": "'93 Ford F-350 Crew Cab Airport Security",
+      "IGUI_VehicleName93fordF350fossoil": "'93 Ford F-350 Crew Cab Fossoil",
+      "IGUI_VehicleName93fordF350mccoy": "'93 Ford F-350 McCoy Utility Truck"
+    }
+  },
+  "flashing": {
+    "mpA": {
+      "frames": 33,
+      "colourRange": 156.17930680359436,
+      "mostBlue": {
+        "file": "f00003.jpg",
+        "redMinusBlue": -76.96079589216944,
+        "rgb": [
+          36.36704749679076,
+          32.06048780487805,
+          113.3278433889602
+        ]
+      },
+      "mostRed": {
+        "file": "f00031.jpg",
+        "redMinusBlue": 79.21851091142491,
+        "rgb": [
+          113.52204107830552,
+          33.4609242618742,
+          34.30353016688061
+        ]
+      },
+      "framesNotModified": true
+    },
+    "mpB": {
+      "frames": 34,
+      "colourRange": 158.85073170731707,
+      "mostBlue": {
+        "file": "f00030.jpg",
+        "redMinusBlue": -77.91761232349165,
+        "rgb": [
+          38.02399229781771,
+          33.389396662387675,
+          115.94160462130937
+        ]
+      },
+      "mostRed": {
+        "file": "f00033.jpg",
+        "redMinusBlue": 80.93311938382541,
+        "rgb": [
+          116.26944801026957,
+          34.538754813863925,
+          35.33632862644416
+        ]
+      },
+      "framesNotModified": true
+    },
+    "sp": {
+      "frames": 35,
+      "roi": [
+        500,
+        95,
+        920,
+        340
+      ],
+      "colourRange": 125.8371622934888,
+      "mostBlue": {
+        "file": "f00025.jpg",
+        "redMinusBlue": -56.591360544217686,
+        "rgb": [
+          54.65221574344023,
+          46.93102040816326,
+          111.24357628765792
+        ]
+      },
+      "mostRed": {
+        "file": "f00020.jpg",
+        "redMinusBlue": 69.24580174927112,
+        "rgb": [
+          113.21297376093294,
+          47.7067055393586,
+          43.96717201166181
+        ]
+      },
+      "framesNotModified": true
+    }
+  },
+  "limits": [
+    "Loopback non-Steam dedicated transport",
+    "Forced story selection proves native construction, not natural frequency",
+    "Pool shares and small area samples are not population frequency estimates",
+    "Armor registration and mechanics UI do not prove every armor installation",
+    "No trailer-driving, long-run benchmark or human listening acceptance"
+  ],
+  "cleanExits": {
+    "mp_initial": {
+      "a": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "b": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "server": {
+        "exitCode": 0
+      }
+    },
+    "mp_police_reload": {
+      "a": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "b": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "server": {
+        "exitCode": 0
+      }
+    },
+    "mp_military": {
+      "a": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "b": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "server": {
+        "exitCode": 0
+      }
+    },
+    "mp_military_reload": {
+      "a": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "b": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      },
+      "server": {
+        "exitCode": 0
+      }
+    },
+    "sp_silent": {
+      "sp": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      }
+    },
+    "sp_reload": {
+      "sp": {
+        "exitCode": 0,
+        "keeperInJob": true,
+        "gameInJob": true,
+        "desktopSwitched": false
+      }
+    }
+  }
+}

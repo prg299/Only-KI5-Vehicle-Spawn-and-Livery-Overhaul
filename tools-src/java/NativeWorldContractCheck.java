@@ -45,6 +45,8 @@ public final class NativeWorldContractCheck {
         for (String name : new String[]{"getAngleX", "getAngleY", "getAngleZ", "isCreated"})
             method(vehicle, name);
         method(vehicle, "setAngles", "float", "float", "float");
+        method(vehicle, "hasLightbar");
+        method(vehicle, "setLightbarLightsMode", "int");
         method("zombie.inventory.ItemPickerJava", "getItemContainer",
                "String", "String", "String", "boolean");
         method("zombie.inventory.ItemPickerJava", "rollItem",

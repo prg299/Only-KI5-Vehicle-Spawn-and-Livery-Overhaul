@@ -11,7 +11,7 @@ public final class LuaPolicyCheck {
         if (!Set.of("native", "ascending", "descending").contains(order)) throw new IllegalArgumentException(order);
         code.append("ONLY_KI5_TEST_ZONE_ORDER = \"").append(order).append("\"\n");
         String trafficShape = args.length > 3 ? args[3] : "shared";
-        if (!Set.of("shared", "copied").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
+        if (!Set.of("shared", "copied", "singleplayer", "client").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
         code.append("ONLY_KI5_TEST_TRAFFIC_SHAPE = \"").append(trafficShape).append("\"\n");
         try (var paths = Files.walk(lua)) {
             for (Path path : paths.filter(p -> p.toString().endsWith(".lua")).toList()) {

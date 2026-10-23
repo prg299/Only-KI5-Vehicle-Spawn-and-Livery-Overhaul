@@ -1,6 +1,6 @@
 # Dependencies and load order
 
-The 0.3.0 full-fleet profile requires **87 external Workshop items / 102 modules**.
+The 0.3.1 full-fleet profile requires **87 external Workshop items / 102 modules**.
 The non-vehicle requirements are **that DAMN Library**, **More Car Features +
 Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
 KI5 base vehicles and selected vehicle expansion modules remain original external

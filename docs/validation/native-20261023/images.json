@@ -1,0 +1,38 @@
+{
+  "checkpoint-camo.png": {
+    "sha256": "6152ab8d18ca4f8666130c4cce539816fa46193a2a47cf2b4897db975e9cafb2",
+    "bytes": 2564657,
+    "nativeRun": "full-fleet-20261023-c",
+    "unmodified": true
+  },
+  "mcv-ambulance-mechanics.png": {
+    "sha256": "9f62f739e404cae64b064aa9f0e0f555986211b8e7e364954be775436578afc6",
+    "bytes": 1404357,
+    "nativeRun": "multiplayer-20261023-g-acceptance-reload",
+    "unmodified": true
+  },
+  "police-multiplayer-blue.jpg": {
+    "sha256": "c7e29f71967257c8c1ca25bc9ea2bfe59901d83e48412cd4d9d7364111464105",
+    "bytes": 259617,
+    "nativeRun": "multiplayer-20261023-b",
+    "unmodified": true
+  },
+  "police-multiplayer-red.jpg": {
+    "sha256": "05277aaa08bfb2e1ad7e3e7c672c0e6ddb34debc7dd15db69eeb4f282c2e7a5e",
+    "bytes": 274829,
+    "nativeRun": "multiplayer-20261023-b",
+    "unmodified": true
+  },
+  "police-singleplayer-blue.jpg": {
+    "sha256": "32d45b9d140fe67a50e280b786d472b50ce97287331782039a7a900ea6a392ac",
+    "bytes": 205240,
+    "nativeRun": "singleplayer-20261023-i-reload",
+    "unmodified": true
+  },
+  "police-singleplayer-red.jpg": {
+    "sha256": "3f6e5bf986ea4c3136081b50910a84fa5de77edf156d0ce33dd751f910f9dc05",
+    "bytes": 213667,
+    "nativeRun": "singleplayer-20261023-i-reload",
+    "unmodified": true
+  }
+}
