@@ -2,6 +2,7 @@
 -- including scripted stories, smashed/crash distributions, and burnt pools.
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
+local SpawnSkins = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnSkins"
 local PoliceRegions = require "OnlyKI5VehicleSpawnLiveryOverhaul_PoliceRegions"
 local MOD_TAG = "[OnlyKI5VehicleSpawnLiveryOverhaul]"
 local routablePoliceScripts = {}
@@ -49,6 +50,7 @@ local function routePoliceVehicleToRegion(vehicle)
     -- Native/randomized stories can bypass both Lua creation wrappers and pools.
     -- Resolve exact non-police aliases before the existing regional guard.
     SpawnAliases.routeNewVehicle(vehicle)
+    SpawnSkins.routeNewVehicle(vehicle)
     local square = vehicle:getSquare()
     if not square then return end
 

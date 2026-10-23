@@ -1,0 +1,495 @@
+{
+  "location": {
+    "key": "state-police",
+    "category": "regional-police",
+    "title": "FALLAS LAKE / KENTUCKY STATE POLICE",
+    "probe": [
+      7264,
+      8376
+    ],
+    "frame": [
+      7265,
+      8374
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "state"
+  },
+  "frame": [
+    7265,
+    8374
+  ],
+  "zoom": 1.75,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 199,
+      "sqlId": 148,
+      "script": "Base.92fordCVPI2ksp",
+      "skin": 0,
+      "x": 7259.5,
+      "y": 8385.640625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison"
+      }
+    },
+    {
+      "id": 182,
+      "sqlId": 157,
+      "script": "Base.86fordE150brewster",
+      "skin": 0,
+      "x": 7282.5,
+      "y": 8343.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 174,
+      "sqlId": 155,
+      "script": "Base.VanBurnt",
+      "skin": 0,
+      "x": 7278.3828125,
+      "y": 8415.09375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 201,
+      "sqlId": 158,
+      "script": "Base.92jeepYJse",
+      "skin": 4,
+      "x": 7308.0703125,
+      "y": 8383.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_JP92Jack": "true",
+        "defaultPartSet_JP92Winch": "true",
+        "defaultPartSet_JP92RollBar": "true",
+        "defaultPartSet_JP92Bodykit": "true",
+        "defaultPartSet_JP92Lightbar": "true"
+      }
+    },
+    {
+      "id": 216,
+      "sqlId": 147,
+      "script": "Base.91fordLTDksp",
+      "skin": 2,
+      "x": 7264.0625,
+      "y": 8373.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 173,
+      "sqlId": 169,
+      "script": "Base.93mustangSSP",
+      "skin": 3,
+      "x": 7308.53125,
+      "y": 8341.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 207,
+      "sqlId": 151,
+      "script": "Base.85chevyCapriceWagon2",
+      "skin": 6,
+      "x": 7275.7421875,
+      "y": 8395.09375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 168,
+      "sqlId": 166,
+      "script": "Base.59ambulance",
+      "skin": 0,
+      "x": 7309.2578125,
+      "y": 8407.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "ambulance",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNStretcher": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 241,
+      "sqlId": 165,
+      "script": "Base.93chevySuburban",
+      "skin": 1,
+      "x": 7282.5,
+      "y": 8333.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_SUB93Roofrack": "true",
+        "defaultPartSet_SUB93BugGuard": "true"
+      }
+    },
+    {
+      "id": 238,
+      "sqlId": 149,
+      "script": "Base.93fordTaurusSHO",
+      "skin": 5,
+      "x": 7251.71875,
+      "y": 8376.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 193,
+      "sqlId": 152,
+      "script": "Base.93fordTaurusSHO",
+      "skin": 3,
+      "x": 7275.875,
+      "y": 8401.3203125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 204,
+      "sqlId": 154,
+      "script": "Base.70fordEscortSedan",
+      "skin": 6,
+      "x": 7270.1328125,
+      "y": 8413.484375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 233,
+      "sqlId": 161,
+      "script": "Base.69charger500",
+      "skin": 3,
+      "x": 7308.8515625,
+      "y": 8389.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 255,
+      "sqlId": 163,
+      "script": "Base.85pontiacParisienneSedan",
+      "skin": 2,
+      "x": 7278.90625,
+      "y": 8421.1484375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 254,
+      "sqlId": 156,
+      "script": "Base.70fordEscortCoupe",
+      "skin": 5,
+      "x": 7282.5,
+      "y": 8338.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 249,
+      "sqlId": 162,
+      "script": "Base.91fordRangerXC",
+      "skin": 10,
+      "x": 7308.75,
+      "y": 8362.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_RNG91TruckBedExtras": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 234,
+      "sqlId": 170,
+      "script": "Base.93fordTaurusSHO",
+      "skin": 0,
+      "x": 7308.71875,
+      "y": 8332.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 244,
+      "sqlId": 153,
+      "script": "Base.87chevySuburban",
+      "skin": 0,
+      "x": 7282.5,
+      "y": 8348.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_SUB87Roofrack": "true",
+        "defaultPartSet_SUB87RoofLights": "true",
+        "defaultPartSet_DAMNSunVisor": "true"
+      }
+    },
+    {
+      "id": 195,
+      "sqlId": 160,
+      "script": "Base.90fordF350ambulance",
+      "skin": 0,
+      "x": 7266.4296875,
+      "y": 8334.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNStretcher": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 206,
+      "sqlId": 150,
+      "script": "Base.89volvo245wagon",
+      "skin": 0,
+      "x": 7251.7265625,
+      "y": 8370.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_VL200LipFront": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_VL200Roofrack": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 214,
+      "sqlId": 159,
+      "script": "Base.93chevySilveradoSC",
+      "skin": 7,
+      "x": 7267.2421875,
+      "y": 8328.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_SUB93TailgatePanel": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_SUB93BugGuard": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 208,
+      "sqlId": 171,
+      "script": "Base.93fordTaurusWagon",
+      "skin": 7,
+      "x": 7282.5,
+      "y": 8323.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true"
+      }
+    },
+    {
+      "id": 179,
+      "sqlId": 164,
+      "script": "Base.92fordCVPI2ksp",
+      "skin": 0,
+      "x": 7309.3984375,
+      "y": 8395.5,
+      "z": 0,
+      "lights": 2,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "on"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "f37274f7a74580d12e911c4e8b40700d7d23ef0b58999c9919dfbf49ccc5a072",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

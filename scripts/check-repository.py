@@ -18,7 +18,7 @@ root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
 check(b42['name'] == 'Only KI5: Vehicle Spawn & Livery Overhaul', 'Wrong display name')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.3.1' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(b42['modversion'] == '0.3.2' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')
@@ -52,7 +52,7 @@ for relative, entry in imported.items():
     check(bool(entry['sources']) and all(s['workshopId'] in allowed_origins for s in entry['sources']), 'Unknown import origin: '+relative)
     check(not any(s['workshopId'] in {'3171167894', '3520758551', '3624971238'} for s in entry['sources']), 'External framework was bundled')
 authored_lua = [p for p in lua_files if p.relative_to(MOD).as_posix() not in imported]
-check(len(authored_lua) == 11, f'Unexpected authored runtime module count {len(authored_lua)}')
+check(len(authored_lua) == 12, f'Unexpected authored runtime module count {len(authored_lua)}')
 module_names = {p.stem for p in lua_files}
 for p in lua_files:
     text = p.read_text('utf-8')
@@ -76,7 +76,10 @@ check(not (MOD/'42/media/lua/shared/Translate/EN/IG_UI_EN.txt').exists(), 'Legac
 for name in ('67commandoRanger', '86chevyM1010ambulance', '76chevyK10fossoil', '93fordF350fossoil'):
     check(bool(names.get('IGUI_VehicleName'+name)), 'Missing native JSON variant name: '+name)
 dependencies = json.loads((ROOT/'release/workshop/dependencies.json').read_text('utf-8'))
-check({d['workshopId'] for d in dependencies} == set(profile['WorkshopItems'].split(';')), 'Workshop dependency drift')
+fleet_dependencies=json.loads((ROOT/'config/fleet-dependencies.json').read_text('utf-8'))
+check({d['workshopId'] for d in fleet_dependencies} == set(profile['WorkshopItems'].split(';')), 'Full fleet input inventory drift')
+check({d['workshopId'] for d in dependencies} == {'3171167894','3520758551'}, 'Workshop requirements must contain only damnlib and More Car Features')
+check('id=2490220997' in (ROOT/'release/workshop/description.txt').read_text('utf-8'), 'Missing requested KI5 collection installation link')
 audit = json.loads((ROOT/'docs/permissions-audit.json').read_text('utf-8'))
 check({d['workshopId'] for d in dependencies} <= {i['workshopId'] for i in audit['items']}, 'Unaudited dependency')
 check((ROOT/'LICENSE').read_text().startswith('MIT License'), 'Missing MIT license')
@@ -99,14 +102,24 @@ gallery_path=ROOT/'release/workshop/gallery/manifest.json'
 if gallery_path.exists():
     gallery=json.loads(gallery_path.read_text('utf-8'))
     check(gallery['workshopId']=='3825545131' and gallery['sceneGeneratedByAI'] is False, 'Gallery identity/source drift')
-    check(len(gallery['images'])==7, 'Expected seven reviewed gallery frames')
+    check(len(gallery['images'])==14, 'Expected expanded fourteen-frame location gallery')
+    check([i['category'] for i in gallery['images']] == ['regional-police']*7+['military']*2+['highway']+['civilian']*4, 'Gallery subjects differ from requested set')
+    check(sum(bool(i.get('sheriffLocation')) for i in gallery['images'])==1, 'Expected just one sheriff location')
+    check({i.get('expectedLivery') for i in gallery['images'] if i['category']=='regional-police'}=={'louisville','westPoint','muldraugh','louisvilleCounty','meade','state','airportSecurity'}, 'Regional gallery coverage drift')
+    prior=json.loads((ROOT/'release/workshop/archive/20261024-five-natural/gallery/manifest.json').read_text('utf8'))
+    approved={i['location']:i['sha256'] for i in prior['images'] if i['category']=='military'}
     check(sum(i['bytes'] for i in gallery['images'])==gallery['totalBytes'], 'Gallery size inventory drift')
     for frame in gallery['images']:
         path=gallery_path.parent/frame['file']
         master=ROOT/frame['master']
         check(path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==frame['sha256'], 'Gallery export drift: '+frame['file'])
         check(master.is_file() and hashlib.sha256(master.read_bytes()).hexdigest()==frame['masterSha256'], 'Gallery native source drift: '+frame['file'])
-        check(frame['dimensions'][0]*9==frame['dimensions'][1]*16, 'Gallery aspect ratio drift')
+        check(frame['dimensions']==[1024,512] and frame['staged'] is False, 'Gallery dimensions or natural-capture policy drift')
+        title=ROOT/frame['titleMaster']
+        check(title.is_file() and hashlib.sha256(title.read_bytes()).hexdigest()==frame['titleSha256'], 'Location lettering provenance drift')
+        if frame['category']=='military':
+            check(frame.get('retainedApprovedImage') and approved[frame['location']]==frame['sha256'], 'Approved military image changed')
+        else:check(frame.get('photoVisibilityReveal') is True, 'Replacement frame lacks the native photo visibility setting')
 for required in ['README.md', 'CREDITS.md', 'THIRD_PARTY_NOTICES.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/release-readiness.md']:
     check((ROOT/required).is_file(), 'Missing '+required)
 

@@ -9,8 +9,8 @@ from native_files import read_json
 
 p=argparse.ArgumentParser();p.add_argument('run');p.add_argument('client',choices=['a','b'])
 a=p.parse_args();root=Path(__file__).resolve().parents[1]
-run=(root/'build/native'/a.run).resolve()
-if not run.is_relative_to(root/'build/native'):raise ValueError('Run root')
+from native_paths import owned_run
+run=owned_run(a.run)
 credentials=json.loads((run/'credentials.json').read_text())
 client=json.loads((run/'clients.json').read_text())[a.client]
 inputs=[]

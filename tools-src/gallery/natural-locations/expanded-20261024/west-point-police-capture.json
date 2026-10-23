@@ -1,0 +1,389 @@
+{
+  "location": {
+    "key": "west-point-police",
+    "category": "regional-police",
+    "title": "WEST POINT POLICE DEPARTMENT",
+    "probe": [
+      11790,
+      6806
+    ],
+    "frame": [
+      11788,
+      6804
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "westPoint"
+  },
+  "frame": [
+    11788,
+    6804
+  ],
+  "zoom": 1.75,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 244,
+      "sqlId": 108,
+      "script": "Base.91fordLTDpdWestPoint",
+      "skin": 0,
+      "x": 11828.828125,
+      "y": 6800.5,
+      "z": 0,
+      "lights": 2,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "on"
+      }
+    },
+    {
+      "id": 179,
+      "sqlId": 105,
+      "script": "Base.70dodgeTA",
+      "skin": 6,
+      "x": 11760.671875,
+      "y": 6786.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_TireFrontLeft": "true",
+        "defaultPartSet_TireFrontRight": "true",
+        "defaultPartSet_TireRearLeft": "true",
+        "defaultPartSet_TireRearRight": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 199,
+      "sqlId": 99,
+      "script": "Base.92fordCVPI2WestPoint",
+      "skin": 0,
+      "x": 11782.9375,
+      "y": 6813.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 214,
+      "sqlId": 111,
+      "script": "Base.70fordEscortSedan",
+      "skin": 0,
+      "x": 11756.1640625,
+      "y": 6837.1015625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 195,
+      "sqlId": 107,
+      "script": "Base.SmallCar02Burnt",
+      "skin": 0,
+      "x": 11812,
+      "y": 6836,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 241,
+      "sqlId": 101,
+      "script": "Base.92fordCVPIWestPoint",
+      "skin": 0,
+      "x": 11802.5,
+      "y": 6786.9375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison"
+      }
+    },
+    {
+      "id": 255,
+      "sqlId": 110,
+      "script": "Base.84oldsmobile98Coupe",
+      "skin": 6,
+      "x": 11829.0078125,
+      "y": 6791.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 114,
+      "script": "Base.76chevyK10",
+      "skin": 2,
+      "x": 11774.40625,
+      "y": 6851.359375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_CH76TruckBedExtras": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 204,
+      "sqlId": 104,
+      "script": "Base.70fordEscortSedan",
+      "skin": 3,
+      "x": 11788.328125,
+      "y": 6834.1875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamw",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 207,
+      "sqlId": 109,
+      "script": "Base.04vwTouran",
+      "skin": 2,
+      "x": 11762.796875,
+      "y": 6837.65625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 238,
+      "sqlId": 98,
+      "script": "Base.93chevySuburbanPoliceWPPD",
+      "skin": 0,
+      "x": 11783.015625,
+      "y": 6807.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 193,
+      "sqlId": 103,
+      "script": "Base.92fordCVPIWestPoint",
+      "skin": 0,
+      "x": 11771.9375,
+      "y": 6825.0546875,
+      "z": 0,
+      "lights": 2,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "on"
+      }
+    },
+    {
+      "id": 168,
+      "sqlId": 112,
+      "script": "Base.70elCamino",
+      "skin": 4,
+      "x": 11771.5,
+      "y": 6762.796875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNVinylRoof": "true"
+      }
+    },
+    {
+      "id": 174,
+      "sqlId": 115,
+      "script": "Base.63beetle",
+      "skin": 2,
+      "x": 11837.2890625,
+      "y": 6837.1015625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_BTL63Roofrack": "true"
+      }
+    },
+    {
+      "id": 206,
+      "sqlId": 97,
+      "script": "Base.93chevySuburbanPoliceWPPD",
+      "skin": 0,
+      "x": 11782.6015625,
+      "y": 6801.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 233,
+      "sqlId": 100,
+      "script": "Base.91fordLTDpdWestPoint",
+      "skin": 0,
+      "x": 11805.5,
+      "y": 6796.53125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison"
+      }
+    },
+    {
+      "id": 216,
+      "sqlId": 113,
+      "script": "Base.93chevySilveradoSClong",
+      "skin": 4,
+      "x": 11839.9921875,
+      "y": 6800.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_SUB93TailgatePanel": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_SUB93BugGuard": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 249,
+      "sqlId": 102,
+      "script": "Base.91fordLTDpdWestPoint",
+      "skin": 0,
+      "x": 11811.5,
+      "y": 6796.53125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "27c686f444f4380a6a08997625f31e3e899e54ef6d29f65dd4f1e64231dd9900",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

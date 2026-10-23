@@ -1,0 +1,33 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-23",
+  "reference": "tools-src/art/only-ki5-title-master.png",
+  "generatedContribution": "Location lettering on transparent layers only; no game scene generation",
+  "prompts": [
+    {
+      "key": "west-point-police",
+      "title": "WEST POINT\nPOLICE DEPARTMENT",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay, matching the attached ONLY KI5 title's condensed block lettering and off-white face, strong dark charcoal outline and restrained shadow. Replace the reference wording entirely with the following exact text (line breaks as shown):\nWEST POINT\nPOLICE DEPARTMENT\nOnly these words. Main location line bold and large, second line smaller when present. Modern compact readable survival-game typography, restrained very light texture. Horizontal centered title on a wide transparent canvas. No scene, vehicles, photos, buildings, scenery, emblems, logos, icons, badges, panels, rectangular backing or borders. No other text or watermark. Generous genuinely transparent clear margins, all glyphs complete. This is a lettering layer to be composited on unchanged actual gameplay pixels; do not generate gameplay."
+    },
+    {
+      "key": "muldraugh-police",
+      "title": "MULDRAUGH\nPOLICE DEPARTMENT",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay, matching the attached ONLY KI5 title's condensed block lettering and off-white face, strong dark charcoal outline and restrained shadow. Replace the reference wording entirely with the following exact text (line breaks as shown):\nMULDRAUGH\nPOLICE DEPARTMENT\nOnly these words. Main location line bold and large, second line smaller when present. Modern compact readable survival-game typography, restrained very light texture. Horizontal centered title on a wide transparent canvas. No scene, vehicles, photos, buildings, scenery, emblems, logos, icons, badges, panels, rectangular backing or borders. No other text or watermark. Generous genuinely transparent clear margins, all glyphs complete. This is a lettering layer to be composited on unchanged actual gameplay pixels; do not generate gameplay."
+    },
+    {
+      "key": "louisville-military-checkpoint",
+      "title": "LOUISVILLE\nMILITARY CHECKPOINT",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay, matching the attached ONLY KI5 title's condensed block lettering and off-white face, strong dark charcoal outline and restrained shadow. Replace the reference wording entirely with the following exact text (line breaks as shown):\nLOUISVILLE\nMILITARY CHECKPOINT\nOnly these words. Main location line bold and large, second line smaller when present. Modern compact readable survival-game typography, restrained very light texture. Horizontal centered title on a wide transparent canvas. No scene, vehicles, photos, buildings, scenery, emblems, logos, icons, badges, panels, rectangular backing or borders. No other text or watermark. Generous genuinely transparent clear margins, all glyphs complete. This is a lettering layer to be composited on unchanged actual gameplay pixels; do not generate gameplay."
+    },
+    {
+      "key": "secret-military-base",
+      "title": "SECRET MILITARY BASE\nNEAR ROSEWOOD",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay, matching the attached ONLY KI5 title's condensed block lettering and off-white face, strong dark charcoal outline and restrained shadow. Replace the reference wording entirely with the following exact text (line breaks as shown):\nSECRET MILITARY BASE\nNEAR ROSEWOOD\nOnly these words. Main location line bold and large, second line smaller when present. Modern compact readable survival-game typography, restrained very light texture. Horizontal centered title on a wide transparent canvas. No scene, vehicles, photos, buildings, scenery, emblems, logos, icons, badges, panels, rectangular backing or borders. No other text or watermark. Generous genuinely transparent clear margins, all glyphs complete. This is a lettering layer to be composited on unchanged actual gameplay pixels; do not generate gameplay."
+    },
+    {
+      "key": "louisville-highway",
+      "title": "LOUISVILLE HIGHWAY",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay, matching the attached ONLY KI5 title's condensed block lettering and off-white face, strong dark charcoal outline and restrained shadow. Replace the reference wording entirely with the following exact text (line breaks as shown):\nLOUISVILLE HIGHWAY\nOnly these words. Main location line bold and large, second line smaller when present. Modern compact readable survival-game typography, restrained very light texture. Horizontal centered title on a wide transparent canvas. No scene, vehicles, photos, buildings, scenery, emblems, logos, icons, badges, panels, rectangular backing or borders. No other text or watermark. Generous genuinely transparent clear margins, all glyphs complete. This is a lettering layer to be composited on unchanged actual gameplay pixels; do not generate gameplay."
+    }
+  ]
+}

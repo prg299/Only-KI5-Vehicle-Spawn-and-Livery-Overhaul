@@ -13,7 +13,9 @@ Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside 
 
 [hr][/hr]
 [h2]Requirements[/h2]
-[b]Build 42.21[/b], the listed original KI5 vehicle packs, damnlib and More Car Features / WayMoreCars. Enable requirements before this mod.
+[b]Build 42.21[/b], damnlib and More Car Features / WayMoreCars.
+
+Install and enable the vehicles from the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] before this mod. Vehicle packs are installed separately and are not individual Workshop requirements here.
 
 [b]YAPZLib is not required.[/b] Internal helpers replace it.
 
@@ -25,7 +27,7 @@ Changes appear in [b]fresh chunks[/b]; existing vehicles are not rewritten. Back
 
 Disable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanilla selection mods and the old Vehicle Suite integrations: their selected content is already included.
 
-[b]0.3.1 unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
+[b]Unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
 
 [hr][/hr]
 [h2]Credits[/h2]
@@ -37,19 +39,18 @@ Disable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanill
 [*] Branco - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo[/url]; Papa_Chad - supported vehicle families.
 [*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url].
 [*] Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url] selection inspiration and duplicate-ID data.
-[*] The Indie Stone - Project Zomboid. Erika / prg299 - integration, authored helpers, tests and gameplay screenshot; ImageGen - title lettering.
 [/list]
 
 If an original author reaches out, their integrated content will be removed and their mod moved to an external dependency, with credits retained. MIT covers authored contributions only; integrated content retains its original ownership.
 
 [hr][/hr]
 [h2]Info[/h2]
-AI was used to make this mod. If you have a problem with that, don't download it.
+AI was used in the process to make this mod. If you have a problem with that, don't download it.
 
-[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code, full credits and test results on GitHub[/url]
+[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code on GitHub[/url]
 
 [hr][/hr]
 [h2]Support development[/h2]
-Enjoying Only KI5? Support future updates on Ko-fi.
+If you enjoy my work, you can support me by leaving a like!
 
-[url=https://ko-fi.com/bearski][img]https://storage.ko-fi.com/cdn/kofi5.png?v=6[/img][/url]
+Want to follow my projects? You can check me out on [url=https://ko-fi.com/bearski]Ko-fi[/url]

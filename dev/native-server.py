@@ -6,8 +6,8 @@ from native_files import read_json
 p=argparse.ArgumentParser();p.add_argument('run');p.add_argument('--code');p.add_argument('--file',type=Path)
 p.add_argument('--output',type=Path);p.add_argument('--quiet',action='store_true')
 a=p.parse_args();root=Path(__file__).resolve().parents[1]
-run=(root/'build/native'/a.run).resolve()
-if not run.is_relative_to(root/'build/native'):raise ValueError('Owned run')
+from native_paths import owned_run
+run=owned_run(a.run)
 
 def call(code):
     if (run/'request.json').exists():raise RuntimeError('Another action is pending')

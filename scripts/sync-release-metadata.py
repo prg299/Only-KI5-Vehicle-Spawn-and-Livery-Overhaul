@@ -3,6 +3,11 @@ from pathlib import Path
 import json
 import re
 import shutil
+import argparse
+
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--page-only',action='store_true',help='Synchronize page/dependency documentation without touching the frozen player payload')
+args=parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT/'mod/OnlyKI5VehicleSpawnLiveryOverhaul'
@@ -17,21 +22,30 @@ lines = ['version=1', 'id='+workshop_id, 'title='+metadata['title']]
 lines += ['description='+line for line in description.splitlines()]
 lines += ['visibility='+metadata['visibility'], 'tags='+';'.join(metadata['tags'])]
 (ROOT/'release/workshop/workshop.txt').write_text('\n'.join(lines)+'\n', 'utf-8')
-for name in ('CREDITS.md', 'THIRD_PARTY_NOTICES.md'):
+for name in (() if args.page_only else ('CREDITS.md', 'THIRD_PARTY_NOTICES.md')):
     text = (ROOT/name).read_text('utf-8')
     text = re.sub(r'\]\((docs/[^)]+)\)', lambda m: ']('+URL+m[1]+')', text)
     (MOD/name).write_text(text, 'utf-8')
-shutil.copy2(ROOT/'LICENSE', MOD/'LICENSE')
-(MOD/'provenance').mkdir(exist_ok=True)
-shutil.copy2(ROOT/'docs/imported-content.json', MOD/'provenance/imported-content.json')
+if not args.page_only:
+    shutil.copy2(ROOT/'LICENSE', MOD/'LICENSE')
+    (MOD/'provenance').mkdir(exist_ok=True)
+    shutil.copy2(ROOT/'docs/imported-content.json', MOD/'provenance/imported-content.json')
 dependencies = json.loads((ROOT/'release/workshop/dependencies.json').read_text('utf-8'))
-module_count = sum(len(d['modIds']) for d in dependencies)
+fleet_dependencies=json.loads((ROOT/'config/fleet-dependencies.json').read_text('utf-8'))
+module_count = sum(len(d['modIds']) for d in fleet_dependencies)
 descriptor = dict(line.split('=', 1) for line in (MOD/'mod.info').read_text('utf-8').splitlines() if '=' in line)
 header = f"""# Dependencies and load order
 
-The {descriptor['modversion']} full-fleet profile requires **{len(dependencies)} external Workshop items / {module_count} modules**.
-The non-vehicle requirements are **that DAMN Library**, **More Car Features +
-Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
+The Workshop page lists only **{len(dependencies)} required items**: **that DAMN Library**
+and **More Car Features + Spawn Zones Expansion / WayMoreCars**.
+Install the vehicles separately from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=2490220997).
+Individual vehicle packs are not attached as Workshop requirements.
+**YAPZLib is not required.**
+
+The {descriptor['modversion']} full-fleet runtime profile still uses **{len(fleet_dependencies)} external items / {module_count} modules**.
+The complete input inventory is retained below and in config/fleet-dependencies.json.
+The unchanged player descriptor requires those installed/enabled modules; this
+page-list cleanup does not replace or bundle the vehicle models.
 
 **Highly recommended, optional:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey.
 Follow its server/client setup instructions. It is not bundled or a required item,
@@ -78,6 +92,6 @@ See [credits](../CREDITS.md), [provenance](imported-content.json),
 | --- | --- | --- |
 """
 rows = [f"| [{d['name']}]({d['url']}) | \x60{d['workshopId']}\x60 | "
-        + ', '.join('\x60'+m+'\x60' for m in d['modIds'])+' |' for d in dependencies]
+        + ', '.join('\x60'+m+'\x60' for m in d['modIds'])+' |' for d in fleet_dependencies]
 (ROOT/'docs/dependencies.md').write_text(header+'\n'.join(rows)+'\n', 'utf-8')
 print('Synchronized Workshop description, linked credits, license, package provenance and dependency list.')

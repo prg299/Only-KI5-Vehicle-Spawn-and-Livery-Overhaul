@@ -1,8 +1,18 @@
-# Native release acceptance — 0.3.1
+# Native release acceptance
 
 Tested 2026-10-23 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521). The native checks below passed in disposable worlds and an ordinary dedicated server with two joined native clients. An unlisted Steam testing item is uploaded; public release remains pending and the limits below are not claimed as passed.
 
-## Results
+## 0.3.2 focused livery follow-up
+
+The only player-payload changes are the new SpawnSkins module, its call from the existing pre-creation router and the two version descriptors. The catalog, vehicle-class selection and military pools are unchanged. The running dedicated server reports 95.0% Humvee share in general military, light-military and highway military-car groups; both joined/rejoined checks assert those weights.
+
+The exhaustive production-Lua fixture verifies 95% ordinary / 4% medic / 1% JTF per new eight-skin Humvee, alternate six-skin indices, client exclusion, unknown-layout exclusion, saved vehicles and repeat callbacks. All 56 runtime Lua files compile; all 13 policy scenarios and six PowerShell parser checks pass.
+
+Native SP separately observes five natural checkpoint Humvees and 20 explicit construction fixtures. Native MP separately observes one natural checkpoint Humvee and 20 explicit fixtures, with 40 authority/peer skin comparisons. All 20 fixtures in each mode retain their SQL identities, skins and saved decisions across a complete process restart; both rejoined MP clients match the server in all 40 comparisons. All four owned runs exit cleanly with no desktop switch. Small native samples do not prove population frequencies.
+
+[Focused receipts and clean exits](validation/native-20261024-humvee/evidence.json), [raw tested payload](validation/native-20261024-humvee/tested-payload.json) and [canonical payload](validation/native-20261024-humvee/canonical-payload.json) cover the 290-file, 46,571,538-byte 0.3.2 candidate. The original evidence below remains a dated 0.3.1 record. The SP test driver initially used an unsupported save signature, then transient vehicle IDs after chunk reload; those harness issues were corrected to save(true), persisted markers and SQL identity before the clean restart comparisons. No gameplay fix was inferred from those harness failures.
+
+## Original 0.3.1 results
 
 | Area | Native evidence | Result |
 | --- | --- | --- |

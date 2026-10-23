@@ -1,0 +1,865 @@
+{
+  "location": {
+    "key": "west-point-main-street",
+    "category": "civilian",
+    "title": "WEST POINT MAIN STREET",
+    "probe": [
+      11945,
+      6900
+    ],
+    "frame": [
+      11935,
+      6904
+    ],
+    "zoom": 2.5,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing"
+  },
+  "frame": [
+    11935,
+    6904
+  ],
+  "zoom": 2.5,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 222,
+      "sqlId": 411,
+      "script": "Base.85pontiacParisienneSedan",
+      "skin": 3,
+      "x": 11884.5,
+      "y": 6927.9375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 208,
+      "sqlId": 353,
+      "script": "Base.87fordF700bank",
+      "skin": 0,
+      "x": 11899.5,
+      "y": 6929.1875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "special_banktruck",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 189,
+      "sqlId": 336,
+      "script": "Base.85chevyStepVanUsLogistics",
+      "skin": 0,
+      "x": 11968.5,
+      "y": 6923.953125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "postal",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 217,
+      "sqlId": 339,
+      "script": "Base.84mercLWB4M",
+      "skin": 0,
+      "x": 11919.7421875,
+      "y": 6879.3984375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_W460Roofrack": "true",
+        "defaultPartSet_W460Bodykit": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_W460Guards": "true",
+        "defaultPartSet_DAMNGasCanOne": "true"
+      }
+    },
+    {
+      "id": 243,
+      "sqlId": 357,
+      "script": "Base.84cadillacDeVilleSedan",
+      "skin": 4,
+      "x": 11898.0078125,
+      "y": 6856.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 207,
+      "sqlId": 408,
+      "script": "Base.91fordLTD",
+      "skin": 8,
+      "x": 11890.5,
+      "y": 6927.8828125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_LTD91Roofrack": "true"
+      }
+    },
+    {
+      "id": 197,
+      "sqlId": 329,
+      "script": "Base.93fordF150",
+      "skin": 0,
+      "x": 11912.5234375,
+      "y": 6901.765625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNRoofLights": "true"
+      }
+    },
+    {
+      "id": 184,
+      "sqlId": 320,
+      "script": "Base.75grandPrixSJ",
+      "skin": 3,
+      "x": 11948.234375,
+      "y": 6898.1796875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamw",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_PRX75Roofrack": "true",
+        "defaultPartSet_PRX75CordovaTop": "true"
+      }
+    },
+    {
+      "id": 176,
+      "sqlId": 332,
+      "script": "Base.SmallCar02Burnt",
+      "skin": 0,
+      "x": 11922.8984375,
+      "y": 6927.296875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 205,
+      "sqlId": 327,
+      "script": "Base.93chevySilveradoXC",
+      "skin": 1,
+      "x": 11922.4375,
+      "y": 6915.8828125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_SUB93TailgatePanel": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_SUB93BugGuard": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 200,
+      "sqlId": 333,
+      "script": "Base.63Type2Van",
+      "skin": 7,
+      "x": 11941.3671875,
+      "y": 6935.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_VAN63Roofrack": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 179,
+      "sqlId": 352,
+      "script": "Base.85buickLeSabreWagon2",
+      "skin": 6,
+      "x": 11969.828125,
+      "y": 6852.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 181,
+      "sqlId": 406,
+      "script": "Base.69mini",
+      "skin": 4,
+      "x": 11894.0078125,
+      "y": 6906.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 202,
+      "sqlId": 410,
+      "script": "Base.93fordF150",
+      "skin": 1,
+      "x": 11887.828125,
+      "y": 6893.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNRoofLights": "true"
+      }
+    },
+    {
+      "id": 242,
+      "sqlId": 341,
+      "script": "Base.70chevelleSedan",
+      "skin": 0,
+      "x": 11977.5,
+      "y": 6873.6875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNVinylRoof": "true"
+      }
+    },
+    {
+      "id": 169,
+      "sqlId": 340,
+      "script": "Base.85buickLeSabreWagon",
+      "skin": 5,
+      "x": 11953.828125,
+      "y": 6942.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 193,
+      "sqlId": 414,
+      "script": "Base.04vwTouran",
+      "skin": 2,
+      "x": 11880.46875,
+      "y": 6862.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 195,
+      "sqlId": 343,
+      "script": "Base.PickupSpecialBurnt",
+      "skin": 2,
+      "x": 11922.4609375,
+      "y": 6863.1484375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 236,
+      "sqlId": 349,
+      "script": "Base.87buickRegalTurboTfbi",
+      "skin": 8,
+      "x": 11967.5,
+      "y": 6945.6796875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GNX87Roofrack": "true",
+        "defaultPartSet_GNX87FrontLip": "true"
+      }
+    },
+    {
+      "id": 191,
+      "sqlId": 354,
+      "script": "Base.93chevySuburbanpdWestPoint",
+      "skin": 0,
+      "x": 11972.5,
+      "y": 6903.5,
+      "z": 0,
+      "lights": 2,
+      "siren": 0,
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "on"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 413,
+      "script": "Base.87fordF700box",
+      "skin": 6,
+      "x": 11885.5,
+      "y": 6948.9921875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "special_boxtruck",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_B700RoofLights": "true"
+      }
+    },
+    {
+      "id": 252,
+      "sqlId": 355,
+      "script": "Base.04vwTouran",
+      "skin": 9,
+      "x": 11897.5,
+      "y": 6942.46875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 187,
+      "sqlId": 328,
+      "script": "Base.89trooper",
+      "skin": 1,
+      "x": 11919.7578125,
+      "y": 6897.9296875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_ISZ89Roofrack": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 183,
+      "sqlId": 331,
+      "script": "Base.ModernCar02Burnt",
+      "skin": 0,
+      "x": 11922.40625,
+      "y": 6921.0703125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 178,
+      "sqlId": 325,
+      "script": "Base.84cadillacDeVilleSedan",
+      "skin": 10,
+      "x": 11924.7265625,
+      "y": 6898.0625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamw",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 210,
+      "sqlId": 338,
+      "script": "Base.Trailer61Airflyte",
+      "skin": 2,
+      "x": 11919.7734375,
+      "y": 6873.796875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNPropaneTankOne": "true",
+        "defaultPartSet_KI5CRWings": "true"
+      }
+    },
+    {
+      "id": 203,
+      "sqlId": 348,
+      "script": "Base.75grandPrixLJ",
+      "skin": 2,
+      "x": 11967.5,
+      "y": 6950.890625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_PRX75Roofrack": "true",
+        "defaultPartSet_PRX75CordovaTop": "true"
+      }
+    },
+    {
+      "id": 250,
+      "sqlId": 337,
+      "script": "Base.85buickLeSabreSedan",
+      "skin": 0,
+      "x": 11906.0625,
+      "y": 6901.8046875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 196,
+      "sqlId": 407,
+      "script": "Base.PickupSpecialBurnt",
+      "skin": 1,
+      "x": 11894.6953125,
+      "y": 6901.4140625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 228,
+      "sqlId": 326,
+      "script": "Base.82firebird",
+      "skin": 6,
+      "x": 11922.3125,
+      "y": 6909.90625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 249,
+      "sqlId": 342,
+      "script": "Base.69mini",
+      "skin": 5,
+      "x": 11967.5,
+      "y": 6940.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 253,
+      "sqlId": 322,
+      "script": "Base.67gt500",
+      "skin": 6,
+      "x": 11942.7421875,
+      "y": 6898.453125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamw",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_TireFrontLeft": "true",
+        "defaultPartSet_TireFrontRight": "true",
+        "defaultPartSet_TireRearLeft": "true",
+        "defaultPartSet_TireRearRight": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 214,
+      "sqlId": 335,
+      "script": "Base.87fordF700box",
+      "skin": 6,
+      "x": 11983.15625,
+      "y": 6901.75,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjame",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_B700RoofLights": "true"
+      }
+    },
+    {
+      "id": 247,
+      "sqlId": 409,
+      "script": "Base.91fordLTDtaxi",
+      "skin": 0,
+      "x": 11882.8828125,
+      "y": 6906.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 233,
+      "sqlId": 412,
+      "script": "Base.70fordEscortCoupe",
+      "skin": 6,
+      "x": 11880.328125,
+      "y": 6868.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 211,
+      "sqlId": 330,
+      "script": "Base.PickUpVanBurnt",
+      "skin": 0,
+      "x": 11919.890625,
+      "y": 6891.03125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 167,
+      "sqlId": 324,
+      "script": "Base.PickUpVanBurnt",
+      "skin": 0,
+      "x": 11922.0703125,
+      "y": 6903.015625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 221,
+      "sqlId": 405,
+      "script": "Base.63Type2VanApocalypse",
+      "skin": 0,
+      "x": 11888.3671875,
+      "y": 6906.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNSpareTireRoof": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 209,
+      "sqlId": 323,
+      "script": "Base.90bmwE30m3",
+      "skin": 0,
+      "x": 11930.65625,
+      "y": 6898.265625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamw",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTireTrunk": "true",
+        "defaultPartSet_BMWE30Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 223,
+      "sqlId": 334,
+      "script": "Base.88chevyS10",
+      "skin": 2,
+      "x": 11919.65625,
+      "y": 6885.4609375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 230,
+      "sqlId": 344,
+      "script": "Base.69miniIJ",
+      "skin": 2,
+      "x": 11899.0078125,
+      "y": 6893.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 248,
+      "sqlId": 356,
+      "script": "Base.85pontiacParisienneWagon",
+      "skin": 9,
+      "x": 11903.4921875,
+      "y": 6942.890625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 255,
+      "sqlId": 358,
+      "script": "Base.63beetle",
+      "skin": 2,
+      "x": 11897.2578125,
+      "y": 6850.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_BTL63Roofrack": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "5214a8aa0303ecff0f5ca1e52459aafc2d38e4e1b2321ea0aa93b23e4fa6d798",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

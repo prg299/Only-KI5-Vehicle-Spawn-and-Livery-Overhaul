@@ -10,6 +10,8 @@ Runtime explicitly requires the integrated VMZ distribution and zone-registratio
 
 ## Native military world support
 
+`SpawnSkins` owns new Humvee livery selection. The existing pre-creation routing callback invokes it after aliases resolve, before requiring a coordinate-bearing police square. Its audited six/eight-skin profiles keep the eight-skin medic/JTF entries at 4%/1%. Selection runs only on spawning authority, persists the zero-based decision in vehicle mod data and returns for already-created vehicles. Unknown layouts and separate SWAT/sheriff/burnt scripts are left alone. See [Humvee livery weights](humvee-liveries.md).
+
 - `WorldSupport` owns server/single-player authority checks, small table/angle operations and filling only empty newly created scene containers through native loot APIs.
 - `MilitaryZones` registers vehicle zones through `IsoWorld.registerVehiclesZone`, deduplicates callbacks, respects overriding map cells across all lot directories, and retains skinned civilian variants when clearing military source pools. It chains the existing global `reloadLuaFile`, preserving its return values, to merge edits only into explicitly registered map `objects.lua` files before the native loader consumes them. A weak vehicle set gates military parking angles to newly created authoritative vehicles.
 - `RoadScene` adapts the original recipes' operations to native `RandomizedWorldBase` vehicle, trailer, personnel, corpse and object APIs. Weighted selection uses the final fleet distribution and validates scripts/towing parts; cardinal transforms place local recipe coordinates in the world.

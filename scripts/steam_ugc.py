@@ -79,6 +79,8 @@ class Steam:
         self.bind('SteamAPI_ISteamUGC_UpdateItemPreviewFile', BOOL, P, U64, U32, C.c_char_p)
         self.bind('SteamAPI_ISteamUGC_SubmitItemUpdate', U64, P, U64, C.c_char_p)
         self.bind('SteamAPI_ISteamUGC_AddDependency', U64, P, U64, U64)
+        self.bind('SteamAPI_ISteamUGC_RemoveDependency', U64, P, U64, U64)
+        self.bind('SteamAPI_ISteamUGC_RemoveItemPreview', BOOL, P, U64, U32)
         error = C.create_string_buffer(1024)
         if self.api.SteamAPI_InitFlat(error) != 0:
             raise RuntimeError('Steam API initialization failed: ' + error.value.decode(errors='replace'))
@@ -181,7 +183,22 @@ class Steam:
             present.add(child)
             completed(dict(operation='addDependency', workshopId=child, name=DEPENDENCIES[child], status='complete', result=result.result))
 
-    def upload_page(self, files, existing, description=None):
+    def remove_dependencies(self, existing, allowed, completed):
+        """Remove only the owner-authorized vehicle requirements, idempotently."""
+        unwanted=set(existing['dependencies'])-set(DEPENDENCIES)
+        if unwanted-set(allowed):
+            raise ValueError('Unexpected requirements; refusing to remove unknown items')
+        for child in sorted(unwanted):
+            fresh=self.query()
+            if child not in fresh['dependencies']:
+                continue
+            completed(dict(operation='removeDependency',workshopId=child,status='submitting'))
+            result=self.call(self.api.SteamAPI_ISteamUGC_RemoveDependency(self.ugc,ITEM,child),DependencyResult,3413)
+            if result.parent!=ITEM or result.child!=child:
+                raise RuntimeError('Removal callback identity mismatch; query before retrying')
+            completed(dict(operation='removeDependency',workshopId=child,status='complete',result=result.result))
+
+    def upload_page(self, files, existing, description=None, replace_gallery=False):
         """RVI's preview updater, restricted to this already-unlisted item.
 
         Does not set content, main cover, title, tags or visibility. Query before
@@ -196,6 +213,11 @@ class Steam:
                 self.ugc, handle, description.encode('utf-8')):
             raise RuntimeError('Steam rejected description')
         indexes = {p['name']: p['index'] for p in existing['previews']}
+        if replace_gallery:
+            for index in sorted(indexes.values(),reverse=True):
+                if not self.api.SteamAPI_ISteamUGC_RemoveItemPreview(self.ugc,handle,index):
+                    raise RuntimeError('Steam rejected removal of old gallery preview')
+            indexes={}
         for path in files:
             encoded = str(path).encode('utf-8')
             if path.name in indexes:

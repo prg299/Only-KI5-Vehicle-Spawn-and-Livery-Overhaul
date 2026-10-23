@@ -1,0 +1,152 @@
+{
+  "location": {
+    "key": "muldraugh-industrial",
+    "category": "civilian",
+    "title": "MULDRAUGH / MCCOY LOGGING",
+    "probe": [
+      10340,
+      9290
+    ],
+    "frame": [
+      10346,
+      9267
+    ],
+    "zoom": 2,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing"
+  },
+  "frame": [
+    10346,
+    9267
+  ],
+  "zoom": 2,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 209,
+      "sqlId": 318,
+      "script": "Base.86fordE150mccoy",
+      "skin": 0,
+      "x": 10348.5,
+      "y": 9264.84375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 167,
+      "sqlId": 402,
+      "script": "Base.86fordE150mccoy",
+      "skin": 0,
+      "x": 10351.5,
+      "y": 9237.84375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 184,
+      "sqlId": 404,
+      "script": "Base.86fordE150mccoy",
+      "skin": 0,
+      "x": 10342.5,
+      "y": 9237.84375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 178,
+      "sqlId": 401,
+      "script": "Base.76chevyK20mccoy",
+      "skin": 0,
+      "x": 10348.5,
+      "y": 9237.859375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_CH76TruckBedExtras": "true"
+      }
+    },
+    {
+      "id": 253,
+      "sqlId": 317,
+      "script": "Base.76chevyK10mccoy",
+      "skin": 0,
+      "x": 10342.5,
+      "y": 9264.7109375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_CH76TruckBedCover": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 228,
+      "sqlId": 319,
+      "script": "Base.TrailerM127stake",
+      "skin": 2,
+      "x": 10339,
+      "y": 9256.9921875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 205,
+      "sqlId": 403,
+      "script": "Base.86fordE150treyBaines",
+      "skin": 0,
+      "x": 10339.5,
+      "y": 9237.671875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "mccoy",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "bcafede625382367a4d2237473e94c3c0cb9bba79434d5c3897023e47036aa1f",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

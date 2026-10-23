@@ -5,6 +5,8 @@ assert(not ActiveMods.requiresResetLua(current),'Photo profile needs a Lua reset
 MainScreen.instance:setDefaultSandboxVars()
 SandboxVars.Zombies=6
 SandboxVars.VehicleEasyUse=true
+-- Photo-world abundance only; does not ship or change the player's settings.
+SandboxVars.CarSpawnRate=5
 SandboxVars.ZombieConfig.PopulationMultiplier=0
 SandboxVars.ZombieConfig.PopulationStartMultiplier=0
 SandboxVars.ZombieConfig.PopulationPeakMultiplier=0

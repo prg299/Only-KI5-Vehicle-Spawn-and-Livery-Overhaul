@@ -6,7 +6,7 @@ Credentials are handled only by Steam's existing cache, outside this repository.
 from pathlib import Path
 from datetime import datetime,timezone
 import argparse,hashlib,json,os,re,shutil,subprocess,time
-from steam_workshop import metadata,reconcile_ids,vdf_field,make_vdf,retain_id,plain_quotes,read_as_steamcmd
+from steam_workshop import metadata,reconcile_ids,vdf_field,make_vdf,retain_id,plain_quotes,read_as_steamcmd,quote
 
 ROOT=Path(__file__).resolve().parents[1]
 RELEASE=ROOT/'release/workshop'
@@ -18,6 +18,8 @@ VDF=PRIVATE/'only-ki5-item.vdf'
 IDENTITY=RELEASE/'steamcmd-identity.json'
 STEAMCMD=Path(os.environ.get('ONLY_KI5_STEAMCMD',str(Path(os.environ['LOCALAPPDATA'])/'GameMods/SteamCMD/steamcmd.exe')))
 PROTECTED_IDS={'3806374180','3811728541'}
+VERSION='0.3.2'
+NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-humvee'
 
 def hashes(folder):
     return {p.relative_to(folder).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
@@ -45,13 +47,13 @@ def keep_id():
         for path in (RELEASE/'workshop.txt',STAGE/'workshop.txt'):retain_id(path,result)
     return result
 
-def prepare():
+def prepare(preserve_page=False):
     PRIVATE.mkdir(parents=True,exist_ok=True)
     expected=hashes(SOURCE)
     package=STAGE/'Contents/mods'/MOD_ID
     if hashes(package)!=expected:raise ValueError('Stage differs from source; prepare a clean stage first')
     if json.loads((STAGE/'payload-manifest.json').read_text(encoding='utf-8'))!=expected:raise ValueError('Payload manifest differs')
-    canonical=json.loads((ROOT/'docs/validation/native-20261023/canonical-payload.json').read_text(encoding='utf-8'))['files']
+    canonical=json.loads((NATIVE_EVIDENCE/'canonical-payload.json').read_text(encoding='utf-8'))['files']
     current={p.relative_to(SOURCE).as_posix():hashlib.sha256(
         p.read_bytes().replace(b'\r\n',b'\n') if p.suffix in {'.lua','.txt','.info','.md','.json'} else p.read_bytes()).hexdigest()
         for p in SOURCE.rglob('*') if p.is_file()}
@@ -65,8 +67,8 @@ def prepare():
     description+='\n\nMod ID: '+MOD_ID
     info['description']=description
     note=plain_quotes((RELEASE/'changenote.txt').read_text('utf-8-sig').strip())
-    if not note.startswith('Only KI5 0.3.1 -'):raise ValueError('Change note version mismatch')
-    for text in (description,note):
+    if not note.startswith('Only KI5 '+VERSION+' -'):raise ValueError('Change note version mismatch')
+    for text in ((note,) if preserve_page else (description,note)):
         if '\\' in text or len(text.encode())+text.count('\n')>4000:
             raise ValueError('SteamCMD text must contain no backslashes and stay below 4000 bytes')
     item=saved_id()
@@ -75,17 +77,31 @@ def prepare():
     shutil.copy2(RELEASE/'workshop.txt',STAGE/'workshop.txt')
     preview=RELEASE/'only-ki5-overhaul-preview.png'
     if preview.read_bytes()!=(STAGE/'preview.png').read_bytes():raise ValueError('Preview changed; restage explicitly')
-    VDF.write_text(make_vdf('108600',info,STAGE/'Contents',STAGE/'preview.png',item,note),encoding='utf-8')
+    if preserve_page:
+        if item!='3825545131':raise ValueError('Page preservation requires the existing Only KI5 item')
+        before=json.loads((RELEASE/'page-verified.json').read_text('utf-8'))
+        if before['visibility']!=3:raise ValueError('Expected verified unlisted page')
+        fields={'appid':'108600','publishedfileid':item,
+                'contentfolder':(STAGE/'Contents').resolve().as_posix(),'changenote':note}
+        VDF.write_text('\n'.join(['"workshopitem"','{',*[quote(k)+' '+quote(v) for k,v in fields.items()],'}','']),encoding='utf-8')
+    else:
+        VDF.write_text(make_vdf('108600',info,STAGE/'Contents',STAGE/'preview.png',item,note),encoding='utf-8')
     parsed=read_as_steamcmd(VDF.read_text(encoding='utf-8'))
-    assert parsed['description']==description and parsed['visibility']=='3' and parsed['appid']=='108600'
+    assert parsed['appid']=='108600'
+    if preserve_page:
+        assert set(parsed)=={'appid','publishedfileid','contentfolder','changenote'}
+    else:
+        assert parsed['description']==description and parsed['visibility']=='3'
     assert reconcile_ids(parsed['publishedfileid'])==item
-    record={'preparedUtc':datetime.now(timezone.utc).isoformat(),'version':'0.3.1','workshopId':item,
+    record={'preparedUtc':datetime.now(timezone.utc).isoformat(),'version':VERSION,'workshopId':item,
             'visibility':'unlisted','payloadFiles':len(expected),'payloadBytes':sum(p.stat().st_size for p in SOURCE.rglob('*') if p.is_file()),
             'previewSha256':hashlib.sha256(preview.read_bytes()).hexdigest(),
             'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
-            'descriptionSha256':hashlib.sha256(description.encode()).hexdigest(),'uploadAttempted':False}
+            'descriptionSha256':hashlib.sha256(description.encode()).hexdigest(),'uploadAttempted':False,
+            'pagePreserved':preserve_page,'nativeEvidence':NATIVE_EVIDENCE.relative_to(ROOT).as_posix()}
+    if preserve_page:record['descriptionSha256']=hashlib.sha256(before['description'].replace('\r\n','\n').encode()).hexdigest()
     write(PRIVATE/'prepared.json',record)
-    print('Prepared 0.3.1: '+str(len(expected))+' native-tested payload files; unlisted; '+(item or 'new item'))
+    print('Prepared '+VERSION+': '+str(len(expected))+' native-tested payload files; unlisted; '+(item or 'new item'))
     return record
 
 def cached_username():
@@ -144,7 +160,7 @@ def download():
         'steamcmdExitCode':code,'allPayloadHashesMatch':True,'payloadSha256':actual})
     print('Official SteamCMD download matches all '+str(len(actual))+' payload files; manifest '+manifest)
 
-def verify(add_dependencies=False):
+def verify(add_dependencies=False,remove_vehicle_dependencies=False):
     import steam_ugc
     item=saved_id()
     if not item:raise ValueError('No assigned Workshop item to query')
@@ -161,7 +177,13 @@ def verify(add_dependencies=False):
             def record(operation):
                 operations.append(operation);write(PRIVATE/'dependency-operations.json',operations)
             steam.add_dependencies(before,record)
-        after=steam.query() if add_dependencies else before
+        if remove_vehicle_dependencies:
+            fleet=json.loads((ROOT/'config/fleet-dependencies.json').read_text('utf-8'))
+            allowed={int(d['workshopId']) for d in fleet}-set(steam_ugc.DEPENDENCIES)
+            def record_removal(operation):
+                operations.append(operation);write(PRIVATE/'dependency-removal-operations.json',operations)
+            steam.remove_dependencies(before,allowed,record_removal)
+        after=steam.query() if add_dependencies or remove_vehicle_dependencies else before
         publication=json.loads((RELEASE/'publication.json').read_text(encoding='utf-8'))
         if publication['workshopId']!=item:raise ValueError('Publication receipt targets another item')
         page_update=RELEASE/'page-update-verified.json'
@@ -189,14 +211,18 @@ def main():
     p.add_argument('--upload',action='store_true');p.add_argument('--cached-login',action='store_true')
     p.add_argument('--verify',action='store_true');p.add_argument('--add-dependencies',action='store_true')
     p.add_argument('--download',action='store_true')
+    p.add_argument('--remove-vehicle-dependencies',action='store_true')
+    p.add_argument('--preserve-page',action='store_true',help='Content-only update preserving live description, title, gallery, cover, visibility and requirements')
     a=p.parse_args()
     if a.add_dependencies and not a.verify:p.error('--add-dependencies requires --verify')
+    if a.remove_vehicle_dependencies and not a.verify:p.error('--remove-vehicle-dependencies requires --verify')
     if (a.upload or a.download) and not a.cached_login:p.error('Use --cached-login; credentials must be handled locally by Steam')
     if sum((a.upload,a.verify,a.download))>1:p.error('Choose only one of --upload, --verify or --download')
     if a.download:download()
-    elif a.verify:verify(a.add_dependencies)
+    elif a.verify:verify(a.add_dependencies,a.remove_vehicle_dependencies)
     else:
-        record=prepare()
+        if a.preserve_page:verify()
+        record=prepare(a.preserve_page)
         if a.upload:upload(record)
 
 if __name__=='__main__':main()

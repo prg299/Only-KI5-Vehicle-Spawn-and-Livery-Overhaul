@@ -1,209 +1,724 @@
 {
   "workshopId": "3825545131",
   "nativeGame": "Project Zomboid 42.21.0",
-  "source": "Owned isolated native game framebuffer, 2026-10-23",
+  "source": "Unposed natural world generation in owned native photo worlds",
   "sceneGeneratedByAI": false,
-  "processing": "16:9 crop where recorded, then JPEG encoding; no pixel retouching or resizing",
-  "dimensionPolicy": "Native screenshots retain 16:9 and their original pixel density; these are not ImageGen assets.",
-  "photoSettings": "Hidden HUD, daylight/ambient overrides, disabled radio devices, dressed photo character; staged scenes marked per image.",
-  "credits": [
-    "The Indie Stone: Project Zomboid",
-    "KI5 and original fleet creators: vehicle models",
-    "Integrated addon creators: police liveries, variants, camo and scene recipes; see CREDITS.md",
-    "Erika / prg299: integration and native capture session"
+  "generatedContribution": "Transparent location lettering only",
+  "dimensions": [
+    1024,
+    512
   ],
-  "tinyPngCompression": "pending: official website rejected all seven valid JPEGs as INVALID with Something went wrong; no official API key configured",
+  "processing": "Native footage crop and aspect-preserving downsample; separate title composite and JPEG encoding",
+  "photoSettings": "New scenes use a disposable Very High vehicle-abundance sandbox and the native debug no-lighting observer to remove fog of war. Approved military images retain their original bytes/default photo-world settings. No manual vehicle creation, repositioning, repair, skin or light edits. These are not population-frequency evidence.",
   "images": [
     {
-      "file": "only-ki5-01-louisville-police.jpg",
-      "title": "Louisville police liveries",
-      "scene": "police",
-      "staged": true,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-01-louisville-police-native.png",
-      "masterSha256": "6326c76185c4bba9494cef45220268426fe4b98eacd8289a7bf0a992db027b9d",
-      "sourceDimensions": [
-        1280,
-        720
+      "file": "only-ki5-location-01-louisville-police.jpg",
+      "title": "LOUISVILLE POLICE DEPARTMENT",
+      "category": "regional-police",
+      "location": "louisville-police",
+      "sheriffLocation": false,
+      "expectedLivery": "louisville",
+      "frame": [
+        12451,
+        1632
       ],
-      "cropBox": [
-        180,
-        15,
-        1108,
-        537
-      ],
-      "dimensions": [
-        928,
-        522
-      ],
-      "format": "JPEG",
-      "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 55767,
-      "sha256": "7115f32e721ae9a8dec53767d7939841174c90c538a6a89d81478fb2f0f3a6b3",
-      "tinyPngCompression": "pending"
-    },
-    {
-      "file": "only-ki5-02-silent-lightbars.jpg",
-      "title": "Flashing lightbars, sirens off",
-      "scene": "lightbars",
-      "staged": true,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-02-silent-lightbars-native.png",
-      "masterSha256": "5b932608ffe235dce3228f6d525918753f3ecfe9aaa9131ebef3725ac89c9366",
-      "sourceDimensions": [
-        1280,
-        720
-      ],
-      "cropBox": [
-        180,
-        15,
-        1108,
-        537
-      ],
-      "dimensions": [
-        928,
-        522
-      ],
-      "format": "JPEG",
-      "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 33993,
-      "sha256": "d4827b32001753c50082f566da11fd83b89c0c20aaace0dd25ba89ea0db65ae7",
-      "tinyPngCompression": "pending"
-    },
-    {
-      "file": "only-ki5-03-military-checkpoint.jpg",
-      "title": "The Louisville checkpoint fleet",
-      "scene": "checkpoint",
       "staged": false,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-03-military-checkpoint-native.png",
-      "masterSha256": "307508168e39ac83bc212b5fdcaaebbca3260dce876f9ea170078a4cd3aca586",
-      "sourceDimensions": [
-        1280,
-        720
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-louisville-police-native.png",
+      "masterSha256": "95a2cf127b69f9b26a580cc66791ee0953a3ee0522a5845f3c3b68096a5aa3c5",
+      "titleMaster": "tools-src/gallery/location-titles/louisville-police-master.png",
+      "titleSha256": "cb5333705f499ce438b9e23007f2bba39c793b1352ff634500d53e334902c938",
+      "titlePosition": [
+        24,
+        416
       ],
-      "cropBox": null,
-      "dimensions": [
-        1280,
-        720
+      "titleDimensions": [
+        259,
+        76
       ],
-      "format": "JPEG",
-      "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 196147,
-      "sha256": "fbb60feeb47fb88d40db961dcdd4097abe623ef459ecb9fc09e250b80f1258dd",
-      "tinyPngCompression": "pending"
-    },
-    {
-      "file": "only-ki5-04-military-blockpost.jpg",
-      "title": "Military roadside blockpost",
-      "scene": "blockpost",
-      "staged": true,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-04-military-blockpost-native.png",
-      "masterSha256": "74af82dc1888d6c46ccdb2276b8fcf9672186d1971ce89e4fcdf2fff4ab518e8",
-      "sourceDimensions": [
-        1280,
-        720
-      ],
-      "cropBox": null,
-      "dimensions": [
-        1280,
-        720
-      ],
-      "format": "JPEG",
-      "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 168261,
-      "sha256": "99680803ac1515997e1e7ebd0f874bc044caae65e5d9058cd935f51017fb3fd7",
-      "tinyPngCompression": "pending"
-    },
-    {
-      "file": "only-ki5-05-military-convoy.jpg",
-      "title": "Military convoy and matching camo",
-      "scene": "convoy",
-      "staged": true,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-05-military-convoy-native.png",
-      "masterSha256": "4420c4436a98786d3a768283a3f5c16ea5e39dd1ad86d7a43ca972b8742b8adc",
-      "sourceDimensions": [
-        1280,
-        720
-      ],
-      "cropBox": null,
-      "dimensions": [
-        1280,
-        720
-      ],
-      "format": "JPEG",
-      "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 157589,
-      "sha256": "f3abd8f81df9e7927b798cf1da8636f6f325265448f5e319ff678e99d10be418",
-      "tinyPngCompression": "pending"
-    },
-    {
-      "file": "only-ki5-06-highway-traffic.jpg",
-      "title": "KI5 highway traffic and trailer spawns",
-      "scene": "traffic",
-      "staged": false,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-06-highway-traffic-native.png",
-      "masterSha256": "d12bb8dcdf36fc7a58c7def517bf59302b36afa51050aa824a7235fccc06262a",
       "sourceDimensions": [
         1280,
         720
       ],
       "cropBox": [
-        280,
-        40,
-        1160,
-        535
+        0,
+        0,
+        1280,
+        640
       ],
       "dimensions": [
-        880,
-        495
+        1024,
+        512
       ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-louisville-police-titled-master.png",
       "format": "JPEG",
       "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 64376,
-      "sha256": "cd3d02870b6bdcad79370b6fd573393b6667553fcb5f56f1b2afae498dd1b5c1",
-      "tinyPngCompression": "pending"
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 189891,
+      "beforeTinyPngBytes": 189891,
+      "sha256": "6baa22eb97c035fe5d040b04c0a1b66abf8517cf1e273ba4ebbc44003e85aeea",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/louisville-police-capture.json"
     },
     {
-      "file": "only-ki5-07-integrated-variants.jpg",
-      "title": "Integrated Commando and ambulance variants",
-      "scene": "variant-close",
-      "staged": true,
-      "captureRun": "gallery-20261023-a",
-      "master": "tools-src/gallery/only-ki5-07-integrated-variants-native.png",
-      "masterSha256": "e2da1553d196c944b3a99ed305cd53800a6b67b682fbe92cd240f8d753ad0831",
+      "file": "only-ki5-location-02-west-point-police.jpg",
+      "title": "WEST POINT POLICE DEPARTMENT",
+      "category": "regional-police",
+      "location": "west-point-police",
+      "sheriffLocation": false,
+      "expectedLivery": "westPoint",
+      "frame": [
+        11788,
+        6804
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-west-point-police-native.png",
+      "masterSha256": "27c686f444f4380a6a08997625f31e3e899e54ef6d29f65dd4f1e64231dd9900",
+      "titleMaster": "tools-src/gallery/location-titles/west-point-police-master.png",
+      "titleSha256": "2206cf5f5278e4b22b3d949d542dec65d74172ad2df31c4e2422dcbaf6da5ee3",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        268,
+        76
+      ],
       "sourceDimensions": [
         1280,
         720
       ],
-      "cropBox": null,
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
       "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-west-point-police-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 120975,
+      "beforeTinyPngBytes": 120975,
+      "sha256": "bc0024e9a82013fa1f20ba6c485b0244e027b15cc3b97d960877ad2bc26c507b",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/west-point-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-03-muldraugh-police.jpg",
+      "title": "MULDRAUGH POLICE DEPARTMENT",
+      "category": "regional-police",
+      "location": "muldraugh-police",
+      "sheriffLocation": false,
+      "expectedLivery": "muldraugh",
+      "frame": [
+        10660,
+        10427
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-muldraugh-police-native.png",
+      "masterSha256": "28deb2e5495f54cad9a29b126c7638ac3c60a957ba897e690ab8788b61db2c07",
+      "titleMaster": "tools-src/gallery/location-titles/muldraugh-police-master.png",
+      "titleSha256": "5ce7e7dba7df9f5bc407b62335dd41a88042620cd4032f9df5dd12d8327b7942",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        276,
+        76
+      ],
+      "sourceDimensions": [
         1280,
         720
       ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-muldraugh-police-titled-master.png",
       "format": "JPEG",
       "opaque": true,
-      "jpegQuality": 82,
-      "chromaSubsampling": "4:2:0",
-      "bytes": 150481,
-      "sha256": "46f06054c9d55fee1b5bc16e66277d03cdf8b94a9af6afa513ebfee9d05e91b1",
-      "tinyPngCompression": "pending"
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 133651,
+      "beforeTinyPngBytes": 133651,
+      "sha256": "62e1773e74c835eb3a963f1e6dd9895e996c161f6bbd0688ec841cac2d80ca7d",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/muldraugh-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-04-jefferson-police.jpg",
+      "title": "JEFFERSON COUNTY POLICE",
+      "category": "regional-police",
+      "location": "jefferson-police",
+      "sheriffLocation": false,
+      "expectedLivery": "louisvilleCounty",
+      "frame": [
+        12509,
+        4590
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-jefferson-police-native.png",
+      "masterSha256": "aa272703c826a9fbb02b887f7cfd9f15398dd82eadd84ff39939d72143b7e2cf",
+      "titleMaster": "tools-src/gallery/location-titles/jefferson-police-master.png",
+      "titleSha256": "0ec23892158e23cc388877ed035a7be252a5a837d339bd9777050fd922e9cffb",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        295,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-jefferson-police-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 158181,
+      "beforeTinyPngBytes": 158181,
+      "sha256": "dc361e18421819811b7f1537b6c234596574c0b273ee8ef090797d34a4618859",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/jefferson-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-05-meade-sheriff.jpg",
+      "title": "RIVERSIDE / MEADE COUNTY SHERIFF",
+      "category": "regional-police",
+      "location": "meade-sheriff",
+      "sheriffLocation": true,
+      "expectedLivery": "meade",
+      "frame": [
+        6111,
+        5222
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-meade-sheriff-native.png",
+      "masterSha256": "603d82e074337f69ffd2833dacffc600d37188bf336ff7f49c4a0d5e5c63b0cb",
+      "titleMaster": "tools-src/gallery/location-titles/meade-sheriff-master.png",
+      "titleSha256": "8ea155d6f9d3efcff51250fe832671ec9819fdce057ef5b1c4b35a5c7f81a2e6",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        252,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-meade-sheriff-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 174043,
+      "beforeTinyPngBytes": 174043,
+      "sha256": "7f3e923398cd6f997028e2a0833aba1922ed46c10dd0d192a0cb0350b6b86deb",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/meade-sheriff-capture.json"
+    },
+    {
+      "file": "only-ki5-location-06-state-police.jpg",
+      "title": "FALLAS LAKE / KENTUCKY STATE POLICE",
+      "category": "regional-police",
+      "location": "state-police",
+      "sheriffLocation": false,
+      "expectedLivery": "state",
+      "frame": [
+        7265,
+        8374
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-state-police-native.png",
+      "masterSha256": "f37274f7a74580d12e911c4e8b40700d7d23ef0b58999c9919dfbf49ccc5a072",
+      "titleMaster": "tools-src/gallery/location-titles/state-police-master.png",
+      "titleSha256": "09df0795e730cbe5274b6a546d8dc5101421337825d01575e9f2d97304703b03",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        253,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-state-police-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 133676,
+      "beforeTinyPngBytes": 133676,
+      "sha256": "e351188c71369996b964051cde5daf756a8084b09aa4343f576ac8b42f08dd4c",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/state-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-07-airport-security.jpg",
+      "title": "LOUISVILLE AIRPORT SECURITY",
+      "category": "regional-police",
+      "location": "airport-security",
+      "sheriffLocation": false,
+      "expectedLivery": "airportSecurity",
+      "frame": [
+        15529,
+        2484
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-airport-security-native.png",
+      "masterSha256": "a4851624ea1cec53fcf7b10a50933e97ab95b1a0758b8f1425e9231c985fb352",
+      "titleMaster": "tools-src/gallery/location-titles/airport-security-master.png",
+      "titleSha256": "b3814ea94e656fd6bdf3e146c0a7c8330f2f6cb7473ba29e3080e1f253efc560",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        313,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-airport-security-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 135545,
+      "beforeTinyPngBytes": 135545,
+      "sha256": "f9dfc10f76d1bf11a58642d30f5a5aae346eb85210a5c1dadfb767cc646fc8ff",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/airport-security-capture.json"
+    },
+    {
+      "file": "only-ki5-location-08-louisville-military-checkpoint.jpg",
+      "title": "LOUISVILLE MILITARY CHECKPOINT",
+      "category": "military",
+      "location": "louisville-military-checkpoint",
+      "frame": [
+        12550.0,
+        4213.0
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-louisville-military-checkpoint-native.png",
+      "masterSha256": "d8c7d162e847924f2d7980a6ce3f9f5c9367caf7e21799808bc38346f8562610",
+      "titleMaster": "tools-src/gallery/location-titles/louisville-military-checkpoint-master.png",
+      "titleSha256": "8d9a4d09acb3d99b19a30df9ec5620884043b8800de05a90d8243cb680326d15",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        364,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-louisville-military-checkpoint-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 127406,
+      "beforeTinyPngBytes": 127406,
+      "sha256": "cb0480366bb95da16aca214dcba35831a0f250dbd56ef55e371c527a24d28f48",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/louisville-military-checkpoint-capture.json",
+      "retainedApprovedImage": true,
+      "retainedFrom": "release/workshop/archive/20261024-five-natural/gallery/only-ki5-location-03-louisville-military-checkpoint.jpg"
+    },
+    {
+      "file": "only-ki5-location-09-secret-military-base.jpg",
+      "title": "SECRET MILITARY BASE",
+      "category": "military",
+      "location": "secret-military-base",
+      "frame": [
+        5592,
+        12458
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-secret-military-base-native.png",
+      "masterSha256": "6b0f98b9f328adc0d18b47511a1070dc9592986764a66f1b562aceb8e70a3e9d",
+      "titleMaster": "tools-src/gallery/location-titles/secret-military-base-master.png",
+      "titleSha256": "9cd9b6cd75bcbe40c2dc43ae920c6490f459895c4f3b142175a6c07d60f95bfd",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        499,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-secret-military-base-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 73033,
+      "beforeTinyPngBytes": 73033,
+      "sha256": "cad85776805a1af903144121c86962349c29e9be8d4580fd895a5b07ca3ca92a",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/secret-military-base-capture.json",
+      "retainedApprovedImage": true,
+      "retainedFrom": "release/workshop/archive/20261024-five-natural/gallery/only-ki5-location-04-secret-military-base.jpg"
+    },
+    {
+      "file": "only-ki5-location-10-louisville-highway.jpg",
+      "title": "LOUISVILLE HIGHWAY",
+      "category": "highway",
+      "location": "louisville-highway",
+      "sheriffLocation": false,
+      "expectedLivery": null,
+      "frame": [
+        12598,
+        1788
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-louisville-highway-native.png",
+      "masterSha256": "0df9aeffaa6118811c87da0878ba71926e01296f312ca94848d54f6037101a22",
+      "titleMaster": "tools-src/gallery/location-titles/louisville-highway-master.png",
+      "titleSha256": "2fb9ab2d48a9d00c1ddf3a87ab96ec6a7cbc4438d1d6bc62493239e94ad0da4d",
+      "titlePosition": [
+        24,
+        436
+      ],
+      "titleDimensions": [
+        371,
+        56
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-louisville-highway-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 150950,
+      "beforeTinyPngBytes": 150950,
+      "sha256": "5c728b8936d8085ad714dbf7035ebac8b3984db83475089ee616196f8dd1b7a3",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/louisville-highway-capture.json"
+    },
+    {
+      "file": "only-ki5-location-11-rosewood-fire.jpg",
+      "title": "ROSEWOOD FIRE DEPARTMENT",
+      "category": "civilian",
+      "location": "rosewood-fire",
+      "sheriffLocation": false,
+      "expectedLivery": null,
+      "frame": [
+        8156,
+        11749
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-rosewood-fire-native.png",
+      "masterSha256": "255f68e45b92cfb637a1fa6462da57792d266ba8ac51a1ace4051761ac7c1e39",
+      "titleMaster": "tools-src/gallery/location-titles/rosewood-fire-master.png",
+      "titleSha256": "55f44f60d1915559b05f1f15ca36f793a48097a8f04d47e3f6ce5ecb9c35859f",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        254,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-rosewood-fire-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 118360,
+      "beforeTinyPngBytes": 118360,
+      "sha256": "ae9ceae826ec0fab81a144bf5085c0af075466c25f4e2d765c8c9f2ef9b510b6",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/rosewood-fire-capture.json"
+    },
+    {
+      "file": "only-ki5-location-12-riverside-town-centre.jpg",
+      "title": "RIVERSIDE TOWN CENTRE",
+      "category": "civilian",
+      "location": "riverside-town-centre",
+      "sheriffLocation": false,
+      "expectedLivery": null,
+      "frame": [
+        6181,
+        5251
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-riverside-town-centre-native.png",
+      "masterSha256": "f9c5bb1e24c9786eade5ff6dd7083c6aa4625a8ef26341e2999092ada4e724b1",
+      "titleMaster": "tools-src/gallery/location-titles/riverside-town-centre-master.png",
+      "titleSha256": "54996252d8233bcbc866dce75f90704fbedaf7e6a0a73c9a82aa88f9dd6bd617",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        237,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-riverside-town-centre-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 152778,
+      "beforeTinyPngBytes": 152778,
+      "sha256": "33eba0a9adff298aab4eb30f8b5642080043e85870c065a313bc911ed2cab4eb",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/riverside-town-centre-capture.json"
+    },
+    {
+      "file": "only-ki5-location-13-muldraugh-industrial.jpg",
+      "title": "MULDRAUGH / MCCOY LOGGING",
+      "category": "civilian",
+      "location": "muldraugh-industrial",
+      "sheriffLocation": false,
+      "expectedLivery": null,
+      "frame": [
+        10346,
+        9267
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-muldraugh-industrial-native.png",
+      "masterSha256": "bcafede625382367a4d2237473e94c3c0cb9bba79434d5c3897023e47036aa1f",
+      "titleMaster": "tools-src/gallery/location-titles/muldraugh-industrial-master.png",
+      "titleSha256": "d02c27ce58ee559bf238aec6b715b3559616df44c97883be6bad2f79b7127169",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        256,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-muldraugh-industrial-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 133399,
+      "beforeTinyPngBytes": 133399,
+      "sha256": "a4cdaea8dcabf9214f2f28d74e388c71104354d5146e718a64734ef5091145ba",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/muldraugh-industrial-capture.json"
+    },
+    {
+      "file": "only-ki5-location-14-west-point-main-street.jpg",
+      "title": "WEST POINT MAIN STREET",
+      "category": "civilian",
+      "location": "west-point-main-street",
+      "sheriffLocation": false,
+      "expectedLivery": null,
+      "frame": [
+        11935,
+        6904
+      ],
+      "staged": false,
+      "photoVisibilityReveal": true,
+      "captureRun": "gallery-20261024-g-natural",
+      "master": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-west-point-main-street-native.png",
+      "masterSha256": "5214a8aa0303ecff0f5ca1e52459aafc2d38e4e1b2321ea0aa93b23e4fa6d798",
+      "titleMaster": "tools-src/gallery/location-titles/west-point-main-street-master.png",
+      "titleSha256": "05d1ef37f30440375c56134029d50fa5df887c785d0179b11064d9aa8e07db59",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        263,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/expanded-20261024/only-ki5-west-point-main-street-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 90,
+      "chromaSubsampling": "4:4:4",
+      "bytes": 182902,
+      "beforeTinyPngBytes": 182902,
+      "sha256": "8c8c48f6db0a82ba1b1afeeeeb5386ed1d3d6560511c44c2d43253c4902611b8",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/expanded-20261024/west-point-main-street-capture.json"
     }
   ],
-  "totalBytes": 826614
+  "totalBytes": 1984790
 }

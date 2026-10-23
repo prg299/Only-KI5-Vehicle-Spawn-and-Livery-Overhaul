@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "title": "RIVERSIDE\nTOWN CENTRE",
+  "prompt": "Create a NEW transparent typographic location-title overlay. The reference is a STYLE REFERENCE ONLY: match its condensed off-white block letters, dark charcoal outline and restrained shadow. Exact replacement wording on two lines:\nRIVERSIDE\nTOWN CENTRE\nOnly these words. Large location line and smaller second line. Compact horizontal survival-game lettering with restrained light texture. Real transparency, complete glyphs, clear margins. No scene, photos, buildings, vehicles, symbols, badges or panels. This lettering will be composited over unchanged real gameplay; generate lettering only.",
+  "reference": "west-point-police-master.png",
+  "generatedFile": "exec-d2e0140e-cf4c-4a46-98a9-7ecc6e78b5e2.png"
+}

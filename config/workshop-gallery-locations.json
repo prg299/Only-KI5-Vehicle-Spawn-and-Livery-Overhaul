@@ -1,0 +1,239 @@
+[
+  {
+    "key": "louisville-police",
+    "category": "regional-police",
+    "title": "LOUISVILLE POLICE DEPARTMENT",
+    "probe": [
+      12455,
+      1627
+    ],
+    "frame": [
+      12451,
+      1632
+    ],
+    "zoom": 2,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "louisville"
+  },
+  {
+    "key": "west-point-police",
+    "category": "regional-police",
+    "title": "WEST POINT POLICE DEPARTMENT",
+    "probe": [
+      11790,
+      6806
+    ],
+    "frame": [
+      11788,
+      6804
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "westPoint"
+  },
+  {
+    "key": "muldraugh-police",
+    "category": "regional-police",
+    "title": "MULDRAUGH POLICE DEPARTMENT",
+    "probe": [
+      10658,
+      10434
+    ],
+    "frame": [
+      10660,
+      10427
+    ],
+    "zoom": 2.25,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "muldraugh"
+  },
+  {
+    "key": "jefferson-police",
+    "category": "regional-police",
+    "title": "JEFFERSON COUNTY POLICE",
+    "probe": [
+      12565,
+      4800
+    ],
+    "frame": [
+      12509,
+      4590
+    ],
+    "zoom": 1.75,
+    "source": "Natural Jefferson County patrols in vanilla Dixie highway traffic stalls x12506..12517 y4500..4595; observed LCPD LTD, Suburban and Impala",
+    "expectedLivery": "louisvilleCounty",
+    "lookAt": [
+      12507,
+      4592
+    ]
+  },
+  {
+    "key": "meade-sheriff",
+    "category": "regional-police",
+    "title": "RIVERSIDE / MEADE COUNTY SHERIFF",
+    "probe": [
+      6097,
+      5249
+    ],
+    "frame": [
+      6111,
+      5222
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "meade",
+    "sheriffLocation": true,
+    "lookAt": [
+      6111,
+      5227
+    ]
+  },
+  {
+    "key": "state-police",
+    "category": "regional-police",
+    "title": "FALLAS LAKE / KENTUCKY STATE POLICE",
+    "probe": [
+      7264,
+      8376
+    ],
+    "frame": [
+      7265,
+      8374
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "state"
+  },
+  {
+    "key": "airport-security",
+    "category": "regional-police",
+    "title": "LOUISVILLE AIRPORT SECURITY",
+    "probe": [
+      15510,
+      2485
+    ],
+    "frame": [
+      15529,
+      2484
+    ],
+    "zoom": 1.75,
+    "source": "Natural airport-service stalls; integrated MCV F350 AS livery explicitly reads Airport Security / SDF",
+    "expectedLivery": "airportSecurity",
+    "lookAt": [
+      15530,
+      2486
+    ]
+  },
+  {
+    "key": "louisville-military-checkpoint",
+    "category": "military",
+    "title": "LOUISVILLE MILITARY CHECKPOINT",
+    "probe": [
+      12573,
+      4213
+    ],
+    "frame": [
+      12550,
+      4213
+    ],
+    "zoom": 2,
+    "source": "Vanilla Louisville checkpoint and integrated VMZNEW_Vanilla_Map checkpoint entries",
+    "retainApprovedImage": true
+  },
+  {
+    "key": "secret-military-base",
+    "category": "military",
+    "title": "SECRET MILITARY BASE",
+    "subtitle": "NEAR ROSEWOOD",
+    "probe": [
+      5592,
+      12458
+    ],
+    "frame": [
+      5592,
+      12458
+    ],
+    "zoom": 2,
+    "source": "VMZNEW_Vanilla_Map Secret Base military_vehicle parking rows x5586/5599 y12447..12472",
+    "retainApprovedImage": true
+  },
+  {
+    "key": "louisville-highway",
+    "category": "highway",
+    "title": "LOUISVILLE HIGHWAY",
+    "probe": [
+      12598,
+      1788
+    ],
+    "frame": [
+      12598,
+      1788
+    ],
+    "zoom": 2.5,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing"
+  },
+  {
+    "key": "rosewood-fire",
+    "category": "civilian",
+    "title": "ROSEWOOD FIRE DEPARTMENT",
+    "probe": [
+      8131,
+      11760
+    ],
+    "frame": [
+      8156,
+      11749
+    ],
+    "zoom": 2,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "lookAt": [
+      8153,
+      11754
+    ]
+  },
+  {
+    "key": "riverside-town-centre",
+    "category": "civilian",
+    "title": "RIVERSIDE TOWN CENTRE",
+    "probe": [
+      6181,
+      5251
+    ],
+    "frame": [
+      6181,
+      5251
+    ],
+    "zoom": 2,
+    "source": "Natural Fossoil pickup, utility and civilian vehicles beside Riverside town-centre businesses"
+  },
+  {
+    "key": "muldraugh-industrial",
+    "category": "civilian",
+    "title": "MULDRAUGH / MCCOY LOGGING",
+    "probe": [
+      10340,
+      9290
+    ],
+    "frame": [
+      10346,
+      9267
+    ],
+    "zoom": 2,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing"
+  },
+  {
+    "key": "west-point-main-street",
+    "category": "civilian",
+    "title": "WEST POINT MAIN STREET",
+    "probe": [
+      11945,
+      6900
+    ],
+    "frame": [
+      11935,
+      6904
+    ],
+    "zoom": 2.5,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing"
+  }
+]

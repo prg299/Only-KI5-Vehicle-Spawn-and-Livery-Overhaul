@@ -16,7 +16,9 @@ description=[/list]
 description=
 description=[hr][/hr]
 description=[h2]Requirements[/h2]
-description=[b]Build 42.21[/b], the listed original KI5 vehicle packs, damnlib and More Car Features / WayMoreCars. Enable requirements before this mod.
+description=[b]Build 42.21[/b], damnlib and More Car Features / WayMoreCars.
+description=
+description=Install and enable the vehicles from the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] before this mod. Vehicle packs are installed separately and are not individual Workshop requirements here.
 description=
 description=[b]YAPZLib is not required.[/b] Internal helpers replace it.
 description=
@@ -28,7 +30,7 @@ description=Changes appear in [b]fresh chunks[/b]; existing vehicles are not rew
 description=
 description=Disable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanilla selection mods and the old Vehicle Suite integrations: their selected content is already included.
 description=
-description=[b]0.3.1 unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
+description=[b]Unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
 description=
 description=[hr][/hr]
 description=[h2]Credits[/h2]
@@ -40,21 +42,20 @@ description=[*] Пупсич - [url=https://steamcommunity.com/sharedfiles/filed
 description=[*] Branco - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo[/url]; Papa_Chad - supported vehicle families.
 description=[*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url].
 description=[*] Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url] selection inspiration and duplicate-ID data.
-description=[*] The Indie Stone - Project Zomboid. Erika / prg299 - integration, authored helpers, tests and gameplay screenshot; ImageGen - title lettering.
 description=[/list]
 description=
 description=If an original author reaches out, their integrated content will be removed and their mod moved to an external dependency, with credits retained. MIT covers authored contributions only; integrated content retains its original ownership.
 description=
 description=[hr][/hr]
 description=[h2]Info[/h2]
-description=AI was used to make this mod. If you have a problem with that, don't download it.
+description=AI was used in the process to make this mod. If you have a problem with that, don't download it.
 description=
-description=[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code, full credits and test results on GitHub[/url]
+description=[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code on GitHub[/url]
 description=
 description=[hr][/hr]
 description=[h2]Support development[/h2]
-description=Enjoying Only KI5? Support future updates on Ko-fi.
+description=If you enjoy my work, you can support me by leaving a like!
 description=
-description=[url=https://ko-fi.com/bearski][img]https://storage.ko-fi.com/cdn/kofi5.png?v=6[/img][/url]
+description=Want to follow my projects? You can check me out on [url=https://ko-fi.com/bearski]Ko-fi[/url]
 visibility=unlisted
 tags=Build 42;Vehicles;Multiplayer

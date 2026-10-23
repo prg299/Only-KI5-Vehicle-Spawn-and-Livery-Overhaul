@@ -1,0 +1,276 @@
+{
+  "location": {
+    "key": "muldraugh-police",
+    "category": "regional-police",
+    "title": "MULDRAUGH POLICE DEPARTMENT",
+    "probe": [
+      10658,
+      10434
+    ],
+    "frame": [
+      10660,
+      10427
+    ],
+    "zoom": 2.25,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "muldraugh"
+  },
+  "frame": [
+    10660,
+    10427
+  ],
+  "zoom": 2.25,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 216,
+      "sqlId": 125,
+      "script": "Base.04vwTouran",
+      "skin": 5,
+      "x": 10638.7109375,
+      "y": 10477.8984375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 193,
+      "sqlId": 123,
+      "script": "Base.91geoMetro",
+      "skin": 2,
+      "x": 10615.1484375,
+      "y": 10415.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 195,
+      "sqlId": 119,
+      "script": "Base.86fordE150longW",
+      "skin": 1,
+      "x": 10625.3828125,
+      "y": 10408.734375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "rtrafficjams",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 117,
+      "script": "Base.85chevyImpalaSedanMPD",
+      "skin": 0,
+      "x": 10667.8828125,
+      "y": 10425.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TireFrontLeft": "true",
+        "defaultPartSet_TireFrontRight": "true",
+        "defaultPartSet_TireRearLeft": "true",
+        "defaultPartSet_TireRearRight": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 199,
+      "sqlId": 121,
+      "script": "Base.93chevySuburban",
+      "skin": 9,
+      "x": 10615.9921875,
+      "y": 10442.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_SUB93Roofrack": "true",
+        "defaultPartSet_SUB93BugGuard": "true"
+      }
+    },
+    {
+      "id": 174,
+      "sqlId": 116,
+      "script": "Base.04vwTouran",
+      "skin": 3,
+      "x": 10652.46875,
+      "y": 10436.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 207,
+      "sqlId": 122,
+      "script": "Base.93fordTaurusWagon",
+      "skin": 3,
+      "x": 10678.5,
+      "y": 10385.71875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true"
+      }
+    },
+    {
+      "id": 206,
+      "sqlId": 127,
+      "script": "Base.85oldsmobileDelta88Sedan",
+      "skin": 7,
+      "x": 10701.5,
+      "y": 10475.9375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 214,
+      "sqlId": 120,
+      "script": "Base.91fordLTD",
+      "skin": 4,
+      "x": 10615.8828125,
+      "y": 10436.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parallelstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_LTD91Roofrack": "true"
+      }
+    },
+    {
+      "id": 238,
+      "sqlId": 124,
+      "script": "Base.04vwTouran",
+      "skin": 9,
+      "x": 10695.5,
+      "y": 10473.46875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TOU04Roofrack": "true"
+      }
+    },
+    {
+      "id": 204,
+      "sqlId": 118,
+      "script": "Base.93chevySilveradoXClong",
+      "skin": 1,
+      "x": 10654.5,
+      "y": 10467.2734375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_SUB93TailgatePanel": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_SUB93BugGuard": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 244,
+      "sqlId": 126,
+      "script": "Base.63beetleBuggy",
+      "skin": 3,
+      "x": 10637.2109375,
+      "y": 10474.734375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_BTL63SpareA": "true",
+        "defaultPartSet_BTL63SpareB": "true",
+        "defaultPartSet_BTL63SpareC": "true",
+        "defaultPartSet_BTL63SpareD": "true",
+        "defaultPartSet_BTL63Roofrack": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "28deb2e5495f54cad9a29b126c7638ac3c60a957ba897e690ab8788b61db2c07",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

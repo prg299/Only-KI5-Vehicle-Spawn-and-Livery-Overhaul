@@ -20,6 +20,8 @@ try {
     & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-lightbars.lua') native shared
     if ($LASTEXITCODE -ne 0) { throw 'Native emergency parking/lightbar regression failed' }
     foreach ($authority in @('singleplayer', 'client')) {
+        & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-spawn-skins.lua') native $authority
+        if ($LASTEXITCODE -ne 0) { throw "Weighted livery regression failed ($authority)" }
         & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-lightbars.lua') native $authority
         if ($LASTEXITCODE -ne 0) { throw "Silent lightbar authority regression failed ($authority)" }
     }

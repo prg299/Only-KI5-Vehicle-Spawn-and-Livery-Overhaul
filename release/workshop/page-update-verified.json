@@ -1,50 +1,92 @@
 {
   "workshopId": "3825545131",
   "verified": true,
-  "verifiedUtc": "2026-10-23T21:12:05.424474+00:00",
-  "descriptionSha256": "78fb74e8e6ca2a0c2a7e7797b2680761e0da971697e21406386e4ddc6b4876ef",
-  "galleryImages": 7,
+  "verifiedUtc": "2026-10-23T23:16:05.590120+00:00",
+  "descriptionSha256": "d08823ce94b0313894463b555d5fd692b57901082072f4e418b5be0c3581ffe4",
+  "galleryImages": 14,
   "gallery": [
     {
       "index": 0,
-      "name": "only-ki5-01-louisville-police.jpg",
-      "url": "https://images.steamusercontent.com/ugc/16887156231184127400/4B2A29E4223946DE92390D6F3E1C754233A381C5/",
+      "name": "only-ki5-location-01-louisville-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/15024795696633336194/835BC1785FEAFF14CACF3B0468052BEAFCD7C603/",
       "type": 0
     },
     {
       "index": 1,
-      "name": "only-ki5-02-silent-lightbars.jpg",
-      "url": "https://images.steamusercontent.com/ugc/13523334685381425962/CD639D64EED00F998D0BFA5FBD57959786051FB6/",
+      "name": "only-ki5-location-02-west-point-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16574275557732339922/142ECA8D48053A629A97E9B5D6ED9C97E7A64F9F/",
       "type": 0
     },
     {
       "index": 2,
-      "name": "only-ki5-03-military-checkpoint.jpg",
-      "url": "https://images.steamusercontent.com/ugc/14535172213692832174/0B44A889D7304794BD3DCCB062A4215AEFE9DC00/",
+      "name": "only-ki5-location-03-muldraugh-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17900305120944840466/C59F56CB911DC31A5E87B95BD13A9C9A37C2D9CC/",
       "type": 0
     },
     {
       "index": 3,
-      "name": "only-ki5-04-military-blockpost.jpg",
-      "url": "https://images.steamusercontent.com/ugc/14591823772521425529/841F1286ADF37A02322CB4FFD92EF623999B5FC9/",
+      "name": "only-ki5-location-04-jefferson-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/14488019119117284298/7243441851DD1267ECD9B7300FDCE68B5AA0DFA4/",
       "type": 0
     },
     {
       "index": 4,
-      "name": "only-ki5-05-military-convoy.jpg",
-      "url": "https://images.steamusercontent.com/ugc/11342817284954987514/A0138F5D54C82F09BF16B991FA32CB58A081D295/",
+      "name": "only-ki5-location-05-meade-sheriff.jpg",
+      "url": "https://images.steamusercontent.com/ugc/15087786862182238309/6D2BE14FAB39E8FCDFC16EE638B9ADF733A58C12/",
       "type": 0
     },
     {
       "index": 5,
-      "name": "only-ki5-06-highway-traffic.jpg",
-      "url": "https://images.steamusercontent.com/ugc/16048996664266361050/BABFAF3AB8BE8B076FD2E5B442484C1720AEBB5A/",
+      "name": "only-ki5-location-06-state-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10827503225309591610/46DBF9FA0C8A4270210E7F0C7C38B2A9BD331BC3/",
       "type": 0
     },
     {
       "index": 6,
-      "name": "only-ki5-07-integrated-variants.jpg",
-      "url": "https://images.steamusercontent.com/ugc/15701876805805221059/A07212AB48EE46819D7AEF70F2E425D9E85FA72D/",
+      "name": "only-ki5-location-07-airport-security.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9428946768988811124/7AA934A1CA5071A0703A38F0DDB052AF9D25D02A/",
+      "type": 0
+    },
+    {
+      "index": 7,
+      "name": "only-ki5-location-08-louisville-military-checkpoint.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17035092138906142463/0AA978EBE0279C2E8ABB3A71BFC1DA6E24CCB873/",
+      "type": 0
+    },
+    {
+      "index": 8,
+      "name": "only-ki5-location-09-secret-military-base.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17319060668012727304/211950E654F7F8AC2A8E46E2966C5D83FA7910EC/",
+      "type": 0
+    },
+    {
+      "index": 9,
+      "name": "only-ki5-location-10-louisville-highway.jpg",
+      "url": "https://images.steamusercontent.com/ugc/11599991610357395714/F770FAF5BA0B0D108E5F9305B90418B2F0CF78A6/",
+      "type": 0
+    },
+    {
+      "index": 10,
+      "name": "only-ki5-location-11-rosewood-fire.jpg",
+      "url": "https://images.steamusercontent.com/ugc/12428995490161521720/E53F39B28684AE18DE1FF912A7F402D856371F38/",
+      "type": 0
+    },
+    {
+      "index": 11,
+      "name": "only-ki5-location-12-riverside-town-centre.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16475679398814753212/30A19182849FD762CAF4626384ABCDAE5BFF1656/",
+      "type": 0
+    },
+    {
+      "index": 12,
+      "name": "only-ki5-location-13-muldraugh-industrial.jpg",
+      "url": "https://images.steamusercontent.com/ugc/11015767333691170130/DB9AE91DD185FBF4360A93FCDFC4AB2E4EEC1538/",
+      "type": 0
+    },
+    {
+      "index": 13,
+      "name": "only-ki5-location-14-west-point-main-street.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10517106402247764528/69510F2DDCF62D9BBCB9FAB2BD5D51CA1DF87BE0/",
       "type": 0
     }
   ],
@@ -59,5 +101,39 @@
   "quotaBefore": {
     "totalBytes": 1000000,
     "availableBytes": 998409
-  }
+  },
+  "batches": [
+    {
+      "files": [
+        "only-ki5-location-01-louisville-police.jpg",
+        "only-ki5-location-02-west-point-police.jpg",
+        "only-ki5-location-03-muldraugh-police.jpg",
+        "only-ki5-location-04-jefferson-police.jpg",
+        "only-ki5-location-05-meade-sheriff.jpg"
+      ],
+      "bytes": 776741,
+      "availableBefore": 998409
+    },
+    {
+      "files": [
+        "only-ki5-location-06-state-police.jpg",
+        "only-ki5-location-07-airport-security.jpg",
+        "only-ki5-location-08-louisville-military-checkpoint.jpg",
+        "only-ki5-location-09-secret-military-base.jpg",
+        "only-ki5-location-10-louisville-highway.jpg",
+        "only-ki5-location-11-rosewood-fire.jpg",
+        "only-ki5-location-12-riverside-town-centre.jpg"
+      ],
+      "bytes": 891748,
+      "availableBefore": 998409
+    },
+    {
+      "files": [
+        "only-ki5-location-13-muldraugh-industrial.jpg",
+        "only-ki5-location-14-west-point-main-street.jpg"
+      ],
+      "bytes": 316301,
+      "availableBefore": 998409
+    }
+  ]
 }

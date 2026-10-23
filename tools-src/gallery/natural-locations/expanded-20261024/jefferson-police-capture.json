@@ -1,0 +1,401 @@
+{
+  "location": {
+    "key": "jefferson-police",
+    "category": "regional-police",
+    "title": "JEFFERSON COUNTY POLICE",
+    "probe": [
+      12565,
+      4800
+    ],
+    "frame": [
+      12509,
+      4590
+    ],
+    "zoom": 1.75,
+    "source": "Natural Jefferson County patrols in vanilla Dixie highway traffic stalls x12506..12517 y4500..4595; observed LCPD LTD, Suburban and Impala",
+    "expectedLivery": "louisvilleCounty",
+    "lookAt": [
+      12507,
+      4592
+    ]
+  },
+  "frame": [
+    12509,
+    4590
+  ],
+  "zoom": 1.75,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 221,
+      "sqlId": 367,
+      "script": "Base.84buickElectraCoupe",
+      "skin": 4,
+      "x": 12510.1796875,
+      "y": 4546.7578125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 236,
+      "sqlId": 362,
+      "script": "Base.70chevelleWagon",
+      "skin": 8,
+      "x": 12510.53125,
+      "y": 4540.8046875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 203,
+      "sqlId": 363,
+      "script": "Base.93mustangSVTcobraR",
+      "skin": 5,
+      "x": 12507.234375,
+      "y": 4541.96875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 169,
+      "sqlId": 382,
+      "script": "Base.SmallCarBurnt",
+      "skin": 0,
+      "x": 12511.3671875,
+      "y": 4563.5234375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 248,
+      "sqlId": 386,
+      "script": "Base.93chevySuburbanPoliceLCPD",
+      "skin": 0,
+      "x": 12511.2578125,
+      "y": 4569.40625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "off"
+      }
+    },
+    {
+      "id": 176,
+      "sqlId": 361,
+      "script": "Base.93chevySilveradoK3500flatbed",
+      "skin": 0,
+      "x": 12518.2890625,
+      "y": 4539.59375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_SUB93BugGuard": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 228,
+      "sqlId": 395,
+      "script": "Base.91fordLTDwagon",
+      "skin": 2,
+      "x": 12507.0546875,
+      "y": 4597.90625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_LTD91Roofrack": "true"
+      }
+    },
+    {
+      "id": 208,
+      "sqlId": 378,
+      "script": "Base.70chevelleCoupe",
+      "skin": 7,
+      "x": 12515.4765625,
+      "y": 4564.1171875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNVinylRoof": "true"
+      }
+    },
+    {
+      "id": 189,
+      "sqlId": 385,
+      "script": "Base.OffRoadBurnt",
+      "skin": 0,
+      "x": 12507.765625,
+      "y": 4571.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 249,
+      "sqlId": 371,
+      "script": "Base.89trooper",
+      "skin": 5,
+      "x": 12515.671875,
+      "y": 4552.9296875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_ISZ89Roofrack": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 222,
+      "sqlId": 360,
+      "script": "Base.96saturnSL2",
+      "skin": 3,
+      "x": 12515.265625,
+      "y": 4540.96875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_SAT96Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 376,
+      "script": "Base.SmallCar02Burnt",
+      "skin": 0,
+      "x": 12507.25,
+      "y": 4559.5703125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 205,
+      "sqlId": 381,
+      "script": "Base.CarNormalBurnt",
+      "skin": 0,
+      "x": 12507.640625,
+      "y": 4565.8828125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 183,
+      "sqlId": 415,
+      "script": "Base.85oldsmobileDelta88Wagon",
+      "skin": 2,
+      "x": 12518.0078125,
+      "y": 4610.46875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 200,
+      "sqlId": 364,
+      "script": "Base.85oldsmobileDelta88Wagon",
+      "skin": 3,
+      "x": 12515.0390625,
+      "y": 4546.890625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 207,
+      "sqlId": 368,
+      "script": "Base.91fordLTDpdLCPD",
+      "skin": 0,
+      "x": 12507.0546875,
+      "y": 4547.1171875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "off"
+      }
+    },
+    {
+      "id": 252,
+      "sqlId": 365,
+      "script": "Base.84cadillacDeVilleCoupe",
+      "skin": 6,
+      "x": 12518.15625,
+      "y": 4545.8984375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 247,
+      "sqlId": 393,
+      "script": "Base.85chevyImpalaSedanLCPD",
+      "skin": 0,
+      "x": 12507.7265625,
+      "y": 4591.9140625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TireFrontLeft": "true",
+        "defaultPartSet_TireFrontRight": "true",
+        "defaultPartSet_TireRearLeft": "true",
+        "defaultPartSet_TireRearRight": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "off"
+      }
+    },
+    {
+      "id": 209,
+      "sqlId": 373,
+      "script": "Base.91range2",
+      "skin": 1,
+      "x": 12518.5859375,
+      "y": 4558,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "trafficjamn",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_RR91Roofrack": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_DAMNSpareTireTrunk": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "aa272703c826a9fbb02b887f7cfd9f15398dd82eadd84ff39939d72143b7e2cf",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

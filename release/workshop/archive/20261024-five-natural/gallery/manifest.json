@@ -1,0 +1,246 @@
+{
+  "workshopId": "3825545131",
+  "nativeGame": "Project Zomboid 42.21.0",
+  "source": "Unposed natural world generation in an owned native session, 2026-10-23",
+  "sceneGeneratedByAI": false,
+  "generatedContribution": "Transparent location lettering only",
+  "processing": "Native footage crop and aspect-preserving downsample, then separate title composite and JPEG encoding",
+  "dimensions": [
+    1024,
+    512
+  ],
+  "photoSettings": "Hidden HUD, noon, dressed observer; only observer/camera moved. No vehicle creation, repositioning, repair or light changes.",
+  "images": [
+    {
+      "file": "only-ki5-location-01-west-point-police.jpg",
+      "title": "WEST POINT POLICE DEPARTMENT",
+      "category": "regional-police",
+      "location": "west-point-police",
+      "frame": [
+        11803,
+        6790
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-west-point-police-native.png",
+      "masterSha256": "23c318cb6e7321d311f5ff5c7bc2adbcd03a83f4a0c9b388caa4813b877a5888",
+      "titleMaster": "tools-src/gallery/location-titles/west-point-police-master.png",
+      "titleSha256": "2206cf5f5278e4b22b3d949d542dec65d74172ad2df31c4e2422dcbaf6da5ee3",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        381,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-west-point-police-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 80851,
+      "beforeTinyPngBytes": 80851,
+      "sha256": "48dada070bf16db07e0a91d1bf0cc06e8ee4c41621d4c8c17d6b5fbe1c2cb58e",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/west-point-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-02-muldraugh-police.jpg",
+      "title": "MULDRAUGH POLICE DEPARTMENT",
+      "category": "regional-police",
+      "location": "muldraugh-police",
+      "frame": [
+        10620,
+        10416
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-muldraugh-police-native.png",
+      "masterSha256": "bc4a5d49479929a27524e9b01a3ae876d44b19761b146ef4fd927ed452341aa8",
+      "titleMaster": "tools-src/gallery/location-titles/muldraugh-police-master.png",
+      "titleSha256": "5ce7e7dba7df9f5bc407b62335dd41a88042620cd4032f9df5dd12d8327b7942",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        392,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-muldraugh-police-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 58291,
+      "beforeTinyPngBytes": 58291,
+      "sha256": "9e308aa9e22d022d7a308e32d84a4118c2b4e043872cc5e9286894821751bc88",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/muldraugh-police-capture.json"
+    },
+    {
+      "file": "only-ki5-location-03-louisville-military-checkpoint.jpg",
+      "title": "LOUISVILLE MILITARY CHECKPOINT",
+      "category": "military",
+      "location": "louisville-military-checkpoint",
+      "frame": [
+        12550.0,
+        4213.0
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-louisville-military-checkpoint-native.png",
+      "masterSha256": "d8c7d162e847924f2d7980a6ce3f9f5c9367caf7e21799808bc38346f8562610",
+      "titleMaster": "tools-src/gallery/location-titles/louisville-military-checkpoint-master.png",
+      "titleSha256": "8d9a4d09acb3d99b19a30df9ec5620884043b8800de05a90d8243cb680326d15",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        364,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-louisville-military-checkpoint-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 127406,
+      "beforeTinyPngBytes": 127406,
+      "sha256": "cb0480366bb95da16aca214dcba35831a0f250dbd56ef55e371c527a24d28f48",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/louisville-military-checkpoint-capture.json"
+    },
+    {
+      "file": "only-ki5-location-04-secret-military-base.jpg",
+      "title": "SECRET MILITARY BASE",
+      "category": "military",
+      "location": "secret-military-base",
+      "frame": [
+        5592,
+        12458
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-secret-military-base-native.png",
+      "masterSha256": "6b0f98b9f328adc0d18b47511a1070dc9592986764a66f1b562aceb8e70a3e9d",
+      "titleMaster": "tools-src/gallery/location-titles/secret-military-base-master.png",
+      "titleSha256": "9cd9b6cd75bcbe40c2dc43ae920c6490f459895c4f3b142175a6c07d60f95bfd",
+      "titlePosition": [
+        24,
+        384
+      ],
+      "titleDimensions": [
+        499,
+        108
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-secret-military-base-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 73033,
+      "beforeTinyPngBytes": 73033,
+      "sha256": "cad85776805a1af903144121c86962349c29e9be8d4580fd895a5b07ca3ca92a",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/secret-military-base-capture.json"
+    },
+    {
+      "file": "only-ki5-location-05-louisville-highway.jpg",
+      "title": "LOUISVILLE HIGHWAY",
+      "category": "highway",
+      "location": "louisville-highway",
+      "frame": [
+        12598.0,
+        1788.0
+      ],
+      "staged": false,
+      "master": "tools-src/gallery/natural-locations/only-ki5-louisville-highway-native.png",
+      "masterSha256": "d16f91df72b3d0f3bed7e6db500656ec1c91c86d1d7c5b57d52ac4921769173f",
+      "titleMaster": "tools-src/gallery/location-titles/louisville-highway-master.png",
+      "titleSha256": "2fb9ab2d48a9d00c1ddf3a87ab96ec6a7cbc4438d1d6bc62493239e94ad0da4d",
+      "titlePosition": [
+        24,
+        416
+      ],
+      "titleDimensions": [
+        503,
+        76
+      ],
+      "sourceDimensions": [
+        1280,
+        720
+      ],
+      "cropBox": [
+        0,
+        0,
+        1280,
+        640
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "composedMaster": "tools-src/gallery/natural-locations/only-ki5-louisville-highway-titled-master.png",
+      "format": "JPEG",
+      "opaque": true,
+      "jpegQuality": 86,
+      "bytes": 77683,
+      "beforeTinyPngBytes": 77683,
+      "sha256": "a7d67276bb47cb9082e2a2c65a6d0ccfe45044885bead92941bac67263711b13",
+      "tinyPngCompression": "pending",
+      "captureProvenance": "tools-src/gallery/natural-locations/louisville-highway-capture.json"
+    }
+  ],
+  "totalBytes": 417264
+}

@@ -1,0 +1,2734 @@
+{
+  "version": "0.3.2",
+  "game": "42.21.0",
+  "runs": {
+    "humvee-032-sp-a": {
+      "report": {
+        "singlePlayer": true,
+        "baseline": null,
+        "natural": [
+          {
+            "id": 208,
+            "sqlId": 6,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12558.5,
+            "y": 4209.421875,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 205,
+            "sqlId": 7,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12549.5,
+            "y": 4209.421875,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 213,
+            "sqlId": 10,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12497.421875,
+            "y": 4258.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 206,
+            "sqlId": 5,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12555.5,
+            "y": 4209.421875,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 216,
+            "sqlId": 2,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12567.5,
+            "y": 4223.578125,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          }
+        ],
+        "fixture": [
+          {
+            "id": 208,
+            "sqlId": 99,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12558.1484375,
+            "y": 2030.7421875,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 240,
+            "sqlId": 87,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12534.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 248,
+            "sqlId": 90,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12542.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 234,
+            "sqlId": 88,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12544.125,
+            "y": 2018.078125,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 184,
+            "sqlId": 86,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12534.5,
+            "y": 2055.1015625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 213,
+            "sqlId": 100,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12558.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 179,
+            "sqlId": 84,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12534.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 219,
+            "sqlId": 92,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12543.109375,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 214,
+            "sqlId": 91,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12543.109375,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 177,
+            "sqlId": 103,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12566.5,
+            "y": 2043.1015625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 200,
+            "sqlId": 95,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 206,
+            "sqlId": 96,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12550.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 216,
+            "sqlId": 101,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12558.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 215,
+            "sqlId": 89,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 189,
+            "sqlId": 97,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 251,
+            "sqlId": 93,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12550.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 205,
+            "sqlId": 94,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2030.65625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 253,
+            "sqlId": 98,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12558.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 235,
+            "sqlId": 85,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12532.8515625,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 252,
+            "sqlId": 102,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12558.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          }
+        ],
+        "peerComparisons": [],
+        "fixtureHistogram": {
+          "0": 2,
+          "2": 2,
+          "1": 3,
+          "6": 3,
+          "7": 3,
+          "5": 7
+        },
+        "weights": {
+          "standard": 95,
+          "medic": 4,
+          "jtf": 1
+        },
+        "observedNaturalSeparately": true,
+        "frequencyProvenByExhaustivePolicyFixture": true
+      },
+      "cleanExits": {
+        "sp": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        }
+      }
+    },
+    "humvee-032-sp-b-reload": {
+      "report": {
+        "singlePlayer": true,
+        "baseline": "humvee-032-sp-a",
+        "natural": [],
+        "fixture": [
+          {
+            "id": 208,
+            "sqlId": 97,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 196,
+            "sqlId": 85,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12532.8515625,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 198,
+            "sqlId": 87,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12534.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 213,
+            "sqlId": 102,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12558.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 201,
+            "sqlId": 91,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12543.109375,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 212,
+            "sqlId": 101,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12558.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 203,
+            "sqlId": 93,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12550.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 205,
+            "sqlId": 94,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2030.65625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 195,
+            "sqlId": 84,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12534.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 204,
+            "sqlId": 88,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12544.125,
+            "y": 2018.078125,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 216,
+            "sqlId": 103,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12566.5,
+            "y": 2043.1015625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 211,
+            "sqlId": 100,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12558.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 197,
+            "sqlId": 86,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12534.5,
+            "y": 2055.1015625,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 199,
+            "sqlId": 89,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 207,
+            "sqlId": 96,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12550.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 202,
+            "sqlId": 92,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12543.109375,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 206,
+            "sqlId": 95,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 209,
+            "sqlId": 98,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12558.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 210,
+            "sqlId": 99,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12558.1640625,
+            "y": 2030.75,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          },
+          {
+            "id": 200,
+            "sqlId": 90,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12542.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true",
+              "OnlyKI5Acceptance.HumveeFixture": true
+            }
+          }
+        ],
+        "peerComparisons": [],
+        "fixtureHistogram": {
+          "5": 7,
+          "2": 2,
+          "1": 3,
+          "0": 2,
+          "6": 3,
+          "7": 3
+        },
+        "weights": {
+          "standard": 95,
+          "medic": 4,
+          "jtf": 1
+        },
+        "observedNaturalSeparately": true,
+        "frequencyProvenByExhaustivePolicyFixture": true
+      },
+      "cleanExits": {
+        "sp": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        }
+      }
+    },
+    "humvee-032-mp-a": {
+      "report": {
+        "singlePlayer": false,
+        "baseline": null,
+        "natural": [
+          {
+            "id": 143,
+            "sqlId": 123,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12564.5,
+            "y": 4209.419921875,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "military",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          }
+        ],
+        "fixture": [
+          {
+            "id": 238,
+            "sqlId": 148,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12558.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 240,
+            "sqlId": 144,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 254,
+            "sqlId": 131,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12534.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 236,
+            "sqlId": 149,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12566.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 239,
+            "sqlId": 146,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12558.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 241,
+            "sqlId": 142,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12550.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 252,
+            "sqlId": 136,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 234,
+            "sqlId": 150,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12574.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 232,
+            "sqlId": 132,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12534.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 249,
+            "sqlId": 137,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 244,
+            "sqlId": 138,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12542.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 245,
+            "sqlId": 141,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12550.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 248,
+            "sqlId": 139,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12542.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 251,
+            "sqlId": 135,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 255,
+            "sqlId": 133,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12534.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 253,
+            "sqlId": 134,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12534.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 237,
+            "sqlId": 147,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12558.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 242,
+            "sqlId": 145,
+            "script": "Base.92amgeneralM998",
+            "skin": 3,
+            "x": 12558.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 3,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 246,
+            "sqlId": 143,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12550.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 247,
+            "sqlId": 140,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12550.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          }
+        ],
+        "humveeVehiclePoolShares": {
+          "military": 0.95,
+          "military_vehicle_light": 0.95,
+          "modified_trfjm": 0.95
+        },
+        "peerComparisons": [
+          {
+            "peer": "a",
+            "id": 238,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 240,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 254,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 236,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 239,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 241,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 252,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 234,
+            "skin": 2,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 232,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 249,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 244,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 245,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 248,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 251,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 255,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 253,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 237,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 242,
+            "skin": 3,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 246,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 247,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 238,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 240,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 254,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 236,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 239,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 241,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 252,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 234,
+            "skin": 2,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 232,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 249,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 244,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 245,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 248,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 251,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 255,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 253,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 237,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 242,
+            "skin": 3,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 246,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 247,
+            "skin": 7,
+            "matches": true
+          }
+        ],
+        "fixtureHistogram": {
+          "0": 5,
+          "5": 5,
+          "1": 4,
+          "7": 2,
+          "2": 1,
+          "6": 2,
+          "3": 1
+        },
+        "weights": {
+          "standard": 95,
+          "medic": 4,
+          "jtf": 1
+        },
+        "observedNaturalSeparately": true,
+        "frequencyProvenByExhaustivePolicyFixture": true
+      },
+      "cleanExits": {
+        "a": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        },
+        "b": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        },
+        "server": {
+          "exitCode": 0
+        }
+      }
+    },
+    "humvee-032-mp-b-reload": {
+      "report": {
+        "singlePlayer": false,
+        "baseline": "humvee-032-mp-a",
+        "natural": [],
+        "fixture": [
+          {
+            "id": 253,
+            "sqlId": 141,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12550.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 140,
+            "sqlId": 133,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12534.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 138,
+            "sqlId": 138,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12542.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 247,
+            "sqlId": 149,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12566.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 251,
+            "sqlId": 145,
+            "script": "Base.92amgeneralM998",
+            "skin": 3,
+            "x": 12558.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "zone": "",
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 3,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 220,
+            "sqlId": 144,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12550.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 250,
+            "sqlId": 146,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12558.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 246,
+            "sqlId": 150,
+            "script": "Base.92amgeneralM998",
+            "skin": 2,
+            "x": 12574.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 2,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 252,
+            "sqlId": 142,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12550.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 254,
+            "sqlId": 140,
+            "script": "Base.92amgeneralM998",
+            "skin": 7,
+            "x": 12550.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 7,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 137,
+            "sqlId": 139,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12542.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 218,
+            "sqlId": 148,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12558.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 168,
+            "sqlId": 135,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2018.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 167,
+            "sqlId": 136,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 166,
+            "sqlId": 137,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12542.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 139,
+            "sqlId": 134,
+            "script": "Base.92amgeneralM998",
+            "skin": 0,
+            "x": 12534.5,
+            "y": 2066.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 170,
+            "sqlId": 131,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12534.5,
+            "y": 2030.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 169,
+            "sqlId": 132,
+            "script": "Base.92amgeneralM998",
+            "skin": 1,
+            "x": 12534.5,
+            "y": 2042.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 1,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 219,
+            "sqlId": 147,
+            "script": "Base.92amgeneralM998",
+            "skin": 5,
+            "x": 12558.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          },
+          {
+            "id": 221,
+            "sqlId": 143,
+            "script": "Base.92amgeneralM998",
+            "skin": 6,
+            "x": 12550.5,
+            "y": 2054.5,
+            "z": 0,
+            "lights": 0,
+            "siren": 0,
+            "created": true,
+            "data": {
+              "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 6,
+              "OnlyKI5Acceptance.HumveeFixture": true,
+              "damnlib_migrated": true,
+              "defaultPartSet_M998Roofrack": "true",
+              "defaultPartSet_DAMNSpareTire": "true",
+              "defaultPartSet_DAMNMudflaps": "true",
+              "defaultPartSet_M998TrunkBarrier": "true",
+              "defaultPartSet_M998BackCover": "true",
+              "defaultPartSet_M998Muffler": "true",
+              "defaultPartSet_DAMNBumperFront": "true"
+            }
+          }
+        ],
+        "humveeVehiclePoolShares": {
+          "military": 0.95,
+          "military_vehicle_light": 0.95,
+          "modified_trfjm": 0.95
+        },
+        "peerComparisons": [
+          {
+            "peer": "a",
+            "id": 218,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 220,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 170,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 247,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 250,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 252,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 167,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 246,
+            "skin": 2,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 169,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 166,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 138,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 253,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 137,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 168,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 140,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 139,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 219,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 251,
+            "skin": 3,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 221,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "a",
+            "id": 254,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 218,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 220,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 170,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 247,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 250,
+            "skin": 7,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 252,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 167,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 246,
+            "skin": 2,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 169,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 166,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 138,
+            "skin": 1,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 253,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 137,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 168,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 140,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 139,
+            "skin": 0,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 219,
+            "skin": 5,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 251,
+            "skin": 3,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 221,
+            "skin": 6,
+            "matches": true
+          },
+          {
+            "peer": "b",
+            "id": 254,
+            "skin": 7,
+            "matches": true
+          }
+        ],
+        "fixtureHistogram": {
+          "0": 5,
+          "1": 4,
+          "3": 1,
+          "5": 5,
+          "7": 2,
+          "2": 1,
+          "6": 2
+        },
+        "weights": {
+          "standard": 95,
+          "medic": 4,
+          "jtf": 1
+        },
+        "observedNaturalSeparately": true,
+        "frequencyProvenByExhaustivePolicyFixture": true
+      },
+      "cleanExits": {
+        "a": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        },
+        "b": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "keeperInJob": true,
+          "gameInJob": true
+        },
+        "server": {
+          "exitCode": 0
+        }
+      }
+    }
+  },
+  "changedPayloadFiles": [
+    "42/media/lua/server/OnlyKI5VehicleSpawnLiveryOverhaul_PoliceSpawnRouting.lua",
+    "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_SpawnSkins.lua",
+    "42/mod.info",
+    "mod.info"
+  ],
+  "scope": "Focused weighted-livery follow-up; earlier 0.3.1 acceptance remains separate",
+  "productionLuaScenarios": 13,
+  "compiledLuaFiles": 56,
+  "hearingAcceptance": false
+}

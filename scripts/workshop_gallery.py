@@ -19,9 +19,15 @@ def main():
     parser.add_argument('--upload', action='store_true')
     parser.add_argument('--description', action='store_true', help='Sync reviewed description; requires --upload')
     parser.add_argument('--verify-images', action='store_true', help='Read back each original Steam CDN image and compare SHA-256')
+    parser.add_argument('--description-only',action='store_true')
+    parser.add_argument('--replace-gallery',action='store_true',help='Replace the explicitly reviewed previous gallery')
     args = parser.parse_args()
     if args.description and not args.upload:
         parser.error('--description requires --upload')
+    if args.description_only and not (args.upload and args.description):
+        parser.error('--description-only requires --upload --description')
+    if args.replace_gallery and (not args.upload or args.description_only):
+        parser.error('--replace-gallery requires --upload and cannot combine with --description-only')
     item = saved_id()
     if item != '3825545131':
         raise ValueError('Gallery tool is restricted to the new Only KI5 item')
@@ -65,11 +71,23 @@ def main():
                 raise ValueError('Gallery image differs from reviewed manifest')
             files.append(path)
         names = [p.name for p in files]
+        if len(set(names))!=len(names):raise ValueError('Duplicate gallery filenames')
         previous = [p['name'] for p in before['previews']]
-        if previous != names[:len(previous)]:
+        cursor=0;replace_first=False
+        if args.description_only:
+            files=[];names=previous
+        elif args.replace_gallery:
+            baselines=[]
+            for folder in ('20261023-initial-gallery','20261024-five-natural'):
+                baseline=json.loads((RELEASE/'archive'/folder/'page-verified.json').read_text('utf-8'))
+                baselines.append([p['name'] for p in baseline['previews']])
+            if previous==names[:len(previous)]:cursor=len(previous)
+            elif previous in baselines:replace_first=True
+            else:
+                raise ValueError('Live gallery differs from the explicitly reviewed replacement baseline')
+        elif previous != names[:len(previous)]:
             raise ValueError('Existing gallery differs from reviewed order; refusing replacement')
-        if sum(p.stat().st_size for p in files) > quota['availableBytes']:
-            raise ValueError('Reviewed gallery exceeds available app preview staging quota')
+        else:cursor=len(previous)
         description = None
         if args.description:
             description = (RELEASE/'description.txt').read_text('utf-8-sig').strip()+'\n\nMod ID: OnlyKI5VehicleSpawnLiveryOverhaul'
@@ -78,8 +96,27 @@ def main():
         attempt = dict(workshopId=item, before=before, quota=quota,
                        files=[p.name for p in files], status='submitting')
         write(PRIVATE/'gallery-attempt.json', attempt)
-        steam.upload_page(files, before, description)
-        after = steam.query()
+        after=before;batches=[]
+        if args.description_only or (cursor==len(files) and description is not None):
+            steam.upload_page([],after,description)
+            after=steam.query()
+        while cursor<len(files):
+            available=steam.cloud_quota()['availableBytes']
+            budget=min(900_000,available-1024)
+            batch=[];size=0
+            for path in files[cursor:]:
+                if size+path.stat().st_size>budget:break
+                batch.append(path);size+=path.stat().st_size
+            if not batch:raise ValueError('A reviewed image exceeds available staging quota; no quality reduction attempted')
+            steam.upload_page(batch,after,description if not batches else None,replace_first)
+            replace_first=False;cursor+=len(batch);after=steam.query()
+            if [p['name'] for p in after['previews']]!=names[:cursor]:
+                raise RuntimeError('Batch order verification pending; query before resuming')
+            for key in ('title','visibility','cover','dependencies'):
+                if after[key]!=before[key]:raise RuntimeError('Unexpected '+key+' change during gallery batch')
+            batches.append(dict(files=[p.name for p in batch],bytes=size,availableBefore=available))
+            write(PRIVATE/'gallery-attempt.json',dict(attempt,verifiedPrefix=cursor,batches=batches))
+            print('Verified gallery batch: '+str(cursor)+'/'+str(len(names))+' images',flush=True)
         for key in ('title', 'visibility', 'cover'):
             if after[key] != before[key]:
                 raise RuntimeError('Unexpected '+key+' change during gallery update')
@@ -93,13 +130,13 @@ def main():
         stamp = datetime.now(timezone.utc).isoformat()
         receipt = dict(workshopId=item, verified=True, verifiedUtc=stamp,
                        descriptionSha256=hashlib.sha256(after['description'].replace('\r\n','\n').encode()).hexdigest(),
-                       galleryImages=len(files), gallery=after['previews'],
+                       galleryImages=len(after['previews']), gallery=after['previews'],
                        preserved=['title', 'visibility', 'cover', 'dependencies', 'content'],
-                       payloadUploadAttempted=False, quotaBefore=quota)
+                       payloadUploadAttempted=False, quotaBefore=quota,batches=batches)
         write(RELEASE/'page-update-verified.json', receipt)
         write(RELEASE/'page-verified.json', dict(queriedUtc=stamp, **after))
         write(PRIVATE/'gallery-attempt.json', dict(attempt, status='verified'))
-        print('Verified '+str(len(files))+' ordered gallery images; cover, unlisted visibility and requirements preserved')
+        print('Verified '+str(len(after['previews']))+' ordered gallery images; cover, unlisted visibility and requirements preserved')
     finally:
         steam.api.SteamAPI_Shutdown()
 

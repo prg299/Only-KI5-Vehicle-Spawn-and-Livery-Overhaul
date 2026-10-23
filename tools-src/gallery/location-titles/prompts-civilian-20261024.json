@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-24",
+  "reference": "west-point-police-master.png",
+  "generatedContribution": "Transparent lettering only",
+  "assets": [
+    {
+      "key": "rosewood-fire",
+      "title": "ROSEWOOD\nFIRE DEPARTMENT",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact replacement text with two lines:\nROSEWOOD\nFIRE DEPARTMENT\nOnly these words. Main location line bold, second line smaller. Compact horizontal readable survival-game typography with restrained light texture. Transparent background, complete glyphs and clear margins. No scene, photo, scenery, vehicles, symbols, panels, badges, icons or rectangular backing. This lettering will be composited over unchanged real gameplay; generate only lettering.",
+      "generatedFile": "exec-83ad58f1-a7a9-4d90-9c39-51f4869f003e.png"
+    },
+    {
+      "key": "riverside-post",
+      "title": "RIVERSIDE\nPOST OFFICE",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact replacement text with two lines:\nRIVERSIDE\nPOST OFFICE\nOnly these words. Main location line bold, second line smaller. Compact horizontal readable survival-game typography with restrained light texture. Transparent background, complete glyphs and clear margins. No scene, photo, scenery, vehicles, symbols, panels, badges, icons or rectangular backing. This lettering will be composited over unchanged real gameplay; generate only lettering.",
+      "generatedFile": "exec-686465df-d70c-4dcc-9ba5-f63db93ae5ba.png"
+    },
+    {
+      "key": "muldraugh-industrial",
+      "title": "MULDRAUGH\nMCCOY LOGGING",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact replacement text with two lines:\nMULDRAUGH\nMCCOY LOGGING\nOnly these words. Main location line bold, second line smaller. Compact horizontal readable survival-game typography with restrained light texture. Transparent background, complete glyphs and clear margins. No scene, photo, scenery, vehicles, symbols, panels, badges, icons or rectangular backing. This lettering will be composited over unchanged real gameplay; generate only lettering.",
+      "generatedFile": "exec-86187c62-043a-4e43-8ade-356cae4d3d61.png"
+    },
+    {
+      "key": "west-point-main-street",
+      "title": "WEST POINT\nMAIN STREET",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact replacement text with two lines:\nWEST POINT\nMAIN STREET\nOnly these words. Main location line bold, second line smaller. Compact horizontal readable survival-game typography with restrained light texture. Transparent background, complete glyphs and clear margins. No scene, photo, scenery, vehicles, symbols, panels, badges, icons or rectangular backing. This lettering will be composited over unchanged real gameplay; generate only lettering.",
+      "generatedFile": "exec-27bb2e7b-6497-4594-a3ac-fc63b5df443f.png"
+    }
+  ]
+}

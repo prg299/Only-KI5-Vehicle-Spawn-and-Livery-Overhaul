@@ -1,0 +1,51 @@
+{
+  "workshopId": "3825545131",
+  "verified": true,
+  "verifiedUtc": "2026-10-23T21:55:53.009315+00:00",
+  "descriptionSha256": "f102c703a4edb9be98e6912069b4bf80d785a13ab60ce415fdb58b1bdbf02df4",
+  "galleryImages": 5,
+  "gallery": [
+    {
+      "index": 0,
+      "name": "only-ki5-location-01-west-point-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10299332371621142437/0195649D6F34BC60438BA52819EC7D40F25F1786/",
+      "type": 0
+    },
+    {
+      "index": 1,
+      "name": "only-ki5-location-02-muldraugh-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16060554866799535390/AAD7C572C778CB78A53D22534D8A669DB9D82689/",
+      "type": 0
+    },
+    {
+      "index": 2,
+      "name": "only-ki5-location-03-louisville-military-checkpoint.jpg",
+      "url": "https://images.steamusercontent.com/ugc/12723497323402021081/0AA978EBE0279C2E8ABB3A71BFC1DA6E24CCB873/",
+      "type": 0
+    },
+    {
+      "index": 3,
+      "name": "only-ki5-location-04-secret-military-base.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9757977231493776754/211950E654F7F8AC2A8E46E2966C5D83FA7910EC/",
+      "type": 0
+    },
+    {
+      "index": 4,
+      "name": "only-ki5-location-05-louisville-highway.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16657479952357903045/6F3E70A38E61E1C733E88539383F6B0F3F10AC0C/",
+      "type": 0
+    }
+  ],
+  "preserved": [
+    "title",
+    "visibility",
+    "cover",
+    "dependencies",
+    "content"
+  ],
+  "payloadUploadAttempted": false,
+  "quotaBefore": {
+    "totalBytes": 1000000,
+    "availableBytes": 998409
+  }
+}

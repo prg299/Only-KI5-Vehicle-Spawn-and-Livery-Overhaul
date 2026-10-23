@@ -1,6 +1,7 @@
 """Shared serialized broker for owned, already guarded native lab processes."""
 from pathlib import Path
 import json, subprocess, sys, time
+from native_paths import owned_run
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -8,8 +9,7 @@ def rows(value): return list(value.values()) if isinstance(value,dict) else valu
 
 class NativeLab:
     def __init__(self,name):
-        self.name=name;self.run=(ROOT/'build/native'/name).resolve()
-        if not self.run.is_relative_to(ROOT/'build/native'):raise ValueError('Owned run root')
+        self.name=name;self.run=owned_run(name)
 
     def invoke(self,tool,*arguments):
         result=subprocess.run([sys.executable,str(ROOT/'dev'/tool),self.name,*arguments],

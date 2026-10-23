@@ -1,8 +1,15 @@
 # Dependencies and load order
 
-The 0.3.1 full-fleet profile requires **87 external Workshop items / 102 modules**.
-The non-vehicle requirements are **that DAMN Library**, **More Car Features +
-Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
+The Workshop page lists only **2 required items**: **that DAMN Library**
+and **More Car Features + Spawn Zones Expansion / WayMoreCars**.
+Install the vehicles separately from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=2490220997).
+Individual vehicle packs are not attached as Workshop requirements.
+**YAPZLib is not required.**
+
+The 0.3.2 full-fleet runtime profile still uses **87 external items / 102 modules**.
+The complete input inventory is retained below and in config/fleet-dependencies.json.
+The unchanged player descriptor requires those installed/enabled modules; this
+page-list cleanup does not replace or bundle the vehicle models.
 
 **Highly recommended, optional:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey.
 Follow its server/client setup instructions. It is not bundled or a required item,

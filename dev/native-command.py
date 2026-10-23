@@ -2,6 +2,7 @@
 from pathlib import Path
 import argparse,json,time,uuid
 from native_files import read_json
+from native_paths import owned_run
 
 p=argparse.ArgumentParser()
 p.add_argument('run');p.add_argument('action',choices=['lua','capture','client','stop'])
@@ -10,8 +11,8 @@ p.add_argument('--name');p.add_argument('--port',type=int);p.add_argument('--out
 p.add_argument('--quiet',action='store_true')
 a=p.parse_args()
 root=Path(__file__).resolve().parents[1]
-run=(root/'build/native'/a.run).resolve()
-if not run.is_relative_to(root/'build/native'):raise ValueError('Run escaped test root')
+run=owned_run(a.run)
+if (run/'finished.json').exists():raise RuntimeError('The owned native lifetime is already finished')
 if (run/'request.json').exists():raise RuntimeError('A prior action is pending')
 q={'id':uuid.uuid4().hex,'action':a.action,'client':a.client}
 if a.file:q['code']=a.file.read_text('utf-8-sig')
@@ -22,6 +23,7 @@ tmp=run/'request.pending';tmp.write_text(json.dumps(q),encoding='utf-8');tmp.rep
 if a.action=='stop':print('Owned lifetime stop requested');raise SystemExit()
 deadline=time.monotonic()+300
 while time.monotonic()<deadline:
+    if (run/'finished.json').exists():raise RuntimeError('The owned native lifetime ended before replying')
     path=run/'response.json'
     if path.exists():
         result=read_json(path)

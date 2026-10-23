@@ -1,0 +1,38 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-24",
+  "reference": "west-point-police-master.png",
+  "generatedContribution": "Transparent lettering only; native gameplay remains separate",
+  "assets": [
+    {
+      "key": "louisville-police",
+      "title": "LOUISVILLE\nPOLICE DEPARTMENT",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nLOUISVILLE\nPOLICE DEPARTMENT\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    },
+    {
+      "key": "jefferson-police",
+      "title": "JEFFERSON COUNTY\nPOLICE",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nJEFFERSON COUNTY\nPOLICE\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    },
+    {
+      "key": "meade-sheriff",
+      "title": "RIVERSIDE\nMEADE COUNTY SHERIFF",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nRIVERSIDE\nMEADE COUNTY SHERIFF\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    },
+    {
+      "key": "state-police",
+      "title": "FALLAS LAKE\nKENTUCKY STATE POLICE",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nFALLAS LAKE\nKENTUCKY STATE POLICE\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    },
+    {
+      "key": "airport-security",
+      "title": "LOUISVILLE AIRPORT\nSECURITY",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nLOUISVILLE AIRPORT\nSECURITY\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    },
+    {
+      "key": "prison-transport",
+      "title": "ROSEWOOD\nKNOX PENITENTIARY",
+      "prompt": "Create a NEW isolated transparent typographic location-title overlay. The reference image is a STYLE REFERENCE ONLY. Match its condensed off-white block lettering, dark charcoal outline and restrained shadow. Exact wording, replacing all reference text:\nROSEWOOD\nKNOX PENITENTIARY\nOnly these words, two lines. Main location line bold, second line smaller. Compact horizontal readable survival-game lettering, restrained very light texture. Genuinely transparent canvas with complete glyphs and clear margins. No scenery, photos, vehicles, symbols, badges, panels or rectangular backing. This separate lettering layer will be composited over untouched real gameplay; do not generate any gameplay or scene."
+    }
+  ]
+}

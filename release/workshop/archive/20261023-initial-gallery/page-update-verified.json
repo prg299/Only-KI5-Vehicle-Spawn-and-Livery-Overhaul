@@ -1,0 +1,63 @@
+{
+  "workshopId": "3825545131",
+  "verified": true,
+  "verifiedUtc": "2026-10-23T21:51:30.017701+00:00",
+  "descriptionSha256": "f102c703a4edb9be98e6912069b4bf80d785a13ab60ce415fdb58b1bdbf02df4",
+  "galleryImages": 7,
+  "gallery": [
+    {
+      "index": 0,
+      "name": "only-ki5-01-louisville-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16887156231184127400/4B2A29E4223946DE92390D6F3E1C754233A381C5/",
+      "type": 0
+    },
+    {
+      "index": 1,
+      "name": "only-ki5-02-silent-lightbars.jpg",
+      "url": "https://images.steamusercontent.com/ugc/13523334685381425962/CD639D64EED00F998D0BFA5FBD57959786051FB6/",
+      "type": 0
+    },
+    {
+      "index": 2,
+      "name": "only-ki5-03-military-checkpoint.jpg",
+      "url": "https://images.steamusercontent.com/ugc/14535172213692832174/0B44A889D7304794BD3DCCB062A4215AEFE9DC00/",
+      "type": 0
+    },
+    {
+      "index": 3,
+      "name": "only-ki5-04-military-blockpost.jpg",
+      "url": "https://images.steamusercontent.com/ugc/14591823772521425529/841F1286ADF37A02322CB4FFD92EF623999B5FC9/",
+      "type": 0
+    },
+    {
+      "index": 4,
+      "name": "only-ki5-05-military-convoy.jpg",
+      "url": "https://images.steamusercontent.com/ugc/11342817284954987514/A0138F5D54C82F09BF16B991FA32CB58A081D295/",
+      "type": 0
+    },
+    {
+      "index": 5,
+      "name": "only-ki5-06-highway-traffic.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16048996664266361050/BABFAF3AB8BE8B076FD2E5B442484C1720AEBB5A/",
+      "type": 0
+    },
+    {
+      "index": 6,
+      "name": "only-ki5-07-integrated-variants.jpg",
+      "url": "https://images.steamusercontent.com/ugc/15701876805805221059/A07212AB48EE46819D7AEF70F2E425D9E85FA72D/",
+      "type": 0
+    }
+  ],
+  "preserved": [
+    "title",
+    "visibility",
+    "cover",
+    "dependencies",
+    "content"
+  ],
+  "payloadUploadAttempted": false,
+  "quotaBefore": {
+    "totalBytes": 1000000,
+    "availableBytes": 998409
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "queriedUtc": "2026-10-23T21:55:53.009315+00:00",
+  "workshopId": 3825545131,
+  "title": "Only KI5: Vehicle Spawn & Livery Overhaul",
+  "description": "[h1]Only KI5: Vehicle Spawn & Livery Overhaul[/h1]\nPut KI5 on Kentucky's roads. Regional police, military checkpoints and roadside scenes.\n\n[hr][/hr]\n[h2]How it works[/h2]\n[list]\n[*] [b]KI5 traffic.[/b] Replaces vanilla traffic, profession vehicles and roadside vehicle choices.\n[*] [b]Local police.[/b] Regional liveries for Louisville, Muldraugh, West Point and other jurisdictions.\n[*] [b]Silent lightbars.[/b] Eligible police spawns have a 50% flashing-light chance outside emergency parking. Lights on, siren off, in single-player and multiplayer.\n[*] [b]Military encounters.[/b] Military zones, checkpoint fleets and four roadside stories with consistent camo.\n[*] [b]More variety.[/b] Integrated vehicle variants, police skins and duplicate suppression.\n[/list]\n\n[hr][/hr]\n[h2]Requirements[/h2]\n[b]Build 42.21[/b], damnlib and More Car Features / WayMoreCars.\n\nInstall and enable the vehicles from the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] before this mod. Vehicle packs are installed separately and are not individual Workshop requirements here.\n\n[b]YAPZLib is not required.[/b] Internal helpers replace it.\n\n[b]Highly recommended:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388]KI5 Vehicle Performance Patch (Unofficial)[/url] by lucygoosey. Optional; follow its server/client setup instructions.\n\n[hr][/hr]\n[h2]Compatibility & saves[/h2]\nChanges appear in [b]fresh chunks[/b]; existing vehicles are not rewritten. Back up saves before changing mods.\n\nDisable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanilla selection mods and the old Vehicle Suite integrations: their selected content is already included.\n\n[b]0.3.1 unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.\n\n[hr][/hr]\n[h2]Credits[/h2]\n[list]\n[*] [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5[/url] - original vehicles; external packs retain their creators' ownership.\n[*] KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]damnlib[/url].\n[*] GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features[/url].\n[*] \u041f\u0443\u043f\u0441\u0438\u0447 - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url]. VMZ's original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]YAPZLib[/url] requirement is replaced here; no library source is bundled.\n[*] Branco - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo[/url]; Papa_Chad - supported vehicle families.\n[*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url].\n[*] Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url] selection inspiration and duplicate-ID data.\n[/list]\n\nIf an original author reaches out, their integrated content will be removed and their mod moved to an external dependency, with credits retained. MIT covers authored contributions only; integrated content retains its original ownership.\n\n[hr][/hr]\n[h2]Info[/h2]\nAI was used in the process to make this mod. If you have a problem with that, don't download it.\n\n[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code on GitHub[/url]\n\n[hr][/hr]\n[h2]Support development[/h2]\nIf you enjoy my work, you can support me by leaving a like!\n\nWant to follow my projects? You can check me out on [url=https://ko-fi.com/bearski]Ko-fi[/url]\n\nMod ID: OnlyKI5VehicleSpawnLiveryOverhaul",
+  "visibility": 3,
+  "cover": "https://images.steamusercontent.com/ugc/18008343982082122715/3D0FDFF48AF0B2DF669C3115F441E2BDF5C8276E/",
+  "previews": [
+    {
+      "index": 0,
+      "name": "only-ki5-location-01-west-point-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10299332371621142437/0195649D6F34BC60438BA52819EC7D40F25F1786/",
+      "type": 0
+    },
+    {
+      "index": 1,
+      "name": "only-ki5-location-02-muldraugh-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16060554866799535390/AAD7C572C778CB78A53D22534D8A669DB9D82689/",
+      "type": 0
+    },
+    {
+      "index": 2,
+      "name": "only-ki5-location-03-louisville-military-checkpoint.jpg",
+      "url": "https://images.steamusercontent.com/ugc/12723497323402021081/0AA978EBE0279C2E8ABB3A71BFC1DA6E24CCB873/",
+      "type": 0
+    },
+    {
+      "index": 3,
+      "name": "only-ki5-location-04-secret-military-base.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9757977231493776754/211950E654F7F8AC2A8E46E2966C5D83FA7910EC/",
+      "type": 0
+    },
+    {
+      "index": 4,
+      "name": "only-ki5-location-05-louisville-highway.jpg",
+      "url": "https://images.steamusercontent.com/ugc/16657479952357903045/6F3E70A38E61E1C733E88539383F6B0F3F10AC0C/",
+      "type": 0
+    }
+  ],
+  "dependencies": [
+    3171167894,
+    3520758551
+  ],
+  "missingDependencies": []
+}

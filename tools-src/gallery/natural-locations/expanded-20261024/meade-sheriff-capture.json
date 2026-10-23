@@ -1,0 +1,252 @@
+{
+  "location": {
+    "key": "meade-sheriff",
+    "category": "regional-police",
+    "title": "RIVERSIDE / MEADE COUNTY SHERIFF",
+    "probe": [
+      6097,
+      5249
+    ],
+    "frame": [
+      6111,
+      5222
+    ],
+    "zoom": 1.75,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "expectedLivery": "meade",
+    "sheriffLocation": true,
+    "lookAt": [
+      6111,
+      5227
+    ]
+  },
+  "frame": [
+    6111,
+    5222
+  ],
+  "zoom": 1.75,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 203,
+      "sqlId": 136,
+      "script": "Base.92fordCVPIMeade",
+      "skin": 0,
+      "x": 6110.9921875,
+      "y": 5227.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 132,
+      "script": "Base.84mercSWB",
+      "skin": 0,
+      "x": 6111.6875,
+      "y": 5247.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_W460Roofrack": "true",
+        "defaultPartSet_W460Bodykit": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_W460Guards": "true"
+      }
+    },
+    {
+      "id": 169,
+      "sqlId": 129,
+      "script": "Base.92fordCVPIMeade",
+      "skin": 0,
+      "x": 6092.46875,
+      "y": 5240.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison"
+      }
+    },
+    {
+      "id": 200,
+      "sqlId": 133,
+      "script": "Base.90bmwE30sedan4",
+      "skin": 5,
+      "x": 6111.5703125,
+      "y": 5259.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTireTrunk": "true",
+        "defaultPartSet_BMWE30Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 189,
+      "sqlId": 135,
+      "script": "Base.92jeepYJs",
+      "skin": 7,
+      "x": 6097.0703125,
+      "y": 5265.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_JP92Jack": "true",
+        "defaultPartSet_JP92Winch": "true",
+        "defaultPartSet_JP92RollBar": "true",
+        "defaultPartSet_JP92SoftTop": "true",
+        "defaultPartSet_JP92Bodykit": "true",
+        "defaultPartSet_JP92Lightbar": "true"
+      }
+    },
+    {
+      "id": 249,
+      "sqlId": 128,
+      "script": "Base.92fordCVPItaxi",
+      "skin": 0,
+      "x": 6097.9375,
+      "y": 5247.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 236,
+      "sqlId": 140,
+      "script": "Base.93chevySilveradoPoliceMCS",
+      "skin": 0,
+      "x": 6110.6953125,
+      "y": 5210.4375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "police",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police"
+      }
+    },
+    {
+      "id": 208,
+      "sqlId": 131,
+      "script": "Base.93fordTaurusSHO",
+      "skin": 0,
+      "x": 6097.71875,
+      "y": 5259.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true"
+      }
+    },
+    {
+      "id": 252,
+      "sqlId": 130,
+      "script": "Base.93fordTaurus",
+      "skin": 0,
+      "x": 6111.28125,
+      "y": 5253.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TAU93Roofrack": "true"
+      }
+    },
+    {
+      "id": 248,
+      "sqlId": 134,
+      "script": "Base.85chevyImpalaSedanMCS",
+      "skin": 0,
+      "x": 6083.9375,
+      "y": 5236.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "prison",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_TireFrontLeft": "true",
+        "defaultPartSet_TireFrontRight": "true",
+        "defaultPartSet_TireRearLeft": "true",
+        "defaultPartSet_TireRearRight": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "603d82e074337f69ffd2833dacffc600d37188bf336ff7f49c4a0d5e5c63b0cb",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

@@ -1,0 +1,225 @@
+{
+  "run": "gallery-20261024-g-natural",
+  "payloadVersion": "0.3.2",
+  "game": "42.21.0",
+  "purpose": "Photo framing and appearance only; not population-frequency or gameplay acceptance",
+  "seconds": 2125.8624069690704,
+  "cleanExit": {
+    "exitCode": 0,
+    "desktopSwitched": false,
+    "keeperInJob": true,
+    "gameInJob": true
+  },
+  "resourceGuardPeakGiB": 8.18,
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true,
+  "manualVehicleCreation": false,
+  "vehicleMutations": false,
+  "spawnFixturesCalled": false,
+  "captures": [
+    {
+      "location": "louisville-police",
+      "frame": [
+        12451,
+        1632
+      ],
+      "zoom": 2,
+      "player": {
+        "x": 12450.9765625,
+        "y": 1631.975830078125,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "95a2cf127b69f9b26a580cc66791ee0953a3ee0522a5845f3c3b68096a5aa3c5"
+    },
+    {
+      "location": "west-point-police",
+      "frame": [
+        11788,
+        6804
+      ],
+      "zoom": 1.75,
+      "player": {
+        "x": 11787.9765625,
+        "y": 6803.97607421875,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "27c686f444f4380a6a08997625f31e3e899e54ef6d29f65dd4f1e64231dd9900"
+    },
+    {
+      "location": "muldraugh-police",
+      "frame": [
+        10660,
+        10427
+      ],
+      "zoom": 2.25,
+      "player": {
+        "x": 10659.9765625,
+        "y": 10426.9765625,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "28deb2e5495f54cad9a29b126c7638ac3c60a957ba897e690ab8788b61db2c07"
+    },
+    {
+      "location": "jefferson-police",
+      "frame": [
+        12509,
+        4590
+      ],
+      "zoom": 1.75,
+      "player": {
+        "x": 12508.998046875,
+        "y": 4589.75927734375,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": [
+        12507,
+        4592
+      ],
+      "nativeCaptureSha256": "aa272703c826a9fbb02b887f7cfd9f15398dd82eadd84ff39939d72143b7e2cf"
+    },
+    {
+      "location": "meade-sheriff",
+      "frame": [
+        6111,
+        5222
+      ],
+      "zoom": 1.75,
+      "player": {
+        "x": 6110.92041015625,
+        "y": 5222.03369140625,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": [
+        6111,
+        5227
+      ],
+      "nativeCaptureSha256": "603d82e074337f69ffd2833dacffc600d37188bf336ff7f49c4a0d5e5c63b0cb"
+    },
+    {
+      "location": "state-police",
+      "frame": [
+        7265,
+        8374
+      ],
+      "zoom": 1.75,
+      "player": {
+        "x": 7265.3173828125,
+        "y": 8373.802734375,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "f37274f7a74580d12e911c4e8b40700d7d23ef0b58999c9919dfbf49ccc5a072"
+    },
+    {
+      "location": "airport-security",
+      "frame": [
+        15529,
+        2484
+      ],
+      "zoom": 1.75,
+      "player": {
+        "x": 15529.0966796875,
+        "y": 2483.8017578125,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": [
+        15530,
+        2486
+      ],
+      "nativeCaptureSha256": "a4851624ea1cec53fcf7b10a50933e97ab95b1a0758b8f1425e9231c985fb352"
+    },
+    {
+      "location": "louisville-highway",
+      "frame": [
+        12598,
+        1788
+      ],
+      "zoom": 2.5,
+      "player": {
+        "x": 12598.44140625,
+        "y": 1787.951416015625,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "0df9aeffaa6118811c87da0878ba71926e01296f312ca94848d54f6037101a22"
+    },
+    {
+      "location": "rosewood-fire",
+      "frame": [
+        8156,
+        11749
+      ],
+      "zoom": 2,
+      "player": {
+        "x": 8156.0322265625,
+        "y": 11748.7685546875,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": [
+        8153,
+        11754
+      ],
+      "nativeCaptureSha256": "255f68e45b92cfb637a1fa6462da57792d266ba8ac51a1ace4051761ac7c1e39"
+    },
+    {
+      "location": "riverside-town-centre",
+      "frame": [
+        6181,
+        5251
+      ],
+      "zoom": 2,
+      "player": {
+        "x": 6181.2470703125,
+        "y": 5251.10546875,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "f9c5bb1e24c9786eade5ff6dd7083c6aa4625a8ef26341e2999092ada4e724b1"
+    },
+    {
+      "location": "muldraugh-industrial",
+      "frame": [
+        10346,
+        9267
+      ],
+      "zoom": 2,
+      "player": {
+        "x": 10345.9765625,
+        "y": 9266.9765625,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "bcafede625382367a4d2237473e94c3c0cb9bba79434d5c3897023e47036aa1f"
+    },
+    {
+      "location": "west-point-main-street",
+      "frame": [
+        11935,
+        6904
+      ],
+      "zoom": 2.5,
+      "player": {
+        "x": 11934.9765625,
+        "y": 6903.97607421875,
+        "z": 0,
+        "online": 0
+      },
+      "lookAt": null,
+      "nativeCaptureSha256": "5214a8aa0303ecff0f5ca1e52459aafc2d38e4e1b2321ea0aa93b23e4fa6d798"
+    }
+  ]
+}

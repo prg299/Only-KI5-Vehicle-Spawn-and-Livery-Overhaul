@@ -1,0 +1,229 @@
+{
+  "location": {
+    "key": "rosewood-fire",
+    "category": "civilian",
+    "title": "ROSEWOOD FIRE DEPARTMENT",
+    "probe": [
+      8131,
+      11760
+    ],
+    "frame": [
+      8156,
+      11749
+    ],
+    "zoom": 2,
+    "source": "Vanilla map location; scout and verify native vehicle script before final framing",
+    "lookAt": [
+      8153,
+      11754
+    ]
+  },
+  "frame": [
+    8156,
+    11749
+  ],
+  "zoom": 2,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 207,
+      "sqlId": 303,
+      "script": "Base.69chargerRT",
+      "skin": 1,
+      "x": 8170.1484375,
+      "y": 11751.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 296,
+      "script": "Base.TrailerKI5cargoMedium",
+      "skin": 1,
+      "x": 8139.5,
+      "y": 11756.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_KI5TRCFlares": "true"
+      }
+    },
+    {
+      "id": 249,
+      "sqlId": 298,
+      "script": "Base.87toyotaCorollaAE92truenoLhd",
+      "skin": 8,
+      "x": 8127.5,
+      "y": 11768.5625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_AE92Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNSideskirts": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 252,
+      "sqlId": 301,
+      "script": "Base.93chevySuburbanfd",
+      "skin": 1,
+      "x": 8153.5,
+      "y": 11733.015625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "firegarage",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 189,
+      "sqlId": 304,
+      "script": "Base.91geoMetro",
+      "skin": 0,
+      "x": 8170.8515625,
+      "y": 11742.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 208,
+      "sqlId": 299,
+      "script": "Base.91geoMetro",
+      "skin": 7,
+      "x": 8142.5,
+      "y": 11768.8515625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 209,
+      "sqlId": 300,
+      "script": "Base.90pierceArrowQuint",
+      "skin": 0,
+      "x": 8153.5,
+      "y": 11753.6328125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "firetruck",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 169,
+      "sqlId": 297,
+      "script": "Base.87toyotaCorollaAE92levinLhd",
+      "skin": 6,
+      "x": 8133.5,
+      "y": 11768.5625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_AE92Roofrack": "true",
+        "defaultPartSet_DAMNSpoiler": "true",
+        "defaultPartSet_DAMNSideskirts": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 221,
+      "sqlId": 302,
+      "script": "Base.69mini",
+      "skin": 5,
+      "x": 8170.9921875,
+      "y": 11745.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 200,
+      "sqlId": 295,
+      "script": "Base.69mini",
+      "skin": 1,
+      "x": 8133.5,
+      "y": 11756.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "255f68e45b92cfb637a1fa6462da57792d266ba8ac51a1ace4051761ac7c1e39",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

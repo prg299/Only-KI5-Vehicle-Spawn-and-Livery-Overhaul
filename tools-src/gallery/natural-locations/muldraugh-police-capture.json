@@ -1,0 +1,109 @@
+{
+  "location": {
+    "key": "muldraugh-police",
+    "category": "regional-police",
+    "title": "MULDRAUGH POLICE DEPARTMENT",
+    "probe": [
+      10658,
+      10434
+    ],
+    "frame": [
+      10620,
+      10416
+    ],
+    "zoom": 1.5,
+    "source": "Vanilla objects.lua police ParkingStall x10650 y10432/10438/10441 and x10665 y10424/10427; observed natural police car west of the station"
+  },
+  "frame": [
+    10620,
+    10416
+  ],
+  "zoom": 1.5,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "nearbyVehicles": [
+    {
+      "id": 234,
+      "sqlId": 14,
+      "script": "Base.92fordCVPIMeade",
+      "skin": 0,
+      "x": 10615.9375,
+      "y": 10412.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "off"
+      }
+    },
+    {
+      "id": 233,
+      "sqlId": 63,
+      "script": "Base.69mini",
+      "skin": 0,
+      "x": 10605.0078125,
+      "y": 10412.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 238,
+      "sqlId": 11,
+      "script": "Base.85buickLeSabreSedan",
+      "skin": 8,
+      "x": 10670.9375,
+      "y": 10453.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 236,
+      "sqlId": 12,
+      "script": "Base.91fordLTDwagon",
+      "skin": 6,
+      "x": 10646.5,
+      "y": 10456.9375,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_LTD91Roofrack": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "bc4a5d49479929a27524e9b01a3ae876d44b19761b146ef4fd927ed452341aa8"
+}

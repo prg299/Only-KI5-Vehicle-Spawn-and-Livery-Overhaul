@@ -1,0 +1,196 @@
+{
+  "location": {
+    "key": "louisville-military-checkpoint",
+    "category": "military",
+    "title": "LOUISVILLE MILITARY CHECKPOINT",
+    "probe": [
+      12573,
+      4213
+    ],
+    "frame": [
+      12550,
+      4213
+    ],
+    "zoom": 2,
+    "source": "Vanilla Louisville checkpoint and integrated VMZNEW_Vanilla_Map checkpoint entries"
+  },
+  "frame": [
+    12550.0,
+    4213.0
+  ],
+  "zoom": 2,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "nearbyVehicles": [
+    {
+      "id": 220,
+      "sqlId": 3,
+      "script": "Base.92amgeneralM998Burnt",
+      "skin": 1,
+      "x": 12561.5,
+      "y": 4223.578125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {}
+    },
+    {
+      "id": 216,
+      "sqlId": 4,
+      "script": "Base.78amgeneralM35A2",
+      "skin": 8,
+      "x": 12561.5,
+      "y": 4209.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_M35A2Grille": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_M35A2CabCovers": "true",
+        "defaultPartSet_M35A2Tarp": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_Muffler": "true"
+      }
+    },
+    {
+      "id": 221,
+      "sqlId": 2,
+      "script": "Base.TrailerM1095",
+      "skin": 3,
+      "x": 12573.5,
+      "y": 4209.5390625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_M10XXTarp": "true"
+      }
+    },
+    {
+      "id": 201,
+      "sqlId": 8,
+      "script": "Base.92amgeneralM998",
+      "skin": 0,
+      "x": 12543.5,
+      "y": 4209.421875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_M998Roofrack": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_M998TrunkBarrier": "true",
+        "defaultPartSet_M998BackCover": "true",
+        "defaultPartSet_M998Muffler": "true",
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 222,
+      "sqlId": 1,
+      "script": "Base.78amgeneralM35A2",
+      "skin": 4,
+      "x": 12582.5,
+      "y": 4209.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_M35A2Grille": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_M35A2CabCovers": "true",
+        "defaultPartSet_M35A2Tarp": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_Muffler": "true"
+      }
+    },
+    {
+      "id": 204,
+      "sqlId": 5,
+      "script": "Base.78amgeneralM35A2",
+      "skin": 4,
+      "x": 12552.5,
+      "y": 4209.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_M35A2Grille": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_M35A2CabCovers": "true",
+        "defaultPartSet_M35A2Tarp": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_Muffler": "true"
+      }
+    },
+    {
+      "id": 210,
+      "sqlId": 6,
+      "script": "Base.86chevyM1028",
+      "skin": 2,
+      "x": 12558.5,
+      "y": 4209.21875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 215,
+      "sqlId": 7,
+      "script": "Base.78amgeneralM35A2",
+      "skin": 3,
+      "x": 12543.5,
+      "y": 4223.9921875,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "military",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_M35A2Grille": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_M35A2CabCovers": "true",
+        "defaultPartSet_M35A2Tarp": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_Muffler": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "d8c7d162e847924f2d7980a6ce3f9f5c9367caf7e21799808bc38346f8562610"
+}

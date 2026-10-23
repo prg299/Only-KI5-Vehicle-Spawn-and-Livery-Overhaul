@@ -1,0 +1,328 @@
+{
+  "location": {
+    "key": "riverside-town-centre",
+    "category": "civilian",
+    "title": "RIVERSIDE TOWN CENTRE",
+    "probe": [
+      6181,
+      5251
+    ],
+    "frame": [
+      6181,
+      5251
+    ],
+    "zoom": 2,
+    "source": "Natural Fossoil pickup, utility and civilian vehicles beside Riverside town-centre businesses"
+  },
+  "frame": [
+    6181,
+    5251
+  ],
+  "zoom": 2,
+  "staged": false,
+  "vehicleMutations": false,
+  "spawnFixtureCalled": false,
+  "photoVisibilityReveal": true,
+  "nearbyVehicles": [
+    {
+      "id": 167,
+      "sqlId": 310,
+      "script": "Base.85oldsmobileDelta88Coupe",
+      "skin": 7,
+      "x": 6180.8515625,
+      "y": 5261.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 253,
+      "sqlId": 400,
+      "script": "Base.91range",
+      "skin": 8,
+      "x": 6226.5,
+      "y": 5295.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSideSteps": "true",
+        "defaultPartSet_DAMNMudflaps": "true",
+        "defaultPartSet_RR91Roofrack": "true",
+        "defaultPartSet_DAMNSnorkel": "true",
+        "defaultPartSet_DAMNSpareTireTrunk": "true"
+      }
+    },
+    {
+      "id": 197,
+      "sqlId": 309,
+      "script": "Base.84jeepXJ4",
+      "skin": 3,
+      "x": 6180.4296875,
+      "y": 5255.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_JP84Roofrack": "true"
+      }
+    },
+    {
+      "id": 200,
+      "sqlId": 306,
+      "script": "Base.76chevyK30CCutility",
+      "skin": 1,
+      "x": 6164.5,
+      "y": 5222.3515625,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 184,
+      "sqlId": 312,
+      "script": "Base.73fordFalconXBGTlhd",
+      "skin": 5,
+      "x": 6200.6875,
+      "y": 5251.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 176,
+      "sqlId": 307,
+      "script": "Base.85oldsmobileDelta88Coupe",
+      "skin": 5,
+      "x": 6180.8515625,
+      "y": 5243.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true",
+        "defaultPartSet_GM85VinylRoof": "true"
+      }
+    },
+    {
+      "id": 211,
+      "sqlId": 308,
+      "script": "Base.76chevyK20fossoil",
+      "skin": 0,
+      "x": 6180.859375,
+      "y": 5249.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_CH76TruckBedCover": "true",
+        "defaultPartSet_DAMNSideSteps": "true"
+      }
+    },
+    {
+      "id": 205,
+      "sqlId": 313,
+      "script": "Base.91fordLTD",
+      "skin": 9,
+      "x": 6200.8828125,
+      "y": 5254.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_LTD91Roofrack": "true"
+      }
+    },
+    {
+      "id": 183,
+      "sqlId": 315,
+      "script": "Base.73fordFalconXBGTlhd",
+      "skin": 3,
+      "x": 6211.3125,
+      "y": 5245.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNBumperFront": "true"
+      }
+    },
+    {
+      "id": 187,
+      "sqlId": 311,
+      "script": "Base.89volvo245wagon",
+      "skin": 7,
+      "x": 6200.7265625,
+      "y": 5248.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_VL200LipFront": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_VL200Roofrack": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 178,
+      "sqlId": 316,
+      "script": "Base.93mustangSSP",
+      "skin": 0,
+      "x": 6200.53125,
+      "y": 5257.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNMudflaps": "true"
+      }
+    },
+    {
+      "id": 250,
+      "sqlId": 314,
+      "script": "Base.85buickLeSabreWagon2",
+      "skin": 6,
+      "x": 6211.171875,
+      "y": 5236.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true",
+        "defaultPartSet_GM85Roofrack": "true"
+      }
+    },
+    {
+      "id": 209,
+      "sqlId": 398,
+      "script": "Base.85chevyStepVan",
+      "skin": 0,
+      "x": 6156.953125,
+      "y": 5299.5,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "parkingstall",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true"
+      }
+    },
+    {
+      "id": 223,
+      "sqlId": 305,
+      "script": "Base.69mini",
+      "skin": 2,
+      "x": 6173.5,
+      "y": 5221.0078125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "bad",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_MINI69Roofrack": "true",
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    },
+    {
+      "id": 228,
+      "sqlId": 399,
+      "script": "Base.70fordEscortCoupe",
+      "skin": 4,
+      "x": 6223.5,
+      "y": 5295.328125,
+      "z": 0,
+      "lights": 0,
+      "siren": 0,
+      "zone": "medium",
+      "created": true,
+      "data": {
+        "damnlib_migrated": true,
+        "defaultPartSet_DAMNBumperFront": "true",
+        "defaultPartSet_DAMNBumperRear": "true",
+        "defaultPartSet_DAMNSpareTire": "true"
+      }
+    }
+  ],
+  "nativeCaptureSha256": "f9c5bb1e24c9786eade5ff6dd7083c6aa4625a8ef26341e2999092ada4e724b1",
+  "captureRun": "gallery-20261024-g-natural",
+  "carSpawnRate": 5,
+  "nativePhotoNoLighting": true
+}

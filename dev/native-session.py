@@ -7,6 +7,7 @@ is modified. Commands in request.json execute inside this guarded lifetime.
 from pathlib import Path
 import argparse, hashlib, json, os, shutil, socket, subprocess, sys, time, traceback
 import urllib.request
+from native_paths import NATIVE_ROOT,owned_run
 
 ROOT = Path(__file__).resolve().parents[1]
 GAME = Path(os.environ.get('PZ_GAME_DIR', r'C:\SteamLibrary\steamapps\common\ProjectZomboid'))
@@ -119,7 +120,7 @@ import me.zed_0xff.zombie_buddy.Patch;
 public final class Pump {
  @Patch(className="zombie.GameWindow",methodName="mainThreadStep",strictMatch=true)
  public static final class MainStep {
-  @Patch.OnExit public static void exit() { Audio.expose(); Main.runTasks(); }
+  @Patch.OnExit public static void exit() { Audio.expose(); Photo.expose(); Main.runTasks(); }
  }
 }
 ''')
@@ -283,13 +284,13 @@ def main():
     p.add_argument('--resume')
     args=p.parse_args()
     if not args.run.replace('-','').isalnum(): raise ValueError('Run name')
-    reuse=(ROOT/'build/native'/args.reuse).resolve() if args.reuse else None
-    if reuse and not reuse.is_relative_to(ROOT/'build/native'):raise ValueError('Reuse escaped test root')
-    resume=(ROOT/'build/native'/args.resume).resolve() if args.resume else None
+    reuse=owned_run(args.reuse) if args.reuse else None
+    resume=owned_run(args.resume) if args.resume else None
     if resume:
-        if not resume.is_relative_to(ROOT/'build/native') or not (resume/'finished.json').is_file():raise ValueError('Resume requires a stopped owned lifetime')
+        if not (resume/'finished.json').is_file():raise ValueError('Resume requires a stopped owned lifetime')
         if args.mp and json.loads((resume/'server/exit.json').read_text())['exitCode']!=0:raise ValueError('Resume requires a clean server save/exit')
-    s=Session(ROOT/'build/native'/args.run,args.effective,reuse,resume)
+    NATIVE_ROOT.mkdir(parents=True,exist_ok=True)
+    s=Session(owned_run(args.run),args.effective,reuse,resume)
     try:
         s.prepare()
         if args.mp:

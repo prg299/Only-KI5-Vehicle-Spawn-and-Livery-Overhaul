@@ -1,0 +1,37 @@
+{
+  "workshopId": "3825545131",
+  "verifiedUtc": "2026-10-23T21:56:13.563692+00:00",
+  "allImagesMatch": true,
+  "images": [
+    {
+      "file": "only-ki5-location-01-west-point-police.jpg",
+      "bytes": 80851,
+      "sha256": "48dada070bf16db07e0a91d1bf0cc06e8ee4c41621d4c8c17d6b5fbe1c2cb58e",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-location-02-muldraugh-police.jpg",
+      "bytes": 58291,
+      "sha256": "9e308aa9e22d022d7a308e32d84a4118c2b4e043872cc5e9286894821751bc88",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-location-03-louisville-military-checkpoint.jpg",
+      "bytes": 127406,
+      "sha256": "cb0480366bb95da16aca214dcba35831a0f250dbd56ef55e371c527a24d28f48",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-location-04-secret-military-base.jpg",
+      "bytes": 73033,
+      "sha256": "cad85776805a1af903144121c86962349c29e9be8d4580fd895a5b07ca3ca92a",
+      "matches": true
+    },
+    {
+      "file": "only-ki5-location-05-louisville-highway.jpg",
+      "bytes": 77683,
+      "sha256": "a7d67276bb47cb9082e2a2c65a6d0ccfe45044885bead92941bac67263711b13",
+      "matches": true
+    }
+  ]
+}
