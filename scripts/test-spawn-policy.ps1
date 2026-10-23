@@ -9,7 +9,7 @@ Push-Location $gameRoot
 try {
     foreach ($zoneOrder in @('native', 'ascending', 'descending')) {
         foreach ($trafficShape in @('shared', 'copied')) {
-            & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\KI5KnoxCountyFleet\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\knox-fleet-policy.lua') $zoneOrder $trafficShape
+            & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-overhaul-policy.lua') $zoneOrder $trafficShape
             if ($LASTEXITCODE -ne 0) { throw "Lua policy tests failed ($zoneOrder zone order, $trafficShape highway table)" }
         }
     }

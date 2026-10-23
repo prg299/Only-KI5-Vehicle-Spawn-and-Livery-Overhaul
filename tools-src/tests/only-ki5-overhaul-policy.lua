@@ -13,8 +13,8 @@ end
 Events = { OnInitGlobalModData = event(), OnLoadMapZones = event(), OnLoadedMapZones = event(), OnSpawnVehicleStart = event() }
 function addVehicleDebug(name, direction, skin, square) return name, direction, skin, square end
 ProfessionVehicles = {}
-local C = require "KI5KnoxCountyFleet_Catalog"
-local A = require "KI5KnoxCountyFleet_SpawnAliases"
+local C = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local A = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
 local trucks = {}
 for _, s in ipairs(C.groups.militaryTruck) do trucks[s] = true end
 ScriptManager = { instance = {} }
@@ -37,11 +37,11 @@ VehicleZoneDistribution = {
 -- as the installed Kahlua implementation's native order.
 local originalPairs = pairs
 function pairs(t)
-    if t ~= VehicleZoneDistribution or SUITE_TEST_ZONE_ORDER == "native" then return originalPairs(t) end
+    if t ~= VehicleZoneDistribution or ONLY_KI5_TEST_ZONE_ORDER == "native" then return originalPairs(t) end
     local keys = {}
     for key in originalPairs(t) do keys[#keys + 1] = key end
     table.sort(keys, function(a, b)
-        if SUITE_TEST_ZONE_ORDER == "descending" then return a > b end
+        if ONLY_KI5_TEST_ZONE_ORDER == "descending" then return a > b end
         return a < b
     end)
     local index = 0
@@ -51,8 +51,8 @@ function pairs(t)
         if key then return key, t[key] end
     end
 end
-require "KI5KnoxCountyFleet_Runtime"
-require "KI5KnoxCountyFleet_PoliceSpawnRouting"
+require "OnlyKI5VehicleSpawnLiveryOverhaul_Runtime"
+require "OnlyKI5VehicleSpawnLiveryOverhaul_PoliceSpawnRouting"
 -- VMZ clears all military source entries out of ordinary pools.
 VehicleZoneDistribution.trafficjamn.vehicles["Base.87chevySuburbanCUCV"] = nil
 VehicleZoneDistribution.trafficjams.vehicles["Base.87chevySuburbanCUCV"] = nil
@@ -64,7 +64,7 @@ VehicleZoneDistribution.trafficjamn.vehicles = trafficMixedVehicles
 VehicleZoneDistribution.trafficjame = { vehicles = trafficMixedVehicles }
 VehicleZoneDistribution.trafficjamw = { vehicles = trafficMixedVehicles }
 VehicleZoneDistribution.modified_trfjm = { vehicles = trafficMixedVehicles }
-if SUITE_TEST_TRAFFIC_SHAPE == "copied" then
+if ONLY_KI5_TEST_TRAFFIC_SHAPE == "copied" then
     -- Also cover a downstream mod detaching the highway table after VMZ has
     -- cleared it: the new pool still inherits the authored trafficjams budget.
     local copy = {}

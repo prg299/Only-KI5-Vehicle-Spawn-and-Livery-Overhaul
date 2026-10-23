@@ -5,7 +5,7 @@ body:
     id: version
     attributes:
       label: Game and addon version
-      placeholder: PZ 42.21.0 / Knox County Fleet 0.1.0
+      placeholder: PZ 42.21.0 / Only KI5: Vehicle Spawn & Livery Overhaul 0.1.0
     validations:
       required: true
   - type: textarea

@@ -3,7 +3,7 @@ param()
 
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$luaRoot = Join-Path $projectRoot 'mod\KI5KnoxCountyFleet\42\media\lua'
+$luaRoot = Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua'
 $gameRoot = if ($env:PZ_GAME_DIR) { $env:PZ_GAME_DIR } else { 'C:\SteamLibrary\steamapps\common\ProjectZomboid' }
 $gameJava = Join-Path $gameRoot 'jre64\bin\java.exe'
 $gameJar = Join-Path $gameRoot 'projectzomboid.jar'

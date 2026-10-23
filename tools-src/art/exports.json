@@ -1,34 +1,33 @@
 {
-  "master": "tools-src/art/knox-fleet-master.png",
+  "master": "tools-src/art/only-ki5-overhaul-master.png",
   "masterDimensions": [
     1254,
     1254
   ],
-  "masterBytes": 2974468,
-  "compressionPendingReason": "TinyPNG website explicitly blocked the unattended headless browser; no configured official Tinify API key was present.",
+  "masterBytes": 2670941,
   "derivatives": [
     {
-      "path": "mod/KI5KnoxCountyFleet/knox-fleet-icon.png",
+      "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/only-ki5-overhaul-icon.png",
       "width": 256,
       "height": 256,
       "format": "PNG",
-      "beforeTinyPngBytes": 133948,
+      "beforeTinyPngBytes": 131531,
       "compression": "pending"
     },
     {
-      "path": "mod/KI5KnoxCountyFleet/knox-fleet-poster.png",
+      "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/only-ki5-overhaul-poster.png",
       "width": 512,
       "height": 512,
       "format": "PNG",
-      "beforeTinyPngBytes": 517520,
+      "beforeTinyPngBytes": 490265,
       "compression": "pending"
     },
     {
-      "path": "release/workshop/knox-fleet-preview.png",
+      "path": "release/workshop/only-ki5-overhaul-preview.png",
       "width": 512,
       "height": 512,
       "format": "PNG",
-      "beforeTinyPngBytes": 517520,
+      "beforeTinyPngBytes": 490265,
       "compression": "pending"
     }
   ]

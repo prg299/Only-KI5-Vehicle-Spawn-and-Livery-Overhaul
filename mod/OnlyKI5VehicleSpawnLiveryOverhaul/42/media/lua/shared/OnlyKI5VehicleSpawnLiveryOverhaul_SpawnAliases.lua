@@ -1,6 +1,6 @@
 -- One exact alias authority for pool, profession, direct-Lua and native spawns.
 -- No prefix matching: third-party KI5 scripts and existing vehicles are untouched.
-local Catalog = require "KI5KnoxCountyFleet_Catalog"
+local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local Aliases = {}
 Aliases.targets = {
     ["Base.VanRadioJJ"] = "Base.86fordE150LBMWradio",

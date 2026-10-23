@@ -2,11 +2,17 @@
 
 This 0.1.0 full-fleet profile requires **89 original Workshop items**. It preserves the private Suite's selected vehicle set; it is intentionally not advertised as a small standalone vehicle pack. The exact module list is public in `config/fleet-profile.ini` and duplicated in `mod.info` for the game. Workshop subscription and mod activation are separate steps.
 
-Load damnlib, the original KI5 vehicles and selected expansion modules, More Car Variants' four modules, Consistent Camo's two modules, and Police Skins B42 Hotfix before `KI5KnoxCountyFleet`. If WayMoreCars or VMZNEW is installed, load it before this addon too. They are optional; no server configuration is changed by this project.
+Load damnlib, the original KI5 vehicles and selected expansion modules, More Car Variants' four modules, Consistent Camo's two modules, and Police Skins B42 Hotfix before `OnlyKI5VehicleSpawnLiveryOverhaul`. If WayMoreCars or VMZNEW is installed, load it before this addon too. They are optional; no server configuration is changed by this project.
 
 Do not enable the private Suite, World Vehicles, Regional Police Skins or No Vanilla selection modules alongside this addon. Disable original `LFPSP` when using the required `LFPSP-B42Fix` as its author directs. Specific Loot and the J10 modules remain excluded from the profile.
 
 More Car Variants has six overlapping script IDs with current KI5 packs. All definitions remain upstream. See `docs/compatibility.md` before acceptance. Its Steam API/page availability discrepancy is a release gate.
+
+## Reducing add-on dependencies
+
+The owner asked whether original implementations could replace these add-ons. This is feasible as separate implementation work: the region routing, spawn policy and military pool normalization are already authored here. A new camo policy can select suitable built-in skins, while an exact visual replacement needs original texture work. More Car Variants can be replaced by authored profession/variant registrations using supported external vehicle contracts, with original assets where needed. Replacing the police-skin dependency needs original liveries plus authored registration/mechanics code. These changes are not implemented in 0.1.0, so the three content add-ons remain required until their replacements are complete and validated. No copied/recolored upstream skin files are proposed for the public source.
+
+The intended result would leave damnlib as the only non-vehicle dependency. This is a proposed target, not the current dependency list.
 
 | Original Workshop item | Workshop ID | Enabled module IDs |
 | --- | --- | --- |

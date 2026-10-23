@@ -3,7 +3,7 @@ from pathlib import Path
 import ast, hashlib, json, re
 
 ROOT = Path(__file__).resolve().parents[1]
-MOD = ROOT / 'mod/KI5KnoxCountyFleet'
+MOD = ROOT / 'mod/OnlyKI5VehicleSpawnLiveryOverhaul'
 errors = []
 
 def check(ok, message):
@@ -16,7 +16,7 @@ def info(path):
 profile = info(ROOT / 'config/fleet-profile.ini')
 root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
-check(b42['id'] == 'KI5KnoxCountyFleet', 'Wrong mod identity')
+check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
 check(b42['modversion'] == '0.1.0' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
@@ -38,9 +38,9 @@ check(len(lua_files) == 7, f'Unexpected runtime module count {len(lua_files)}')
 module_names = {p.stem for p in lua_files}
 for p in lua_files:
     text = p.read_text('utf-8')
-    check(p.stem.startswith('KI5KnoxCountyFleet_'), f'Unrenamed runtime filename {p.name}')
+    check(p.stem.startswith('OnlyKI5VehicleSpawnLiveryOverhaul_'), f'Unrenamed runtime filename {p.name}')
     check(not re.search(r'ME422|ME 422|me422_', text), f'Old runtime identity in {p.name}')
-    for target in re.findall(r'require\s*["\'](KI5KnoxCountyFleet_[^"\']+)["\']', text):
+    for target in re.findall(r'require\s*["\'](OnlyKI5VehicleSpawnLiveryOverhaul_[^"\']+)["\']', text):
         check(target in module_names, f'Unresolved authored require {target}')
 for p in MOD.rglob('*'):
     if not p.is_file():

@@ -40,13 +40,13 @@ for key, scripts in pairs(PoliceRegions.liveries) do
 end
 
 PoliceRegions.distributionForRegion = {
-    jefferson = "knox_fleet_police_louisville_county",
-    louisville = "knox_fleet_police_louisville",
-    muldraugh = "knox_fleet_police_muldraugh",
-    riverside = "knox_fleet_police_meade",
-    rosewood = "knox_fleet_police_meade",
-    westpoint = "knox_fleet_police_westpoint",
-    valleystation = "knox_fleet_police_bulletin",
+    jefferson = "only_ki5_overhaul_police_louisville_county",
+    louisville = "only_ki5_overhaul_police_louisville",
+    muldraugh = "only_ki5_overhaul_police_muldraugh",
+    riverside = "only_ki5_overhaul_police_meade",
+    rosewood = "only_ki5_overhaul_police_meade",
+    westpoint = "only_ki5_overhaul_police_westpoint",
+    valleystation = "only_ki5_overhaul_police_bulletin",
 }
 
 PoliceRegions.liveryKeyForRegion = {

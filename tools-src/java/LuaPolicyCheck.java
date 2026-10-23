@@ -9,14 +9,14 @@ public final class LuaPolicyCheck {
         StringBuilder code = new StringBuilder("loaders = {}; loaded = {}; function require(n) if loaded[n] then return loaded[n] end; assert(loaders[n], n); local v = loaders[n](); loaded[n] = v or true; return loaded[n] end\n");
         String order = args.length > 2 ? args[2] : "native";
         if (!Set.of("native", "ascending", "descending").contains(order)) throw new IllegalArgumentException(order);
-        code.append("SUITE_TEST_ZONE_ORDER = \"").append(order).append("\"\n");
+        code.append("ONLY_KI5_TEST_ZONE_ORDER = \"").append(order).append("\"\n");
         String trafficShape = args.length > 3 ? args[3] : "shared";
         if (!Set.of("shared", "copied").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
-        code.append("SUITE_TEST_TRAFFIC_SHAPE = \"").append(trafficShape).append("\"\n");
+        code.append("ONLY_KI5_TEST_TRAFFIC_SHAPE = \"").append(trafficShape).append("\"\n");
         try (var paths = Files.walk(lua)) {
             for (Path path : paths.filter(p -> p.toString().endsWith(".lua")).toList()) {
                 String name = path.getFileName().toString().replace(".lua", "");
-                if (!name.startsWith("KI5KnoxCountyFleet_")) continue;
+                if (!name.startsWith("OnlyKI5VehicleSpawnLiveryOverhaul_")) continue;
                 code.append("loaders[\"").append(name).append("\"] = function()\n")
                     .append(Files.readString(path)).append("\nend\n");
             }
@@ -29,7 +29,7 @@ public final class LuaPolicyCheck {
         Object env = platformImpl.getMethod("newEnvironment").invoke(platform);
         Class<?> compiler = Class.forName("se.krka.kahlua.luaj.compiler.LuaCompiler");
         Object closure = compiler.getMethod("loadstring", String.class, String.class, tableType)
-            .invoke(null, code.toString(), "suite-policy-check", env);
+            .invoke(null, code.toString(), "only-ki5-policy-check", env);
         Class<?> threadType = Class.forName("se.krka.kahlua.vm.KahluaThread");
         Object thread = threadType.getConstructor(platformType, tableType).newInstance(platform, env);
         Field owner = threadType.getDeclaredField("debugOwnerThread");

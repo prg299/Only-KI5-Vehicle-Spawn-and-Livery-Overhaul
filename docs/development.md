@@ -1,8 +1,8 @@
 # Development and regeneration
 
-Keep the source, test profile, uploader stage and subscribed Workshop copies distinct. This project lives at `D:\Stuff\Projects\KI5-Knox-County-Fleet`; the author's installed game and original Workshop inputs are read-only at `C:\SteamLibrary\steamapps\common\ProjectZomboid` and `C:\SteamLibrary\steamapps\workshop\content\108600`. Optional local deployment is `C:\Users\erika\Zomboid\mods\KI5KnoxCountyFleet`; this task does not populate it or change enabled mod lists.
+Keep the source, test profile, uploader stage and subscribed Workshop copies distinct. This project lives at `D:\Stuff\Projects\Only-KI5-Vehicle-Spawn-and-Livery-Overhaul`; the author's installed game and original Workshop inputs are read-only at `C:\SteamLibrary\steamapps\common\ProjectZomboid` and `C:\SteamLibrary\steamapps\workshop\content\108600`. Optional local deployment is `C:\Users\erika\Zomboid\mods\OnlyKI5VehicleSpawnLiveryOverhaul`; this task does not populate it or change enabled mod lists.
 
-The default project-local stage is `build/workshop/KI5KnoxCountyFleet`. Keeping it outside the player's `Zomboid/Workshop` prevents an unpublished uploader copy from shadowing a subscribed release, a lesson from Real Vehicle Interiors. Stage preparation fails when a stage already exists rather than overwriting a release receipt.
+The default project-local stage is `build/workshop/OnlyKI5VehicleSpawnLiveryOverhaul`. Keeping it outside the player's `Zomboid/Workshop` prevents an unpublished uploader copy from shadowing a subscribed release, a lesson from Real Vehicle Interiors. Stage preparation fails when a stage already exists rather than overwriting a release receipt.
 
 Regenerate the catalog only after reviewing upstream updates; then review provider hashes, newly discovered IDs, disabled-only variants and collisions. The generator resolves the selected profile, never a live server config. Keep original dependency IDs and vehicle IDs intact while renaming authored paths/contracts.
 

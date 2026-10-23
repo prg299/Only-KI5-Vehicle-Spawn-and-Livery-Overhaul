@@ -1,14 +1,17 @@
-# Knox County Fleet artwork
+# Only KI5 artwork rename
 
-Tool: built-in image_gen, 2026-10-23. Use: launcher icon and Workshop poster.
-Master: `knox-fleet-master.png`; retain its full resolution and alpha.
-Reference: the author's private Suite poster, visually inspected for style only.
+Tool: built-in image_gen, 2026-10-23; edit of this project's previous cover.
+Master: `only-ki5-overhaul-master.png`. Previous master and prompt are preserved in `archive/`.
+Intent: use the owner-selected Only KI5 prefix and descriptive title while preserving vehicle artwork, composition, style and alpha.
 
-## Prompt
+## Exact edit prompt
 
-+Use case: ads-marketing
-Asset type: square launcher icon and Steam Workshop poster for the independent Project Zomboid community addon KI5: Knox County Fleet.
-Create an original premium game-mod cover, 1024 by 1024 composition, a rounded-square illustrated badge with genuinely transparent exterior corners. Reference the previously viewed unlisted Suite image only for dark realistic illustrated mood, muted olive and charcoal palette, wet Kentucky roads, red-blue light accents and warm dusk. Do not copy its composition or vehicles exactly.
-Scene: three early 1990s Kentucky vehicles on a rain-dark county road beside pines at dusk: a black-and-white sheriff sedan prominently in front at three-quarter angle, an olive military utility truck behind left, a cream work pickup behind right. Plausible grounded vehicle illustration, crisply lit silhouettes, subtle red-blue emergency-light reflections, readable even as a 256px icon. No people or zombies. Art should be dramatic but uncluttered.
-Typography is integral authored artwork: top small text "KI5 ADDON"; center/lower large two-line title "KNOX COUNTY" then "FLEET", warm off-white condensed block lettering, very legible, restrained weathered print. Spell exactly. The badge should look like a community addon, not an official KI5 product. No brand logos, no car badges, no extra slogans, no watermark.
-Maintain meaningful transparency only outside rounded-square badge corners; scene inside badge opaque. Keep all text and vehicles inside a generous safe border.
+Use case: text-localization
+Edit target: the provided existing mod cover. Change its lettering to the new descriptive name. Keep the three vehicles, composition, camera angle, rain-dark road, warm Kentucky sunset, trees, light reflections, muted olive/charcoal palette, illustration style, rounded badge border, and genuine transparent exterior corners unchanged as closely as possible.
+Replace the top small "KI5 ADDON" lettering with "ONLY KI5" in bold warm off-white lettering, a little larger and immediately legible.
+Replace all lower "KNOX COUNTY FLEET" lettering with exactly these three centered lines:
+"VEHICLE SPAWN"
+"& LIVERY"
+"OVERHAUL"
+Use the same warm off-white, condensed, bold, lightly weathered block lettering. Make the words readable at a 256px square launcher icon. Retain enough safe padding around the lettering; expand the existing lower typography area upward only as necessary, without covering the police lightbar or changing vehicle silhouettes. This must clearly read as ONLY KI5: VEHICLE SPAWN & LIVERY OVERHAUL. No old title, no extra slogan or watermark, no brand logos.
+Preserve alpha outside the rounded-square badge. The image inside the badge stays opaque. Square composition.

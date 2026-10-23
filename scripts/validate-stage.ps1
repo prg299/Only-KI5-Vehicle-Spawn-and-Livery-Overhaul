@@ -1,6 +1,6 @@
 param(
-    [string] $Stage = (Join-Path $PSScriptRoot '..\build\workshop\KI5KnoxCountyFleet'),
-    [string] $JavaHome = $env:KCF_JAVA_HOME
+    [string] $Stage = (Join-Path $PSScriptRoot '..\build\workshop\OnlyKI5VehicleSpawnLiveryOverhaul'),
+    [string] $JavaHome = $env:ONLY_KI5_JAVA_HOME
 )
 $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
@@ -12,5 +12,5 @@ $compiler = if ($JavaHome) { Join-Path $JavaHome 'bin\javac.exe' } elseif ($env:
 if ($LASTEXITCODE) { throw 'Native uploader adapter compilation failed.' }
 # The game's path guard admits uploader content beneath its cache prefix.
 # Use only this checkout's ignored build directory as the disposable cache.
-& "$game\jre64\bin\java.exe" -cp "$classes;$game;$game\projectzomboid.jar" ValidateWorkshopStage $Stage (Join-Path $root 'build') $game KI5KnoxCountyFleet public
+& "$game\jre64\bin\java.exe" -cp "$classes;$game;$game\projectzomboid.jar" ValidateWorkshopStage $Stage (Join-Path $root 'build') $game OnlyKI5VehicleSpawnLiveryOverhaul public
 if ($LASTEXITCODE) { throw 'Native uploader stage validation failed.' }

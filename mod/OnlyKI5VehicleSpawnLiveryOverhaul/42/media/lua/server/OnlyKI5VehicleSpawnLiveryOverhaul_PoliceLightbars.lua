@@ -1,12 +1,12 @@
--- Server-authoritative silent police lightbars for the KI5: Knox County Fleet.
+-- Server-authoritative silent police lightbars for the Only KI5: Vehicle Spawn & Livery Overhaul.
 
 if isClient and isClient() then
     return
 end
 
-local Catalog = require "KI5KnoxCountyFleet_Catalog"
+local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local LIGHTBAR_CHANCE_PERCENT = 50
-local MOD_DATA_KEY = "KI5KnoxCountyFleet.PoliceLightbarSpawnV1"
+local MOD_DATA_KEY = "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1"
 local stationZoneTypes = { police = true, fire = true, ambulance = true, prison = true, ranger = true, military = true }
 
 local function isPoliceScript(scriptName)

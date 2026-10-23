@@ -1,4 +1,4 @@
-[h1]KI5: Knox County Fleet[/h1]
+[h1]Only KI5: Vehicle Spawn & Livery Overhaul[/h1]
 Put KI5 on Kentucky's roads.
 
 KI5-only world traffic, profession vehicles, regional police liveries, roadside stories and military-fleet tuning for Project Zomboid Build 42.21. Independent community addon by Erika (prg299).
@@ -6,12 +6,12 @@ KI5-only world traffic, profession vehicles, regional police liveries, roadside 
 [b]Release candidate 0.1.0: native gameplay and multiplayer acceptance pending.[/b]
 
 [h2]Requirements[/h2]
-This is a full-fleet integration. Subscribe to and enable all listed required items and modules before KI5KnoxCountyFleet. All original vehicle, variant, camo and police-skin content stays in its original mods. No KI5 or third-party asset repack.
+This is a full-fleet integration. Subscribe to and enable all listed required items and modules before OnlyKI5VehicleSpawnLiveryOverhaul. All original vehicle, variant, camo and police-skin content stays in its original mods. No KI5 or third-party asset repack.
 
 Use the police B42 hotfix instead of original LFPSP. Do not enable the private Vehicle Suite, World Vehicles, Regional Police Skins or No Vanilla selection modules alongside this addon. Fresh chunks are needed for changed spawns; existing vehicles are not rewritten.
 
 [h2]Credits[/h2]
 KI5: original vehicles. KI5 and bikinihorst: that DAMN Library and vehicle ecosystem. Пупсич: More Car Variants. Branco: Consistent Camo. Papa_Chad: original vehicles supported by the external camo pack. Old Killer: original police skins. Aurora: police B42 hotfix. Kraz: No Vanilla Vehicles inspiration; no original files/key list included. The Indie Stone: Project Zomboid. Erika/prg299: integration, regional/spawn policy and tools. Artwork generated with OpenAI image_gen.
 
-[url=https://github.com/prg299/KI5-Knox-County-Fleet]Source, exact dependencies, credits, license and release status[/url]
+[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source, exact dependencies, credits, license and release status[/url]
 MIT for authored contributions only. Original dependency rights remain with their authors. Not affiliated with or endorsed by KI5 or The Indie Stone.

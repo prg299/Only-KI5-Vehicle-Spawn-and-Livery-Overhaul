@@ -1,9 +1,9 @@
 -- Final regional police-livery guard for any pre-creation vehicle path,
 -- including scripted stories, smashed/crash distributions, and burnt pools.
-local Catalog = require "KI5KnoxCountyFleet_Catalog"
-local SpawnAliases = require "KI5KnoxCountyFleet_SpawnAliases"
-local PoliceRegions = require "KI5KnoxCountyFleet_PoliceRegions"
-local MOD_TAG = "[KI5KnoxCountyFleet]"
+local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
+local PoliceRegions = require "OnlyKI5VehicleSpawnLiveryOverhaul_PoliceRegions"
+local MOD_TAG = "[OnlyKI5VehicleSpawnLiveryOverhaul]"
 local routablePoliceScripts = {}
 
 for scriptName in pairs(Catalog.policeScripts or {}) do

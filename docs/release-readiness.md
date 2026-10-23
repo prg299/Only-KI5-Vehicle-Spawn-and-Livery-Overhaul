@@ -11,7 +11,7 @@ This is a public source release candidate, not a published or natively accepted 
 
 ## Artwork and packaging preparation
 
-Repository metadata/identity/dependency checks passed and five PowerShell scripts parsed. PNG exports preserve meaningful corner alpha at 256×256 (133,948 bytes) and 512×512 (517,520 bytes). The full-resolution 1254×1254 ImageGen master (2,974,468 bytes) and exact prompt remain in `tools-src/art/`. These derivatives are not claimed fully optimized: TinyPNG's website rejected the headless browser with an explicit user-agent block; no configured Tinify API key was present. Compression remains pending. No workaround for the site's browser restriction was used.
+Repository metadata/identity/dependency checks passed and five PowerShell scripts parsed. The owner-selected title is Only KI5: Vehicle Spawn & Livery Overhaul. The cover's revised PNG exports preserve meaningful corner alpha at 256×256 (131,531 bytes) and 512×512 (490,265 bytes). The full-resolution 1254×1254 ImageGen edit master (2,670,941 bytes), exact edit prompt and previous master/prompt remain in `tools-src/art/`. These derivatives are not claimed fully optimized: TinyPNG's website rejected the headless browser with an explicit user-agent block; no configured Tinify API key was present. Compression remains pending. No workaround for the site's browser restriction was used.
 
 The new-item stage has 16 runtime-package files and a SHA-256 payload manifest, a blank Workshop ID and public target visibility. It stays under `build/workshop` and has not been uploaded.
 

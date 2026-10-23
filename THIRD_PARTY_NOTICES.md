@@ -1,6 +1,6 @@
 # Third-party notices
 
-The MIT license covers authored Knox County Fleet contributions only. It grants no rights to Project Zomboid, Steam, KI5 vehicles, damnlib, More Car Variants, Consistent Camo, Police Skins or their authors' trademarks. Obtain dependencies independently under their own terms.
+The MIT license covers authored Only KI5: Vehicle Spawn & Livery Overhaul contributions only. It grants no rights to Project Zomboid, Steam, KI5 vehicles, damnlib, More Car Variants, Consistent Camo, Police Skins or their authors' trademarks. Obtain dependencies independently under their own terms.
 
 This repository and runtime package contain no third-party vehicle definitions, meshes, textures, audio, animations, JARs, DLLs, game extracts, or copied upstream Lua. The generated catalog contains observed script identifiers, source hashes and distribution facts plus this project's authored selection/weighting code; it does not grant ownership of upstream names or facts. `docs/ki5-provider-inventory.json` records where those observations came from. The old unlisted package's third-party permission assertion is not claimed as permission for this public release.
 

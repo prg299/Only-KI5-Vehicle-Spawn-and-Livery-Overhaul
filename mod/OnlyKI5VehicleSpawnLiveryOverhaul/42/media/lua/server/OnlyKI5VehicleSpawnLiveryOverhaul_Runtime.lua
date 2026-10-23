@@ -1,4 +1,4 @@
--- KI5: Knox County Fleet (Build 42)
+-- Only KI5: Vehicle Spawn & Livery Overhaul (Build 42)
 --
 -- One late server-side authority for the external KI5 fleet, variants,
 -- police-skin dependencies and authored regional routing. The late
@@ -9,11 +9,11 @@ if isClient and isClient() then
     return
 end
 
-local Catalog = require "KI5KnoxCountyFleet_Catalog"
-local SpawnAliases = require "KI5KnoxCountyFleet_SpawnAliases"
+local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
 
-local PoliceRegions = require "KI5KnoxCountyFleet_PoliceRegions"
-local MOD_TAG = "[KI5KnoxCountyFleet]"
+local PoliceRegions = require "OnlyKI5VehicleSpawnLiveryOverhaul_PoliceRegions"
+local MOD_TAG = "[OnlyKI5VehicleSpawnLiveryOverhaul]"
 local groups = Catalog.groups
 
 -- Some active mods create world vehicles directly with addVehicleDebug,
@@ -84,7 +84,7 @@ local function directVehicleReplacement(scriptName)
 end
 
 local function installDirectVanillaVehicleRedirect()
-    local marker = "__KI5KnoxCountyFleet_DirectVanillaRedirectInstalled"
+    local marker = "__OnlyKI5VehicleSpawnLiveryOverhaul_DirectVanillaRedirectInstalled"
     if rawget(_G, marker) then return true end
     local originalAddVehicleDebug = rawget(_G, "addVehicleDebug")
     if type(originalAddVehicleDebug) ~= "function" then return false end
@@ -1065,7 +1065,7 @@ local function applyProfessionRegistry()
     return true, applied
 end
 
--- Authored Knox County Fleet regional routing. After capturing
+-- Authored Only KI5: Vehicle Spawn & Livery Overhaul regional routing. After capturing
 -- KI5 source weights, it removes only KI5 livery IDs from broad/global pools.
 -- The vanilla police source models are replaced by the KI5 registry, and each
 -- regional police distribution contains only the KI5 liveries assigned there.
@@ -1151,21 +1151,21 @@ local function applyRegionalPolice()
         end
     end
     for distributionName, distribution in pairs(VehicleZoneDistribution) do
-        if string.sub(distributionName, 1, 19) ~= "knox_fleet_police_"
+        if string.sub(distributionName, 1, 19) ~= "only_ki5_overhaul_police_"
             and type(distribution) == "table" and type(distribution.vehicles) == "table" then
             removeSkinScripts(distribution.vehicles)
         end
     end
 
     local definitions = {
-        { "knox_fleet_police_louisville", "police", liveryScripts.louisville, "louisville" },
-        { "knox_fleet_police_louisville_county", "police", liveryScripts.louisvilleCounty },
-        { "knox_fleet_police_muldraugh", "police", liveryScripts.muldraugh },
-        { "knox_fleet_police_meade", "police", liveryScripts.meade },
-        { "knox_fleet_police_westpoint", "police", liveryScripts.westPoint },
-        { "knox_fleet_police_bulletin", "police", liveryScripts.bulletin },
-        { "knox_fleet_police_airport_security", "airportservice", liveryScripts.airportSecurity },
-        { "knox_fleet_police_prison_transport", "prison", liveryScripts.prisonTransport },
+        { "only_ki5_overhaul_police_louisville", "police", liveryScripts.louisville, "louisville" },
+        { "only_ki5_overhaul_police_louisville_county", "police", liveryScripts.louisvilleCounty },
+        { "only_ki5_overhaul_police_muldraugh", "police", liveryScripts.muldraugh },
+        { "only_ki5_overhaul_police_meade", "police", liveryScripts.meade },
+        { "only_ki5_overhaul_police_westpoint", "police", liveryScripts.westPoint },
+        { "only_ki5_overhaul_police_bulletin", "police", liveryScripts.bulletin },
+        { "only_ki5_overhaul_police_airport_security", "airportservice", liveryScripts.airportSecurity },
+        { "only_ki5_overhaul_police_prison_transport", "prison", liveryScripts.prisonTransport },
     }
     for _, definition in ipairs(definitions) do
         local source = VehicleZoneDistribution[definition[2]]
@@ -1218,12 +1218,12 @@ local function routeRegionalPolice(created)
             if sourceName == "police" then
                 local region = regionForZone(metaGrid, zone)
                 local destination = distributionForRegion[region]
-                if not destination and vanillaGeneralFallbacks[zoneKey(zone)] then destination = "knox_fleet_police_meade" end
+                if not destination and vanillaGeneralFallbacks[zoneKey(zone)] then destination = "only_ki5_overhaul_police_meade" end
                 if destination and created[destination] then zone:setName(destination); routedPolice = routedPolice + 1 end
-            elseif sourceName == "airportservice" and regionForZone(metaGrid, zone) == "laa" and created["knox_fleet_police_airport_security"] then
-                zone:setName("knox_fleet_police_airport_security"); routedAirport = routedAirport + 1
-            elseif sourceName == "prison" and created["knox_fleet_police_prison_transport"] then
-                zone:setName("knox_fleet_police_prison_transport"); routedPrison = routedPrison + 1
+            elseif sourceName == "airportservice" and regionForZone(metaGrid, zone) == "laa" and created["only_ki5_overhaul_police_airport_security"] then
+                zone:setName("only_ki5_overhaul_police_airport_security"); routedAirport = routedAirport + 1
+            elseif sourceName == "prison" and created["only_ki5_overhaul_police_prison_transport"] then
+                zone:setName("only_ki5_overhaul_police_prison_transport"); routedPrison = routedPrison + 1
             end
         end
     end

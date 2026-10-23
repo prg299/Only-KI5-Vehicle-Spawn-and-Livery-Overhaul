@@ -7,8 +7,8 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
-$sourceRoot = Join-Path $projectRoot 'mod\KI5KnoxCountyFleet'
-$catalogPath = Join-Path $sourceRoot '42\media\lua\shared\KI5KnoxCountyFleet_Catalog.lua'
+$sourceRoot = Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul'
+$catalogPath = Join-Path $sourceRoot '42\media\lua\shared\OnlyKI5VehicleSpawnLiveryOverhaul_Catalog.lua'
 $provenancePath = Join-Path $projectRoot 'docs\ki5-provider-inventory.json'
 $reportPath = Join-Path $projectRoot 'docs\fleet-inventory.md'
 $rootDescriptor = Join-Path $sourceRoot 'mod.info'
@@ -16,7 +16,7 @@ $b42Descriptor = Join-Path $sourceRoot '42\mod.info'
 $mergeRules = @(Get-Content -LiteralPath (Join-Path $projectRoot 'config\merge-rules.json') -Raw | ConvertFrom-Json)
 
 function Fail([string] $Message) {
-    throw "[KI5KnoxCountyFleet catalog] $Message"
+    throw "[OnlyKI5VehicleSpawnLiveryOverhaul catalog] $Message"
 }
 
 function Read-Descriptor([string] $Path) {
@@ -681,7 +681,7 @@ $provenance = [ordered]@{
 [IO.File]::WriteAllText($provenancePath, (($provenance | ConvertTo-Json -Depth 9) + [Environment]::NewLine), [Text.UTF8Encoding]::new($false))
 
 $report = [Text.StringBuilder]::new()
-[void] $report.AppendLine('# KI5: Knox County Fleet catalogue')
+[void] $report.AppendLine('# Only KI5: Vehicle Spawn & Livery Overhaul catalogue')
 [void] $report.AppendLine('')
 [void] $report.AppendLine("- External vehicle providers: $(@($providers | Where-Object { -not $_.Bundled }).Count)")
 [void] $report.AppendLine("- Bundled MCV/police providers: $(@($providers | Where-Object Bundled).Count)")
