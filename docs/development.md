@@ -4,6 +4,22 @@ Keep the source, test profile, uploader stage and subscribed Workshop copies dis
 
 The default project-local stage is `build/workshop/OnlyKI5VehicleSpawnLiveryOverhaul`. Keeping it outside the player's `Zomboid/Workshop` prevents an unpublished uploader copy from shadowing a subscribed release, a lesson from Real Vehicle Interiors. Stage preparation fails when a stage already exists rather than overwriting a release receipt.
 
+## Naming
+
+| Surface | Current name |
+| --- | --- |
+| Display title | Only KI5: Vehicle Spawn & Livery Overhaul |
+| Repository and source folder | `Only-KI5-Vehicle-Spawn-and-Livery-Overhaul` |
+| Mod ID and Lua filename prefix | `OnlyKI5VehicleSpawnLiveryOverhaul` |
+| Generated distribution prefix | `only_ki5_overhaul` |
+| Artwork filename prefix | `only-ki5-overhaul` |
+| JDK environment setting | `ONLY_KI5_JAVA_HOME` |
+| Workspace project record | `only-ki5-vehicle-spawn-livery-overhaul` |
+
+The repository check rejects former branding in active owned filenames and text. Original art prompts/masters remain in `tools-src/art/archive`; obsolete local uploader stages and browser evidence are under `build/history/initial-brand`. Those records preserve the actual names used when the evidence was produced. Dependency identifiers, upstream credits and historical source identities are external contracts/provenance rather than project branding.
+
+## Validation
+
 Regenerate the catalog only after reviewing upstream updates; then review provider hashes, newly discovered IDs, disabled-only variants and collisions. The generator resolves the selected profile, never a live server config. Keep original dependency IDs and vehicle IDs intact while renaming authored paths/contracts.
 
 `validate-lua.ps1` uses the installed game's Kahlua compiler. `test-spawn-policy.ps1` executes production Lua with mocked game services across three table orders and shared/copied highway tables; this is automated policy coverage, not native vehicle-generation proof. The installed game also has the owner's PZ_Optimization compiler/table overrides; validation records must disclose that environment. `validate-stage.ps1` invokes the game's read-only uploader validator without Steam initialization, login or upload.

@@ -16,6 +16,7 @@ def info(path):
 profile = info(ROOT / 'config/fleet-profile.ini')
 root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
+check(b42['name'] == 'Only KI5: Vehicle Spawn & Livery Overhaul', 'Wrong display name')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
 check(b42['modversion'] == '0.1.0' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
@@ -57,6 +58,22 @@ check({d['workshopId'] for d in dependencies} <= {i['workshopId'] for i in audit
 check((ROOT/'LICENSE').read_text().startswith('MIT License'), 'Missing MIT license')
 for required in ['README.md', 'CREDITS.md', 'THIRD_PARTY_NOTICES.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/release-readiness.md']:
     check((ROOT/required).is_file(), 'Missing '+required)
+
+# Original prompts/masters are historical provenance. Every active owned path
+# and text reference must use the current project identity.
+former_names = ('ki5knoxcountyfleet', 'ki5-knox-county-fleet', 'knox county fleet',
+                'knox-fleet', 'knox_fleet', 'kcf_java_home')
+text_extensions = {'.md', '.lua', '.py', '.ps1', '.java', '.json', '.ini', '.info', '.txt', '.yml', '.yaml'}
+active_files = [p for p in ROOT.iterdir() if p.is_file()]
+for directory in ('.github', 'config', 'docs', 'mod', 'release', 'scripts', 'tools-src'):
+    active_files.extend(p for p in (ROOT/directory).rglob('*')
+                        if p.is_file() and 'archive' not in p.relative_to(ROOT).parts)
+for path in active_files:
+    relative = path.relative_to(ROOT).as_posix()
+    check(not any(name in relative.lower() for name in former_names), 'Former brand in active filename: '+relative)
+    if path != Path(__file__).resolve() and (path.suffix.lower() in text_extensions or path.name == 'LICENSE'):
+        check(not any(name in path.read_text('utf-8-sig').lower() for name in former_names),
+              'Former brand in active text: '+relative)
 if errors:
     raise SystemExit('\n'.join(errors))
-print(f'PASS: {len(lua_files)} authored/generated Lua modules; {len(dependencies)} external Workshop dependencies; metadata, rights boundary, identities and Python syntax.')
+print(f'PASS: {len(lua_files)} authored/generated Lua modules; {len(dependencies)} external Workshop dependencies; metadata, rights boundary, current branding and Python syntax.')

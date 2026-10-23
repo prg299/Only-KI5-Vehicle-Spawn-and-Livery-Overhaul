@@ -14,6 +14,16 @@ The owner asked whether original implementations could replace these add-ons. Th
 
 The intended result would leave damnlib as the only non-vehicle dependency. This is a proposed target, not the current dependency list.
 
+Recommended implementation order:
+
+| Priority | Replacement | Scope and acceptance |
+| --- | --- | --- |
+| 1 | Authored camo policy | Prefer suitable existing skins where that meets the intended look. Generate original textures only for missing visual coverage. Check fresh vehicle spawns, burnt variants and preservation of existing vehicles before removing the camo dependency. |
+| 2 | Authored profession/variant support | Compare current native variants with the four MCV modules and implement only missing roles. Validate mechanics, loot, armor and profession stories; resolve the six recorded collisions before removing MCV. |
+| 3 | Original police livery set | Create distinct jurisdiction liveries for the current regional routing, with explicit city/county, sheriff, state, airport, prison and SWAT roles. Verify UV fit, both sides, damage/blood states and regional spawning in the game before removing the police-skin dependency. |
+
+Treat original artwork, reusable registration code and native acceptance as separate deliverables. These suggestions do not authorize relabeling or copying an upstream texture as an original contribution, and the existing requirements are retained until functional replacements pass their checks.
+
 | Original Workshop item | Workshop ID | Enabled module IDs |
 | --- | --- | --- |
 | ['04 Volkswagen Touran](https://steamcommunity.com/sharedfiles/filedetails/?id=3478633453) | `3478633453` | `04vwTouran` |
