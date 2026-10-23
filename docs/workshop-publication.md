@@ -42,3 +42,11 @@ The RVI-style description has the requested like/Ko-fi support section, GitHub s
 `scripts/workshop_gallery.py --upload --description --description-only` updates just the description. `--upload --replace-gallery` replaces only the explicitly reviewed baseline gallery, then independently checks title, cover, visibility and requirements. `--verify-images` reads back original CDN bytes.
 
 For a subsequent runtime upload, `scripts/workshop_upload.py --upload --cached-login --preserve-page` sends only app/item identity, content path and change note through SteamCMD. It omits title, description, cover, gallery, visibility, tags and requirements; a fresh owner query is required first. The source/stage must match the version-specific native-tested canonical payload. SteamCMD may disconnect the owner's desktop session; content/download receipts and later owner page verification remain separate.
+
+## 0.3.2 content update
+
+SteamCMD committed the content-only update with exit 0. It used `--preserve-page`, supplying only app/item identity, content path and the change note. The source/art/code commit is `d76d765c9313a1be04108b58093ecd464b74eddf`; [its GitHub checks passed](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/actions/runs/40039167052).
+
+The official SteamCMD download of manifest **4804580298420381499** matches all **290 files / 46,571,538 bytes** and every staged/source SHA-256 hash. [Publication](../release/workshop/publication.json) and [download](../release/workshop/download-verified.json) retain the receipts. The native-tested canonical payload still matches the source; the class-selection pools remain 95% Humvee / 5% other military cars.
+
+Immediately before the content upload, the owner query verified the fourteen-image gallery, unlisted visibility, unchanged description/cover and exact two requirements. SteamCMD then disconnected the desktop account. The post-content owner query is pending reconnection; `verification-status.json` distinguishes that pending page check from the successful content upload/download. Anonymous official GetPublishedFileDetails returned item result 9 without metadata, so it cannot establish this unlisted item's post-upload state. The fresh-browser carousel attempt remains rate-limited (HTTP 429).

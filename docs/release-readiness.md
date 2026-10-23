@@ -1,6 +1,6 @@
 # Release readiness - 0.3.2
 
-The source candidate passed focused native single-player, two-client dedicated-server and full-restart checks. The fourteen-image gallery and requested description/requirements edits are live on unlisted Workshop item 3825545131. The 0.3.2 content update is prepared for SteamCMD; publication/download verification is recorded separately in [publication](workshop-publication.md). Public release remains pending.
+The source candidate passed focused native single-player, two-client dedicated-server and full-restart checks. The fourteen-image gallery and requested description/requirements edits are live on unlisted Workshop item 3825545131. SteamCMD committed the 0.3.2 content update, and its official download matches all 290 files (manifest 4804580298420381499). Post-content owner page verification awaits Steam desktop reconnection; publication/download records are in [publication](workshop-publication.md). Public release remains pending.
 
 ## Verified candidate
 

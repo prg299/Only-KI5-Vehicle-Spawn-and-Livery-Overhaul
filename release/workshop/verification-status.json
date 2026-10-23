@@ -1,12 +1,17 @@
 {
-  "verifiedUtc": "2026-10-23T21:38:33.916024+00:00",
+  "verifiedUtc": "2026-10-23T23:21:10.147878+00:00",
   "workshopId": "3825545131",
   "steamcmdUploadConfirmed": true,
   "officialDownloadMatches": true,
   "visibilityConfigured": 3,
-  "visibilityOwnerVerified": true,
+  "visibilityOwnerVerified": false,
   "requiredWorkshopItems": 2,
-  "requiredItemsVerified": true,
-  "descriptionVerifiedAgainstUpload": true,
-  "blocker": null
+  "requiredItemsVerified": false,
+  "descriptionVerifiedAgainstUpload": false,
+  "blocker": "SteamCMD disconnected the Steam desktop session; owner reconnection is needed for the post-content page query.",
+  "contentVersion": "0.3.2",
+  "manifest": "4804580298420381499",
+  "galleryImages": 14,
+  "lastOwnerVerifiedBeforeContentUtc": "2026-10-23T23:21:10.147878+00:00",
+  "postContentPageVerified": false
 }
