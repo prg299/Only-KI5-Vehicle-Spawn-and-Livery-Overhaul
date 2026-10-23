@@ -1,8 +1,8 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local VZDUtils = require("YAPZLib/VehicleZoneDistribution")
-local tableIsEmpty = require("YAPZLib/Utils").tableIsEmpty
+local VZDUtils = require("OnlyKI5VehicleSpawnLiveryOverhaul_MilitaryZones")
+local tableIsEmpty = require("OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport").tableIsEmpty
 
 if not VehicleZoneDistribution then return end
 	

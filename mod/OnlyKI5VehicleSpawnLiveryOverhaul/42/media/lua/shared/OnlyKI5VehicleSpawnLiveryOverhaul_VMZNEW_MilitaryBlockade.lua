@@ -1,8 +1,8 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local ISRVSBase = require("YAPZLib/RVSBase")
-local invertAngle = require("YAPZLib/Utils").invertAngle
+local ISRVSBase = require("OnlyKI5VehicleSpawnLiveryOverhaul_RoadStories")
+local invertAngle = require("OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport").invertAngle
 
 MilitaryBlockade = ISRVSBase:derive("MilitaryBlockade")
 MilitaryBlockade.name = "Military Blockade"

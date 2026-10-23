@@ -1,7 +1,7 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local ISRVSBase = require("YAPZLib/RVSBase")
+local ISRVSBase = require("OnlyKI5VehicleSpawnLiveryOverhaul_RoadStories")
 local createTent = require("OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryBlockpostTent")
 
 MilitaryBlockpost = ISRVSBase:derive("MilitaryBlockpost")

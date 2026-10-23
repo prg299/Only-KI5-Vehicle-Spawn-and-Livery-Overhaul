@@ -14,6 +14,12 @@ ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / 'mod/OnlyKI5VehicleSpawnLiveryOverhaul'
 PREFIX = 'OnlyKI5VehicleSpawnLiveryOverhaul_'
 MANIFEST = ROOT / 'docs/imported-content.json'
+NATIVE_REQUIRES = {
+    'YAPZLib/VehicleZone': PREFIX + 'MilitaryZones',
+    'YAPZLib/VehicleZoneDistribution': PREFIX + 'MilitaryZones',
+    'YAPZLib/Utils': PREFIX + 'WorldSupport',
+    'YAPZLib/RVSBase': PREFIX + 'RoadStories',
+}
 
 
 def sha(data):
@@ -166,6 +172,12 @@ def main():
                 for original, renamed in lua_map.items():
                     for quote in ('"', "'"):
                         text = text.replace(quote + original + quote, quote + renamed + quote)
+                if source['modId'] == 'VMZNEW':
+                    for original, replacement in NATIVE_REQUIRES.items():
+                        for quote in ('"', "'"):
+                            text = text.replace(quote + original + quote, quote + replacement + quote)
+                    if 'YAPZLib/' in text:
+                        raise ValueError(f'Unreplaced military library contract: {relative}')
                 for original, canonical in aliases.items():
                     for quote in ('"', "'"):
                         text = text.replace(quote + original + quote, quote + canonical + quote)
@@ -231,13 +243,15 @@ def main():
         'authorRequests': 'An original author may contact the maintainer to request removal of their integrated content and conversion to an external dependency.',
         'bundledModuleIds': [s['modId'] for s in sources] + ['NoVanillaDuplicates'],
         'moduleRequireMaps': module_maps,
+        'authoredNativeReplacements': NATIVE_REQUIRES,
         'files': [records[p] for p in sorted(records)],
         'omittedFiles': omitted, 'layerDecisions': layer_decisions,
         'mergedLocalizationKeys': len(translations),
         'duplicateIds': len(duplicate_ids),
         'reimplemented': ['NoVanillaVehicles', 'NoVanillaProf', 'NoVanillaStoriesKI5',
                           'ME422RegionalPoliceSkins'],
-        'externalOnly': ['damnlib', 'WayMoreCars', 'YAPZLib', 'original KI5 vehicles']}
+        'externalOnly': ['damnlib', 'WayMoreCars', 'original KI5 vehicles'],
+        'notBundledOrRequired': ['YAPZLib']}
     MANIFEST.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + '\n', 'utf-8')
     print(f'Integrated {len(outputs)} files; omitted {len(omitted)} stale MCV definitions; '
           f'merged {len(translations)} names; restored {len(duplicate_ids)} duplicate IDs.')

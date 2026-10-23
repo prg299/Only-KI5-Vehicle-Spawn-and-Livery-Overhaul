@@ -1123,7 +1123,7 @@
       "descriptionSha256": "769adf4108447b32717ed62fbbc0bd96756b69787ed43da8a911f10ac1b1f993",
       "restrictionFlags": null,
       "publicRedistributionGrant": "No individual republishing grant claimed",
-      "disposition": "external dependency; no files copied",
+      "disposition": "replaced by authored native world helpers; not required or bundled; no library files copied",
       "localRightsFiles": []
     },
     {

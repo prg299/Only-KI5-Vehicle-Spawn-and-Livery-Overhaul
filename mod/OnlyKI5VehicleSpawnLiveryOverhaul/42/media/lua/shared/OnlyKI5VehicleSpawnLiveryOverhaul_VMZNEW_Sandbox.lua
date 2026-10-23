@@ -1,7 +1,7 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local getVehicleStoriesList = require("YAPZLib/RVSBase").getVehicleStoriesList
+local getVehicleStoriesList = require("OnlyKI5VehicleSpawnLiveryOverhaul_RoadStories").getVehicleStoriesList
 
 local stories = {}
 stories["MilitaryBlockade"] = true

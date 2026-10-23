@@ -1,8 +1,8 @@
 # Dependencies and load order
 
-The 0.2.0 full-fleet profile requires **88 external Workshop items / 103 modules**.
+The 0.3.0 full-fleet profile requires **87 external Workshop items / 102 modules**.
 The non-vehicle requirements are **that DAMN Library**, **More Car Features +
-Spawn Zones Expansion / WayMoreCars**, and **Yet Another PZ Library / YAPZLib**.
+Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
 KI5 base vehicles and selected vehicle expansion modules remain original external
 downloads. No private server configuration is used.
 
@@ -16,7 +16,8 @@ OnlyKI5VehicleSpawnLiveryOverhaul. The descriptor declares those edges.
 - Consistent Camo: KI5Camo and PapaChadCamo shared texture trees.
 - Lore-Friendly Police Skins and its B42 hotfix: selected shared/versioned content.
 - Vehicle Military Zones: military locations, split pools, sandbox settings,
-  translations and road stories; it uses external YAPZLib.
+  translations and all four road stories. Authored helpers call native game
+  APIs for map data, distributions, scene construction and story scheduling.
 - No Vanilla selection/profession/story behavior: authored late implementation,
   plus the original duplicate-suppression identifier data.
 
@@ -32,6 +33,9 @@ dependency. To make that change, update config/bundled-sources.json, the externa
 profile and descriptor conflicts, then regenerate/import/check/stage together.
 The importer removes only its unchanged, previously manifested files.
 Shared paths need review before switching an upstream mod back on.
+
+YAPZLib's role has been replaced with authored code; its files are not bundled.
+Other mods may still require it independently, so it is not marked incompatible.
 
 See [credits](../CREDITS.md), [provenance](imported-content.json),
 [permissions](permissions.md) and [compatibility](compatibility.md).
@@ -125,4 +129,3 @@ See [credits](../CREDITS.md), [provenance](imported-content.json),
 | [More Car Features + Spawn Zones Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551) | `3520758551` | `WayMoreCars` |
 | [that DAMN Library](https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894) | `3171167894` | `damnlib` |
 | [Trailers!](https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100) | `3330403100` | `KI5trailers` |
-| [Yet Another PZ LIbrary](https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238) | `3624971238` | `YAPZLib` |

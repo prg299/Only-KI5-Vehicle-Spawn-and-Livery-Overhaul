@@ -17,7 +17,7 @@ The [TIS permissions guide](https://theindiestone.com/forums/topic/2530-mod-perm
 | No Vanilla Vehicles, Kraz, 2535461640 | No reuse terms found in reviewed description/local text | Authored selection implementation plus attributed extracted duplicate-ID data. |
 | Vehicle Military Zones, Пупсич, 3436499337 | Documents making compatibility addons; no separate republishing terms found | Selected Build 42 content integrated with attribution. |
 | More Car Features / WayMoreCars, GamestaMechanic, 3520758551 | MODS-03 badge links the TIS ask-permission category | Required external dependency; no files copied. |
-| YAPZLib, Пупсич, 3624971238 | Description expressly allows using the library for mods | Required external dependency supplying integrated VMZ APIs; no files copied. |
+| YAPZLib, Пупсич, 3624971238 | Description expressly allows using the library for mods | Historical upstream reference only. Replaced by authored native world helpers; neither required nor bundled, no library files copied. |
 | Erika's private Suite and regional integration | User authorized creating this new public derivative; the old third-party permission record covered an unlisted release | Only authored Lua algorithms/tools and observed identifier facts carried forward under a new mod identity. Old package/assets never uploaded to GitHub. |
 
 The license is MIT only for authored contributions. Integrated and external content ownership, terms and trademarks remain with their creators. Per-file source/output hashes, selected version layers and exclusions are in `imported-content.json`. Recheck terms and hashes before a Workshop release and after upstream updates.

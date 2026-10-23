@@ -1,7 +1,7 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local zoneUtils = require("YAPZLib/VehicleZone")
+local zoneUtils = require("OnlyKI5VehicleSpawnLiveryOverhaul_MilitaryZones")
 local activeMods = getActivatedMods()
 
 zoneUtils.change("Muldraugh, KY", {

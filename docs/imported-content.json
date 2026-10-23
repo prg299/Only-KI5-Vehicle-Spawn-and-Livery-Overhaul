@@ -74,6 +74,12 @@
       "VMZ/Zones/Vanilla_Map": "OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_Vanilla_Map"
     }
   },
+  "authoredNativeReplacements": {
+    "YAPZLib/VehicleZone": "OnlyKI5VehicleSpawnLiveryOverhaul_MilitaryZones",
+    "YAPZLib/VehicleZoneDistribution": "OnlyKI5VehicleSpawnLiveryOverhaul_MilitaryZones",
+    "YAPZLib/Utils": "OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport",
+    "YAPZLib/RVSBase": "OnlyKI5VehicleSpawnLiveryOverhaul_RoadStories"
+  },
   "files": [
     {
       "targetPath": "42/media/lua/client/OnlyKI5VehicleSpawnLiveryOverhaul_LFPSP_B42Fix_87fordB700MechanicsOverlay.lua",
@@ -482,7 +488,7 @@
     },
     {
       "targetPath": "42/media/lua/server/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_RegisterZones.lua",
-      "sha256": "882d7395278fcf5d129e59686302e79e4d19a068069ea69787c272fa0afcd519",
+      "sha256": "f46a8aed1c35aed7e79ca2bade1945756978da3902e003fd6ea56451b5375ff7",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -587,7 +593,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_BiohazardCrash.lua",
-      "sha256": "73c45acf364f4782761cd3328da5ec5a5898021d07a860c404d7a0b5448a0565",
+      "sha256": "5983db6da0d665fe427fa82232130215c4633517a189ee1767b77a778065229b",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -602,7 +608,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_Change.lua",
-      "sha256": "c42306021d1d8a4bef670c0c0639fff57cdfb68ae814e67e02d9d5fe7c2a1199",
+      "sha256": "21603c2c8c1661c7247f2fedc59e2c3d14170b8bc1417b873747fadcd0813ea4",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -632,7 +638,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryBlockade.lua",
-      "sha256": "f9cc2b91165f67724c7e16bd5773f024e636e8c20c581c4d6c16746d86195fc7",
+      "sha256": "80037d4a7227f06f43586d1502a91f4527bef2a33f36296bfe341c1903d32bb1",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -647,7 +653,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryBlockpost.lua",
-      "sha256": "5748f2f6b0e79fdb3eb163161321e8ba4ca51e492684a4575d0d0b86a9513242",
+      "sha256": "26521730fac8834c8cc3b4e3fa07020d16163a1eda11a9e20debb95374d6581d",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -662,7 +668,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryBlockpostTent.lua",
-      "sha256": "33bb486520c0dda4f2c5aaf87b759ba6c00ddc57f61805d7058f0f1d3f8f9b1c",
+      "sha256": "f354c24dde9f8d41a4073107d6ba7836017e271548921be63c9dc9f82f2c07a6",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -677,7 +683,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_MilitaryConvoy.lua",
-      "sha256": "d81a135337afe3af1c00a33b817cbb22bd7a5646bc743be7aeb9c4e303c886ed",
+      "sha256": "41c42496963306402c908491c5a961d25855dd21abbe02745d53188d15e4e3a2",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -692,7 +698,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_Sandbox.lua",
-      "sha256": "00882696c3f6015d4669d6f86d020a1dd2565e15e9c166ffe721d2af0d871c5e",
+      "sha256": "e49c444ab64ef55dc3535ed2729e9363041147b293ce853114cd794a7a71277f",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -722,7 +728,7 @@
     },
     {
       "targetPath": "42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_VehicleZoneDistribution.lua",
-      "sha256": "db7fe8d2fca137aaf3c451e506bd728db9bfb568c92b10a7fe2c5ab0d88eb43d",
+      "sha256": "22f23e66c9e3d19e946455d3e5d13e0dad3132ec8d89d38501d08f87112da6f9",
       "transform": "namespaced Lua / attributed",
       "sources": [
         {
@@ -4972,7 +4978,9 @@
   "externalOnly": [
     "damnlib",
     "WayMoreCars",
-    "YAPZLib",
     "original KI5 vehicles"
+  ],
+  "notBundledOrRequired": [
+    "YAPZLib"
   ]
 }

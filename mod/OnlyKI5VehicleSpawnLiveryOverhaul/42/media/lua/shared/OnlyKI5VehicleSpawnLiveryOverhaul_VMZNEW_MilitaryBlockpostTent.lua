@@ -1,7 +1,7 @@
 -- Integrated from Vehicle Military Zones (VMZNEW).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337
 -- Third-party contribution; excluded from the project MIT license.
-local __refillContainer = require("YAPZLib/Utils").refillContainer
+local __refillContainer = require("OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport").refillContainer
 
 local tent = {}
 

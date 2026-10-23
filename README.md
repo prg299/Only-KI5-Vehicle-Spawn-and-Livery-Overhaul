@@ -4,20 +4,20 @@ Put KI5 on Kentucky's roads. **Only KI5: Vehicle Spawn & Livery Overhaul** bring
 
 ![Only KI5: Vehicle Spawn & Livery Overhaul](release/workshop/only-ki5-overhaul-preview.png)
 
-**0.2.0 — public source / Workshop release candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib, More Car Features and YAPZLib remain external. Workshop publication and native gameplay acceptance are pending.
+**0.3.0 — public source / Workshop release candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Workshop publication and native gameplay acceptance are pending.
 
 ## What it does
 
 - Replaces normal, crash, profession/story and audited direct vanilla vehicle selections through one late server-side KI5 catalog.
 - Routes police liveries by region, including Louisville city/county, Muldraugh, Meade, West Point, airport and prison roles.
 - Keeps the private Suite's defaults: 95% Humvee within military cars, 75% AM General within military trucks, a preferred M35A2 transport share and 95% white EMS F350 within ambulance choices. These are candidate-pool shares, not a promise that 95% of all spawned vehicles are military.
-- Requires More Car Features / WayMoreCars and preserves its highway aliases. Integrated Vehicle Military Zones supplies military locations, split pools, sandbox settings and road stories through external YAPZLib.
+- Requires More Car Features / WayMoreCars and preserves its highway aliases. Integrated Vehicle Military Zones supplies military locations, split pools, sandbox settings and four road-story recipes. Internal authored helpers use native game APIs for zones, angled parking and scene construction/scheduling.
 - On multiplayer servers, gives eligible newly spawned police vehicles a 50% silent flashing-lightbar chance outside dedicated emergency stations. Single-player lightbar parity is not claimed by this inherited server-only callback.
 - Leaves existing saved vehicles/chunks unchanged. Changes affect newly generated vehicles.
 
 ## Install
 
-This is a **full-fleet integration** with 88 external Workshop requirements, including the original KI5 fleet. Install and enable the modules in [dependencies](docs/dependencies.md), then enable `OnlyKI5VehicleSpawnLiveryOverhaul` after them. The non-vehicle dependencies are damnlib, More Car Features / WayMoreCars and Yet Another PZ Library / YAPZLib. Disable the integrated originals: all four MCV modules, both Consistent Camo modules, original LFPSP and its B42 hotfix, VMZNEW, No Vanilla selection modules, and the private Suite/World Vehicles/Regional Police integrations. They would duplicate this package's registrations or assets.
+This is a **full-fleet integration** with 87 external Workshop requirements, including the original KI5 fleet. Install and enable the modules in [dependencies](docs/dependencies.md), then enable `OnlyKI5VehicleSpawnLiveryOverhaul` after them. The only non-vehicle dependencies are damnlib and More Car Features / WayMoreCars. YAPZLib is neither required nor bundled; keep it enabled if another mod needs it. Disable the integrated originals: all four MCV modules, both Consistent Camo modules, original LFPSP and its B42 hotfix, VMZNEW, No Vanilla selection modules, and the private Suite/World Vehicles/Regional Police integrations. They would duplicate this package's registrations or assets.
 
 For a manual test install, copy `mod/OnlyKI5VehicleSpawnLiveryOverhaul` to your own `Zomboid/mods` directory. Use a disposable world first. No automatic deployment, subscription or server/playset changes are performed by these tools. Replacing the old mod in an established server needs its own backed-up migration/acceptance pass.
 
@@ -34,11 +34,12 @@ node C:/Users/erika/.codex/tools/run-heavy.mjs -- python scripts/sync-release-me
 node C:/Users/erika/.codex/tools/run-heavy.mjs -- python scripts/check-repository.py
 node C:/Users/erika/.codex/tools/run-heavy.mjs -- pwsh -NoProfile -File scripts/validate-lua.ps1
 node C:/Users/erika/.codex/tools/run-heavy.mjs -- pwsh -NoProfile -File scripts/test-spawn-policy.ps1
+node C:/Users/erika/.codex/tools/run-heavy.mjs -- pwsh -NoProfile -File scripts/check-native-world-api.ps1
 node C:/Users/erika/.codex/tools/run-heavy.mjs -- python scripts/stage-workshop.py
 node C:/Users/erika/.codex/tools/run-heavy.mjs -- pwsh -NoProfile -File scripts/validate-stage.ps1
 ```
 
-After reviewing upstream changes, run `scripts/import-content.py` before regenerating the catalog. It reads only the sources in `config/bundled-sources.json`, preserves file provenance, merges localization, filters six reviewed stale MCV definitions, and replaces only its unchanged manifested outputs. It never reads a private server configuration. Imported art retains upstream bytes and is not regenerated.
+After reviewing upstream changes, run `scripts/import-content.py` before regenerating the catalog. It reads only the sources in `config/bundled-sources.json`, preserves file provenance, merges localization, filters six reviewed stale MCV definitions, remaps military helper imports to authored native implementations, and replaces only its unchanged manifested outputs. It never reads a private server configuration. Imported art retains upstream bytes and is not regenerated.
 
 CI runs the portable repository and PowerShell parser checks without proprietary game files. It cannot run the installed-game Lua/compiler or native gameplay checks. Other contributors can invoke those scripts with their own resource-management setup; the guard path above is specific to the author's workstation.
 

@@ -18,7 +18,7 @@ root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
 check(b42['name'] == 'Only KI5: Vehicle Spawn & Livery Overhaul', 'Wrong display name')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.2.0' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(b42['modversion'] == '0.3.0' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')
@@ -29,7 +29,9 @@ inventory = json.loads((ROOT/'docs/ki5-provider-inventory.json').read_text('utf-
 imports = json.loads((ROOT/'docs/imported-content.json').read_text('utf-8'))
 sources = json.loads((ROOT/'config/bundled-sources.json').read_text('utf-8'))
 check(set(inventory['bundledModuleIds']) == set(imports['bundledModuleIds']), 'Bundled inventory drift')
-check({'WayMoreCars', 'YAPZLib', 'damnlib'} <= set(b42['require'].split(',')), 'Missing external framework')
+check({'WayMoreCars', 'damnlib'} <= set(b42['require'].split(',')), 'Missing external framework')
+check('YAPZLib' not in b42['require'].split(','), 'Removed library dependency returned')
+check('3624971238' not in profile['WorkshopItems'].split(';'), 'Removed library Workshop requirement returned')
 check(set(imports['bundledModuleIds']) <= set(b42['incompatible'].split(',')), 'Integrated originals must conflict')
 check(not set(imports['bundledModuleIds']) & set(b42['require'].split(',')), 'Integrated module still required externally')
 check(all(p['ModId'] in imports['bundledModuleIds'] for p in inventory['providers'] if p['Bundled']), 'Unexpected bundled vehicle provider')
@@ -50,12 +52,13 @@ for relative, entry in imported.items():
     check(bool(entry['sources']) and all(s['workshopId'] in allowed_origins for s in entry['sources']), 'Unknown import origin: '+relative)
     check(not any(s['workshopId'] in {'3171167894', '3520758551', '3624971238'} for s in entry['sources']), 'External framework was bundled')
 authored_lua = [p for p in lua_files if p.relative_to(MOD).as_posix() not in imported]
-check(len(authored_lua) == 7, f'Unexpected authored runtime module count {len(authored_lua)}')
+check(len(authored_lua) == 11, f'Unexpected authored runtime module count {len(authored_lua)}')
 module_names = {p.stem for p in lua_files}
 for p in lua_files:
     text = p.read_text('utf-8')
     check(p.stem.startswith('OnlyKI5VehicleSpawnLiveryOverhaul_'), f'Unrenamed runtime filename {p.name}')
     check(not re.search(r'ME422|ME 422|me422_', text), f'Old runtime identity in {p.name}')
+    check(not re.search(r'require\s*\(?\s*["\']YAPZLib/', text), f'Unreplaced runtime library import in {p.name}')
     for target in re.findall(r'require\s*\(?\s*["\'](OnlyKI5VehicleSpawnLiveryOverhaul_[^"\']+)["\']', text):
         check(target in module_names, f'Unresolved authored require {target}')
 for p in MOD.rglob('*'):

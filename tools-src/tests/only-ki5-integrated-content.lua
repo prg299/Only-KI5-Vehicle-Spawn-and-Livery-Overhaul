@@ -1,5 +1,5 @@
 -- Executes real VMZ registration/distribution modules plus the final authored
--- callbacks. YAPZ and game services are mocked; this is not native map proof.
+-- callbacks and authored native adapters. Game services are mocked; this is not native map proof.
 function isClient() return false end
 function print(_) end
 function ZombRand(n) return 0 end
@@ -11,28 +11,14 @@ local function event()
     return e
 end
 Events = { OnLoadMapZones = event(), OnLoadedMapZones = event(),
-    OnInitGlobalModData = event(), OnSpawnVehicleStart = event() }
+    OnInitGlobalModData = event(), OnSpawnVehicleStart = event(), OnSpawnVehicleEnd = event() }
 function getActivatedMods() return { contains = function() return false end } end
 local registrations = {}
-loaded["YAPZLib/VehicleZone"] = {
-    register = function(zones, vanilla)
-        registrations[#registrations + 1] = { zones = zones, vanilla = vanilla }
-    end,
-    change = function() end,
-}
-loaded["YAPZLib/Utils"] = { tableIsEmpty = function(t)
-    for _ in pairs(t) do return false end
+function getLotDirectories() return { size = function() return 0 end } end
+function getWorld() return { getMetaGrid = function() return nil end, registerVehiclesZone = function(_, name, kind, x, y)
+    registrations[#registrations + 1] = {name = name, kind = kind, x = x, y = y}
     return true
-end }
-loaded["YAPZLib/VehicleZoneDistribution"] = {
-    clearSpawnZones = function(source)
-        for name, zone in pairs(VehicleZoneDistribution) do
-            if name ~= "military" and name ~= "army" and zone.vehicles then
-                for script in pairs(source) do zone.vehicles[script] = nil end
-            end
-        end
-    end,
-}
+end } end
 SandboxVars = { VMZ = { SpawnRate = 50, VehiCond = 50, PartDamage = 30,
     KeySpawn = 20, SpecCar = false } }
 local C = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
@@ -67,9 +53,8 @@ require "OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_RegisterZones"
 assert(#Events.OnLoadMapZones.callbacks == callbacks, "registration module must load once")
 Events.OnLoadMapZones.fire()
 Events.OnLoadedMapZones.fire()
-assert(#registrations == 2, "vanilla and optional-map registration callbacks")
-assert(registrations[1].vanilla == true and #registrations[1].zones > 0)
-assert(registrations[2].vanilla == false)
+assert(#registrations > 0, "integrated vanilla records reach native zone registration")
+local registeredCount = #registrations
 assert(not VehicleZoneDistribution.parkingstall.vehicles["Base.fr_je_wrangler_92"])
 local light = VehicleZoneDistribution.military_vehicle_light.vehicles
 local total = 0
@@ -80,4 +65,4 @@ assert(math.abs(light["Base.92amgeneralM998"].spawnChance / total - 0.95) < 0.00
 local heavy = VehicleZoneDistribution.military_vehicle_heavy.vehicles
 assert(heavy["Base.78amgeneralM35A2"], "truck pool survives integrated VMZ")
 Events.OnLoadedMapZones.fire()
-assert(#registrations == 2, "finalization must not re-register native zones")
+assert(#registrations == registeredCount, "finalization must not re-register native zones")

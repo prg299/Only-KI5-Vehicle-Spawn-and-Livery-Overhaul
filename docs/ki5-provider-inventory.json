@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceConfiguration": "fleet-profile.ini",
-  "sourceConfigurationHash": "ADCBD05FD52710B95377C92DC0E6D44FE79DC8267D360D108CA6215E4972E5C6",
+  "sourceConfigurationHash": "BFBE5CE551480CC03BA841CBF2B79AE24DB999523408DC7F4ADD8A972D5578C5",
   "workshopAppId": "108600",
   "externalRequiredModules": [
     "damnlib",
@@ -105,8 +105,7 @@
     "96saturnSseries",
     "98stagea",
     "99fordCVPI",
-    "WayMoreCars",
-    "YAPZLib"
+    "WayMoreCars"
   ],
   "bundledModuleIds": [
     "KI5Camo",

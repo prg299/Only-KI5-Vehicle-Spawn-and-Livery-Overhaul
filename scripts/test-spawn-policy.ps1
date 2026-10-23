@@ -15,4 +15,6 @@ try {
     }
     & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-integrated-content.lua') native shared
     if ($LASTEXITCODE -ne 0) { throw 'Integrated VMZ content/callback regression failed' }
+    & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-native-world.lua') native shared
+    if ($LASTEXITCODE -ne 0) { throw 'Authored native world/scene regression failed' }
 } finally { Pop-Location }

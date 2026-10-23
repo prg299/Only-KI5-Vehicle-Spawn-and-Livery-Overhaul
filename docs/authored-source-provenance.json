@@ -28,5 +28,25 @@
     "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/42/media/lua/shared/Definitions/OnlyKI5VehicleSpawnLiveryOverhaul_SmashedPolice.lua",
     "origin": "Erika authored integration, private Suite 1.1.4",
     "sourceSha256": "09c90508847fb0998c476107b2a4d75c2ee9d15e9cbf1cdc2eaf43c90559c2b7"
+  },
+  {
+    "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport.lua",
+    "origin": "Erika authored native game API implementation, Only KI5 0.3.0; no YAPZLib source copied",
+    "sourceSha256": "0271920a12a048df2e6a2294bf92662c24bd9152a46fb3dd352052c3c50ab59b"
+  },
+  {
+    "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_MilitaryZones.lua",
+    "origin": "Erika authored native game API implementation, Only KI5 0.3.0; no YAPZLib source copied",
+    "sourceSha256": "2dd8e716cda068ff9a9f3956630b51b4406e6eb2f98fcec07f63133fb990515a"
+  },
+  {
+    "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_RoadScene.lua",
+    "origin": "Erika authored native game API implementation, Only KI5 0.3.0; no YAPZLib source copied",
+    "sourceSha256": "eb9c8b3a0539d26b0bcfc182d5f845b35eee3a1c4dbb2830fe586aa4cc811139"
+  },
+  {
+    "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/42/media/lua/shared/OnlyKI5VehicleSpawnLiveryOverhaul_RoadStories.lua",
+    "origin": "Erika authored native game API implementation, Only KI5 0.3.0; no YAPZLib source copied",
+    "sourceSha256": "7684ff1413d9ff7c95864dabf467375b68042e725e4265b30a943e6d19d6b7af"
   }
 ]
