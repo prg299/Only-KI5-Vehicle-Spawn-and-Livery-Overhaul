@@ -21,6 +21,8 @@ This is a **full-fleet integration** with 87 external Workshop requirements, inc
 
 For a manual test install, copy `mod/OnlyKI5VehicleSpawnLiveryOverhaul` to your own `Zomboid/mods` directory. Use a disposable world first. No automatic deployment, subscription or server/playset changes are performed by these tools. Replacing the old mod in an established server needs its own backed-up migration/acceptance pass.
 
+**Highly recommended:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey. It is optional and remains external; follow its server/client setup instructions. It was not part of this candidate's native acceptance profile.
+
 ## Development
 
 Requires PowerShell 7, Python 3.10+, JDK 25 for the native uploader adapter, and local read-only Project Zomboid/Workshop downloads. Set `PZ_GAME_DIR` and `PZ_WORKSHOP_DIR` when they differ from the documented Windows defaults, and `ONLY_KI5_JAVA_HOME` to your JDK 25 root when it is not your default compiler. `config/fleet-profile.ini` is the explicit public input; your server configuration is never read.

@@ -1,4 +1,4 @@
-"""Prepare a new public Workshop item locally. Never logs in or uploads."""
+"""Prepare a Workshop stage locally. Never logs in or uploads."""
 from pathlib import Path
 import hashlib, json, shutil
 
@@ -16,4 +16,5 @@ manifest = {p.relative_to(package).as_posix(): hashlib.sha256(p.read_bytes()).he
             for p in sorted(package.rglob('*')) if p.is_file()}
 (stage/'payload-manifest.json').write_text(json.dumps(manifest, indent=2)+'\n', 'utf-8')
 print(f'Prepared {len(manifest)} payload files at {stage}')
-print('New-item metadata has a blank Workshop ID and public visibility. Nothing uploaded.')
+metadata=json.loads((ROOT/'release/workshop/metadata.json').read_text())
+print('Target visibility: '+metadata['visibility']+'. Nothing uploaded.')

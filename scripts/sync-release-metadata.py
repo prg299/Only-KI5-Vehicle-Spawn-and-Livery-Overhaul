@@ -8,9 +8,14 @@ ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT/'mod/OnlyKI5VehicleSpawnLiveryOverhaul'
 URL = 'https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/blob/main/'
 description = (ROOT/'release/workshop/description.txt').read_text('utf-8-sig')
-lines = ['version=1', 'id=', 'title=Only KI5: Vehicle Spawn & Livery Overhaul']
+metadata = json.loads((ROOT/'release/workshop/metadata.json').read_text('utf-8'))
+identity = ROOT/'release/workshop/steamcmd-identity.json'
+workshop_id = json.loads(identity.read_text())['workshopId'] if identity.exists() else ''
+if metadata['visibility'] != 'unlisted':
+    raise ValueError('The current release is authorized as unlisted only')
+lines = ['version=1', 'id='+workshop_id, 'title='+metadata['title']]
 lines += ['description='+line for line in description.splitlines()]
-lines += ['visibility=public', 'tags=Build 42;Vehicles;Multiplayer']
+lines += ['visibility='+metadata['visibility'], 'tags='+';'.join(metadata['tags'])]
 (ROOT/'release/workshop/workshop.txt').write_text('\n'.join(lines)+'\n', 'utf-8')
 for name in ('CREDITS.md', 'THIRD_PARTY_NOTICES.md'):
     text = (ROOT/name).read_text('utf-8')
@@ -27,6 +32,11 @@ header = f"""# Dependencies and load order
 The {descriptor['modversion']} full-fleet profile requires **{len(dependencies)} external Workshop items / {module_count} modules**.
 The non-vehicle requirements are **that DAMN Library**, **More Car Features +
 Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
+
+**Highly recommended, optional:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey.
+Follow its server/client setup instructions. It is not bundled or a required item,
+and it was not included in the current native acceptance profile.
+
 KI5 base vehicles and selected vehicle expansion modules remain original external
 downloads. No private server configuration is used.
 

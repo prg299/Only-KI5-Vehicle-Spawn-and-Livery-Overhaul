@@ -1,0 +1,2 @@
+Only KI5 0.3.1 - initial unlisted testing release.
+Silent police lightbars in single-player and multiplayer; native B42 catalog, military scene hardware and variant-name fixes. Includes credited variants, camo, police skins and military zones. Further acceptance testing continues.

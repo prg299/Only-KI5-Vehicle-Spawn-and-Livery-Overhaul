@@ -12,5 +12,6 @@ $compiler = if ($JavaHome) { Join-Path $JavaHome 'bin\javac.exe' } elseif ($env:
 if ($LASTEXITCODE) { throw 'Native uploader adapter compilation failed.' }
 # The game's path guard admits uploader content beneath its cache prefix.
 # Use only this checkout's ignored build directory as the disposable cache.
-& "$game\jre64\bin\java.exe" -cp "$classes;$game;$game\projectzomboid.jar" ValidateWorkshopStage $Stage (Join-Path $root 'build') $game OnlyKI5VehicleSpawnLiveryOverhaul public
+$metadata = Get-Content -LiteralPath (Join-Path $root 'release/workshop/metadata.json') -Raw | ConvertFrom-Json
+& "$game\jre64\bin\java.exe" -cp "$classes;$game;$game\projectzomboid.jar" ValidateWorkshopStage $Stage (Join-Path $root 'build') $game OnlyKI5VehicleSpawnLiveryOverhaul $metadata.visibility
 if ($LASTEXITCODE) { throw 'Native uploader stage validation failed.' }

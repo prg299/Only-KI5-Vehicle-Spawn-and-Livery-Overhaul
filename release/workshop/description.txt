@@ -1,36 +1,55 @@
 [h1]Only KI5: Vehicle Spawn & Livery Overhaul[/h1]
-Put KI5 on Kentucky's roads.
+Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside scenes.
 
-KI5-only world traffic, profession vehicles, regional police liveries, roadside stories, consistent military camo and military vehicle zones for Project Zomboid Build 42.21. Community integration by Erika (prg299), based on the original unlisted Vehicle Suite.
-
-[b]Release candidate 0.3.1: native gameplay and multiplayer results and remaining release checks are documented on GitHub. Workshop publication is pending.[/b]
-
-[h2]Included integrations[/h2]
-More Car Variants, Consistent Camo, Lore-Friendly Police Skins with the B42 hotfix, Vehicle Military Zones, and No Vanilla selection/duplicate-suppression behavior. All four military road-story recipes use internal authored native game helpers for zones, angled parking, scene construction and scheduling. YAPZLib is not required or bundled. Six stale MCV vehicle definitions are omitted so current KI5 definitions take priority. All original authors retain ownership of their contributions.
-
-[h2]Requirements and load order[/h2]
-Subscribe to the listed original KI5 vehicle requirements plus [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]that DAMN Library[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features + Spawn Zones Expansion[/url]. These are the only non-vehicle dependencies. Enable them before OnlyKI5VehicleSpawnLiveryOverhaul. They remain external and are not bundled. Keep YAPZLib only if another mod needs it.
-
-Disable the separately installed MCV modules, KI5Camo/PapaChadCamo, LFPSP and LFPSP-B42Fix, VMZNEW, No Vanilla selection modules, and the old Vehicle Suite/World Vehicles/Regional Police Skins integrations when using this mod. They are already integrated or replaced here and would duplicate assets or registrations. Fresh chunks are needed for changed spawns; existing vehicles are not rewritten.
-
-[h2]Silent police lightbars[/h2]
-Eligible newly spawned police vehicles have a 50% flashing-lightbar chance in single-player and multiplayer, outside dedicated emergency-station parking. The spawn policy clears siren modes before checking existing lights or saved spawn decisions. Automatic flashing lights must stay silent.
-
-[h2]Original authors and credits[/h2]
+[hr][/hr]
+[h2]How it works[/h2]
 [list]
-[*][url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5[/url] - original vehicles, models, textures, animations and vehicle systems. Original KI5 vehicle packs stay external.
-[*]KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]that DAMN Library[/url], retained as an external dependency.
-[*]Пупсич - integrated [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants (KI5)[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url], including its original zone data and story recipes. VMZ originally used [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]Yet Another PZ Library[/url]; Only KI5 replaces that requirement with authored native helpers. No YAPZLib source is bundled.
-[*]Branco - integrated [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo for Military Vehicles[/url]. Papa_Chad - original vehicle families supported by the camo textures; those vehicle models are not bundled.
-[*]Old Killer - original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Lore-Friendly Police Skins for KI5[/url]. Aurora - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280]B42 compatibility hotfix[/url]. Their skins and fixes are integrated with attribution.
-[*]Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url], selection/profession/story inspiration and integrated duplicate-suppression data. The selection behavior uses this mod's late registry.
-[*]GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features + Spawn Zones Expansion / WayMoreCars[/url], retained as an external dependency; no source copied.
-[*][url=https://projectzomboid.com/]The Indie Stone[/url] - Project Zomboid and its modding framework.
-[*][url=https://github.com/prg299]Erika / prg299[/url] - integration, regional routing, spawn policy, native military world helpers, checkpointed story scheduling, tools, tests and native gameplay screenshot. OpenAI image_gen generated only the separate ONLY KI5 title lettering.
+[*] [b]KI5 traffic.[/b] Replaces vanilla traffic, profession vehicles and roadside vehicle choices.
+[*] [b]Local police.[/b] Regional liveries for Louisville, Muldraugh, West Point and other jurisdictions.
+[*] [b]Silent lightbars.[/b] Eligible police spawns have a 50% flashing-light chance outside emergency parking. Lights on, siren off, in single-player and multiplayer.
+[*] [b]Military encounters.[/b] Military zones, checkpoint fleets and four roadside stories with consistent camo.
+[*] [b]More variety.[/b] Integrated vehicle variants, police skins and duplicate suppression.
 [/list]
 
-[h2]A note to original authors[/h2]
-If you are an original author of integrated content and would prefer it distributed separately, please contact me through Steam or [url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/issues]GitHub issues[/url]. I will remove your integrated content and move your original mod to an external dependency, keeping proper credits, links and load-order instructions.
+[hr][/hr]
+[h2]Requirements[/h2]
+[b]Build 42.21[/b], the listed original KI5 vehicle packs, damnlib and More Car Features / WayMoreCars. Enable requirements before this mod.
 
-[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source, exact dependencies, provenance, credits and release status[/url]
-MIT applies only to this project's authored contributions. Integrated third-party material retains its original ownership and terms and is excluded from MIT. Independent community addon; not affiliated with or endorsed by KI5, the other original authors or The Indie Stone.
+[b]YAPZLib is not required.[/b] Internal helpers replace it.
+
+[b]Highly recommended:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388]KI5 Vehicle Performance Patch (Unofficial)[/url] by lucygoosey. Optional; follow its server/client setup instructions.
+
+[hr][/hr]
+[h2]Compatibility & saves[/h2]
+Changes appear in [b]fresh chunks[/b]; existing vehicles are not rewritten. Back up saves before changing mods.
+
+Disable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanilla selection mods and the old Vehicle Suite integrations: their selected content is already included.
+
+[b]0.3.1 unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
+
+[hr][/hr]
+[h2]Credits[/h2]
+[list]
+[*] [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5[/url] - original vehicles; external packs retain their creators' ownership.
+[*] KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]damnlib[/url].
+[*] GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features[/url].
+[*] Пупсич - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url]. VMZ's original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]YAPZLib[/url] requirement is replaced here; no library source is bundled.
+[*] Branco - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo[/url]; Papa_Chad - supported vehicle families.
+[*] Old Killer - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Police Skins[/url]; Aurora - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280]B42 hotfix[/url].
+[*] Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url] selection inspiration and duplicate-ID data.
+[*] The Indie Stone - Project Zomboid. Erika / prg299 - integration, authored helpers, tests and gameplay screenshot; ImageGen - title lettering.
+[/list]
+
+If an original author reaches out, their integrated content will be removed and their mod moved to an external dependency, with credits retained. MIT covers authored contributions only; integrated content retains its original ownership.
+
+[hr][/hr]
+[h2]Info[/h2]
+AI was used to make this mod. If you have a problem with that, don't download it.
+
+[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source code, full credits and test results on GitHub[/url]
+
+[hr][/hr]
+[h2]Support development[/h2]
+Enjoying Only KI5? Support future updates on Ko-fi.
+
+[url=https://ko-fi.com/bearski][img]https://storage.ko-fi.com/cdn/kofi5.png?v=6[/img][/url]

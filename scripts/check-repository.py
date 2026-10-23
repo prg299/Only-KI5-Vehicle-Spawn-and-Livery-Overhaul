@@ -83,6 +83,8 @@ check((ROOT/'LICENSE').read_text().startswith('MIT License'), 'Missing MIT licen
 check('imported-content.json' in (ROOT/'LICENSE').read_text(), 'MIT exclusion missing')
 description = (ROOT/'release/workshop/description.txt').read_text('utf-8')
 check('external dependency' in description and 'original author' in description, 'Missing author-contact/dependency statement')
+check('id=3808100388' in description and 'Highly recommended' in description, 'Missing requested optional recommendation')
+check('3808100388' not in {d['workshopId'] for d in dependencies}, 'Optional performance recommendation became mandatory')
 for wid in allowed_origins | {'3395145553', '3520758551', '3624971238', '3171167894'}:
     check('id='+wid in description, 'Missing Workshop description attribution link: '+wid)
 capture_record = json.loads((ROOT/'tools-src/art/capture-provenance.json').read_text('utf-8'))

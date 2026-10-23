@@ -3,6 +3,11 @@
 The 0.3.1 full-fleet profile requires **87 external Workshop items / 102 modules**.
 The non-vehicle requirements are **that DAMN Library**, **More Car Features +
 Spawn Zones Expansion / WayMoreCars**. **YAPZLib is not required.**
+
+**Highly recommended, optional:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey.
+Follow its server/client setup instructions. It is not bundled or a required item,
+and it was not included in the current native acceptance profile.
+
 KI5 base vehicles and selected vehicle expansion modules remain original external
 downloads. No private server configuration is used.
 
