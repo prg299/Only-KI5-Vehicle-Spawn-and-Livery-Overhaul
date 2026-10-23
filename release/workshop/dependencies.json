@@ -1,0 +1,733 @@
+[
+  {
+    "workshopId": "3478633453",
+    "name": "'04 Volkswagen Touran",
+    "modIds": [
+      "04vwTouran"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3478633453"
+  },
+  {
+    "workshopId": "2772575623",
+    "name": "'59 Cadillac Miller-Meteor + ECTO-1",
+    "modIds": [
+      "59meteor"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2772575623"
+  },
+  {
+    "workshopId": "3005903549",
+    "name": "'63 Volkswagen 1300 Beetle",
+    "modIds": [
+      "63beetle"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3005903549"
+  },
+  {
+    "workshopId": "3041122351",
+    "name": "'63 Volkswagen Type 2 Van",
+    "modIds": [
+      "63Type2Van"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3041122351"
+  },
+  {
+    "workshopId": "3566868353",
+    "name": "'65 Pontiac Banshee",
+    "modIds": [
+      "65banshee"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3566868353"
+  },
+  {
+    "workshopId": "3447272250",
+    "name": "'66 Pontiac LeMans / GTO",
+    "modIds": [
+      "66pontiacLeMans"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3447272250"
+  },
+  {
+    "workshopId": "2478247379",
+    "name": "'67 Cadillac Gage Commando",
+    "modIds": [
+      "67commando"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2478247379"
+  },
+  {
+    "workshopId": "3026723485",
+    "name": "'67 Shelby GT500 + Eleanor",
+    "modIds": [
+      "67gt500"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3026723485"
+  },
+  {
+    "workshopId": "3258343790",
+    "name": "'68 Pontiac Firebird",
+    "modIds": [
+      "68firebird"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3258343790"
+  },
+  {
+    "workshopId": "2991201484",
+    "name": "'69 Chevrolet Camaro",
+    "modIds": [
+      "69camaro"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2991201484"
+  },
+  {
+    "workshopId": "3631989559",
+    "name": "'69 Dodge Charger",
+    "modIds": [
+      "69charger"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3631989559"
+  },
+  {
+    "workshopId": "3756938756",
+    "name": "'69 Ford Mustang",
+    "modIds": [
+      "69fordMustang",
+      "69fordMustangExtra"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3756938756"
+  },
+  {
+    "workshopId": "2937786633",
+    "name": "'69 Mini Mk2",
+    "modIds": [
+      "69mini",
+      "69mini_ItalianJob"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2937786633"
+  },
+  {
+    "workshopId": "3766571591",
+    "name": "'70 Chevrolet Chevelle / El Camino",
+    "modIds": [
+      "70chevelle"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591"
+  },
+  {
+    "workshopId": "2873290424",
+    "name": "'70 Dodge Challenger",
+    "modIds": [
+      "70dodge"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2873290424"
+  },
+  {
+    "workshopId": "3670063857",
+    "name": "'70 Ford Escort",
+    "modIds": [
+      "70fordEscort"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670063857"
+  },
+  {
+    "workshopId": "2913633066",
+    "name": "'70 Plymouth Barracuda",
+    "modIds": [
+      "70barracuda"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2913633066"
+  },
+  {
+    "workshopId": "3642935062",
+    "name": "'70 Plymouth Road Runner",
+    "modIds": [
+      "70roadRunner"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062"
+  },
+  {
+    "workshopId": "3490370700",
+    "name": "'73 Ford Falcon",
+    "modIds": [
+      "73fordFalcon"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3490370700"
+  },
+  {
+    "workshopId": "3743371090",
+    "name": "'73 NISSAN Skyline GT-R",
+    "modIds": [
+      "73nissanGTR"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3743371090"
+  },
+  {
+    "workshopId": "3213391371",
+    "name": "'75 Pontiac Grand Prix",
+    "modIds": [
+      "75grandPrix"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3213391371"
+  },
+  {
+    "workshopId": "3161951724",
+    "name": "'76 Chevrolet K Series",
+    "modIds": [
+      "76chevyKseries",
+      "76chevyKseriesExpanded"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3161951724"
+  },
+  {
+    "workshopId": "3730833846",
+    "name": "'76 Chrysler New Yorker",
+    "modIds": [
+      "76chryslerNewYorker"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3730833846"
+  },
+  {
+    "workshopId": "3346905070",
+    "name": "'77 Pontiac Firebird",
+    "modIds": [
+      "77firebird"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3346905070"
+  },
+  {
+    "workshopId": "2799152995",
+    "name": "'78 AM General M35 Series Trucks",
+    "modIds": [
+      "78amgeneralM35A2",
+      "78amgeneralM35A2extra",
+      "78amgeneralM49A2C",
+      "78amgeneralM50A3",
+      "78amgeneralM62"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2799152995"
+  },
+  {
+    "workshopId": "3726526329",
+    "name": "'78 Lamborghini Countach",
+    "modIds": [
+      "78lamboCountach"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3726526329"
+  },
+  {
+    "workshopId": "3703948448",
+    "name": "'79 Chevrolet Camaro",
+    "modIds": [
+      "79camaro"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3703948448"
+  },
+  {
+    "workshopId": "3248388837",
+    "name": "'80 MAN KAT1",
+    "modIds": [
+      "80manKat1"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3248388837"
+  },
+  {
+    "workshopId": "3253385114",
+    "name": "'81 DeLorean DMC-12",
+    "modIds": [
+      "81deloreanDMC12"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3253385114"
+  },
+  {
+    "workshopId": "2618213077",
+    "name": "'82 Oshkosh M911 + Military Semi-Trailers",
+    "modIds": [
+      "82oshkoshM911"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2618213077"
+  },
+  {
+    "workshopId": "3320947974",
+    "name": "'82 Pontiac Firebird",
+    "modIds": [
+      "82firebird",
+      "82firebirdKITT"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3320947974"
+  },
+  {
+    "workshopId": "3379334330",
+    "name": "'82 Porsche 911",
+    "modIds": [
+      "82porsche911"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3379334330"
+  },
+  {
+    "workshopId": "2811383142",
+    "name": "'83 AM General M923",
+    "modIds": [
+      "83amgeneralM923",
+      "83amgeneralM923extra"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2811383142"
+  },
+  {
+    "workshopId": "3799732653",
+    "name": "'83 GMC G-Series Vans",
+    "modIds": [
+      "83gmcGseriesVans"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3799732653"
+  },
+  {
+    "workshopId": "3596903773",
+    "name": "'84 Buick Electra",
+    "modIds": [
+      "84buickElectra"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3596903773"
+  },
+  {
+    "workshopId": "3592777775",
+    "name": "'84 Cadillac DeVille",
+    "modIds": [
+      "84cadillacDeVille"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3592777775"
+  },
+  {
+    "workshopId": "3171184800",
+    "name": "'84 Cadillac Gage LAV-300",
+    "modIds": [
+      "84gageV300"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171184800"
+  },
+  {
+    "workshopId": "3684254299",
+    "name": "'84 Chevrolet Corvette",
+    "modIds": [
+      "84corvette"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3684254299"
+  },
+  {
+    "workshopId": "3409287192",
+    "name": "'84 Jeep XJ Cherokee",
+    "modIds": [
+      "84jeepXJ"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3409287192"
+  },
+  {
+    "workshopId": "2805630347",
+    "name": "'84 Mercedes Benz W460",
+    "modIds": [
+      "84merc"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2805630347"
+  },
+  {
+    "workshopId": "3601417745",
+    "name": "'84 Oldsmobile 98 Regency",
+    "modIds": [
+      "84oldsmobile98"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3601417745"
+  },
+  {
+    "workshopId": "3418252689",
+    "name": "'85 Buick LeSabre",
+    "modIds": [
+      "85buickLeSabre"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3418252689"
+  },
+  {
+    "workshopId": "3413704851",
+    "name": "'85 Chevrolet Caprice / Impala",
+    "modIds": [
+      "85chevyCaprice"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3413704851"
+  },
+  {
+    "workshopId": "3614034284",
+    "name": "'85 Chevrolet Step-Van",
+    "modIds": [
+      "85chevyStepVan",
+      "85chevyStepVanexpanded"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3614034284"
+  },
+  {
+    "workshopId": "3418253716",
+    "name": "'85 Oldsmobile Delta 88",
+    "modIds": [
+      "85oldsmobileDelta88"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3418253716"
+  },
+  {
+    "workshopId": "3413706334",
+    "name": "'85 Pontiac Parisienne",
+    "modIds": [
+      "85pontiacParisienne"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3413706334"
+  },
+  {
+    "workshopId": "3428008364",
+    "name": "'86 Chevrolet CUCVs + M101A2 Trailer",
+    "modIds": [
+      "86chevyCUCV"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3428008364"
+  },
+  {
+    "workshopId": "2870394916",
+    "name": "'86 Ford Econoline E-150 + Pop Culture vans",
+    "modIds": [
+      "86fordE150",
+      "86fordE150dnd",
+      "86fordE150expanded",
+      "86fordE150pd"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2870394916"
+  },
+  {
+    "workshopId": "2566953935",
+    "name": "'86 Oshkosh P19A + Military Trailers",
+    "modIds": [
+      "86oshkoshP19A"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2566953935"
+  },
+  {
+    "workshopId": "3226885926",
+    "name": "'87 Buick Regal",
+    "modIds": [
+      "87buickRegal"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3226885926"
+  },
+  {
+    "workshopId": "3196180339",
+    "name": "'87 Chevrolet Suburban",
+    "modIds": [
+      "87chevySuburban"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3196180339"
+  },
+  {
+    "workshopId": "3110911330",
+    "name": "'87 Ford B700/F700 Trucks",
+    "modIds": [
+      "87fordB700"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330"
+  },
+  {
+    "workshopId": "3779315249",
+    "name": "'87 Toyota Corolla AE92",
+    "modIds": [
+      "87toyotaCorolla"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779315249"
+  },
+  {
+    "workshopId": "3052360250",
+    "name": "'87 Toyota MR2",
+    "modIds": [
+      "87toyotaMR2"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3052360250"
+  },
+  {
+    "workshopId": "2886832936",
+    "name": "'88 Chevrolet S10",
+    "modIds": [
+      "88chevyS10"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2886832936"
+  },
+  {
+    "workshopId": "3435796523",
+    "name": "'88 Toyota Hilux",
+    "modIds": [
+      "88toyotaHilux"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3435796523"
+  },
+  {
+    "workshopId": "3034636011",
+    "name": "'89 Dodge Caravan",
+    "modIds": [
+      "89dodgeCaravan"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3034636011"
+  },
+  {
+    "workshopId": "2886833398",
+    "name": "'89 Ford Bronco",
+    "modIds": [
+      "89fordBronco"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2886833398"
+  },
+  {
+    "workshopId": "2932549988",
+    "name": "'89 Isuzu Trooper",
+    "modIds": [
+      "89trooper"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2932549988"
+  },
+  {
+    "workshopId": "3570973322",
+    "name": "'89 LAND ROVER Defender",
+    "modIds": [
+      "89defender"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3570973322"
+  },
+  {
+    "workshopId": "3292659291",
+    "name": "'89 Volvo 200 Series",
+    "modIds": [
+      "89volvo200"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3292659291"
+  },
+  {
+    "workshopId": "3110913021",
+    "name": "'90 BMW 3 Series (E30)",
+    "modIds": [
+      "90bmwE30"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3110913021"
+  },
+  {
+    "workshopId": "2952802178",
+    "name": "'90 Ford F350 Ambulance",
+    "modIds": [
+      "90fordF350ambulance"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2952802178"
+  },
+  {
+    "workshopId": "2942793445",
+    "name": "'90 Pierce Arrow Pumper and Ladder Trucks",
+    "modIds": [
+      "90pierceArrow"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2942793445"
+  },
+  {
+    "workshopId": "3366300557",
+    "name": "'91 Ford LTD Crown Victoria / Country Squire",
+    "modIds": [
+      "91fordLTD"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3366300557"
+  },
+  {
+    "workshopId": "3539691958",
+    "name": "'91 Ford Ranger",
+    "modIds": [
+      "91fordRanger"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3539691958"
+  },
+  {
+    "workshopId": "3008795514",
+    "name": "'91 Geo Metro",
+    "modIds": [
+      "91geoMetro"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3008795514"
+  },
+  {
+    "workshopId": "3770890864",
+    "name": "'91 Lexus LS400",
+    "modIds": [
+      "91lexusLS400"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3770890864"
+  },
+  {
+    "workshopId": "3504401781",
+    "name": "'91 Nissan 240SX",
+    "modIds": [
+      "91nissan240sx"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3504401781"
+  },
+  {
+    "workshopId": "2409333430",
+    "name": "'91 RANGE ROVER Classic",
+    "modIds": [
+      "91range"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2409333430"
+  },
+  {
+    "workshopId": "2642541073",
+    "name": "'92 AM General M998 + M101A3 Cargo trailer",
+    "modIds": [
+      "92amgeneralM998",
+      "92amgeneralM998extra"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2642541073"
+  },
+  {
+    "workshopId": "2962175696",
+    "name": "'92 Ford Crown Victoria",
+    "modIds": [
+      "92fordCVPI"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2962175696"
+  },
+  {
+    "workshopId": "3287727378",
+    "name": "'92 Jeep YJ Wrangler",
+    "modIds": [
+      "92jeepYJ"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3287727378"
+  },
+  {
+    "workshopId": "2846036306",
+    "name": "'92 NISSAN Skyline GT-R (R32)",
+    "modIds": [
+      "92nissanGTR"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2846036306"
+  },
+  {
+    "workshopId": "3152529790",
+    "name": "'93 Chevrolet Suburban / Silverado",
+    "modIds": [
+      "93chevySuburban",
+      "93chevySuburbanExpanded"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3152529790"
+  },
+  {
+    "workshopId": "3073430075",
+    "name": "'93 Ford F-Series",
+    "modIds": [
+      "93fordF350"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3073430075"
+  },
+  {
+    "workshopId": "3001592312",
+    "name": "'93 Ford Mustang",
+    "modIds": [
+      "93mustangSSP"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3001592312"
+  },
+  {
+    "workshopId": "3088951320",
+    "name": "'93 Ford Taurus",
+    "modIds": [
+      "93fordTaurus"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3088951320"
+  },
+  {
+    "workshopId": "3647735736",
+    "name": "'95 Subaru Impreza WRX STI",
+    "modIds": [
+      "95impreza"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3647735736"
+  },
+  {
+    "workshopId": "3647736504",
+    "name": "'96 Mitsubishi Lancer EVO IV",
+    "modIds": [
+      "96lancerEVO"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3647736504"
+  },
+  {
+    "workshopId": "3679880253",
+    "name": "'96 Saturn S Series",
+    "modIds": [
+      "96saturnSseries"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3679880253"
+  },
+  {
+    "workshopId": "3315443103",
+    "name": "'98 Nissan Stagea 260RS Autech",
+    "modIds": [
+      "98stagea"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3315443103"
+  },
+  {
+    "workshopId": "2971246021",
+    "name": "'99 Ford Crown Victoria Police Interceptor",
+    "modIds": [
+      "99fordCVPI"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2971246021"
+  },
+  {
+    "workshopId": "3455267136",
+    "name": "[Abandoned] More Car Variants (KI5)",
+    "modIds": [
+      "MCV67commando",
+      "MCV76chevyKseries",
+      "MCV86chevyCUCV",
+      "MCV93fordFseries"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136"
+  },
+  {
+    "workshopId": "3797166280",
+    "name": "[B42.20Fix] Lore-Friendly Police Skins For KI5 Vehicles - Beta 0.5",
+    "modIds": [
+      "LFPSP-B42Fix"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280"
+  },
+  {
+    "workshopId": "3670064951",
+    "name": "Campers!",
+    "modIds": [
+      "KI5campers"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951"
+  },
+  {
+    "workshopId": "3309256818",
+    "name": "Consistent Camo for Military Vehicles",
+    "modIds": [
+      "KI5Camo",
+      "PapaChadCamo"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818"
+  },
+  {
+    "workshopId": "3171167894",
+    "name": "that DAMN Library",
+    "modIds": [
+      "damnlib"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894"
+  },
+  {
+    "workshopId": "3330403100",
+    "name": "Trailers!",
+    "modIds": [
+      "KI5trailers"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100"
+  }
+]

@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a fleet, routing or dependency issue
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Game and addon version
+      placeholder: PZ 42.21.0 / Knox County Fleet 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: What happened and how to reproduce it
+      description: Include the vehicle script ID, map region, fresh/existing chunk and SP/server/client context.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependency versions and relevant optional mods
+      description: Include MCV/police-hotfix/WayMoreCars/VMZ versions when relevant. Remove private server details.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or screenshots
+      description: Remove player data, secrets and private addresses. Distinguish actual spawned vehicles from candidate-pool telemetry.

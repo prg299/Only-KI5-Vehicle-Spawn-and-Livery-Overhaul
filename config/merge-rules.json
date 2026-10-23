@@ -1,0 +1,8 @@
+[
+  {"script": "Base.76chevyK20brickingit", "baseModId": "76chevyKseriesExpanded", "addonModId": "MCV76chevyKseries"},
+  {"script": "Base.76chevyK20helton", "baseModId": "76chevyKseriesExpanded", "addonModId": "MCV76chevyKseries"},
+  {"script": "Base.76chevyK20utility", "baseModId": "76chevyKseries", "addonModId": "MCV76chevyKseries"},
+  {"script": "Base.76chevyK30CCutility", "baseModId": "76chevyKseries", "addonModId": "MCV76chevyKseries"},
+  {"script": "Base.86chevyM1010", "baseModId": "86chevyCUCV", "addonModId": "MCV86chevyCUCV"},
+  {"script": "Base.67commando", "baseModId": "67commando", "addonModId": "MCV67commando"}
+]

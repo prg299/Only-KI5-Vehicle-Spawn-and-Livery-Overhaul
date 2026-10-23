@@ -1,0 +1,11 @@
+# Development and regeneration
+
+Keep the source, test profile, uploader stage and subscribed Workshop copies distinct. This project lives at `D:\Stuff\Projects\KI5-Knox-County-Fleet`; the author's installed game and original Workshop inputs are read-only at `C:\SteamLibrary\steamapps\common\ProjectZomboid` and `C:\SteamLibrary\steamapps\workshop\content\108600`. Optional local deployment is `C:\Users\erika\Zomboid\mods\KI5KnoxCountyFleet`; this task does not populate it or change enabled mod lists.
+
+The default project-local stage is `build/workshop/KI5KnoxCountyFleet`. Keeping it outside the player's `Zomboid/Workshop` prevents an unpublished uploader copy from shadowing a subscribed release, a lesson from Real Vehicle Interiors. Stage preparation fails when a stage already exists rather than overwriting a release receipt.
+
+Regenerate the catalog only after reviewing upstream updates; then review provider hashes, newly discovered IDs, disabled-only variants and collisions. The generator resolves the selected profile, never a live server config. Keep original dependency IDs and vehicle IDs intact while renaming authored paths/contracts.
+
+`validate-lua.ps1` uses the installed game's Kahlua compiler. `test-spawn-policy.ps1` executes production Lua with mocked game services across three table orders and shared/copied highway tables; this is automated policy coverage, not native vehicle-generation proof. The installed game also has the owner's PZ_Optimization compiler/table overrides; validation records must disclose that environment. `validate-stage.ps1` invokes the game's read-only uploader validator without Steam initialization, login or upload.
+
+Before release, use a disposable new world and test original dependency vehicles and all variant modules, regional police, mechanics/armor, new chunks, highway wrecks, independent light/truck roles, direct-spawn stories, joining clients, reloads and existing-vehicle preservation. Capture native logs, frame/readiness markers, real production inputs and visuals through an isolated project-owned harness. Do not take over the owner's desktop or change the active server/load order. No reusable isolated native full-fleet acceptance driver is established for this addon yet.

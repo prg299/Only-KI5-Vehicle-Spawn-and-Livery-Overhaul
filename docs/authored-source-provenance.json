@@ -1,0 +1,32 @@
+[
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/server/KI5KnoxCountyFleet_PoliceLightbars.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "96de559b9bdd075cbd6786e4c3e2cfacc39c9b11ecae8c0ee3eca01786cdf9a5"
+  },
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/server/KI5KnoxCountyFleet_PoliceSpawnRouting.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "92bfbd3f9286e9ff75a73e0c13c10dcdcc76f83efe0621a4dc9638cf4783fb15"
+  },
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/server/KI5KnoxCountyFleet_Runtime.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "2511bbe747c09e373953b5621fa08f3254ea17409895ebe4b8f216604cf1f795"
+  },
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/shared/KI5KnoxCountyFleet_PoliceRegions.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "4d2cd4c0d27e1c3a0f1124de2604cfaf831061dd3e789171e27afbc7383dc761"
+  },
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/shared/KI5KnoxCountyFleet_SpawnAliases.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "70785567018f2a5bd0e8fdfeecbe965160a64e360d6031cfb417c7ab3a198499"
+  },
+  {
+    "path": "mod/KI5KnoxCountyFleet/42/media/lua/shared/Definitions/KI5KnoxCountyFleet_SmashedPolice.lua",
+    "origin": "Erika authored integration, private Suite 1.1.4",
+    "sourceSha256": "09c90508847fb0998c476107b2a4d75c2ee9d15e9cbf1cdc2eaf43c90559c2b7"
+  }
+]

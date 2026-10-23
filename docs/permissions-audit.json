@@ -1,0 +1,1397 @@
+{
+  "checkedAtUtc": "2026-10-23T08:47:29.455413+00:00",
+  "method": "Valve public GetPublishedFileDetails API plus local read-only license/readme/credit files. Restriction detection is conservative text matching; it is not a legal opinion or a complete comment-history audit. All third-party content remains external regardless of flags.",
+  "items": [
+    {
+      "workshopId": "2409333430",
+      "title": "'91 RANGE ROVER Classic",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2409333430",
+      "apiResult": 1,
+      "descriptionSha256": "6b0b91933ed128c168baa0899568d4ea128e10f7f44f8fcae8dd8a0cc84e56ba",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2478247379",
+      "title": "'67 Cadillac Gage Commando",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2478247379",
+      "apiResult": 1,
+      "descriptionSha256": "6ba05325601679e564e809ef04f1e0ce987089837ad1fc00079190f2feb81762",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2535461640",
+      "title": "No Vanilla Vehicles (B42)",
+      "creatorSteamId": "76561198006533587",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640",
+      "apiResult": 1,
+      "descriptionSha256": "e642d3ba44fd172195ca1dc9c88c1953ca8523d1d31ab7f30f5fd47b5ce4ecd3",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "historical source or attribution only; no files copied",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2566953935",
+      "title": "'86 Oshkosh P19A + Military Trailers",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2566953935",
+      "apiResult": 1,
+      "descriptionSha256": "83ace7a0f525d527a804022f947ce7e8ee57585ced4cd9127dfad4d5de7e4090",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2618213077",
+      "title": "'82 Oshkosh M911 + Military Semi-Trailers",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2618213077",
+      "apiResult": 1,
+      "descriptionSha256": "0f73775071c94b45ebf2c5e02d506bcd6ce49534db10a0c5f7b9332d99e146fe",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2642541073",
+      "title": "'92 AM General M998 + M101A3 Cargo trailer",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2642541073",
+      "apiResult": 1,
+      "descriptionSha256": "38e80e8d5d4ad69efb5f5c837d49b54b10800276602152d69d57ce3680dbc17b",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2772575623",
+      "title": "'59 Cadillac Miller-Meteor + ECTO-1",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2772575623",
+      "apiResult": 1,
+      "descriptionSha256": "d312ff806e0f3d34ecefbfc5244d32009d1be431a7f3239e91c80bb41ed7ba54",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2799152995",
+      "title": "'78 AM General M35 Series Trucks",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2799152995",
+      "apiResult": 1,
+      "descriptionSha256": "7d20006a94201e2ce892bdb33b21c582dbf7c58fa8df20aa4251d09fe8472880",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2805630347",
+      "title": "'84 Mercedes Benz W460",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2805630347",
+      "apiResult": 1,
+      "descriptionSha256": "eb22c58398464758e644ace184fd2cc3d6ec59bf36bbd03f6cbb3f31c7dfc025",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2811383142",
+      "title": "'83 AM General M923",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2811383142",
+      "apiResult": 1,
+      "descriptionSha256": "34254327f6ea5a7742866785aa1f66e951c0e75a4d390956b9bc659f98e27b11",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2846036306",
+      "title": "'92 NISSAN Skyline GT-R (R32)",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2846036306",
+      "apiResult": 1,
+      "descriptionSha256": "747902018dacdde33e1b9619de12d2bc7281e127e37f1edfde5ab5c53f689cc4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2870394916",
+      "title": "'86 Ford Econoline E-150 + Pop Culture vans",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2870394916",
+      "apiResult": 1,
+      "descriptionSha256": "c5f4a8ca807eefc4eccd98218e0d2f697eb392d7157b2677f519c7e0c736c959",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2873290424",
+      "title": "'70 Dodge Challenger",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2873290424",
+      "apiResult": 1,
+      "descriptionSha256": "6ce88dede20918f5878bc48de863e5da9b5e5812d16394a1d7a57238e594c282",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2886832936",
+      "title": "'88 Chevrolet S10",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2886832936",
+      "apiResult": 1,
+      "descriptionSha256": "f495db90a25b5446bf7a1f8c1a9f91627768ab65da82335af2e91ce0a082464e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2886833398",
+      "title": "'89 Ford Bronco",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2886833398",
+      "apiResult": 1,
+      "descriptionSha256": "73ca8b32f951bc7af3fc6aa283524b61f06e32f87fda5f519b1c66ab04854b83",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2913633066",
+      "title": "'70 Plymouth Barracuda",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2913633066",
+      "apiResult": 1,
+      "descriptionSha256": "ac5f19021cc8239155c80e41cd5014907887edfa3f951bf0466c56226c1294f4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2932549988",
+      "title": "'89 Isuzu Trooper",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2932549988",
+      "apiResult": 1,
+      "descriptionSha256": "9aad710a1f96445289a29c3223b5b2cecf28ae43e9d166c3069e3737a32cc18b",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2937786633",
+      "title": "'69 Mini Mk2",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2937786633",
+      "apiResult": 1,
+      "descriptionSha256": "b92ce3f964e35170d7c7372dce532ba459a6a3e98d461e9ae40b84a9b0683110",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2942793445",
+      "title": "'90 Pierce Arrow Pumper and Ladder Trucks",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2942793445",
+      "apiResult": 1,
+      "descriptionSha256": "6314d0409e278ad30fd6b0a8d0a19d6f991272bce46ef84d6b8101c956dc832b",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2952802178",
+      "title": "'90 Ford F350 Ambulance",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2952802178",
+      "apiResult": 1,
+      "descriptionSha256": "b930ff2ac817def15f511d90da597549d26262fc5ac53612c440ee693d329173",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2962175696",
+      "title": "'92 Ford Crown Victoria",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2962175696",
+      "apiResult": 1,
+      "descriptionSha256": "2d46e5b243029e08a61fcedbcc2d07b2c9aa895d4d5aa168e603c87390111ba4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2971246021",
+      "title": "'99 Ford Crown Victoria Police Interceptor",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2971246021",
+      "apiResult": 1,
+      "descriptionSha256": "771c84ec9a919ba048ed8504d14d7a3812e8d09c9b496dbb416e068c1eb8b62f",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "2991201484",
+      "title": "'69 Chevrolet Camaro",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2991201484",
+      "apiResult": 1,
+      "descriptionSha256": "33d02486fd2aafa840286f5545c8a439754efc771ad1e468f7de5fa97346ec4d",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3001592312",
+      "title": "'93 Ford Mustang",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3001592312",
+      "apiResult": 1,
+      "descriptionSha256": "7a8ceb6d5615abb4a6662c65ccbed0540cd7ade15d65ecdb32758347d23c6a4e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3005903549",
+      "title": "'63 Volkswagen 1300 Beetle",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3005903549",
+      "apiResult": 1,
+      "descriptionSha256": "9568e302c0cbbfd19133ea7b6e08e526e91c9f98f68c2dba2545b793102a856e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3008795514",
+      "title": "'91 Geo Metro",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3008795514",
+      "apiResult": 1,
+      "descriptionSha256": "3f01bb74ec7c2efd8a17d1e0c6852584f64f11be261f2d3b34101787faa8cb93",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3026723485",
+      "title": "'67 Shelby GT500 + Eleanor",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3026723485",
+      "apiResult": 1,
+      "descriptionSha256": "97eedc7b0de2c0aad41c5944d84b78879c588fdbc9505b014c10a1aabfa32c32",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3034636011",
+      "title": "'89 Dodge Caravan",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3034636011",
+      "apiResult": 1,
+      "descriptionSha256": "60b381578130932a118e3fbf98edaa27663fe3f8c9b546134a6312f41b28ad02",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3041122351",
+      "title": "'63 Volkswagen Type 2 Van",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3041122351",
+      "apiResult": 1,
+      "descriptionSha256": "b90b500d6380bd36ce38475dfe4eb3d81b6b321b8b75319e033b880400764909",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3052360250",
+      "title": "'87 Toyota MR2",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3052360250",
+      "apiResult": 1,
+      "descriptionSha256": "1c7c0f5d496974bbeba598d3cb1d52695e9295a1e2107fea8505c8d6ed3cc3e1",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3073430075",
+      "title": "'93 Ford F-Series",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3073430075",
+      "apiResult": 1,
+      "descriptionSha256": "f95e8262e063653fb9f6dfdce7e4429af16c5421b5ddddfff3f90f5728788d7f",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3088951320",
+      "title": "'93 Ford Taurus",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3088951320",
+      "apiResult": 1,
+      "descriptionSha256": "41f28ee019a0925e275342b4374436f4433be789328e035fade7658b62ba9e60",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3110911330",
+      "title": "'87 Ford B700/F700 Trucks",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3110911330",
+      "apiResult": 1,
+      "descriptionSha256": "0d9c7320124464f31875ae2ee7cf0ac81a16a1cf0aac54b9a3a7201b152e2ee3",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3110913021",
+      "title": "'90 BMW 3 Series (E30)",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3110913021",
+      "apiResult": 1,
+      "descriptionSha256": "aeae4716bb60bf0b23f6635063971dd406389e0fb28d2d6edbb4e809a4a6c62d",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3152529790",
+      "title": "'93 Chevrolet Suburban / Silverado",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3152529790",
+      "apiResult": 1,
+      "descriptionSha256": "a114e4ae91219cc55efff32044381915171036562222eacc3be956d1335eaa2e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3161951724",
+      "title": "'76 Chevrolet K Series",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3161951724",
+      "apiResult": 1,
+      "descriptionSha256": "21b545a2f17950468e07de46b29aec3721b28aab094f51fd0eaf8811b6bdbeb2",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3171184800",
+      "title": "'84 Cadillac Gage LAV-300",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171184800",
+      "apiResult": 1,
+      "descriptionSha256": "e5a67c521a8c6278905c8761b2e0551c85f609ea4858a2c5d013392a77770430",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3196180339",
+      "title": "'87 Chevrolet Suburban",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3196180339",
+      "apiResult": 1,
+      "descriptionSha256": "163faf828290b0e08edc75085e3b1b7d45c4d55320382fa2bba9cb0fc69b211f",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3213391371",
+      "title": "'75 Pontiac Grand Prix",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3213391371",
+      "apiResult": 1,
+      "descriptionSha256": "b9fb3794890c0909357eab7a5f99c9ba737c77824b264133f5fe9726d4a8afa9",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3226885926",
+      "title": "'87 Buick Regal",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3226885926",
+      "apiResult": 1,
+      "descriptionSha256": "1f6c5ea5764eac5c31dec1d3e11ee634addf118b5775b2dc7e14dd8fae231a59",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3248388837",
+      "title": "'80 MAN KAT1",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3248388837",
+      "apiResult": 1,
+      "descriptionSha256": "ba7495738f3cb53dbe2cbe8cad2ff70a8b36954995f8226d9c0bd66e6edc5a80",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3253385114",
+      "title": "'81 DeLorean DMC-12",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3253385114",
+      "apiResult": 1,
+      "descriptionSha256": "8aa5df0f21ad3adc17d5a3f3f623568110aeebe6967692685cf72e2484f58472",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3258343790",
+      "title": "'68 Pontiac Firebird",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3258343790",
+      "apiResult": 1,
+      "descriptionSha256": "edb53d604a47545375626ad520da268d545616b238abdea11c5494f09c7c7277",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3287727378",
+      "title": "'92 Jeep YJ Wrangler",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3287727378",
+      "apiResult": 1,
+      "descriptionSha256": "c87eacefd6250818a4bfe6b444000f80598839ba94ad8265f0eefdac409c9cce",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3292659291",
+      "title": "'89 Volvo 200 Series",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3292659291",
+      "apiResult": 1,
+      "descriptionSha256": "7248ec76f45f3cef49c3c4293f589288d2600eefeeb0baf007fce969516a92ee",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3309256818",
+      "title": "Consistent Camo for Military Vehicles",
+      "creatorSteamId": "76561198165491601",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818",
+      "apiResult": 1,
+      "descriptionSha256": "a5004db83971659d68cf7a7735841fbfade1a0af59ee23b4e3243990fabaf450",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3315443103",
+      "title": "'98 Nissan Stagea 260RS Autech",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3315443103",
+      "apiResult": 1,
+      "descriptionSha256": "705059438efe78b72835d2e109d6ac4fb8e56652361c4fe95a0e2773b50b8585",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3320947974",
+      "title": "'82 Pontiac Firebird",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3320947974",
+      "apiResult": 1,
+      "descriptionSha256": "f36f8cbf1538a8c56c442a8a24d1b1f65f0d05a95048da83cd8776be34589dac",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3330403100",
+      "title": "Trailers!",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100",
+      "apiResult": 1,
+      "descriptionSha256": "bec5876ee4ba824ac538e116bf4515e012fe579f7bb4971c75f5a2c327cacad3",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3346905070",
+      "title": "'77 Pontiac Firebird",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3346905070",
+      "apiResult": 1,
+      "descriptionSha256": "8a3e82d9e26754ba24ef3d51e9480c5dc97b515f5a4b90306426fa13fe7ceb00",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3366300557",
+      "title": "'91 Ford LTD Crown Victoria / Country Squire",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3366300557",
+      "apiResult": 1,
+      "descriptionSha256": "b7b145cca3fcd246e4ea66c058157377f2f9b1a1b30f0058b1c63cebf86e29e0",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3379334330",
+      "title": "'82 Porsche 911",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3379334330",
+      "apiResult": 1,
+      "descriptionSha256": "4ef86ae0ec1efc747e08aa1a97c67fa2f41c6837c85447c415e29d8826adab2f",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3395145553",
+      "title": "[B41/B42] Lore-Friendly Police Skins For KI5 Vehicles - Beta 0.5",
+      "creatorSteamId": "76561198804526981",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553",
+      "apiResult": 1,
+      "descriptionSha256": "e74baf867c819ceaa2f5dbaad8c2da39336e8eaebe952cc979887ca8d6b2748c",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "historical source or attribution only; no files copied",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3409287192",
+      "title": "'84 Jeep XJ Cherokee",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3409287192",
+      "apiResult": 1,
+      "descriptionSha256": "448129a7b0d5ba942ec61f47ee5cec475223094788d97b83351de50a553c6efb",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3413704851",
+      "title": "'85 Chevrolet Caprice / Impala",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3413704851",
+      "apiResult": 1,
+      "descriptionSha256": "0a4db53981877e27703fc7735e30f36f2f6d158bc5785fdfb0cca10448ae6d94",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3413706334",
+      "title": "'85 Pontiac Parisienne",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3413706334",
+      "apiResult": 1,
+      "descriptionSha256": "e9ef04ec5adb96c8be7bf1ccffa0890082c7ac5792920ee1480d57bd27ccfbc9",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3418252689",
+      "title": "'85 Buick LeSabre",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3418252689",
+      "apiResult": 1,
+      "descriptionSha256": "13af93560ae8c44dd4390cdc5cba5063479eeed10bf330ba899cedfd9f5a5f98",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3418253716",
+      "title": "'85 Oldsmobile Delta 88",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3418253716",
+      "apiResult": 1,
+      "descriptionSha256": "cac20380a5d7de429788ab68ccf96d8ff77c03f42134f15bfe6a525d30fd3c3b",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3428008364",
+      "title": "'86 Chevrolet CUCVs + M101A2 Trailer",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3428008364",
+      "apiResult": 1,
+      "descriptionSha256": "2dc36468cb36c4fb17359d0e6af31117db36db17df9ef636722d8c1a64209be4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3435796523",
+      "title": "'88 Toyota Hilux",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3435796523",
+      "apiResult": 1,
+      "descriptionSha256": "849c7ec8dcee2c84882426c7a3dbe848fb29e69573f73d472251d0323f672535",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3447272250",
+      "title": "'66 Pontiac LeMans / GTO",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3447272250",
+      "apiResult": 1,
+      "descriptionSha256": "c5c1d217723d45cdc5305899f8aee76527cea530135a7a7b290a14e715d43d02",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3455267136",
+      "title": "[Abandoned] More Car Variants (KI5)",
+      "creatorSteamId": null,
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "apiResult": 9,
+      "descriptionSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": [],
+      "creatorName": "Пупсич",
+      "publicPageReachable": true,
+      "pageDescriptionChecked": false,
+      "availabilityNote": "Valve API result 9. Public page title was retrieved and a web-indexed description was reviewed; a subsequent direct page request was unavailable. Verify new subscriptions/downloads before public Workshop release."
+    },
+    {
+      "workshopId": "3478633453",
+      "title": "'04 Volkswagen Touran",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3478633453",
+      "apiResult": 1,
+      "descriptionSha256": "0776193eaea1479bda5ad7b489cc7118a6fd22cf8a010e04f9de3d6c354b1183",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3490370700",
+      "title": "'73 Ford Falcon",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3490370700",
+      "apiResult": 1,
+      "descriptionSha256": "011aa3b90b2bf4abb0cd21c78c7359fc4eef4a1b8fe6b62efbc31308111235af",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3504401781",
+      "title": "'91 Nissan 240SX",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3504401781",
+      "apiResult": 1,
+      "descriptionSha256": "d98d42ee1fab82080306381ff32e5fa2053253e8a19e53b5e4bf54a69eda49ac",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3539691958",
+      "title": "'91 Ford Ranger",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3539691958",
+      "apiResult": 1,
+      "descriptionSha256": "fd56a4c8a3e2a9a56f3ebeba497b7e4ea00ea9d3d5c8d47f0db5368159adf52b",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3566868353",
+      "title": "'65 Pontiac Banshee",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3566868353",
+      "apiResult": 1,
+      "descriptionSha256": "7b06c3a56183519a0d871101db681d368ac7444e3febbdbe0303fcada8e1b530",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3570973322",
+      "title": "'89 LAND ROVER Defender",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3570973322",
+      "apiResult": 1,
+      "descriptionSha256": "b68f97c19db943ec65bffad7a8c4bc578ed2f6d2408fb153bc6a48a378a13db5",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3592777775",
+      "title": "'84 Cadillac DeVille",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3592777775",
+      "apiResult": 1,
+      "descriptionSha256": "02ff1c3f23642ff2aab3a25fb89bad6eba8111057ea999fefb54f79fd9df1dcc",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3596903773",
+      "title": "'84 Buick Electra",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3596903773",
+      "apiResult": 1,
+      "descriptionSha256": "a5a9dcf461d3714253d4225e11c5fc00b0ef94e3a82101c5c376a7e0300fd30e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3601417745",
+      "title": "'84 Oldsmobile 98 Regency",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3601417745",
+      "apiResult": 1,
+      "descriptionSha256": "24ec137610a0ff8e62bfeaebcd6d2392dd98fbde38374a0937002f8cee831278",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3614034284",
+      "title": "'85 Chevrolet Step-Van",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3614034284",
+      "apiResult": 1,
+      "descriptionSha256": "ad4085d0029e7b25473f932e91490effd9f7c674bca82359fc1cf4a56d724547",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3631989559",
+      "title": "'69 Dodge Charger",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3631989559",
+      "apiResult": 1,
+      "descriptionSha256": "e40da54a635ff1d95c1ae001e2dfc9f226c2d0b784e47345d531a7821626ecb4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3642935062",
+      "title": "'70 Plymouth Road Runner",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3642935062",
+      "apiResult": 1,
+      "descriptionSha256": "09b711da97b634326837f4a04ced19a0342f1ec5473acf8e6e926a854f51dac4",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3647735736",
+      "title": "'95 Subaru Impreza WRX STI",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3647735736",
+      "apiResult": 1,
+      "descriptionSha256": "6528264fa171b790f2853f7c1d1194e5a342c7c63655486eca284b80db8b1a2e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3647736504",
+      "title": "'96 Mitsubishi Lancer EVO IV",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3647736504",
+      "apiResult": 1,
+      "descriptionSha256": "419087da93ffa96f6481aa1eb33a6f7f959270138cd538e0baf0cdfce41db6cf",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3670063857",
+      "title": "'70 Ford Escort",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670063857",
+      "apiResult": 1,
+      "descriptionSha256": "2a6ea57e49a58377fa581e10815ced0d0952a7d48151fde757e9a846af88a8ec",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3670064951",
+      "title": "Campers!",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951",
+      "apiResult": 1,
+      "descriptionSha256": "e7583e15151b0b9bfdc8bc52c097842bfe7196428d24e2dec3f0aee3da49439e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3679880253",
+      "title": "'96 Saturn S Series",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3679880253",
+      "apiResult": 1,
+      "descriptionSha256": "1739528c0cf31780d7c37dd0fc0a438b6b175eae494fa26a5736934a1e122dc0",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3684254299",
+      "title": "'84 Chevrolet Corvette",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3684254299",
+      "apiResult": 1,
+      "descriptionSha256": "35b95e8f76820ad12beac5b19fe1acdecb1216c30fe00b14bbb30387e84c79dc",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3703948448",
+      "title": "'79 Chevrolet Camaro",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3703948448",
+      "apiResult": 1,
+      "descriptionSha256": "10c1d129be49caadac92ba977781ebb8fd8bd666b1a67652254e8052bac83466",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3726526329",
+      "title": "'78 Lamborghini Countach",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3726526329",
+      "apiResult": 1,
+      "descriptionSha256": "6d6bb9fe5b62cff1e673bf4bd19d0795ae665952b9401d3e88e3467e0df02ef2",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3730833846",
+      "title": "'76 Chrysler New Yorker",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3730833846",
+      "apiResult": 1,
+      "descriptionSha256": "50b842ad909e58d009d5cfd2c8c2fd4af988c63d51c92d64e47fbf8ab10e7c38",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3743371090",
+      "title": "'73 NISSAN Skyline GT-R",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3743371090",
+      "apiResult": 1,
+      "descriptionSha256": "c394f92be7e95a697358660cbefd7ae30f6dbc81b872babadfc8cce267ed71f1",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3756938756",
+      "title": "'69 Ford Mustang",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3756938756",
+      "apiResult": 1,
+      "descriptionSha256": "045915805a5898059a293b56c21210bd53c3a60b5d1f27b0ce27ea380e6feba9",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3766571591",
+      "title": "'70 Chevrolet Chevelle / El Camino",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3766571591",
+      "apiResult": 1,
+      "descriptionSha256": "62110593ff1640cd67c7821595075be0856a34011547ec4ac97e73595b671b06",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3770890864",
+      "title": "'91 Lexus LS400",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3770890864",
+      "apiResult": 1,
+      "descriptionSha256": "fbfc7d2c97dbda6db62ddc77fcbc5f7f4053d82dc2ec0cd1ea44744db26868d3",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3779315249",
+      "title": "'87 Toyota Corolla AE92",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3779315249",
+      "apiResult": 1,
+      "descriptionSha256": "62dabf63bc53530a5a6540229576e6a667b9198868a80bab5158da5c1380133e",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3797166280",
+      "title": "[B42.20Fix] Lore-Friendly Police Skins For KI5 Vehicles - Beta 0.5",
+      "creatorSteamId": "76561198415686670",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280",
+      "apiResult": 1,
+      "descriptionSha256": "b6f5f0f4b5287562229eba3f7bb5830f5d1eba4b4230af12dae119f461045c66",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3799732653",
+      "title": "'83 GMC G-Series Vans",
+      "creatorSteamId": "76561198089039119",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3799732653",
+      "apiResult": 1,
+      "descriptionSha256": "c2cd1ab8bc358f098c12b1fc32f5d2d0751f1bcbff05fcfa452a83764ebc67d2",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3805891140",
+      "title": "Unavailable",
+      "creatorSteamId": null,
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3805891140",
+      "apiResult": 9,
+      "descriptionSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "historical source or attribution only; no files copied",
+      "localRightsFiles": [
+        {
+          "path": "mods/ME422RegionalPoliceSkins/CREDITS.md",
+          "sha256": "afe9cc2afedaa6254b60a0314067d387f3df16e133c5b3701e479122376abc9c",
+          "restrictions": []
+        }
+      ]
+    },
+    {
+      "workshopId": "3806374180",
+      "title": "Unavailable",
+      "creatorSteamId": null,
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3806374180",
+      "apiResult": 9,
+      "descriptionSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "restrictionFlags": [],
+      "publicRedistributionGrant": "not established; absence of a restriction is not a license",
+      "disposition": "historical source or attribution only; no files copied",
+      "localRightsFiles": [
+        {
+          "path": "mods/ME422KI5VehicleSuite/CREDITS.md",
+          "sha256": "292d1d94296e139eed3b83c78f078769a3ca2bd7a53450b1ec5904a119bf5654",
+          "restrictions": []
+        }
+      ]
+    },
+    {
+      "workshopId": "3171167894",
+      "title": "that DAMN Library",
+      "creatorSteamId": "76561198089039119",
+      "creatorName": "KI5 and bikinihorst",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894",
+      "apiResult": 1,
+      "descriptionSha256": "239638eb9da63874f956974bcd4a7e87fcb698c35848348e2b16a3bdfb288cd2",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    }
+  ]
+}

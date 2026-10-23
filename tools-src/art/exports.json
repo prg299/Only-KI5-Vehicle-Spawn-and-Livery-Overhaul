@@ -1,0 +1,35 @@
+{
+  "master": "tools-src/art/knox-fleet-master.png",
+  "masterDimensions": [
+    1254,
+    1254
+  ],
+  "masterBytes": 2974468,
+  "compressionPendingReason": "TinyPNG website explicitly blocked the unattended headless browser; no configured official Tinify API key was present.",
+  "derivatives": [
+    {
+      "path": "mod/KI5KnoxCountyFleet/knox-fleet-icon.png",
+      "width": 256,
+      "height": 256,
+      "format": "PNG",
+      "beforeTinyPngBytes": 133948,
+      "compression": "pending"
+    },
+    {
+      "path": "mod/KI5KnoxCountyFleet/knox-fleet-poster.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "beforeTinyPngBytes": 517520,
+      "compression": "pending"
+    },
+    {
+      "path": "release/workshop/knox-fleet-preview.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "beforeTinyPngBytes": 517520,
+      "compression": "pending"
+    }
+  ]
+}
