@@ -1,0 +1,133 @@
+module Base
+{
+	model 76chevyK20CapM
+	{
+		mesh = vehicles/Vehicles_76chevyKseries_Bedcap|76chevyK20_bedcap,
+		shader = damn_vehicle_shader,
+		scale = 0.1,
+		static = FALSE,
+		boneWeight = trunk_bone_top20 1.0,
+	}
+
+	model 76chevyK10CapM
+	{
+		mesh = vehicles/Vehicles_76chevyKseries_Bedcap|76chevyK10_bedcap,
+		shader = damn_vehicle_shader,
+		scale = 0.1,
+		static = FALSE,
+		boneWeight = trunk_bone_top10 1.0,
+	}
+
+	template vehicle CH76BedCoverK20M
+	{
+		part CH76TruckBedCover
+		{
+
+			model CH76CapM
+				{
+                	file = 76chevyK20CapM,
+					offset = 0.0000 -0.0070 0.0633,
+				}
+
+			anim Close
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					rate = 1.0,
+				}
+
+			anim Open
+				{
+					anim = trunk_opening,
+					rate = 0.5,
+				}
+
+			anim Closed
+				{
+					anim = trunk_opening,
+					animate = FALSE,
+				}
+
+			anim Opened
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					animate = FALSE,
+				}
+
+			door
+			{}
+
+			category = Other,
+			area = Toolbox,
+			parent = TrunkDoor,
+			itemType = Base.76chevyK20BedCap,
+			mechanicRequireKey = false,
+            durability = 5,
+			repairMechanic = true,
+
+            lua
+				{
+					create = Vehicles.Create.Default,
+				}
+		}
+	}
+
+	template vehicle CH76BedCoverK10M
+	{
+		part CH76TruckBedCover
+		{
+
+			model CH76CapM
+				{
+                		file = 76chevyK10CapM,
+						offset = 0.0000 -0.0070 0.0633,
+				}
+
+           anim Close
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					rate = 1.0,
+				}
+
+			anim Open
+				{
+					anim = trunk_opening,
+					rate = 0.5,
+				}
+
+			anim Closed
+				{
+					anim = trunk_opening,
+					animate = FALSE,
+				}
+
+			anim Opened
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					animate = FALSE,
+				}
+
+			door
+			{}
+
+			category = Other,
+			area = Toolbox,
+			parent = TrunkDoor,
+			itemType = Base.76chevyK10BedCap,
+			mechanicRequireKey = false,
+            durability = 5,
+			repairMechanic = true,
+
+			lua
+				{
+					create = Vehicles.Create.Default,
+				}
+
+		}
+	}
+
+}
+

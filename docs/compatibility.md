@@ -2,9 +2,9 @@
 
 Target: installed Project Zomboid 42.21.0, revision `4a0e9546ec`, Steam build `25485521`, observed 2026-10-23. Upstream updates can invalidate a previously passing catalog or native test.
 
-Private Suite 1.1.4 omitted six old More Car Variants vehicle scripts so newer KI5 definitions won. A dependency-based public mod cannot delete files from that upstream download. This release therefore **does not carry forward that filtering guarantee**. It records the six collisions below and requires native mechanics/armor/spawn checks before Workshop release. The generated catalog recognizes each ID once; that alone does not fix which upstream vehicle definition the game loads.
+The importer omits six old More Car Variants vehicle files so newer external KI5 definitions win, preserving the private Suite's source-priority rule. It verifies the current base definitions exist before filtering, rejects mixed unique/overlapping files and rejects new collisions. Imported Lua references use canonical base spelling, including `Base.76chevyK20brickingIt`. These structural checks do not replace native mechanics/armor/new-vehicle acceptance.
 
-| Vehicle ID | KI5 provider | External MCV provider |
+| Overlapping source vehicle ID | Retained KI5 provider | Omitted integrated MCV provider |
 | --- | --- | --- |
 | `Base.76chevyK20brickingit` | `76chevyKseriesExpanded` | `MCV76chevyKseries` |
 | `Base.76chevyK20helton` | `76chevyKseriesExpanded` | `MCV76chevyKseries` |
@@ -13,6 +13,8 @@ Private Suite 1.1.4 omitted six old More Car Variants vehicle scripts so newer K
 | `Base.86chevyM1010` | `86chevyCUCV` | `MCV86chevyCUCV` |
 | `Base.67commando` | `67commando` | `MCV67commando` |
 
-No full vehicle override is distributed, and no third-party asset is patched or silently relabeled as MIT. The six known overlaps are explicit in `config/merge-rules.json`; catalog generation fails on newly discovered collisions until they are reviewed. If these upstream combinations fail, resolve the supported profile with the original authors or remove/disable the affected variant modules in a separately reviewed profile. Do not repack stale source files to make a public bundle.
+Only the selected addon vehicle definitions are distributed. No base KI5 definition or framework is copied. The six overlaps are explicit in `config/merge-rules.json` and the import manifest. Police shared/versioned files have 84 identical overlaps and one reviewed Build 42 mechanics-overlay replacement; the selected versioned file wins, matching the upstream layering. MCV English names are merged into one table. Imported ownership and source hashes remain recorded; third-party material is excluded from MIT.
 
-Mixed Filibuster duplicate suppression was driven by an extracted upstream key list in the private Suite and is omitted from 0.1.0. This is a KI5-only supported profile. New vehicles appear only in fresh chunks; existing vehicles and saves are not rewritten. Police hotfix and original LFPSP must never be enabled together; the hotfix can be withdrawn by its author. More Car Variants API result 9 remains an availability gate despite its readable/indexed public page.
+The guarded 57-ID duplicate-suppression set is restored from No Vanilla Vehicles. This remains a KI5-only supported profile; it is not a general Filibuster compatibility promise. New vehicles appear only in fresh chunks; existing vehicles and saves are not rewritten. Disable all integrated originals (including LFPSP, its hotfix and VMZNEW) and the predecessor integrations. More Car Features / WayMoreCars, damnlib and YAPZLib are required external mods. No active server settings, playsets or subscriptions are changed by this repository.
+
+The integrated VMZ registration and pool callbacks are explicitly required before the final policy callbacks. Seven mocked production-Lua scenarios cover final policy and actual integrated VMZ registration/pool execution. Native map placement, military stories, sandbox UI, police skins, armor, saves/reloads, dedicated servers and joined multiplayer still need acceptance in an isolated world.

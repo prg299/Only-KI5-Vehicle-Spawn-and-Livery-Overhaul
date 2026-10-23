@@ -1,0 +1,73 @@
+module Base
+{	
+	
+	template vehicle CH76BedExtrasToolbox
+	{
+		part CH76TruckBedExtras
+		{
+
+			category = Other,
+			area = TruckBed,
+			parent = TrunkDoor,
+			itemType = Base.76chevyKseriesToolbox,
+			mechanicRequireKey = false,
+            durability = 5,
+			repairMechanic = true,
+
+			container
+			{
+				conditionAffectsCapacity = false,
+				test = Vehicles.ContainerAccess.TruckBed,
+			}
+
+			table install
+			{
+                	items
+                	{
+                    	1
+                    		{
+                        	type = Base.Wrench,
+                        	count = 1,
+                        	keep = true,
+							equip = primary,
+                    		}
+                	}
+
+                	time = 800,
+                	skills = Mechanics:1,
+                	recipes = Intermediate Mechanics,
+                	test = Vehicles.InstallTest.Default,
+                	complete = CH76.InstallComplete.BedExtras20,
+                	requireUninstalled = CH76TruckBedCover,
+            }
+
+            table uninstall
+            {
+                	items
+                	{
+                    	1
+                    		{
+			  				type = Base.Wrench,
+							count = 1,
+							keep = true,
+							equip = primary,
+                    		}
+                	}
+
+					time = 900,
+					skills = Mechanics:1,
+					recipes = Intermediate Mechanics,
+            		test = Vehicles.UninstallTest.Default,
+					complete = CH76.UninstallComplete.BedExtras20,
+					requireEmpty = true,
+
+            }
+
+            lua
+            	{
+					create = CH76.Create.BedExtras20,
+					init = CH76.Init.BedExtras20,
+				}
+		}
+	}
+}

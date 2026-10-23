@@ -1,7 +1,7 @@
 -- Only KI5: Vehicle Spawn & Livery Overhaul (Build 42)
 --
--- One late server-side authority for the external KI5 fleet, variants,
--- police-skin dependencies and authored regional routing. The late
+-- One late server-side authority for the external KI5 fleet, integrated
+-- variants/liveries and authored regional routing. The late
 -- OnLoadMapZones execution is deliberate: WayMoreCars injects smashed pools
 -- during this event, so a normal module-load override is incomplete.
 
@@ -11,6 +11,11 @@ end
 
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
+local DuplicateScripts = require "OnlyKI5VehicleSpawnLiveryOverhaul_DuplicateScripts"
+-- Same-mod filenames no longer provide the original inter-mod load-order
+-- edge. Register the upstream military callbacks before the final policy.
+require "OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_VehicleZoneDistribution"
+require "OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_RegisterZones"
 
 local PoliceRegions = require "OnlyKI5VehicleSpawnLiveryOverhaul_PoliceRegions"
 local MOD_TAG = "[OnlyKI5VehicleSpawnLiveryOverhaul]"
@@ -980,6 +985,22 @@ local function applyZoneRegistry()
     return true, converted, smashedConverted, fallbackCount
 end
 
+local function suppressDuplicateVehicles()
+    if type(VehicleZoneDistribution) ~= "table" then return 0 end
+    local removed = 0
+    for _, zone in pairs(VehicleZoneDistribution) do
+        if type(zone) == "table" and type(zone.vehicles) == "table" then
+            for scriptName, _ in pairs(DuplicateScripts) do
+                if zone.vehicles[scriptName] ~= nil then
+                    zone.vehicles[scriptName] = nil
+                    removed = removed + 1
+                end
+            end
+        end
+    end
+    return removed
+end
+
 local function applyProfessionRegistry()
     if type(ProfessionVehicles) ~= "table" then return false, 0 end
     local registry = {}
@@ -1238,7 +1259,7 @@ local function applySuite()
         print(MOD_TAG .. " deferred: VehicleZoneDistribution is unavailable during OnLoadMapZones")
         return
     end
-    local duplicates = 0 -- Mixed Filibuster suppression is outside this KI5-only release.
+    local duplicates = suppressDuplicateVehicles()
     local professionsReady, professions = applyProfessionRegistry()
     local emergencyBurnt = replaceEmergencyBurntVehicles()
     local rangerBefore, rangerAfter = reduceRangerSpawnRate()
@@ -1269,7 +1290,7 @@ local function finalizeLoadedZones()
     -- complete, idempotent policy after all map-zone callbacks so source
     -- variants cannot bypass rarity, service scoping, or military caps.
     local _, converted, smashed = applyZoneRegistry()
-    local duplicates = 0 -- Mixed Filibuster suppression is outside this KI5-only release.
+    local duplicates = suppressDuplicateVehicles()
     local professionsReady, professions = applyProfessionRegistry()
     local emergencyBurnt = replaceEmergencyBurntVehicles()
     local rangerBefore, rangerAfter = reduceRangerSpawnRate()

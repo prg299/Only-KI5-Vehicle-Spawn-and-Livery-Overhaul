@@ -2,6 +2,13 @@ MIT License
 
 Copyright (c) 2026 Erika (prg299) and Only KI5: Vehicle Spawn & Livery Overhaul contributors
 
+Scope: this license applies only to this project's authored contributions.
+Third-party files and derived data listed in docs/imported-content.json
+(provenance/imported-content.json in the runtime package), and
+the underlying game/dependency visuals pictured in screenshots, are excluded.
+Those contributions retain their original ownership and applicable terms.
+See THIRD_PARTY_NOTICES.md and CREDITS.md. No third-party MIT sublicense is granted.
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights

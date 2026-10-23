@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "sourceConfiguration": "fleet-profile.ini",
-  "sourceConfigurationHash": "4675A3C807468E8CD2B766DDE1B738CFD8183954B1DEE259041B1D8C7EF2DDB9",
+  "sourceConfigurationHash": "ADCBD05FD52710B95377C92DC0E6D44FE79DC8267D360D108CA6215E4972E5C6",
   "workshopAppId": "108600",
   "externalRequiredModules": [
     "damnlib",
@@ -105,15 +105,20 @@
     "96saturnSseries",
     "98stagea",
     "99fordCVPI",
-    "MCV93fordFseries",
+    "WayMoreCars",
+    "YAPZLib"
+  ],
+  "bundledModuleIds": [
+    "KI5Camo",
+    "LFPSP-B42Fix",
+    "MCV67commando",
     "MCV76chevyKseries",
     "MCV86chevyCUCV",
-    "MCV67commando",
-    "LFPSP-B42Fix",
-    "KI5Camo",
-    "PapaChadCamo"
+    "MCV93fordFseries",
+    "NoVanillaDuplicates",
+    "PapaChadCamo",
+    "VMZNEW"
   ],
-  "bundledModuleIds": [],
   "providers": [
     {
       "ModId": "04vwTouran",
@@ -1013,37 +1018,37 @@
       "ScriptCount": 36,
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false
+      "Bundled": true
     },
     {
       "ModId": "MCV67commando",
       "WorkshopId": "3455267136",
       "Name": "MCV - '67 Cadillac Gage Commando",
       "RuntimePath": "42\\media\\scripts",
-      "ScriptCount": 2,
+      "ScriptCount": 1,
       "DescriptorHash": "3F1523FF28C0C2444C5A0F4368648A721D0D18E3E38BC9A3C7F5AD28B5F13356",
-      "SourceHash": "993114280F2EAFDFCD679218ADD0199A8BBFB70B864BB8227FB9ED30D3FE41F5",
-      "Bundled": false
+      "SourceHash": "7C1F01AC18062B60FD66BEB853FA46528EB3AA0DF2285D44368A4C4CD541D2ED",
+      "Bundled": true
     },
     {
       "ModId": "MCV76chevyKseries",
       "WorkshopId": "3455267136",
       "Name": "MCV - '76 Chevrolet K Series",
       "RuntimePath": "42\\media\\scripts",
-      "ScriptCount": 18,
+      "ScriptCount": 14,
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true
     },
     {
       "ModId": "MCV86chevyCUCV",
       "WorkshopId": "3455267136",
       "Name": "MCV - '86 Chevrolet CUCV",
       "RuntimePath": "42\\media\\scripts",
-      "ScriptCount": 2,
+      "ScriptCount": 1,
       "DescriptorHash": "EC20FA1C03AB514E6D61BB0CE709A0373B569FC76EE1A224141A57805AC2B4D9",
-      "SourceHash": "EFA6B839EDABB537FABAA8EF7B9B1C46E181955A3D788ADC42E31FFBE9D6FA6D",
-      "Bundled": false
+      "SourceHash": "030D1EE0FCA0155E8906F9B4CC436AF0D559E00C1BE71C03F62F0BEB7BE20AB3",
+      "Bundled": true
     },
     {
       "ModId": "MCV93fordFseries",
@@ -1053,7 +1058,7 @@
       "ScriptCount": 5,
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false
+      "Bundled": true
     }
   ],
   "supportOnly": [
@@ -1303,6 +1308,16 @@
       "Group": "civilian",
       "DescriptorHash": "0C1F78031FA6AD1FE5B93CFDD6EB72DE68279A015EB6727D3D443A0A0CC19389",
       "SourceHash": "EADBE661610DD5B7AB44179AA20901E38A6C7A526FD25C2502AE769695C15C35",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
+      "Script": "Base.67commando",
+      "ModId": "67commando",
+      "WorkshopId": "2478247379",
+      "Group": "militaryCar",
+      "DescriptorHash": "DE006BB9013BE2068D044DD675310ECE9CDB07462906D7E2A069F44C637E5308",
+      "SourceHash": "7C92447D302334A17DF3D30F4A3254E4E3BA486C4F669A83B4A09BF108434637",
       "Bundled": false,
       "RuntimePath": "42.20\\media\\scripts + media\\scripts"
     },
@@ -1777,6 +1792,16 @@
       "RuntimePath": "42.13\\media\\scripts + media\\scripts"
     },
     {
+      "Script": "Base.73fordFalconPSlhd",
+      "ModId": "73fordFalcon",
+      "WorkshopId": "3490370700",
+      "Group": "civilian",
+      "DescriptorHash": "954EA6417B94270E2B4D8C90B50B9BB519B23ECAD9924C116A4907CD472EA56E",
+      "SourceHash": "BA590CE19BCE4A9343356AE13A008B40B2327B79E3A4E73DFCDC9B315F59685C",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
       "Script": "Base.73fordFalconXBGT",
       "ModId": "73fordFalcon",
       "WorkshopId": "3490370700",
@@ -1937,6 +1962,16 @@
       "RuntimePath": "42.20\\media\\scripts + media\\scripts"
     },
     {
+      "Script": "Base.76chevyK20utility",
+      "ModId": "76chevyKseries",
+      "WorkshopId": "3161951724",
+      "Group": "commercial",
+      "DescriptorHash": "C943CBEB23A0B310EC729B65C3167B12DE83076612025AF861787E96939ABF30",
+      "SourceHash": "2AB34106618FF74CA6F0A13AFB9241FCDD70C467044F92C3003B3852F1C0004A",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
       "Script": "Base.76chevyK30CC",
       "ModId": "76chevyKseries",
       "WorkshopId": "3161951724",
@@ -1971,6 +2006,16 @@
       "ModId": "76chevyKseries",
       "WorkshopId": "3161951724",
       "Group": "fire",
+      "DescriptorHash": "C943CBEB23A0B310EC729B65C3167B12DE83076612025AF861787E96939ABF30",
+      "SourceHash": "2AB34106618FF74CA6F0A13AFB9241FCDD70C467044F92C3003B3852F1C0004A",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
+      "Script": "Base.76chevyK30CCutility",
+      "ModId": "76chevyKseries",
+      "WorkshopId": "3161951724",
+      "Group": "commercial",
       "DescriptorHash": "C943CBEB23A0B310EC729B65C3167B12DE83076612025AF861787E96939ABF30",
       "SourceHash": "2AB34106618FF74CA6F0A13AFB9241FCDD70C467044F92C3003B3852F1C0004A",
       "Bundled": false,
@@ -2037,6 +2082,16 @@
       "RuntimePath": "42.20\\media\\scripts + media\\scripts"
     },
     {
+      "Script": "Base.76chevyK20brickingIt",
+      "ModId": "76chevyKseriesExpanded",
+      "WorkshopId": "3161951724",
+      "Group": "commercial",
+      "DescriptorHash": "73B54FB4430801359A7BFFB6FE2F33303668DD8559EF32469107FEDA597CD244",
+      "SourceHash": "2C60F957EA3456980779AC5217FB23E8BF30778C55F03109DDB569676BBAFFAF",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
       "Script": "Base.76chevyK20callowayLandscaping",
       "ModId": "76chevyKseriesExpanded",
       "WorkshopId": "3161951724",
@@ -2048,6 +2103,16 @@
     },
     {
       "Script": "Base.76chevyK20fossoil",
+      "ModId": "76chevyKseriesExpanded",
+      "WorkshopId": "3161951724",
+      "Group": "commercial",
+      "DescriptorHash": "73B54FB4430801359A7BFFB6FE2F33303668DD8559EF32469107FEDA597CD244",
+      "SourceHash": "2C60F957EA3456980779AC5217FB23E8BF30778C55F03109DDB569676BBAFFAF",
+      "Bundled": false,
+      "RuntimePath": "42.20\\media\\scripts + media\\scripts"
+    },
+    {
+      "Script": "Base.76chevyK20helton",
       "ModId": "76chevyKseriesExpanded",
       "WorkshopId": "3161951724",
       "Group": "commercial",
@@ -3331,6 +3396,16 @@
       "ModId": "86chevyCUCV",
       "WorkshopId": "3428008364",
       "Group": "militaryCar",
+      "DescriptorHash": "810EF69EF405CD8715AACB708B12EF31BA84B3D287A551A79F7490628A940D40",
+      "SourceHash": "92335DF41AAD4B3ACBD473AC1D03D53CD4819553D6DAF66310417812E5729415",
+      "Bundled": false,
+      "RuntimePath": "42.13\\media\\scripts + media\\scripts"
+    },
+    {
+      "Script": "Base.86chevyM1010",
+      "ModId": "86chevyCUCV",
+      "WorkshopId": "3428008364",
+      "Group": "militaryTruck",
       "DescriptorHash": "810EF69EF405CD8715AACB708B12EF31BA84B3D287A551A79F7490628A940D40",
       "SourceHash": "92335DF41AAD4B3ACBD473AC1D03D53CD4819553D6DAF66310417812E5729415",
       "Bundled": false,
@@ -5853,7 +5928,7 @@
       "Group": "prison",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5863,7 +5938,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5873,7 +5948,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5883,7 +5958,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5893,7 +5968,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5903,7 +5978,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5913,7 +5988,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5923,7 +5998,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5933,7 +6008,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5943,7 +6018,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5953,7 +6028,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5963,7 +6038,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5973,7 +6048,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5983,7 +6058,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -5993,7 +6068,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6003,7 +6078,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6013,7 +6088,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6023,7 +6098,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6033,7 +6108,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6043,7 +6118,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6053,7 +6128,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6063,7 +6138,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6073,7 +6148,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6083,7 +6158,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6093,7 +6168,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6103,7 +6178,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6113,7 +6188,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6123,7 +6198,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6133,7 +6208,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6143,7 +6218,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6153,7 +6228,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6163,7 +6238,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6173,7 +6248,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6183,7 +6258,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6193,7 +6268,7 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
     },
     {
@@ -6203,18 +6278,8 @@
       "Group": "police",
       "DescriptorHash": "C97C5A8F6DD63A5EAC010712642D804879BAAD35F595E0EB770992A7689377B1",
       "SourceHash": "49EFC8805C976A9815CD75557F521FEE91A344421A889298F11837F1986F42AB",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts + media\\scripts"
-    },
-    {
-      "Script": "Base.67commando",
-      "ModId": "MCV67commando",
-      "WorkshopId": "3455267136",
-      "Group": "militaryCar",
-      "DescriptorHash": "3F1523FF28C0C2444C5A0F4368648A721D0D18E3E38BC9A3C7F5AD28B5F13356",
-      "SourceHash": "993114280F2EAFDFCD679218ADD0199A8BBFB70B864BB8227FB9ED30D3FE41F5",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
     },
     {
       "Script": "Base.67commandoRanger",
@@ -6222,8 +6287,8 @@
       "WorkshopId": "3455267136",
       "Group": "ranger",
       "DescriptorHash": "3F1523FF28C0C2444C5A0F4368648A721D0D18E3E38BC9A3C7F5AD28B5F13356",
-      "SourceHash": "993114280F2EAFDFCD679218ADD0199A8BBFB70B864BB8227FB9ED30D3FE41F5",
-      "Bundled": false,
+      "SourceHash": "7C1F01AC18062B60FD66BEB853FA46528EB3AA0DF2285D44368A4C4CD541D2ED",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6232,8 +6297,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6242,8 +6307,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6252,8 +6317,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6262,8 +6327,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6272,28 +6337,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
-    },
-    {
-      "Script": "Base.76chevyK20brickingit",
-      "ModId": "MCV76chevyKseries",
-      "WorkshopId": "3455267136",
-      "Group": "commercial",
-      "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
-    },
-    {
-      "Script": "Base.76chevyK20helton",
-      "ModId": "MCV76chevyKseries",
-      "WorkshopId": "3455267136",
-      "Group": "commercial",
-      "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6302,8 +6347,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6312,8 +6357,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6322,18 +6367,8 @@
       "WorkshopId": "3455267136",
       "Group": "pickup",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
-    },
-    {
-      "Script": "Base.76chevyK20utility",
-      "ModId": "MCV76chevyKseries",
-      "WorkshopId": "3455267136",
-      "Group": "commercial",
-      "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6342,8 +6377,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6352,8 +6387,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6362,18 +6397,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
-    },
-    {
-      "Script": "Base.76chevyK30CCutility",
-      "ModId": "MCV76chevyKseries",
-      "WorkshopId": "3455267136",
-      "Group": "commercial",
-      "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6382,8 +6407,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6392,8 +6417,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6402,18 +6427,8 @@
       "WorkshopId": "3455267136",
       "Group": "commercial",
       "DescriptorHash": "F1D2B582CF15248DCAAF39CFC646D233FB46E9F3A4B49093147C2908E5C94B8E",
-      "SourceHash": "0E93DB40D78314027A66B0E9FF17640009EFE9F944C9A3C8B81BEB131DAE30DE",
-      "Bundled": false,
-      "RuntimePath": "42\\media\\scripts"
-    },
-    {
-      "Script": "Base.86chevyM1010",
-      "ModId": "MCV86chevyCUCV",
-      "WorkshopId": "3455267136",
-      "Group": "militaryTruck",
-      "DescriptorHash": "EC20FA1C03AB514E6D61BB0CE709A0373B569FC76EE1A224141A57805AC2B4D9",
-      "SourceHash": "EFA6B839EDABB537FABAA8EF7B9B1C46E181955A3D788ADC42E31FFBE9D6FA6D",
-      "Bundled": false,
+      "SourceHash": "91E8DAE64B624596B727196A18C31ED49B672C84EA358488EDCF1A42F9785471",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6422,8 +6437,8 @@
       "WorkshopId": "3455267136",
       "Group": "ambulance",
       "DescriptorHash": "EC20FA1C03AB514E6D61BB0CE709A0373B569FC76EE1A224141A57805AC2B4D9",
-      "SourceHash": "EFA6B839EDABB537FABAA8EF7B9B1C46E181955A3D788ADC42E31FFBE9D6FA6D",
-      "Bundled": false,
+      "SourceHash": "030D1EE0FCA0155E8906F9B4CC436AF0D559E00C1BE71C03F62F0BEB7BE20AB3",
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6433,7 +6448,7 @@
       "Group": "commercial",
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6443,7 +6458,7 @@
       "Group": "commercial",
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6453,7 +6468,7 @@
       "Group": "commercial",
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6463,7 +6478,7 @@
       "Group": "commercial",
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     },
     {
@@ -6473,7 +6488,7 @@
       "Group": "commercial",
       "DescriptorHash": "E344A7A5764771059944CF5EA06D013379377769FC088DEB15061BBFF24FB81A",
       "SourceHash": "581C4D1D265FBDB21501E1F0C94E111FBBE0441A748AD0D68D6ACEFCEA3DCCEF",
-      "Bundled": false,
+      "Bundled": true,
       "RuntimePath": "42\\media\\scripts"
     }
   ],
@@ -6500,16 +6515,6 @@
     },
     {
       "Script": "Base.73fordFalconPS",
-      "SourceModId": "73fordFalcon",
-      "WorkshopId": "3490370700",
-      "Bundled": false,
-      "DisabledSpawnModuleIds": [
-        "73fordFalconPS"
-      ],
-      "Reason": "Vehicle is defined by an enabled provider, but its explicit spawn references exist only in disabled modules."
-    },
-    {
-      "Script": "Base.73fordFalconPSlhd",
       "SourceModId": "73fordFalcon",
       "WorkshopId": "3490370700",
       "Bundled": false,
@@ -6579,42 +6584,79 @@
       "Reason": "Vehicle is defined by an enabled provider, but its explicit spawn references exist only in disabled modules."
     }
   ],
-  "overrides": [
+  "overrides": [],
+  "filteredSupersessions": [
     {
-      "Script": "Base.76chevyK20brickingit",
-      "ReplacedModId": "76chevyKseriesExpanded",
-      "ReplacingModId": "MCV76chevyKseries",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV76chevyKseries",
+      "path": "3455267136/mods/MCV - '76 Chevrolet K Series/42/media/scripts/vehicles/76chevyK20brickingit.txt",
+      "sha256": "a8be9748fcfb6cb6f4b4d72285aa3ae942cf0f66bdf9cba99024cd0da48cfec3",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.76chevyK20brickingit",
+      "baseModId": "76chevyKseriesExpanded",
+      "baseScript": "Base.76chevyK20brickingIt",
+      "disposition": "keep-current-external-base"
     },
     {
-      "Script": "Base.76chevyK20helton",
-      "ReplacedModId": "76chevyKseriesExpanded",
-      "ReplacingModId": "MCV76chevyKseries",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV76chevyKseries",
+      "path": "3455267136/mods/MCV - '76 Chevrolet K Series/42/media/scripts/vehicles/76chevyK20helton.txt",
+      "sha256": "1823e665e6196c8303bfb8f1422b39e2c1f854700a39c413f159e3271a5831cc",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.76chevyK20helton",
+      "baseModId": "76chevyKseriesExpanded",
+      "baseScript": "Base.76chevyK20helton",
+      "disposition": "keep-current-external-base"
     },
     {
-      "Script": "Base.76chevyK20utility",
-      "ReplacedModId": "76chevyKseries",
-      "ReplacingModId": "MCV76chevyKseries",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV76chevyKseries",
+      "path": "3455267136/mods/MCV - '76 Chevrolet K Series/42/media/scripts/vehicles/76chevyK20utility.txt",
+      "sha256": "34ea979f2f5b4980f8bf2eda68a62eb5075b8953ea581670ff8eb3b3388722ee",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.76chevyK20utility",
+      "baseModId": "76chevyKseries",
+      "baseScript": "Base.76chevyK20utility",
+      "disposition": "keep-current-external-base"
     },
     {
-      "Script": "Base.76chevyK30CCutility",
-      "ReplacedModId": "76chevyKseries",
-      "ReplacingModId": "MCV76chevyKseries",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV76chevyKseries",
+      "path": "3455267136/mods/MCV - '76 Chevrolet K Series/42/media/scripts/vehicles/76chevyK30CCutility.txt",
+      "sha256": "1a2848ef9dedca96e7e2b4c1125c56f874fb47913124f99e7b457f7917f33dad",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.76chevyK30CCutility",
+      "baseModId": "76chevyKseries",
+      "baseScript": "Base.76chevyK30CCutility",
+      "disposition": "keep-current-external-base"
     },
     {
-      "Script": "Base.86chevyM1010",
-      "ReplacedModId": "86chevyCUCV",
-      "ReplacingModId": "MCV86chevyCUCV",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV86chevyCUCV",
+      "path": "3455267136/mods/MCV - '86 Chevrolet CUCV/42/media/scripts/vehicles/86chevyM1010.txt",
+      "sha256": "a6363a090f9d01b6687d9aa2cd768c14deced6579086d18e7b22133961e9b3f1",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.86chevyM1010",
+      "baseModId": "86chevyCUCV",
+      "baseScript": "Base.86chevyM1010",
+      "disposition": "keep-current-external-base"
     },
     {
-      "Script": "Base.67commando",
-      "ReplacedModId": "67commando",
-      "ReplacingModId": "MCV67commando",
-      "Reason": "External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance."
+      "workshopId": "3455267136",
+      "modId": "MCV67commando",
+      "path": "3455267136/mods/MCV - '67 Cadillac Gage Commando/42/media/scripts/vehicles/67commando.txt",
+      "sha256": "cd47e3ce8449e62e2c3ed868e88cac3bedba5574f06e7b8cd70d9085c14a1038",
+      "author": "Пупсич",
+      "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+      "script": "Base.67commando",
+      "baseModId": "67commando",
+      "baseScript": "Base.67commando",
+      "disposition": "keep-current-external-base"
     }
   ],
   "excluded": [

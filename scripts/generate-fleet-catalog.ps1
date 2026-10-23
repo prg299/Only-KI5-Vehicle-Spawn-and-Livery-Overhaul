@@ -14,6 +14,10 @@ $reportPath = Join-Path $projectRoot 'docs\fleet-inventory.md'
 $rootDescriptor = Join-Path $sourceRoot 'mod.info'
 $b42Descriptor = Join-Path $sourceRoot '42\mod.info'
 $mergeRules = @(Get-Content -LiteralPath (Join-Path $projectRoot 'config\merge-rules.json') -Raw | ConvertFrom-Json)
+$bundleConfig = @(Get-Content -LiteralPath (Join-Path $projectRoot 'config\bundled-sources.json') -Raw | ConvertFrom-Json)
+$bundleManifest = Get-Content -LiteralPath (Join-Path $projectRoot 'docs\imported-content.json') -Raw | ConvertFrom-Json
+$bundledIds = @($bundleConfig | ForEach-Object { $_.modId })
+$omittedPaths = @($bundleManifest.omittedFiles | ForEach-Object { $_.path })
 
 function Fail([string] $Message) {
     throw "[OnlyKI5VehicleSpawnLiveryOverhaul catalog] $Message"
@@ -151,6 +155,9 @@ $workshopLine = Get-Content -LiteralPath $ServerConfig | Where-Object { $_ -like
 if (-not $modsLine -or -not $workshopLine) { Fail 'Fleet profile is missing Mods= or WorkshopItems=.' }
 $activeMods = ($modsLine -replace '^Mods=', '').Split(';') | Where-Object { $_ }
 $workshopItems = ($workshopLine -replace '^WorkshopItems=', '').Split(';') | Where-Object { $_ }
+$externalMods = @($activeMods)
+$activeMods = @($activeMods) + $bundledIds
+$workshopItems = @(@($workshopItems) + @($bundleConfig | ForEach-Object { $_.workshopId }) | Sort-Object -Unique)
 
 $moduleLookup = @{}
 foreach ($workshopId in $workshopItems) {
@@ -293,9 +300,7 @@ function Is-DisabledOptionalVariant([string] $Script, [string] $SourceModId, [st
 function Add-ScriptRecord([object] $Record) {
     $existing = $recordsByScript[$Record.Script]
     if ($existing) {
-        $rule = @($mergeRules | Where-Object { $_.script -eq $Record.Script -and $_.baseModId -eq $existing.ModId -and $_.addonModId -eq $Record.ModId })
-        if ($rule.Count -ne 1) { Fail "Unreviewed vehicle ID collision: $($Record.Script) from $($existing.ModId) and $($Record.ModId)" }
-        $overrides.Add([pscustomobject]@{ Script = $Record.Script; ReplacedModId = $existing.ModId; ReplacingModId = $Record.ModId; Reason = 'External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.' })
+        Fail "Vehicle ID collision survived import filtering: $($Record.Script) from $($existing.ModId) and $($Record.ModId)"
     }
     $recordsByScript[$Record.Script] = $Record
 }
@@ -303,13 +308,19 @@ function Add-ScriptRecord([object] $Record) {
 foreach ($modId in $candidateModuleIds) {
     $module = $moduleLookup[$modId]
     if (-not $module) { Fail "Active KI5 module is not present in the installed Workshop items: $modId" }
+    $isBundled = $modId -in $bundledIds
     $scriptRoots = @(Get-RuntimeScriptRoots $module.Directory)
     $descriptorHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $module.DescriptorPath).Hash
     if ($scriptRoots.Count -eq 0) {
-        $supportOnly.Add([pscustomobject]@{ ModId = $modId; WorkshopId = $module.WorkshopId; Name = $module.Name; DescriptorHash = $descriptorHash; Bundled = $false })
+        $supportOnly.Add([pscustomobject]@{ ModId = $modId; WorkshopId = $module.WorkshopId; Name = $module.Name; DescriptorHash = $descriptorHash; Bundled = $isBundled })
         continue
     }
     $scriptFiles = @($scriptRoots | ForEach-Object { Get-ChildItem -LiteralPath $_ -Recurse -File -Filter '*.txt' } | Sort-Object FullName)
+    if ($isBundled) {
+        $scriptFiles = @($scriptFiles | Where-Object {
+            [IO.Path]::GetRelativePath($WorkshopRoot, $_.FullName).Replace('\', '/') -notin $omittedPaths
+        })
+    }
     $runtimePaths = @($scriptRoots | ForEach-Object { $_.Substring($module.Directory.Length).TrimStart('\') })
     $runtimePath = $runtimePaths -join ' + '
     $sourceHash = Get-CombinedFileHash $scriptFiles
@@ -319,15 +330,15 @@ foreach ($modId in $candidateModuleIds) {
             $bareName = $_.Matches[0].Groups[1].Value
             if (-not $seen.Add($bareName)) { return }
             $scriptName = "Base.$bareName"
-            if (-not (Is-DisabledOptionalVariant $scriptName $modId $module.WorkshopId $false)) {
+            if (-not (Is-DisabledOptionalVariant $scriptName $modId $module.WorkshopId $isBundled)) {
                 Add-ScriptRecord ([pscustomobject]@{
                     Script = $scriptName; ModId = $modId; WorkshopId = $module.WorkshopId; Group = Get-Group $modId $bareName
-                    DescriptorHash = $descriptorHash; SourceHash = $sourceHash; Bundled = $false; RuntimePath = $runtimePath
+                    DescriptorHash = $descriptorHash; SourceHash = $sourceHash; Bundled = $isBundled; RuntimePath = $runtimePath
                 })
             }
         }
     }
-    $providers.Add([pscustomobject]@{ ModId = $modId; WorkshopId = $module.WorkshopId; Name = $module.Name; RuntimePath = $runtimePath; ScriptCount = $seen.Count; DescriptorHash = $descriptorHash; SourceHash = $sourceHash; Bundled = $false })
+    $providers.Add([pscustomobject]@{ ModId = $modId; WorkshopId = $module.WorkshopId; Name = $module.Name; RuntimePath = $runtimePath; ScriptCount = $seen.Count; DescriptorHash = $descriptorHash; SourceHash = $sourceHash; Bundled = $isBundled })
 }
 
 $allGroups = @('civilian', 'compact', 'luxury', 'sports', 'wagon', 'pickup', 'van', 'commercial', 'suv', 'police', 'prison', 'fire', 'ranger', 'ambulance', 'taxi', 'militaryCar', 'militaryTruck', 'militaryTrailer', 'trailer')
@@ -441,7 +452,7 @@ $policeGenericScripts = @($groups['police'] | Where-Object { $_ -notmatch $polic
 if ($policeGenericScripts.Count -eq 0) { Fail 'The generic police pool is empty after regional livery isolation.' }
 
 $lua = [Text.StringBuilder]::new()
-[void] $lua.AppendLine('-- Generated by scripts/generate-fleet-catalog.ps1 from config/fleet-profile.ini and read-only external Workshop inputs.')
+[void] $lua.AppendLine('-- Generated from the public profile, attributed import manifest and read-only Workshop inputs.')
 [void] $lua.AppendLine('-- The catalog never contains Specific Loot (Workshop 3457132019).')
 [void] $lua.AppendLine('local Catalog = {')
 [void] $lua.AppendLine('    groups = {')
@@ -651,13 +662,15 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $catalogPath) | Out-Null
 [IO.File]::WriteAllText($catalogPath, $lua.ToString(), [Text.UTF8Encoding]::new($false))
 
-$requiredModules = @('damnlib') + $candidateModuleIds + @('KI5Camo', 'PapaChadCamo')
+$requiredModules = $externalMods
 foreach ($moduleId in $requiredModules) {
     if (-not $moduleLookup.ContainsKey($moduleId)) { Fail "Required external module is absent from current Workshop inputs: $moduleId" }
 }
 $requireValue = $requiredModules -join ','
 Set-DescriptorField $rootDescriptor 'require' $requireValue
 Set-DescriptorField $b42Descriptor 'require' $requireValue
+Set-DescriptorField $rootDescriptor 'loadModAfter' $requireValue
+Set-DescriptorField $b42Descriptor 'loadModAfter' $requireValue
 
 $finalRecords = @($recordsByScript.Values | Sort-Object ModId, Script)
 $provenance = [ordered]@{
@@ -666,12 +679,13 @@ $provenance = [ordered]@{
     sourceConfigurationHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $ServerConfig).Hash
     workshopAppId = '108600'
     externalRequiredModules = $requiredModules
-    bundledModuleIds = @($providers | Where-Object Bundled | Select-Object -ExpandProperty ModId | Sort-Object -Unique)
+    bundledModuleIds = @($bundleManifest.bundledModuleIds | Sort-Object -Unique)
     providers = @($providers | Sort-Object ModId, Bundled)
     supportOnly = @($supportOnly | Sort-Object ModId)
     scripts = $finalRecords
     optionalDisabledVariants = @($optionalDisabledVariants | Sort-Object Script)
     overrides = @($overrides)
+    filteredSupersessions = @($bundleManifest.omittedFiles)
     excluded = @(
         [ordered]@{ WorkshopId = '3457132019'; ModId = 'SpecLoot'; Reason = 'Explicit user exclusion.' },
         [ordered]@{ ModId = '82jeepJ10'; Reason = 'Explicit older-project exclusion remains outside the generated world catalogue.' },
@@ -714,7 +728,7 @@ foreach ($groupName in $allGroups) { [void] $report.AppendLine("| $groupName | $
 [void] $report.AppendLine('')
 [void] $report.AppendLine('## Intentional script override')
 [void] $report.AppendLine('')
-foreach ($override in $overrides) { [void] $report.AppendLine("- `$($override.Script)` — `$($override.ReplacedModId)` is intentionally superseded by external `$($override.ReplacingModId)` content; inspect upstream collision risks.") }
+foreach ($entry in $bundleManifest.omittedFiles) { [void] $report.AppendLine(('- `{0}` — older `{1}` definition omitted; current external `{2}` defines `{3}`.' -f $entry.script, $entry.modId, $entry.baseModId, $entry.baseScript)) }
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $reportPath) | Out-Null
 [IO.File]::WriteAllText($reportPath, $report.ToString(), [Text.UTF8Encoding]::new($false))
 

@@ -4,19 +4,35 @@ title=Only KI5: Vehicle Spawn & Livery Overhaul
 description=[h1]Only KI5: Vehicle Spawn & Livery Overhaul[/h1]
 description=Put KI5 on Kentucky's roads.
 description=
-description=KI5-only world traffic, profession vehicles, regional police liveries, roadside stories and military-fleet tuning for Project Zomboid Build 42.21. Independent community addon by Erika (prg299).
+description=KI5-only world traffic, profession vehicles, regional police liveries, roadside stories, consistent military camo and military vehicle zones for Project Zomboid Build 42.21. Community integration by Erika (prg299), based on the original unlisted Vehicle Suite.
 description=
-description=[b]Release candidate 0.1.0: native gameplay and multiplayer acceptance pending.[/b]
+description=[b]Release candidate 0.2.0: native gameplay and multiplayer acceptance pending.[/b]
 description=
-description=[h2]Requirements[/h2]
-description=This is a full-fleet integration. Subscribe to and enable all listed required items and modules before OnlyKI5VehicleSpawnLiveryOverhaul. All original vehicle, variant, camo and police-skin content stays in its original mods. No KI5 or third-party asset repack.
+description=[h2]Included integrations[/h2]
+description=More Car Variants, Consistent Camo, Lore-Friendly Police Skins with the B42 hotfix, Vehicle Military Zones, and No Vanilla selection/duplicate-suppression behavior. Six stale MCV vehicle definitions are omitted so current KI5 definitions take priority. All original authors retain ownership of their contributions.
 description=
-description=Use the police B42 hotfix instead of original LFPSP. Do not enable the private Vehicle Suite, World Vehicles, Regional Police Skins or No Vanilla selection modules alongside this addon. Fresh chunks are needed for changed spawns; existing vehicles are not rewritten.
+description=[h2]Requirements and load order[/h2]
+description=Subscribe to the listed original KI5 vehicle requirements plus [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]that DAMN Library[/url], [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features + Spawn Zones Expansion[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]Yet Another PZ Library[/url]. Enable them before OnlyKI5VehicleSpawnLiveryOverhaul. These remain external dependencies and are not bundled.
 description=
-description=[h2]Credits[/h2]
-description=KI5: original vehicles. KI5 and bikinihorst: that DAMN Library and vehicle ecosystem. Пупсич: More Car Variants. Branco: Consistent Camo. Papa_Chad: original vehicles supported by the external camo pack. Old Killer: original police skins. Aurora: police B42 hotfix. Kraz: No Vanilla Vehicles inspiration; no original files/key list included. The Indie Stone: Project Zomboid. Erika/prg299: integration, regional/spawn policy, tools and native gameplay screenshot. OpenAI image_gen: separate ONLY KI5 title lettering only.
+description=Disable the separately installed MCV modules, KI5Camo/PapaChadCamo, LFPSP and LFPSP-B42Fix, VMZNEW, No Vanilla selection modules, and the old Vehicle Suite/World Vehicles/Regional Police Skins integrations when using this mod. They are already integrated or replaced here and would duplicate assets or registrations. Fresh chunks are needed for changed spawns; existing vehicles are not rewritten.
 description=
-description=[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source, exact dependencies, credits, license and release status[/url]
-description=MIT for authored contributions only. Original dependency rights remain with their authors. Not affiliated with or endorsed by KI5 or The Indie Stone.
+description=[h2]Original authors and credits[/h2]
+description=[list]
+description=[*][url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5[/url] - original vehicles, models, textures, animations and vehicle systems. Original KI5 vehicle packs stay external.
+description=[*]KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]that DAMN Library[/url], retained as an external dependency.
+description=[*]Пупсич - integrated [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants (KI5)[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url]; external [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]Yet Another PZ Library[/url].
+description=[*]Branco - integrated [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818]Consistent Camo for Military Vehicles[/url]. Papa_Chad - original vehicle families supported by the camo textures; those vehicle models are not bundled.
+description=[*]Old Killer - original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395145553]Lore-Friendly Police Skins for KI5[/url]. Aurora - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280]B42 compatibility hotfix[/url]. Their skins and fixes are integrated with attribution.
+description=[*]Kraz - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2535461640]No Vanilla Vehicles[/url], selection/profession/story inspiration and integrated duplicate-suppression data. The selection behavior uses this mod's late registry.
+description=[*]GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features + Spawn Zones Expansion / WayMoreCars[/url], retained as an external dependency; no source copied.
+description=[*][url=https://projectzomboid.com/]The Indie Stone[/url] - Project Zomboid and its modding framework.
+description=[*][url=https://github.com/prg299]Erika / prg299[/url] - integration, regional routing, spawn policy, tools, tests and native gameplay screenshot. OpenAI image_gen generated only the separate ONLY KI5 title lettering.
+description=[/list]
+description=
+description=[h2]A note to original authors[/h2]
+description=If you are an original author of integrated content and would prefer it distributed separately, please contact me through Steam or [url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/issues]GitHub issues[/url]. I will remove your integrated content and move your original mod to an external dependency, keeping proper credits, links and load-order instructions.
+description=
+description=[url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source, exact dependencies, provenance, credits and release status[/url]
+description=MIT applies only to this project's authored contributions. Integrated third-party material retains its original ownership and terms and is excluded from MIT. Independent community addon; not affiliated with or endorsed by KI5, the other original authors or The Indie Stone.
 visibility=public
 tags=Build 42;Vehicles;Multiplayer

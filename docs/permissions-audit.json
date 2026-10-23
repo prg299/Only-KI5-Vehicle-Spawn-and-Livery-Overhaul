@@ -1,6 +1,6 @@
 {
-  "checkedAtUtc": "2026-10-23T08:47:29.455413+00:00",
-  "method": "Valve public GetPublishedFileDetails API plus local read-only license/readme/credit files. Restriction detection is conservative text matching; it is not a legal opinion or a complete comment-history audit. All third-party content remains external regardless of flags.",
+  "checkedAtUtc": "2026-10-23T10:47:29.455413+02:00",
+  "method": "Valve public GetPublishedFileDetails API, public Workshop descriptions/badges and local read-only text headers. This is a dated source audit, not a complete comment-history or private-permission audit. Dispositions distinguish attributed integrations from external requirements; original author ownership is retained.",
   "items": [
     {
       "workshopId": "2409333430",
@@ -41,7 +41,7 @@
       "descriptionSha256": "e642d3ba44fd172195ca1dc9c88c1953ca8523d1d31ab7f30f5fd47b5ce4ecd3",
       "restrictionFlags": [],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
-      "disposition": "historical source or attribution only; no files copied",
+      "disposition": "selection behavior reimplemented; duplicate ID data integrated with attribution",
       "localRightsFiles": []
     },
     {
@@ -540,6 +540,22 @@
       "localRightsFiles": []
     },
     {
+      "workshopId": "3171167894",
+      "title": "that DAMN Library",
+      "creatorSteamId": "76561198089039119",
+      "creatorName": "KI5 and bikinihorst",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894",
+      "apiResult": 1,
+      "descriptionSha256": "239638eb9da63874f956974bcd4a7e87fcb698c35848348e2b16a3bdfb288cd2",
+      "restrictionFlags": [
+        "no-repacking",
+        "permission-required"
+      ],
+      "publicRedistributionGrant": "not established",
+      "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
       "workshopId": "3171184800",
       "title": "'84 Cadillac Gage LAV-300",
       "creatorSteamId": "76561198089039119",
@@ -683,7 +699,7 @@
       "descriptionSha256": "a5004db83971659d68cf7a7735841fbfade1a0af59ee23b4e3243990fabaf450",
       "restrictionFlags": [],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
-      "disposition": "external dependency",
+      "disposition": "integrated with attribution at owner direction; original ownership retained",
       "localRightsFiles": []
     },
     {
@@ -894,6 +910,18 @@
       "localRightsFiles": []
     },
     {
+      "workshopId": "3436499337",
+      "title": "Vehicle Military Zones",
+      "creatorSteamId": "76561199090288742",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337",
+      "apiResult": 1,
+      "descriptionSha256": "e829d8b89a807d248d84d6d8d313871070cb7bec7ae4eb2c643a09daaeb2dd99",
+      "restrictionFlags": null,
+      "publicRedistributionGrant": "No individual republishing grant claimed",
+      "disposition": "integrated with attribution; original ownership retained",
+      "localRightsFiles": []
+    },
+    {
       "workshopId": "3447272250",
       "title": "'66 Pontiac LeMans / GTO",
       "creatorSteamId": "76561198089039119",
@@ -917,7 +945,7 @@
       "descriptionSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "restrictionFlags": [],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
-      "disposition": "external dependency",
+      "disposition": "integrated with attribution at owner direction; original ownership retained",
       "localRightsFiles": [],
       "creatorName": "Пупсич",
       "publicPageReachable": true,
@@ -967,6 +995,18 @@
       ],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
       "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3520758551",
+      "title": "More Car Features + Spawn Zones Expansion",
+      "creatorSteamId": "76561199082856120",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551",
+      "apiResult": 1,
+      "descriptionSha256": "11d3c832e06386dfab478f75dcde1aa56d5ec4d12dfab14ab39404331ab5e308",
+      "restrictionFlags": "permission-required",
+      "publicRedistributionGrant": "No individual republishing grant claimed",
+      "disposition": "external dependency; no files copied",
       "localRightsFiles": []
     },
     {
@@ -1072,6 +1112,18 @@
       ],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
       "disposition": "external dependency",
+      "localRightsFiles": []
+    },
+    {
+      "workshopId": "3624971238",
+      "title": "Yet Another PZ LIbrary",
+      "creatorSteamId": "76561199090288742",
+      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238",
+      "apiResult": 1,
+      "descriptionSha256": "769adf4108447b32717ed62fbbc0bd96756b69787ed43da8a911f10ac1b1f993",
+      "restrictionFlags": null,
+      "publicRedistributionGrant": "No individual republishing grant claimed",
+      "disposition": "external dependency; no files copied",
       "localRightsFiles": []
     },
     {
@@ -1323,7 +1375,7 @@
       "descriptionSha256": "b6f5f0f4b5287562229eba3f7bb5830f5d1eba4b4230af12dae119f461045c66",
       "restrictionFlags": [],
       "publicRedistributionGrant": "not established; absence of a restriction is not a license",
-      "disposition": "external dependency",
+      "disposition": "integrated with attribution at owner direction; original ownership retained",
       "localRightsFiles": []
     },
     {
@@ -1376,22 +1428,11 @@
           "restrictions": []
         }
       ]
-    },
-    {
-      "workshopId": "3171167894",
-      "title": "that DAMN Library",
-      "creatorSteamId": "76561198089039119",
-      "creatorName": "KI5 and bikinihorst",
-      "sourceUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894",
-      "apiResult": 1,
-      "descriptionSha256": "239638eb9da63874f956974bcd4a7e87fcb698c35848348e2b16a3bdfb288cd2",
-      "restrictionFlags": [
-        "no-repacking",
-        "permission-required"
-      ],
-      "publicRedistributionGrant": "not established",
-      "disposition": "external dependency",
-      "localRightsFiles": []
     }
+  ],
+  "integrationDirective": "2026-10-23: owner requested public integration of addons with linked credits and conversion to external dependencies on author request. Explicit no-repacking frameworks stay external. No third-party MIT sublicense claimed.",
+  "permissionContext": [
+    "https://theindiestone.com/forums/topic/2530-mod-permissions/",
+    "https://projectzomboid.com/blog/modding-policy/"
   ]
 }

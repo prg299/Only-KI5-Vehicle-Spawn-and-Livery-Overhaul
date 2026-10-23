@@ -1,0 +1,103 @@
+[
+  {
+    "workshopId": "3455267136",
+    "modId": "MCV93fordFseries",
+    "modDirectory": "MCV - '93 Ford F-Series",
+    "name": "More Car Variants (KI5)",
+    "author": "Пупсич",
+    "mediaRoots": [
+      "common/media",
+      "42/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3455267136",
+    "modId": "MCV76chevyKseries",
+    "modDirectory": "MCV - '76 Chevrolet K Series",
+    "name": "More Car Variants (KI5)",
+    "author": "Пупсич",
+    "mediaRoots": [
+      "common/media",
+      "42/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3455267136",
+    "modId": "MCV86chevyCUCV",
+    "modDirectory": "MCV - '86 Chevrolet CUCV",
+    "name": "More Car Variants (KI5)",
+    "author": "Пупсич",
+    "mediaRoots": [
+      "42/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3455267136",
+    "modId": "MCV67commando",
+    "modDirectory": "MCV - '67 Cadillac Gage Commando",
+    "name": "More Car Variants (KI5)",
+    "author": "Пупсич",
+    "mediaRoots": [
+      "42/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3309256818",
+    "modId": "KI5Camo",
+    "modDirectory": "KI5Camos",
+    "name": "Consistent Camo for Military Vehicles",
+    "author": "Branco",
+    "mediaRoots": [
+      "common/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3309256818",
+    "modId": "PapaChadCamo",
+    "modDirectory": "PapaChadCamos",
+    "name": "Consistent Camo for Military Vehicles",
+    "author": "Branco",
+    "mediaRoots": [
+      "common/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3797166280",
+    "modId": "LFPSP-B42Fix",
+    "modDirectory": "Police Skins Pack for KI5",
+    "name": "Lore-Friendly Police Skins B42 Hotfix",
+    "author": "Old Killer (skins), Aurora (hotfix)",
+    "mediaRoots": [
+      "common/media",
+      "42/media"
+    ],
+    "versionOverrides": ["lua/client/Vehicles/ISUI/93chevySuburbanPolice_CarMechanicsOverlay.lua"],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  },
+  {
+    "workshopId": "3436499337",
+    "modId": "VMZNEW",
+    "modDirectory": "VehicleMilitaryZones",
+    "name": "Vehicle Military Zones",
+    "author": "Пупсич",
+    "mediaRoots": [
+      "common/media",
+      "42/media"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337",
+    "rights": "Original author ownership retained; no MIT sublicense. Integrated at owner's direction under the recorded attribution/default-permissions approach; no individual public redistribution grant claimed."
+  }
+]

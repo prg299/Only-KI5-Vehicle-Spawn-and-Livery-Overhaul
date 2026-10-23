@@ -1,0 +1,88 @@
+VERSION = 1,
+
+option VMZ.RoadStories
+{
+    type = boolean,
+    default = true,
+    page = VMZ,
+    translation = VMZ_RoadStories,
+}
+
+option VMZ.RoadStoriesMultiplier
+{
+    type = double,
+	min = 0,
+    default = 1,
+	max = 5,
+    page = VMZ,
+    translation = VMZ_RoadStoriesMultiplier,
+}
+
+option VMZ.RoadStoriesMinDay
+{
+    type = integer,
+	min = 0,
+    default = 5,
+	max = 1000,
+    page = VMZ,
+    translation = VMZ_RoadStoriesMinDay,
+}
+
+option VMZ.RoadStoriesMaxDay
+{
+    type = integer,
+	min = 0,
+    default = 90,
+	max = 1000,
+    page = VMZ,
+    translation = VMZ_RoadStoriesMaxDay,
+}
+
+
+option VMZ.SpecCar
+{
+    type = boolean,
+    default = false,
+    page = VMZ,
+    translation = VMZ_SpecCar,
+}
+
+option VMZ.SpawnRate
+{
+    type = integer,
+	min = 0,
+    default = 16,
+	max = 100,
+    page = VMZ,
+    translation = VMZ_SpawnRate,
+}
+
+option VMZ.VehiCond
+{
+    type = integer,
+    min = 0,
+    default = 50,
+    max = 100,
+    page = VMZ,
+    translation = VMZ_VehiCond,
+}
+
+option VMZ.PartDamage
+{
+    type = integer,
+	min = 0,
+    default = 0,
+	max = 100,
+    page = VMZ,
+    translation = VMZ_PartDamage,
+}
+
+option VMZ.KeySpawn
+{
+    type = integer,
+	min = 0,
+    default = 70,
+	max = 100,
+    page = VMZ,
+    translation = VMZ_KeySpawn,
+}

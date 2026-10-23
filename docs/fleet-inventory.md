@@ -1,18 +1,18 @@
 # Only KI5: Vehicle Spawn & Livery Overhaul catalogue
 
-- External vehicle providers: 94
-- Bundled MCV/police providers: 0
+- External vehicle providers: 89
+- Bundled MCV/police providers: 5
 - External support-only modules: 11
-- Final selectable non-burnt scripts: 528
+- Final selectable non-burnt scripts: 529
 - Preserved burnt scripts: 6
-- Excluded disabled optional vehicle variants: 10
+- Excluded disabled optional vehicle variants: 9
 - Specific Loot is explicitly excluded from both bundle and dependency closure.
 
 ## Spawn groups
 
 | Group | Scripts |
 | --- | ---: |
-| civilian | 31 |
+| civilian | 32 |
 | compact | 16 |
 | luxury | 13 |
 | sports | 69 |
@@ -49,9 +49,9 @@
 
 ## Intentional script override
 
-- $(@{Script=Base.76chevyK20brickingit; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.76chevyK20brickingit; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.76chevyK20brickingit; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
-- $(@{Script=Base.76chevyK20helton; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.76chevyK20helton; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.76chevyK20helton; ReplacedModId=76chevyKseriesExpanded; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
-- $(@{Script=Base.76chevyK20utility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.76chevyK20utility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.76chevyK20utility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
-- $(@{Script=Base.76chevyK30CCutility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.76chevyK30CCutility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.76chevyK30CCutility; ReplacedModId=76chevyKseries; ReplacingModId=MCV76chevyKseries; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
-- $(@{Script=Base.86chevyM1010; ReplacedModId=86chevyCUCV; ReplacingModId=MCV86chevyCUCV; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.86chevyM1010; ReplacedModId=86chevyCUCV; ReplacingModId=MCV86chevyCUCV; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.86chevyM1010; ReplacedModId=86chevyCUCV; ReplacingModId=MCV86chevyCUCV; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
-- $(@{Script=Base.67commando; ReplacedModId=67commando; ReplacingModId=MCV67commando; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.Script) — $(@{Script=Base.67commando; ReplacedModId=67commando; ReplacingModId=MCV67commando; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacedModId) is intentionally superseded by external $(@{Script=Base.67commando; ReplacedModId=67commando; ReplacingModId=MCV67commando; Reason=External add-on redeclares the same ID; no upstream definition is copied. Inspect upstream compatibility before gameplay acceptance.}.ReplacingModId) content; inspect upstream collision risks.
+- `Base.76chevyK20brickingit` — older `MCV76chevyKseries` definition omitted; current external `76chevyKseriesExpanded` defines `Base.76chevyK20brickingIt`.
+- `Base.76chevyK20helton` — older `MCV76chevyKseries` definition omitted; current external `76chevyKseriesExpanded` defines `Base.76chevyK20helton`.
+- `Base.76chevyK20utility` — older `MCV76chevyKseries` definition omitted; current external `76chevyKseries` defines `Base.76chevyK20utility`.
+- `Base.76chevyK30CCutility` — older `MCV76chevyKseries` definition omitted; current external `76chevyKseries` defines `Base.76chevyK30CCutility`.
+- `Base.86chevyM1010` — older `MCV86chevyCUCV` definition omitted; current external `86chevyCUCV` defines `Base.86chevyM1010`.
+- `Base.67commando` — older `MCV67commando` definition omitted; current external `67commando` defines `Base.67commando`.

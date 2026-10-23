@@ -13,6 +13,10 @@ end
 Events = { OnInitGlobalModData = event(), OnLoadMapZones = event(), OnLoadedMapZones = event(), OnSpawnVehicleStart = event() }
 function addVehicleDebug(name, direction, skin, square) return name, direction, skin, square end
 ProfessionVehicles = {}
+-- These scenarios isolate final policy from upstream VMZ's callbacks. The
+-- integrated-content scenario separately executes both production modules.
+loaded["OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_VehicleZoneDistribution"] = true
+loaded["OnlyKI5VehicleSpawnLiveryOverhaul_VMZNEW_RegisterZones"] = true
 local C = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
 local A = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
 local trucks = {}
@@ -28,7 +32,8 @@ VehicleZoneDistribution = {
     modded_test = { vehicles = { ["Base.VanRadioJJ"] = { index = 7, spawnChance = 20 }, ["Base.TrailerCover"] = { index = 3, spawnChance = 10 } } },
     trafficjamn = { vehicles = { ["Base.87chevySuburbanCUCV"] = { spawnChance = 10 }, ["Base.85chevyCaprice"] = { spawnChance = 100 } } },
     trafficjams = { vehicles = { ["Base.87chevySuburbanCUCV"] = { spawnChance = 10 }, ["Base.78amgeneralM35A2"] = { spawnChance = 20 }, ["Base.85chevyCaprice"] = { spawnChance = 100 } } },
-    parkingstall = { vehicles = { ["Base.85chevyCaprice"] = { spawnChance = 100 } } },
+    parkingstall = { vehicles = { ["Base.85chevyCaprice"] = { spawnChance = 100 },
+        ["Base.fr_je_wrangler_92"] = { spawnChance = 20 } } },
     military = { vehicles = { ["Base.92amgeneralM998"] = { spawnChance = 10 }, ["Base.78amgeneralM35A2"] = { spawnChance = 10 } } },
     military_vehicle_light = { vehicles = {} }, military_vehicle_heavy = { vehicles = {} },
 }
@@ -78,6 +83,7 @@ Events.OnLoadMapZones.fire()
 -- Simulate a later mod reintroducing a vanilla trailer, then finalization.
 VehicleZoneDistribution.modded_test.vehicles["Base.Trailer_Livestock"] = { index = 9, spawnChance = 12 }
 Events.OnLoadedMapZones.fire()
+assert(not VehicleZoneDistribution.parkingstall.vehicles["Base.fr_je_wrangler_92"], "integrated duplicate suppression")
 for _, zone in pairs(VehicleZoneDistribution) do
     if zone.vehicles then for source in pairs(A.targets) do assert(not zone.vehicles[source], source) end end
 end

@@ -1,0 +1,114 @@
+module Base
+{
+	template vehicle CH76BedCoverK20F
+	{
+		part CH76TruckBedCover
+		{
+
+			model CH76CapF
+				{
+                	file = 76chevyK20Cap,
+				}
+
+			anim Close
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					rate = 1.0,
+				}
+
+			anim Open
+				{
+					anim = trunk_opening,
+					rate = 0.5,
+				}
+
+			anim Closed
+				{
+					anim = trunk_opening,
+					animate = FALSE,
+				}
+
+			anim Opened
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					animate = FALSE,
+				}
+
+			door
+			{}
+
+			category = Other,
+			area = Toolbox,
+			parent = TrunkDoor,
+			itemType = Base.76chevyK20BedCap,
+			mechanicRequireKey = false,
+            durability = 5,
+			repairMechanic = true,
+
+            lua
+				{
+					create = Vehicles.Create.Default,
+				}
+		}
+	}
+
+	template vehicle CH76BedCoverK10F
+	{
+		part CH76TruckBedCover
+		{
+
+			model CH76CapF
+				{
+                		file = 76chevyK10Cap,
+				}
+
+           anim Close
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					rate = 1.0,
+				}
+
+			anim Open
+				{
+					anim = trunk_opening,
+					rate = 0.5,
+				}
+
+			anim Closed
+				{
+					anim = trunk_opening,
+					animate = FALSE,
+				}
+
+			anim Opened
+				{
+					anim = trunk_opening,
+					reverse = TRUE,
+					animate = FALSE,
+				}
+
+			door
+			{}
+
+			category = Other,
+			area = Toolbox,
+			parent = TrunkDoor,
+			itemType = Base.76chevyK10BedCap,
+			mechanicRequireKey = false,
+            durability = 5,
+			repairMechanic = true,
+
+            }
+			lua
+				{
+					create = Vehicles.Create.Default,
+				}
+
+		}
+	}
+
+}
+

@@ -7,3 +7,4 @@
 *.ini text eol=lf
 *.jpg binary
 *.png binary
+*.fbx binary

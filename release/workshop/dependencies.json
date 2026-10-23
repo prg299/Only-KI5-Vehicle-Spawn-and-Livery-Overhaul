@@ -679,25 +679,6 @@
     "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=2971246021"
   },
   {
-    "workshopId": "3455267136",
-    "name": "[Abandoned] More Car Variants (KI5)",
-    "modIds": [
-      "MCV67commando",
-      "MCV76chevyKseries",
-      "MCV86chevyCUCV",
-      "MCV93fordFseries"
-    ],
-    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136"
-  },
-  {
-    "workshopId": "3797166280",
-    "name": "[B42.20Fix] Lore-Friendly Police Skins For KI5 Vehicles - Beta 0.5",
-    "modIds": [
-      "LFPSP-B42Fix"
-    ],
-    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280"
-  },
-  {
     "workshopId": "3670064951",
     "name": "Campers!",
     "modIds": [
@@ -706,13 +687,12 @@
     "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951"
   },
   {
-    "workshopId": "3309256818",
-    "name": "Consistent Camo for Military Vehicles",
+    "workshopId": "3520758551",
+    "name": "More Car Features + Spawn Zones Expansion",
     "modIds": [
-      "KI5Camo",
-      "PapaChadCamo"
+      "WayMoreCars"
     ],
-    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818"
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551"
   },
   {
     "workshopId": "3171167894",
@@ -729,5 +709,13 @@
       "KI5trailers"
     ],
     "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100"
+  },
+  {
+    "workshopId": "3624971238",
+    "name": "Yet Another PZ LIbrary",
+    "modIds": [
+      "YAPZLib"
+    ],
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238"
   }
 ]

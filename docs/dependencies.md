@@ -1,28 +1,40 @@
 # Dependencies and load order
 
-This 0.1.0 full-fleet profile requires **89 original Workshop items**. It preserves the private Suite's selected vehicle set; it is intentionally not advertised as a small standalone vehicle pack. The exact module list is public in `config/fleet-profile.ini` and duplicated in `mod.info` for the game. Workshop subscription and mod activation are separate steps.
+The 0.2.0 full-fleet profile requires **88 external Workshop items / 103 modules**.
+The non-vehicle requirements are **that DAMN Library**, **More Car Features +
+Spawn Zones Expansion / WayMoreCars**, and **Yet Another PZ Library / YAPZLib**.
+KI5 base vehicles and selected vehicle expansion modules remain original external
+downloads. No private server configuration is used.
 
-Load damnlib, the original KI5 vehicles and selected expansion modules, More Car Variants' four modules, Consistent Camo's two modules, and Police Skins B42 Hotfix before `OnlyKI5VehicleSpawnLiveryOverhaul`. If WayMoreCars or VMZNEW is installed, load it before this addon too. They are optional; no server configuration is changed by this project.
+Load all required original vehicle/library modules and WayMoreCars before
+OnlyKI5VehicleSpawnLiveryOverhaul. The descriptor declares those edges.
 
-Do not enable the private Suite, World Vehicles, Regional Police Skins or No Vanilla selection modules alongside this addon. Disable original `LFPSP` when using the required `LFPSP-B42Fix` as its author directs. Specific Loot and the J10 modules remain excluded from the profile.
+## Integrated content
 
-More Car Variants has six overlapping script IDs with current KI5 packs. All definitions remain upstream. See `docs/compatibility.md` before acceptance. Its Steam API/page availability discrepancy is a release gate.
+- More Car Variants: all four modules, with six reviewed older vehicle definitions
+  omitted in favor of current external KI5 definitions.
+- Consistent Camo: KI5Camo and PapaChadCamo shared texture trees.
+- Lore-Friendly Police Skins and its B42 hotfix: selected shared/versioned content.
+- Vehicle Military Zones: military locations, split pools, sandbox settings,
+  translations and road stories; it uses external YAPZLib.
+- No Vanilla selection/profession/story behavior: authored late implementation,
+  plus the original duplicate-suppression identifier data.
 
-## Reducing add-on dependencies
+Disable the originals of those integrated modules, both LFPSP and LFPSP-B42Fix,
+VMZNEW, and the private Suite/World Vehicles/Regional Police integrations.
+Their IDs are listed in incompatible= to avoid duplicate loading.
+Specific Loot and J10 modules remain excluded.
 
-The owner asked whether original implementations could replace these add-ons. This is feasible as separate implementation work: the region routing, spawn policy and military pool normalization are already authored here. A new camo policy can select suitable built-in skins, while an exact visual replacement needs original texture work. More Car Variants can be replaced by authored profession/variant registrations using supported external vehicle contracts, with original assets where needed. Replacing the police-skin dependency needs original liveries plus authored registration/mechanics code. These changes are not implemented in 0.1.0, so the three content add-ons remain required until their replacements are complete and validated. No copied/recolored upstream skin files are proposed for the public source.
+Original authors may contact Erika/prg299 through Steam or
+[GitHub issues](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/issues)
+to have their content removed from the bundle and converted to an external
+dependency. To make that change, update config/bundled-sources.json, the external
+profile and descriptor conflicts, then regenerate/import/check/stage together.
+The importer removes only its unchanged, previously manifested files.
+Shared paths need review before switching an upstream mod back on.
 
-The intended result would leave damnlib as the only non-vehicle dependency. This is a proposed target, not the current dependency list.
-
-Recommended implementation order:
-
-| Priority | Replacement | Scope and acceptance |
-| --- | --- | --- |
-| 1 | Authored camo policy | Prefer suitable existing skins where that meets the intended look. Generate original textures only for missing visual coverage. Check fresh vehicle spawns, burnt variants and preservation of existing vehicles before removing the camo dependency. |
-| 2 | Authored profession/variant support | Compare current native variants with the four MCV modules and implement only missing roles. Validate mechanics, loot, armor and profession stories; resolve the six recorded collisions before removing MCV. |
-| 3 | Original police livery set | Create distinct jurisdiction liveries for the current regional routing, with explicit city/county, sheriff, state, airport, prison and SWAT roles. Verify UV fit, both sides, damage/blood states and regional spawning in the game before removing the police-skin dependency. |
-
-Treat original artwork, reusable registration code and native acceptance as separate deliverables. These suggestions do not authorize relabeling or copying an upstream texture as an original contribution, and the existing requirements are retained until functional replacements pass their checks.
+See [credits](../CREDITS.md), [provenance](imported-content.json),
+[permissions](permissions.md) and [compatibility](compatibility.md).
 
 | Original Workshop item | Workshop ID | Enabled module IDs |
 | --- | --- | --- |
@@ -109,9 +121,8 @@ Treat original artwork, reusable registration code and native acceptance as sepa
 | ['96 Saturn S Series](https://steamcommunity.com/sharedfiles/filedetails/?id=3679880253) | `3679880253` | `96saturnSseries` |
 | ['98 Nissan Stagea 260RS Autech](https://steamcommunity.com/sharedfiles/filedetails/?id=3315443103) | `3315443103` | `98stagea` |
 | ['99 Ford Crown Victoria Police Interceptor](https://steamcommunity.com/sharedfiles/filedetails/?id=2971246021) | `2971246021` | `99fordCVPI` |
-| [[Abandoned] More Car Variants (KI5)](https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136) | `3455267136` | `MCV67commando`, `MCV76chevyKseries`, `MCV86chevyCUCV`, `MCV93fordFseries` |
-| [[B42.20Fix] Lore-Friendly Police Skins For KI5 Vehicles - Beta 0.5](https://steamcommunity.com/sharedfiles/filedetails/?id=3797166280) | `3797166280` | `LFPSP-B42Fix` |
 | [Campers!](https://steamcommunity.com/sharedfiles/filedetails/?id=3670064951) | `3670064951` | `KI5campers` |
-| [Consistent Camo for Military Vehicles](https://steamcommunity.com/sharedfiles/filedetails/?id=3309256818) | `3309256818` | `KI5Camo`, `PapaChadCamo` |
+| [More Car Features + Spawn Zones Expansion](https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551) | `3520758551` | `WayMoreCars` |
 | [that DAMN Library](https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894) | `3171167894` | `damnlib` |
 | [Trailers!](https://steamcommunity.com/sharedfiles/filedetails/?id=3330403100) | `3330403100` | `KI5trailers` |
+| [Yet Another PZ LIbrary](https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238) | `3624971238` | `YAPZLib` |

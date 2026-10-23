@@ -6,4 +6,4 @@ Validation performed and its limits:
 - Installed-game Lua/policy checks, if applicable:
 - Native gameplay/input, multiplayer and visuals, if applicable:
 
-For dependency/content changes, link the source, rights record and compatibility decision. Do not include third-party assets or private game/server data.
+For dependency/content changes, link the source, rights record and compatibility decision. Integrated third-party content must use the reviewed source config/importer and retain per-file provenance, ownership and attribution. Never include game binaries, private server data or explicitly restricted external frameworks.
