@@ -1,0 +1,14 @@
+{
+  "observedDate": "2026-10-23",
+  "workshopId": "3825545131",
+  "steamcmdUploadConfirmed": true,
+  "officialDownloadMatches": true,
+  "visibilityConfigured": 3,
+  "visibilityOwnerVerified": false,
+  "requiredWorkshopItems": 87,
+  "requiredItemsVerified": false,
+  "requiredItemsAttachedByThisTask": 0,
+  "descriptionObservedByAnonymousBrowser": true,
+  "descriptionVisibleThroughModIdFooter": true,
+  "blocker": "SteamCMD disconnected the owner Steam desktop session; reconnect it online to attach and verify requirements and query live unlisted visibility."
+}

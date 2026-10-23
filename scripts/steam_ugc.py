@@ -180,4 +180,3 @@ class Steam:
                 raise RuntimeError('Dependency callback identity mismatch; query before retrying')
             present.add(child)
             completed(dict(operation='addDependency', workshopId=child, name=DEPENDENCIES[child], status='complete', result=result.result))
-

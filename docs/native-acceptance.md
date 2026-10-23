@@ -1,6 +1,6 @@
 # Native release acceptance — 0.3.1
 
-Tested 2026-10-23 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521). The native checks below passed in disposable worlds and an ordinary dedicated server with two joined native clients. Steam publication remains pending; the limits below are not claimed as passed.
+Tested 2026-10-23 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521). The native checks below passed in disposable worlds and an ordinary dedicated server with two joined native clients. An unlisted Steam testing item is uploaded; public release remains pending and the limits below are not claimed as passed.
 
 ## Results
 

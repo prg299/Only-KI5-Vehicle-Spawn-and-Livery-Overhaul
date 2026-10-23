@@ -1,0 +1,15 @@
+{
+  "preparedUtc": "2026-10-23T20:04:58.618945+00:00",
+  "version": "0.3.1",
+  "workshopId": "3825545131",
+  "visibility": "unlisted",
+  "payloadFiles": 289,
+  "payloadBytes": 46570087,
+  "previewSha256": "0b98f94db9f8751329680766fcbad92f5d5fe238e4a310dd230c2e6b62d93c66",
+  "sourceCommit": "c3a5282f218c1bb4dcadb23afac37d664ef80834",
+  "descriptionSha256": "0c6533ba015ba65fc7bcf8814ab75e3a500236ccf7b07ff6d9a82a782f3e84b8",
+  "uploadAttempted": true,
+  "steamcmdExitCode": 0,
+  "steamcmdUploadConfirmed": true,
+  "commitConfirmation": "SteamCMD exit 0 and Committing update...Success.; assigned VDF identity retained. No repeated upload."
+}

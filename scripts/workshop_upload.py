@@ -96,11 +96,10 @@ def cached_username():
         raise ValueError('No valid Steam account name in the local desktop setup')
     return username
 
-def upload(record):
-    log=PRIVATE/'steamcmd-upload.log'
-    record['uploadAttempted']=True
+def steamcmd(arguments,log_name):
+    log=PRIVATE/log_name
     with log.open('w',encoding='utf-8') as output:
-        process=subprocess.Popen([str(STEAMCMD),'+login',cached_username(),'+workshop_build_item',str(VDF),'+quit'],
+        process=subprocess.Popen([str(STEAMCMD),'+login',cached_username(),*arguments,'+quit'],
             cwd=STEAMCMD.parent,stdin=subprocess.DEVNULL,stdout=output,stderr=subprocess.STDOUT,
             creationflags=subprocess.CREATE_NO_WINDOW)
         deadline=time.monotonic()+360
@@ -111,14 +110,39 @@ def upload(record):
             if re.search(r'(?:password:|Steam Guard code:|two-factor code:)',content,re.I):
                 process.kill();process.wait();break
             time.sleep(.5)
-    record.update(steamcmdExitCode=process.returncode,workshopId=keep_id())
     content=log.read_text(encoding='utf-8',errors='replace')
-    success=process.returncode==0 and record['workshopId'] and bool(re.search(r'Success\.\s+Uploaded item',content,re.I))
+    return process.returncode,content
+
+def upload(record):
+    record['uploadAttempted']=True
+    code,content=steamcmd(['+workshop_build_item',str(VDF)],'steamcmd-upload.log')
+    record.update(steamcmdExitCode=code,workshopId=keep_id())
+    committed=bool(re.search(r'(?:Success\.\s+Uploaded item|Committing update\.{3,}\s*Success\.)',content,re.I))
+    success=code==0 and record['workshopId'] and committed
     record['steamcmdUploadConfirmed']=bool(success)
     write(RELEASE/'publication.json',record)
     if not success:
         raise RuntimeError('SteamCMD upload not confirmed. Inspect private build/steamcmd/steamcmd-upload.log; saved identity retained.')
     print('SteamCMD confirmed upload: https://steamcommunity.com/sharedfiles/filedetails/?id='+record['workshopId'])
+
+def download():
+    item=saved_id()
+    if not item:raise ValueError('No assigned item to download')
+    code,content=steamcmd(['+workshop_download_item','108600',item,'validate'],'steamcmd-download.log')
+    if code or not re.search(r'Success\.\s+Downloaded item',content,re.I):
+        raise RuntimeError('Official download not confirmed; inspect the private SteamCMD download log')
+    package=STEAMCMD.parent/'steamapps/workshop/content/108600'/item/'mods'/MOD_ID
+    actual=hashes(package);expected=hashes(SOURCE)
+    if actual!=expected:raise ValueError('Official SteamCMD payload differs from staged source')
+    acf=(STEAMCMD.parent/'steamapps/workshop/appworkshop_108600.acf').read_text(encoding='utf-8')
+    installed=acf.split('"WorkshopItemsInstalled"',1)[1]
+    entry=re.search('"'+item+r'"\s*\{([^}]+)\}',installed,re.S)
+    manifest=re.search(r'"manifest"\s*"(\d+)"',entry[1])[1] if entry else None
+    if not manifest:raise ValueError('Downloaded Workshop manifest could not be verified')
+    write(RELEASE/'download-verified.json',{'verifiedUtc':datetime.now(timezone.utc).isoformat(),
+        'workshopId':item,'manifest':manifest,'files':len(actual),'bytes':sum(p.stat().st_size for p in package.rglob('*') if p.is_file()),
+        'steamcmdExitCode':code,'allPayloadHashesMatch':True,'payloadSha256':actual})
+    print('Official SteamCMD download matches all '+str(len(actual))+' payload files; manifest '+manifest)
 
 def verify(add_dependencies=False):
     import steam_ugc
@@ -138,11 +162,19 @@ def verify(add_dependencies=False):
                 operations.append(operation);write(PRIVATE/'dependency-operations.json',operations)
             steam.add_dependencies(before,record)
         after=steam.query() if add_dependencies else before
-        expected=plain_quotes((RELEASE/'description.txt').read_text('utf-8-sig').strip())+'\n\nMod ID: '+MOD_ID
-        if after['description'].replace('\r\n','\n')!=expected:raise ValueError('Live description differs from prepared text')
+        publication=json.loads((RELEASE/'publication.json').read_text(encoding='utf-8'))
+        if publication['workshopId']!=item:raise ValueError('Publication receipt targets another item')
+        description_hash=hashlib.sha256(after['description'].replace('\r\n','\n').encode()).hexdigest()
+        if description_hash!=publication['descriptionSha256']:raise ValueError('Live description differs from uploaded snapshot')
         if after['visibility']!=3 or after['missingDependencies']:raise ValueError('Unlisted visibility or dependency verification is incomplete')
         if set(after['dependencies'])!=set(steam_ugc.DEPENDENCIES):raise ValueError('Unexpected live dependencies')
+        if any(after[key]!=before[key] for key in ('title','cover','previews')):
+            raise ValueError('Unexpected page/media change during dependency update')
         write(RELEASE/'page-verified.json',{'queriedUtc':datetime.now(timezone.utc).isoformat(),**after})
+        write(RELEASE/'verification-status.json',{'verifiedUtc':datetime.now(timezone.utc).isoformat(),
+            'workshopId':item,'steamcmdUploadConfirmed':True,'officialDownloadMatches':True,
+            'visibilityConfigured':3,'visibilityOwnerVerified':True,'requiredWorkshopItems':len(after['dependencies']),
+            'requiredItemsVerified':True,'descriptionVerifiedAgainstUpload':True,'blocker':None})
         print('Verified: unlisted, complete description, '+str(len(after['dependencies']))+' required Workshop items')
     finally:steam.api.SteamAPI_Shutdown()
 
@@ -150,10 +182,13 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--upload',action='store_true');p.add_argument('--cached-login',action='store_true')
     p.add_argument('--verify',action='store_true');p.add_argument('--add-dependencies',action='store_true')
+    p.add_argument('--download',action='store_true')
     a=p.parse_args()
     if a.add_dependencies and not a.verify:p.error('--add-dependencies requires --verify')
-    if a.upload and not a.cached_login:p.error('Use --cached-login; credentials must be handled locally by Steam')
-    if a.verify:verify(a.add_dependencies)
+    if (a.upload or a.download) and not a.cached_login:p.error('Use --cached-login; credentials must be handled locally by Steam')
+    if sum((a.upload,a.verify,a.download))>1:p.error('Choose only one of --upload, --verify or --download')
+    if a.download:download()
+    elif a.verify:verify(a.add_dependencies)
     else:
         record=prepare()
         if a.upload:upload(record)
