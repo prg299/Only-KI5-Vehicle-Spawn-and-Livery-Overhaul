@@ -1,17 +1,44 @@
 {
   "master": "tools-src/art/only-ki5-overhaul-master.png",
   "masterDimensions": [
-    1254,
-    1254
+    705,
+    705
   ],
-  "masterBytes": 2670941,
+  "masterBytes": 590821,
+  "backgroundKind": "actual native Project Zomboid screenshot",
+  "capture": "tools-src/art/only-ki5-native-capture.png",
+  "captureDimensions": [
+    1920,
+    1080
+  ],
+  "captureSha256": "f6785abe77a20e6a5018c313ae7fcef62c2f1816748ebd2f1e2a6f93ac5f40b0",
+  "cropBox": [
+    435,
+    375,
+    1140,
+    1080
+  ],
+  "titleText": "ONLY KI5",
+  "titleMaster": "tools-src/art/only-ki5-title-master.png",
+  "titlePosition": [
+    56,
+    528
+  ],
+  "titleDimensions": [
+    592,
+    159
+  ],
+  "capturePixelsAboveTitlePreserved": true,
+  "formatException": "Project Zomboid ImageData and SteamWorkshopItem use PNGDecoder; native icon/poster/preview must remain PNG even when opaque.",
+  "compressionPendingReason": "TinyPNG website explicitly blocked the unattended browser; no configured official Tinify API key was present.",
   "derivatives": [
     {
       "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/only-ki5-overhaul-icon.png",
       "width": 256,
       "height": 256,
       "format": "PNG",
-      "beforeTinyPngBytes": 131531,
+      "opaque": true,
+      "beforeTinyPngBytes": 96767,
       "compression": "pending"
     },
     {
@@ -19,7 +46,8 @@
       "width": 512,
       "height": 512,
       "format": "PNG",
-      "beforeTinyPngBytes": 490265,
+      "opaque": true,
+      "beforeTinyPngBytes": 352510,
       "compression": "pending"
     },
     {
@@ -27,7 +55,8 @@
       "width": 512,
       "height": 512,
       "format": "PNG",
-      "beforeTinyPngBytes": 490265,
+      "opaque": true,
+      "beforeTinyPngBytes": 352510,
       "compression": "pending"
     }
   ]

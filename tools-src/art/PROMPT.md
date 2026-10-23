@@ -2,10 +2,11 @@
 
 Current title: **Only KI5: Vehicle Spawn & Livery Overhaul**.
 
-- Tool: built-in image_gen, 2026-10-23.
-- Current full-resolution master: `only-ki5-overhaul-master.png`.
-- Exact edit prompt: [v0.1.0 rename prompt](archive/v0.1.0-rename-prompt.md).
-- Previous generation prompt and master: `archive/v0.1.0-original-prompt.md` and `archive/v0.1.0-original-master.png`.
+- Background: actual native Project Zomboid screenshot, captured by Erika on 2026-10-01; full original preserved as `only-ki5-native-capture.png`.
+- Current composite master: `only-ki5-overhaul-master.png` (705px square crop, game image plus bottom title).
+- Title master: `only-ki5-title-master.png`, generated with the built-in image_gen tool on 2026-10-23; [exact title prompt](TITLE-PROMPT.md).
+- Source/hash record: `capture-provenance.json`. The source matches native screenshot `meel_regional_day_4.png` byte for byte.
+- Historical illustrated masters, prompts and export records remain in `archive/`.
 - Export sizes and compression status: `exports.json`; visual review: `REVIEW.md`.
 
-The archived prompts retain the original quoted lettering so the generation/edit provenance remains accurate. Runtime and delivery derivatives use the current title and asset prefix.
+The game scene is not generated or repainted. The export pipeline preserves its pixels above the title exactly, then downsizes for delivery. Only the ONLY KI5 lettering is generated. The archived prompts retain their original wording for provenance.

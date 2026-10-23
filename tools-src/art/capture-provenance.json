@@ -1,0 +1,16 @@
+{
+  "sourceKind": "native Project Zomboid gameplay screenshot",
+  "capturedAt": "2026-10-01",
+  "captureOwner": "Erika / prg299",
+  "sourceProject": "KI5 Emergency Lights Rework isolated photo home",
+  "sourceRecord": "Game Mods/games/project-zomboid/projects/ki5-emergency-lights-rework/README.md, Workshop stills section",
+  "sourceFile": "Game Mods/games/project-zomboid/projects/ki5-emergency-lights-rework/art/workshop-shots/regional_day.png",
+  "nativeScreenshot": "meel_regional_day_4.png",
+  "captureFile": "only-ki5-native-capture.png",
+  "captureSha256": "f6785abe77a20e6a5018c313ae7fcef62c2f1816748ebd2f1e2a6f93ac5f40b0",
+  "nativeScreenshotByteMatchVerified": true,
+  "picturedContent": "Native game world, KI5 police vehicles, external regional police skins and emergency-light effects",
+  "sceneGeneratedByAI": false,
+  "generatedContribution": "ONLY KI5 title lettering on a separate transparent layer",
+  "newOnlyKi5GameplayAcceptanceClaimed": false
+}

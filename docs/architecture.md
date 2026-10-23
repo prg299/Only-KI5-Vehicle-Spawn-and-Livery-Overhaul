@@ -6,4 +6,4 @@ The Catalog owns vehicle groups, exclusions, rarity and weighted candidate lists
 
 All authored runtime filenames, require paths, globals, generated distribution names and modData keys use `OnlyKI5VehicleSpawnLiveryOverhaul` / `only_ki5_overhaul`. Original `Base.*` vehicle IDs and dependency module names are external contracts and must not be renamed. The mod ID is new: do not run the private predecessor alongside it and do not treat it as an automatic save migration.
 
-The package is Lua, descriptors, generated branding and license/credit text. Builds and native checks need locally installed game code, which stays outside Git. The generated Catalog is committed so the public source can be inspected without a proprietary installation.
+The package is Lua, descriptors, native-gameplay screenshot branding with a generated title layer, and license/credit text. Builds and native checks need locally installed game code, which stays outside Git. The generated Catalog is committed so the public source can be inspected without a proprietary installation.

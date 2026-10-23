@@ -11,7 +11,7 @@ This is a full-fleet integration. Subscribe to and enable all listed required it
 Use the police B42 hotfix instead of original LFPSP. Do not enable the private Vehicle Suite, World Vehicles, Regional Police Skins or No Vanilla selection modules alongside this addon. Fresh chunks are needed for changed spawns; existing vehicles are not rewritten.
 
 [h2]Credits[/h2]
-KI5: original vehicles. KI5 and bikinihorst: that DAMN Library and vehicle ecosystem. Пупсич: More Car Variants. Branco: Consistent Camo. Papa_Chad: original vehicles supported by the external camo pack. Old Killer: original police skins. Aurora: police B42 hotfix. Kraz: No Vanilla Vehicles inspiration; no original files/key list included. The Indie Stone: Project Zomboid. Erika/prg299: integration, regional/spawn policy and tools. Artwork generated with OpenAI image_gen.
+KI5: original vehicles. KI5 and bikinihorst: that DAMN Library and vehicle ecosystem. Пупсич: More Car Variants. Branco: Consistent Camo. Papa_Chad: original vehicles supported by the external camo pack. Old Killer: original police skins. Aurora: police B42 hotfix. Kraz: No Vanilla Vehicles inspiration; no original files/key list included. The Indie Stone: Project Zomboid. Erika/prg299: integration, regional/spawn policy, tools and native gameplay screenshot. OpenAI image_gen: separate ONLY KI5 title lettering only.
 
 [url=https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul]Source, exact dependencies, credits, license and release status[/url]
 MIT for authored contributions only. Original dependency rights remain with their authors. Not affiliated with or endorsed by KI5 or The Indie Stone.

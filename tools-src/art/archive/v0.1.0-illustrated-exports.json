@@ -1,0 +1,34 @@
+{
+  "master": "tools-src/art/only-ki5-overhaul-master.png",
+  "masterDimensions": [
+    1254,
+    1254
+  ],
+  "masterBytes": 2670941,
+  "derivatives": [
+    {
+      "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/only-ki5-overhaul-icon.png",
+      "width": 256,
+      "height": 256,
+      "format": "PNG",
+      "beforeTinyPngBytes": 131531,
+      "compression": "pending"
+    },
+    {
+      "path": "mod/OnlyKI5VehicleSpawnLiveryOverhaul/only-ki5-overhaul-poster.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "beforeTinyPngBytes": 490265,
+      "compression": "pending"
+    },
+    {
+      "path": "release/workshop/only-ki5-overhaul-preview.png",
+      "width": 512,
+      "height": 512,
+      "format": "PNG",
+      "beforeTinyPngBytes": 490265,
+      "compression": "pending"
+    }
+  ]
+}

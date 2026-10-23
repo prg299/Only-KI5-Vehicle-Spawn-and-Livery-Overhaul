@@ -56,6 +56,9 @@ check({d['workshopId'] for d in dependencies} == set(profile['WorkshopItems'].sp
 audit = json.loads((ROOT/'docs/permissions-audit.json').read_text('utf-8'))
 check({d['workshopId'] for d in dependencies} <= {i['workshopId'] for i in audit['items']}, 'Unaudited dependency')
 check((ROOT/'LICENSE').read_text().startswith('MIT License'), 'Missing MIT license')
+capture_record = json.loads((ROOT/'tools-src/art/capture-provenance.json').read_text('utf-8'))
+capture_path = ROOT/'tools-src/art'/capture_record['captureFile']
+check(hashlib.sha256(capture_path.read_bytes()).hexdigest() == capture_record['captureSha256'], 'Verified native artwork capture changed')
 for required in ['README.md', 'CREDITS.md', 'THIRD_PARTY_NOTICES.md', 'CONTRIBUTING.md', 'SECURITY.md', 'docs/release-readiness.md']:
     check((ROOT/required).is_file(), 'Missing '+required)
 
