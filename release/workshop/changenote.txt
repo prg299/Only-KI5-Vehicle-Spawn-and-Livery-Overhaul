@@ -1,2 +1,5 @@
-Only KI5 0.3.2 - new public release.
-ONLY KI5: Vehicle Spawn & Skins. KI5 traffic and crash-scene vehicle selections, regional police skins, silent lightbars, military zones and profession vehicles. New eight-skin Humvees favour standard paint (95%), medic 4%, JTF 1%; military cars retain 95% Humvee / 5% other cars. Fourteen titled gameplay screenshots.
+Only KI5 0.3.3 - configurable spawns and whole-pool balance audit.
+
+Custom civilian/novelty weights default to 0.025% of their originals; 0 disables them and 100 restores original weights. Police, military and emergency liveries stay enabled. New sandbox percentages: silent police lights 50%, Humvees within military light cars 95%, AM General within military trucks 75%.
+
+Louisville highway favors ordinary traffic; optional limousines and sweepers are rarer. Corrected service-pool roles, malformed keys, prison escorts, secret-base parking spacing and regional replacements retaining an invalid source skin index. Existing vehicles remain unchanged.

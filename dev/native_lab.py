@@ -38,6 +38,10 @@ class NativeLab:
         self.client(f"SendCommandToServer('/teleportto {x},{y},0');return true")
         self.wait(lambda:self.client('local p=getPlayer();return {x=p:getX(),y=p:getY()}'),
                   lambda r:abs(r['x']-x)<4 and abs(r['y']-y)<4,'admin teleport')
+        # A small client teleport may render before its position reaches the
+        # server. Guest-to-admin must use the updated authoritative location.
+        self.wait(lambda:self.server("local ps=getOnlinePlayers();for i=0,ps:size()-1 do local p=ps:get(i);if p:getUsername()=='OnlyKI5Admin' then return {x=p:getX(),y=p:getY()} end end"),
+                  lambda r:r and abs(r['x']-x)<4 and abs(r['y']-y)<4,'authoritative admin teleport')
         self.client('SendCommandToServer(\'/teleportplayer "OnlyKI5Guest" "OnlyKI5Admin"\');return true')
         self.wait(lambda:self.client('local p=getPlayer();return {x=p:getX(),y=p:getY()}','b'),
                   lambda r:abs(r['x']-x)<5 and abs(r['y']-y)<5,'guest teleport')

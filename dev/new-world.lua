@@ -2,7 +2,9 @@
 local current=ActiveMods.getById('currentGame')
 current:copyFrom(ActiveMods.getById('default'))
 assert(not ActiveMods.requiresResetLua(current),'Acceptance mods need a Lua reset')
-MainScreen.instance:setDefaultSandboxVars()
+-- Optional acceptance branch carries settings submitted through the native
+-- sandbox screen into a fresh world; default runs still reset every option.
+if not OnlyKI5AcceptanceKeepSandboxDraft then MainScreen.instance:setDefaultSandboxVars() end
 SandboxVars.Zombies=6
 SandboxVars.VehicleEasyUse=true
 getWorld():setGameMode('Sandbox')

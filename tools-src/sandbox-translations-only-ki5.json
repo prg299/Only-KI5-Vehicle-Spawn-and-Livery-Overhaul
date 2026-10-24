@@ -1,0 +1,11 @@
+{
+  "Sandbox_OnlyKI5": "ONLY KI5: Vehicle Spawn & Skins",
+  "Sandbox_OnlyKI5_CustomCivilianChance": "Custom civilian and novelty weight (%)",
+  "Sandbox_OnlyKI5_CustomCivilianChance_tooltip": "Multiplier of the original spawn weights for custom business liveries and novelty cars. Default: 0.025% of their original weights. 0 disables them; 100 keeps the original weights. This is not a fixed share of all cars. Dedicated all-custom pools get ordinary vehicle fallbacks. Police, military and emergency liveries are unaffected. Restart the world after changing this; applies to new spawns only.",
+  "Sandbox_OnlyKI5_PoliceLightsChance": "Police lights chance (%)",
+  "Sandbox_OnlyKI5_PoliceLightsChance_tooltip": "Chance for a newly spawned police vehicle with a working lightbar to have flashing lights. The siren stays off. Excludes police stations and other emergency parking. 0 disables automatic lights; 100 enables every eligible lightbar. Existing vehicles keep their saved decision.",
+  "Sandbox_OnlyKI5_HumveeSpawnChance": "Humvee spawn chance (%)",
+  "Sandbox_OnlyKI5_HumveeSpawnChance_tooltip": "Humvee share of military cars and light vehicles, including wrecks. Default: 95% Humvees and 5% other military cars. Does not change the number of military vehicles, the military truck mix or Humvee skin rarity. Restart the world after changing this; applies to new spawns only.",
+  "Sandbox_OnlyKI5_AMGeneralTruckChance": "AM General military trucks (%)",
+  "Sandbox_OnlyKI5_AMGeneralTruckChance_tooltip": "AM General share of military trucks. Default: 75% AM General and 25% other military trucks. Keeps the M35A2 transport preference within the AM General family. Does not change military vehicle density or the car/truck split. Wrecks use available native definitions. Restart the world after changing this; applies to new spawns only."
+}

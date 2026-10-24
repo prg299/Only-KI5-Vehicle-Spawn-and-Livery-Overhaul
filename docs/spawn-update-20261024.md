@@ -1,0 +1,38 @@
+# 0.3.3 spawn settings and complete registry audit
+
+Candidate for the existing public item [3825999183](https://steamcommunity.com/sharedfiles/filedetails/?id=3825999183), ONLY KI5: Vehicle Spawn & Skins. Publication of this update is pending the final receipts below.
+
+## Settings
+
+| ONLY KI5 sandbox setting | Default | Meaning |
+| --- | ---: | --- |
+| Custom civilian and novelty weight (%) | 0.025 | 0.00025 times original custom-business/novelty weights; 0 disables, 100 retains original weights. Police, military and emergency liveries are exempt. |
+| Police lights chance (%) | 50 | Eligible new police lightbars outside emergency parking; sirens remain off. |
+| Humvee spawn chance (%) | 95 | Humvee weight within eligible military car/light pools, including wrecks; separate from skin rarity. |
+| AM General military trucks (%) | 75 | AM General share within military trucks, retaining the M35A2 transport preference; no change to military density or car/truck split. |
+
+Restart the world after selection-setting changes. Existing models, skins and saved lightbar decisions are not rerolled. Wreck pools use real available definitions when a preferred truck wreck family is absent.
+
+## Changes and evidence
+
+The shared final policy examines all vanilla/modded registered pools. It fixes malformed IDs and service roles, detaches the highway's shared aliases, reduces optional limo/Elgin entries and preserves reserved empty pools. Fractional profession selection avoids rounding a 0.025% original-weight multiplier down to zero in short integer lists, retains unique/alternate behavior and delegates unmanaged paths to vanilla. The native regional guard clears an inherited skin index that does not fit an already-selected regional script. Secret-base long rows become individual stalls six tiles apart.
+
+- Production Lua: 23 scenarios pass, including 0/37/100% military-family settings, fractional civilian weights, repeat application, server/SP/client lightbar authority, regional skin-index acceptance and unchanged Humvee livery weighting. All 57 Lua files compile. Thirty-two native API signatures and six PowerShell parser checks pass.
+- Native sandbox input: all four defaults display correctly. Mouse/text edits reach native SandboxOptions/SandboxVars through Next. Invalid preset naming preserves the numeric drafts and committed authority; a valid original-weight preset saves and reloads after a process restart.
+- Native registries: default 0.025% and restored 100% SP worlds, plus the dedicated server, each pass **93 map pools and 255 profession/story choice lists**, with the separate thirteen-entry uniqueness constraint also inventoried. All **558 referenced/native catalog IDs** resolve. Each nonzero profile retains 143 custom model choices with the configured weight scaling. No invariant failures. The default highway has **97.6192% ordinary model weight**.
+- Native SP: default startup measures 95% Humvee, 75% AM General truck and 95% Humvee wreck shares. Loaded native catalog weights/slots pass configured boundaries. Eight eligible fixtures at each police boundary are off at 0% and flashing at 100%, all sirens zero. Twenty further vehicles pass a real active-siren positive control: native audio/emitter activity is detected, then stopped by the spawn callback while flashing remains on. The output bus stays muted; human hearing acceptance is not claimed.
+- Native MP natural state: both peers match the server for 83 vehicles at four locations (checkpoint 6, highway 56, secret base 7, West Point 14), covering scripts, valid skin indices, light modes and siren modes. This is 166 peer comparisons, not a population-frequency sample.
+
+Native MP additionally passes the twenty-vehicle active-siren positive control and callback silencing on both clients, and eight construction fixtures per 0%/100% police boundary. Both peers match the server's light and siren modes. Loaded catalog weights and thousand-slot selections pass 0/37/100/95% Humvee and AM General boundaries; startup registries are checked separately. This does not claim in-place final-registry reconfiguration without a restart.
+
+The final export checks raw payload equality for all three owned lifetimes. Native runs use stock classes first and the test-only ZombieBuddy endpoint/input/capture adapter; the player mod adds no Java/library dependency. Installed optimization Lua emits known disabled-override menu warnings. Two harness limits were repaired separately: main-thread queries must wait for the loading-thread marker, and the complete server registry needs bounded test-command packets.
+
+The ordinary guest completed natural state comparisons before a later debug-photo permission kick. The disposable guest then rejoined in the same process with photo-admin permission. A mistaken test-world zombie setting allowed indoor zombies to kill observers; the guest was recreated through the native death-screen and character wizard, the owned world's zombies were disabled, and an alive outdoor view was retaken. Those final frames still do not visibly show the target lightbar and are explicitly rejected as visual evidence. Current MP state/audio assertions pass; new 0.3.3 red/blue visual acceptance remains unverified. The earlier unchanged-renderer red/blue footage is retained separately, not relabeled as a current run.
+
+All three owned lifetimes ended cleanly: both SP clients, the dedicated server and both MP clients report exit code 0 with no desktop switch. The final raw payload is identical across source and all three runs: **291 files / 46,642,973 bytes**. Recorded guard peaks are 8.73 GiB (default SP), 8.32 GiB (original weights SP) and 15.97 GiB (dedicated server plus two clients); these are acceptance-job measurements, not gameplay performance benchmarks.
+
+## Visual scope and limits
+
+Fourteen natural default-abundance SP location frames were opened and reviewed. Sparse station lots do not demonstrate every livery. The full [visual review](validation/native-20261024-spawn-pools/visual-review.md) separates those observations from complete registry coverage and explicit lightbar fixtures. Existing historical all-recipe, mechanics, save/reload and red/blue-clip evidence remains in [native acceptance](native-acceptance.md); it was not all repeated for this update. Additional maps, every model/armor/trailer interaction, Steam transport, long-run performance and human listening remain outside this acceptance.
+
+No real saves, subscriptions, launcher order, game install or Workshop source download was edited. Required Workshop items remain damnlib and More Car Features. Optional Town Car/limo and Elgin inputs are test-only. The approved fourteen-image gallery, main cover, public visibility and title must be preserved during publication.

@@ -11,6 +11,7 @@ $sourceRoot = Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul'
 $catalogPath = Join-Path $sourceRoot '42\media\lua\shared\OnlyKI5VehicleSpawnLiveryOverhaul_Catalog.lua'
 $provenancePath = Join-Path $projectRoot 'docs\ki5-provider-inventory.json'
 $reportPath = Join-Path $projectRoot 'docs\fleet-inventory.md'
+$civilianPolicy = Get-Content -LiteralPath (Join-Path $projectRoot 'config\civilian-spawn-policy.json') -Raw | ConvertFrom-Json
 $rootDescriptor = Join-Path $sourceRoot 'mod.info'
 $b42Descriptor = Join-Path $sourceRoot '42\mod.info'
 $mergeRules = @(Get-Content -LiteralPath (Join-Path $projectRoot 'config\merge-rules.json') -Raw | ConvertFrom-Json)
@@ -216,10 +217,11 @@ $defaultGroupByModule = @{
 $militaryModuleIds = @('67commando', '78amgeneralM35A2', '80manKat1', '82oshkoshM911', '83amgeneralM923', '84gageV300', '86chevyCUCV', '86oshkoshP19A', '92amgeneralM998', 'MCV86chevyCUCV', 'MCV67commando')
 $militaryTruckPattern = '^(?:78amgeneralM35A2|78amgeneralM49A2C|78amgeneralM50A3|78amgeneralM62|80manKat1|82oshkoshM911|83amgeneralM923|86chevyM1008|86chevyM1010|86chevyM1028|86chevyM1031|86oshkoshUSMC)'
 $amGeneralTruckPattern = '^(?:78amgeneralM35A2|78amgeneralM49A2C|78amgeneralM50A3|78amgeneralM62|83amgeneralM923)'
-$commercialPattern = '(?i)(blacksmith|brewster|brush|building|carpentry|catering|construction|deer|distil|electrics|fabrication|farming|fossoil|garden|glass|landscap|laundry|lumber|masonry|mechanic|metal|mccoy|mobile|motorshop|painting|plumb|postal|propane|repair|service|shuttle|tailor|transit|utility|welding|wood|wrecker|zippee|box|flatbed|bank|airport|calloway|camille|helton|kimble|marchridge|yingswood|brickingit)'
+$commercialPattern = '(?i)(blacksmith|brewster|brush|building|carpentry|catering|construction|deer|distil|electrics|fabrication|farming|fossoil|garden|glass|landscap|laundry|lumber|masonry|mechanic|metal|mccoy|mobileMechanics|motorshop|painting|plumb|postal|propane|repair|service|shuttle|tailor|transit|utility|welding|wood|wrecker|zippee|box|flatbed|bank|airport|calloway|camille|helton|kimble|marchridge|yingswood|brickingit)'
 
 function Get-Group([string] $ModId, [string] $ScriptName) {
     if ($ScriptName -match '(?i)burnt') { return 'preserved-burnt' }
+    if ($ScriptName -in @('93fordF350as','85chevyImpalaSedanAirport','93chevySilveradoAirport','93chevySuburbanAirportSec')) { return 'police' }
     if ($ScriptName -match '^Trailer' -and $ScriptName -match '(?i)(?:M101|M1082|M1095|M127|M128|M129|M747|M967|M1101|M1165)') { return 'militaryTrailer' }
     if ($ScriptName -match '^Trailer') { return 'trailer' }
     if ($ScriptName -match '(?i)(ambulance|med$)') { return 'ambulance' }
@@ -240,7 +242,7 @@ function Get-Group([string] $ModId, [string] $ScriptName) {
     if ($ModId -eq '92fordCVPI' -and $ScriptName -eq '92fordCV') { return 'civilian' }
     # SO is the sheriff-service suffix on E150 and F350 bodies. The plain SSP
     # Mustang is civilian; only its PD/KSP/unmarked suffixes are police.
-    if ($ScriptName -match '(?i)(police|pd\w*$|ksp|sheriff|swat|so$|pdu|unmarked)' -or
+    if ($ScriptName -match '(?i)(police|pd\w*$|ksp|sheriff|swat|so$|pdu|unmarked|fbi$|(?:BCS|MCS|CLPD|LCPD|MPD|WPPD)$)' -or
         $ModId -eq 'LFPSP-B42Fix') { return 'police' }
     if ($ScriptName -eq '86fordE150valkyriesSpear') { return 'van' }
     if ($ModId -eq '86chevyCUCV' -and $ScriptName -match '(?i)K5pd$') { return 'police' }
@@ -384,12 +386,16 @@ $derivedGroups = @{
     modern = @('civilian', 'compact')
     offroad = @('suv', 'pickup')
     race = @('sports')
-    prisonPolice = @('prison', 'police')
+    prisonPolice = @('prison', 'policeGeneric')
     commercialVan = @('commercial', 'van')
     military = @('militaryCar', 'militaryTruck', 'militaryTrailer')
 }
 
 $rarityWeights = @{}
+$customCivilian = @{}
+$trafficCategories = @{}
+$customFallbacks = @{}
+$policyInventory = @()
 $specialtyRarityPattern = '(?i)(?:ecto|ghostbuster|kitt|mr.?bean|spiffo|valkyrie|medical|examiner|swat|prison|airportsecurity|bank|armou?red|prototype|showcar)'
 foreach ($record in $recordsByScript.Values) {
     $weight = 1.0
@@ -404,7 +410,34 @@ foreach ($record in $recordsByScript.Values) {
         $weight = 0.05
     }
     $rarityWeights[$record.Script] = $weight
+    $protected = $record.Group -match '^(?:police|prison|fire|ambulance|ranger|militaryCar|militaryTruck|militaryTrailer|preserved-burnt)$' -or $record.Script -in $civilianPolicy.protectedScripts
+    $novelty = $record.Script -match $civilianPolicy.noveltyPattern -or $record.Script -in $civilianPolicy.customScripts
+    $branded = $record.ModId -in $civilianPolicy.businessModules -or $record.Script -match $civilianPolicy.businessPattern
+    $custom = -not $protected -and ($novelty -or $branded)
+    $category = if ($record.Group -match '^military') { 'military' }
+        elseif ($protected -and $record.Group -ne 'preserved-burnt') { 'emergency' }
+        elseif ($record.Group -eq 'preserved-burnt') { 'wreck' }
+        elseif ($novelty -or $record.Group -eq 'trailer' -or $record.ModId -in @('KI5campers','KI5trailers','87fordB700') -or $record.Script -match '(?i)(limo|elgin|wrecker|87fordF700)') { 'specialty' }
+        elseif ($branded -or $record.Group -eq 'commercial') { 'business' }
+        elseif ($record.Group -in @('sports','race') -or $record.Script -match '(?i)(87buickRegal(?:GNX|TurboT)$|90bmwE30m3$|93fordTaurusSHO$|66pontiacGTO|73fordFalconXBGT|70chevelle(?:CoupeSS|WagonSS)|70elCaminoSS|70fordEscortRS|98stagea260RS|63beetle(?:HP|Buggy)$|75grandPrixHurst$)') { 'sports' }
+        else { 'everyday' }
+    $trafficCategories[$record.Script] = $category
+    if ($custom) {
+        $customCivilian[$record.Script] = $true
+        $bare = $record.Script -replace '^Base\.',''
+        $fallback = if ($bare -match '^85chevyStepVan') { 'Base.85chevyStepVan' }
+            elseif ($bare -match '^86fordE150') { 'Base.86fordE150' }
+            elseif ($bare -match '^93fordF') { 'Base.93fordF350' }
+            elseif ($bare -match '^93chevy') { 'Base.93chevySilveradoSC' }
+            elseif ($bare -match '^76chevyK10') { 'Base.76chevyK10' }
+            elseif ($bare -match '^76chevy') { 'Base.76chevyK20' }
+            else { 'Base.85chevyCapriceSedan' }
+        if (-not $recordsByScript.ContainsKey($fallback)) { Fail "Missing plain fallback $fallback for $($record.Script)" }
+        $customFallbacks[$record.Script] = $fallback
+    }
+    $policyInventory += [ordered]@{ script=$record.Script; sourceModule=$record.ModId; group=$record.Group; category=$category; customCivilian=$custom; novelty=$novelty; protected=$protected; fallback=$customFallbacks[$record.Script] }
 }
+[IO.File]::WriteAllText((Join-Path $projectRoot 'docs\civilian-spawn-policy.json'), (($policyInventory | Sort-Object script | ConvertTo-Json -Depth 4) + [Environment]::NewLine), [Text.UTF8Encoding]::new($false))
 
 function Add-WeightedEntries([Collections.Generic.List[string]] $Destination, [string[]] $ScriptNames, [int] $Count) {
     if ($ScriptNames.Count -eq 0) { Fail 'Cannot allocate weighted slots to an empty vehicle group.' }
@@ -455,7 +488,7 @@ if ($militaryTruckSlots.Count -ne 1000) { Fail "Military truck weighted catalog 
 if ($militaryCarWreckSlots.Count -ne 1000) { Fail "Military wrecked car weighted catalog must contain 1000 slots, got $($militaryCarWreckSlots.Count)." }
 if ($militaryTruckWreckSlots.Count -ne 1000) { Fail "Military wrecked truck weighted catalog must contain 1000 slots, got $($militaryTruckWreckSlots.Count)." }
 
-$policeRegionalPattern = '(?i)(Louisville|Muldraugh|Meade|WestPoint|Bulletin|CLPD|LCPD|MPD|WPPD|MCS|BCS|Airport|Security|Prison|SWAT)'
+$policeRegionalPattern = '(?i)(Louisville|Muldraugh|Meade|WestPoint|Bulletin|CLPD|LCPD|MPD|WPPD|MCS|BCS|Airport|Security|Prison|SWAT|93fordF350as$)'
 $policeRegionalScripts = @($groups['police'] | Where-Object { $_ -match $policeRegionalPattern } | Sort-Object -Unique)
 $policeGenericScripts = @($groups['police'] | Where-Object { $_ -notmatch $policeRegionalPattern } | Sort-Object -Unique)
 if ($policeGenericScripts.Count -eq 0) { Fail 'The generic police pool is empty after regional livery isolation.' }
@@ -463,6 +496,7 @@ if ($policeGenericScripts.Count -eq 0) { Fail 'The generic police pool is empty 
 $lua = [Text.StringBuilder]::new()
 [void] $lua.AppendLine('-- Generated from the public profile, attributed import manifest and read-only Workshop inputs.')
 [void] $lua.AppendLine('-- The catalog never contains Specific Loot (Workshop 3457132019).')
+[void] $lua.AppendLine('local TrafficPolicy = require "OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy"')
 [void] $lua.AppendLine('local Catalog = {')
 [void] $lua.AppendLine('    groups = {')
 foreach ($groupName in $allGroups) {
@@ -509,6 +543,25 @@ foreach ($weightPolicy in @(
     [void] $lua.AppendLine('        },')
 }
 [void] $lua.AppendLine('    },')
+foreach ($field in @('customCivilianScripts','trafficCategories','customCivilianFallbacks','trafficProtectedScripts')) {
+    [void] $lua.AppendLine("    $field = {")
+    $map = switch ($field) {
+        'customCivilianScripts' { $customCivilian }
+        'trafficCategories' { $trafficCategories }
+        'customCivilianFallbacks' { $customFallbacks }
+        'trafficProtectedScripts' { $m=@{};foreach($name in $civilianPolicy.protectedScripts){$m[$name]=$true};$m }
+    }
+    foreach ($name in $map.Keys | Sort-Object) {
+        $value = if ($map[$name] -is [bool]) { 'true' } else { '"'+(Escape-Lua $map[$name])+'"' }
+        [void] $lua.AppendLine(('        ["'+(Escape-Lua $name)+'"] = '+$value+','))
+    }
+    if ($field -eq 'trafficCategories') {
+        foreach ($property in $civilianPolicy.optionalModels.PSObject.Properties) {
+            [void] $lua.AppendLine(('        ["'+(Escape-Lua $property.Name)+'"] = "'+$property.Value.category+'",'))
+        }
+    }
+    [void] $lua.AppendLine('    },')
+}
 [void] $lua.AppendLine('    rarityWeights = {')
 foreach ($scriptName in $rarityWeights.Keys | Where-Object { [double]$rarityWeights[$_] -lt 1 } | Sort-Object) {
     $weight = ([double]$rarityWeights[$scriptName]).ToString('0.###', [Globalization.CultureInfo]::InvariantCulture)
@@ -570,6 +623,8 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.weight(groupName, scriptName, zoneName)')
+[void] $lua.AppendLine('    local override=TrafficPolicy.weightOverride(Catalog,groupName,scriptName,zoneName)')
+[void] $lua.AppendLine('    if override~=nil then return override end')
 [void] $lua.AppendLine('    local weights = Catalog.weights[groupName]')
 [void] $lua.AppendLine('    if weights and weights[scriptName] ~= nil then return weights[scriptName] end')
 [void] $lua.AppendLine('    local rarity = Catalog.rarityWeights[scriptName] or 1')
@@ -593,6 +648,15 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.wreckedWeight(groupName, scriptName, zoneName)')
+[void] $lua.AppendLine('    if TrafficPolicy.suppressed(Catalog,scriptName) then return 0 end')
+[void] $lua.AppendLine('    if groupName == "militaryCar" then')
+[void] $lua.AppendLine('        local override=TrafficPolicy.militaryCarWeight(Catalog,scriptName,true)')
+[void] $lua.AppendLine('        if override~=nil then return override end')
+[void] $lua.AppendLine('    end')
+[void] $lua.AppendLine('    if groupName == "militaryTruck" then')
+[void] $lua.AppendLine('        local override=TrafficPolicy.militaryTruckWeight(Catalog,scriptName,true)')
+[void] $lua.AppendLine('        if override~=nil then return override end')
+[void] $lua.AppendLine('    end')
 [void] $lua.AppendLine('    local weights = Catalog.weights[groupName .. "Wreck"]')
 [void] $lua.AppendLine('    if weights and weights[scriptName] ~= nil then return weights[scriptName] end')
 [void] $lua.AppendLine('    local rarity = Catalog.rarityWeights[scriptName] or 1')
@@ -637,13 +701,29 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.weightedCopy(groupName, slots, zoneName)')
+[void] $lua.AppendLine('    if groupName == "militaryTruck" then')
+[void] $lua.AppendLine('        slots=math.max(1,math.floor(tonumber(slots) or 1000))')
+[void] $lua.AppendLine('        local am,other={},{}')
+[void] $lua.AppendLine('        for _,name in ipairs(Catalog.groups.militaryTruck or {}) do')
+[void] $lua.AppendLine('            local target=TrafficPolicy.isAMGeneralTruck(name) and am or other')
+[void] $lua.AppendLine('            target[#target+1]=name')
+[void] $lua.AppendLine('        end')
+[void] $lua.AppendLine('        if #am>0 and #other>0 then')
+[void] $lua.AppendLine('            local amSlots=math.floor(slots*TrafficPolicy.amGeneralTruckShare()+.5)')
+[void] $lua.AppendLine('            local result={}')
+[void] $lua.AppendLine('            for _,entry in ipairs({{names=am,slots=amSlots},{names=other,slots=slots-amSlots}}) do')
+[void] $lua.AppendLine('                if entry.slots>0 then for _,name in ipairs(weightedList(groupName,entry.names,entry.slots,zoneName,false)) do result[#result+1]=name end end')
+[void] $lua.AppendLine('            end')
+[void] $lua.AppendLine('            return result')
+[void] $lua.AppendLine('        end')
+[void] $lua.AppendLine('    end')
 [void] $lua.AppendLine('    local special = Catalog.weightedGroups[groupName]')
-[void] $lua.AppendLine('    if special and (slots == nil or slots == 1000) then')
+[void] $lua.AppendLine('    if special and groupName ~= "militaryCar" and groupName ~= "militaryTruck" and (slots == nil or slots == 1000) then')
 [void] $lua.AppendLine('        local copy = {}')
 [void] $lua.AppendLine('        for _, scriptName in ipairs(special) do table.insert(copy, scriptName) end')
 [void] $lua.AppendLine('        return copy')
 [void] $lua.AppendLine('    end')
-[void] $lua.AppendLine('    return weightedList(groupName, Catalog.groups[groupName] or {}, slots, zoneName, false)')
+[void] $lua.AppendLine('    return weightedList(groupName, Catalog.groups[groupName] or {}, slots or ((groupName == "militaryCar" or groupName == "militaryTruck") and 1000 or nil), zoneName, false)')
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.weightedList(groupName, candidates, slots, zoneName)')

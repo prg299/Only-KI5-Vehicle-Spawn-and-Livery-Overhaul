@@ -7,9 +7,11 @@ Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside 
 [*] [b]KI5 traffic.[/b] Replaces vanilla traffic, profession vehicles and roadside vehicle choices.
 [*] [b]Crashed cars too.[/b] Replaces vanilla vehicle selections in crash scenes with KI5 vehicles.
 [*] [b]Local police.[/b] Regional liveries for Louisville, Muldraugh, West Point and other jurisdictions.
-[*] [b]Silent lightbars.[/b] Eligible police spawns have a 50% flashing-light chance outside emergency parking. Lights on, siren off, in single-player and multiplayer.
+[*] [b]Silent lightbars.[/b] Set the police lights chance from 0–100% in the ONLY KI5 sandbox page (default 50%). Eligible police spawns outside emergency parking flash with the siren off, in single-player and multiplayer.
 [*] [b]Military encounters.[/b] Military zones, checkpoint fleets and four roadside stories with consistent camo.
-[*] [b]More variety.[/b] Integrated vehicle variants, police skins and duplicate suppression.
+[*] [b]Choose your military mix.[/b] Humvee spawn chance defaults to 95% of military cars/light vehicles. AM General military trucks defaults to 75% of the truck family mix. Both accept 0–100%; Humvee skin rarity stays separate.
+[*] [b]Rare custom civilian skins.[/b] Custom civilian and novelty weight defaults to 0.025% of the original spawn weights in Sandbox Options > ONLY KI5. Set 0 to disable them or 100 for original weights. Police, military and emergency liveries stay enabled. This is a weight multiplier, not a fixed share of all cars.
+[*] [b]Believable traffic.[/b] Louisville highway strongly favors ordinary cars. Limousines, street sweepers and other specialty vehicles are rare in general traffic.
 [/list]
 
 [hr][/hr]

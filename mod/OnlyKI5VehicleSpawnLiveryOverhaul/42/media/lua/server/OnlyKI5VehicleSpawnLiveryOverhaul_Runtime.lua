@@ -10,6 +10,7 @@ if isClient and isClient() then
 end
 
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local TrafficPolicy = require "OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy"
 local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
 local DuplicateScripts = require "OnlyKI5VehicleSpawnLiveryOverhaul_DuplicateScripts"
 -- Same-mod filenames no longer provide the original inter-mod load-order
@@ -193,6 +194,7 @@ end
 -- Every non-burnt native B42 VehicleZoneDistribution selection is mapped to a
 -- semantic KI5 category. Burnt pools intentionally do not appear here.
 register("normal", { "Base.CarNormal" })
+register("race", { "Base.RaceCar12", "Base.RaceCar34", "Base.RaceCar58" })
 register("compact", { "Base.SmallCar", "Base.SmallCar02" })
 register("taxi", { "Base.CarTaxi", "Base.CarTaxi2" })
 register("wagon", { "Base.CarStationWagon", "Base.CarStationWagon2" })
@@ -294,7 +296,9 @@ local function addCandidates(vehicles, groupName, properties, zoneName)
 
     local added = 0
     for _, scriptName in ipairs(candidates) do
-        local chance = totalChance * Catalog.weight(groupName, scriptName, zoneName) / totalWeight
+        local weight=Catalog.weight(groupName,scriptName,zoneName)
+        local chance = totalChance * weight / totalWeight
+        if weight>0 then
         if vehicles[scriptName] == nil then
             local copy = copyProperties(properties, chance)
             -- Source skin numbers belong to the replaced vanilla model.
@@ -307,6 +311,7 @@ local function addCandidates(vehicles, groupName, properties, zoneName)
             setAmbulanceSkinIndex(scriptName, vehicles[scriptName], zoneName)
         end
         added = added + 1
+        end
     end
     return added
 end
@@ -585,10 +590,6 @@ local vmzMilitaryPoolDefinitions = {
 
 local vmzVehicleHeavyCache = {}
 local vmzTrailerHeavyCache = {}
-local amGeneralTruckPrefixes = {
-    "Base.78amgeneralM35A2", "Base.78amgeneralM49A2C", "Base.78amgeneralM50A3",
-    "Base.78amgeneralM62", "Base.83amgeneralM923",
-}
 
 local function vmzVehicleIsHeavy(scriptName)
     if vmzVehicleHeavyCache[scriptName] ~= nil then return vmzVehicleHeavyCache[scriptName] end
@@ -611,12 +612,7 @@ local function vmzTrailerIsHeavy(scriptName)
     return heavy
 end
 
-local function isAMGeneralTruck(scriptName)
-    for _, prefix in ipairs(amGeneralTruckPrefixes) do
-        if string.sub(scriptName, 1, #prefix) == prefix then return true end
-    end
-    return false
-end
+local isAMGeneralTruck = TrafficPolicy.isAMGeneralTruck
 
 local function isM35TransportTruck(scriptName)
     return scriptName == "Base.78amgeneralM35A2" or scriptName == "Base.78amgeneralM35A2Burnt"
@@ -688,7 +684,7 @@ local function addVMZMilitaryTruckCandidates(vehicles, budget, includeCandidate,
     local hasOther = hasMilitaryCandidates("militaryTruck", otherFilter, wrecked)
     if not hasAM and not hasOther then return 0 end
 
-    local amBudget = hasAM and hasOther and budget * 0.75 or (hasAM and budget or 0)
+    local amBudget = hasAM and hasOther and budget * TrafficPolicy.amGeneralTruckShare() or (hasAM and budget or 0)
     local otherBudget = budget - amBudget
     local added = 0
     if amBudget > 0 then
@@ -720,7 +716,7 @@ local function addVMZActivePool(vehicles, kind)
     local includeCars = kind ~= "active-heavy"
     local includeTrucks = kind ~= "active-light"
     if includeCars and hasMilitaryCandidates("militaryCar", filter, false) then
-        table.insert(roles, { name = "militaryCar", share = 0.95, preferred = function(name) return name == "Base.92amgeneralM998" end })
+        table.insert(roles, { name = "militaryCar", share = TrafficPolicy.humveeShare(), preferred = function(name) return name == "Base.92amgeneralM998" end })
     end
     if includeTrucks and hasMilitaryCandidates("militaryTruck", filter, false) then
         table.insert(roles, { name = "militaryTruck" })
@@ -742,7 +738,7 @@ end
 local function addVMZBurntPool(vehicles)
     local roles = {}
     if hasMilitaryCandidates("militaryCar", nil, true) then
-        table.insert(roles, { name = "militaryCar", share = 0.95, preferred = function(name) return name == "Base.92amgeneralM998Burnt" end })
+        table.insert(roles, { name = "militaryCar", share = TrafficPolicy.humveeShare(), preferred = function(name) return name == "Base.92amgeneralM998Burnt" end })
     end
     if hasMilitaryCandidates("militaryTruck", nil, true) then
         table.insert(roles, { name = "militaryTruck" })
@@ -944,6 +940,7 @@ end
 
 local function applyZoneRegistry()
     if type(VehicleZoneDistribution) ~= "table" then return false, 0, 0, 0 end
+    TrafficPolicy.normalizeRegistryKeys()
     local converted, smashedConverted, fallbackCount = 0, 0, 0
     for zoneName, zone in pairs(VehicleZoneDistribution) do
         if type(zone) == "table" and type(zone.vehicles) == "table" then
@@ -1269,6 +1266,7 @@ local function applySuite()
     local rangersRemoved = stripRangersOutsideRangerZones()
     local trafficAdjusted = balanceTrafficEmergency()
     local militaryPools = rebalanceVMZMilitaryPools()
+    TrafficPolicy.apply(Catalog,SpawnAliases)
     applied = true
     print(string.format(MOD_TAG .. " ready converted=%d smashed=%d fallback=%d duplicates=%d professions=%d professionReady=%s regionalReady=%s routedPolice=%d routedAirport=%d routedPrison=%d emergencyBurnt=%d rangerSpawnRate=%s->%s rangerPoolRemoved=%d trafficAdjusted=%d %s", converted, smashed, fallbacks, duplicates, professions, tostring(professionsReady), tostring(regionalReady), routedPolice, routedAirport, routedPrison, emergencyBurnt, tostring(rangerBefore), tostring(rangerAfter), rangersRemoved, trafficAdjusted, militaryPoolLog(militaryPools)))
 end
@@ -1300,6 +1298,7 @@ local function finalizeLoadedZones()
     local trafficAdjusted = balanceTrafficEmergency()
     local police, airport, prison = routeRegionalPolice(created)
     local militaryPools = rebalanceVMZMilitaryPools()
+    TrafficPolicy.apply(Catalog,SpawnAliases)
     finalized = true
     print(string.format(MOD_TAG .. " loaded-zones converted=%d smashed=%d duplicates=%d professions=%d professionReady=%s regionalReady=%s police=%d airport=%d prison=%d emergencyBurnt=%d rangerSpawnRate=%s->%s rangerPoolRemoved=%d trafficAdjusted=%d %s", converted or 0, smashed or 0, duplicates, professions, tostring(professionsReady), tostring(regionalReady), police, airport, prison, emergencyBurnt, tostring(rangerBefore), tostring(rangerAfter), rangersRemoved, trafficAdjusted, militaryPoolLog(militaryPools)))
 end

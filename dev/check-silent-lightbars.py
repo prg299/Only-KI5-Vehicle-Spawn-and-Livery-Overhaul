@@ -13,6 +13,11 @@ lab=NativeLab(a.run)
 who='sp' if a.single_player else 'a'
 call=(lambda code:lab.client(code,'sp')) if a.single_player else lab.server
 if a.single_player:
+    # Keep this twenty-car positive-control sample separate from boundary
+    # fixtures already saved around the northern highway observation area.
+    lab.client('getPlayer():teleportTo(12558,2322,0);return true','sp')
+    lab.wait(lambda:lab.client('return getCell():getGridSquare(12558,2322,0)~=nil','sp'),bool,'streamed audio fixture area')
+    time.sleep(5)
     audio=json.loads(call('return OnlyKI5NativeAudio.enableMutedProbe()'))
     assert audio['masterMuted'] and not audio['soundDisabled'] and audio['soundVolume']>0,audio
     result=call((ROOT/'dev/spawn-police.lua').read_text())

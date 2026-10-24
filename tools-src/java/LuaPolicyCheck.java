@@ -11,8 +11,13 @@ public final class LuaPolicyCheck {
         if (!Set.of("native", "ascending", "descending").contains(order)) throw new IllegalArgumentException(order);
         code.append("ONLY_KI5_TEST_ZONE_ORDER = \"").append(order).append("\"\n");
         String trafficShape = args.length > 3 ? args[3] : "shared";
-        if (!Set.of("shared", "copied", "singleplayer", "client").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
+        if (!Set.of("shared", "copied", "singleplayer", "client", "0", "37", "100").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
         code.append("ONLY_KI5_TEST_TRAFFIC_SHAPE = \"").append(trafficShape).append("\"\n");
+        if (args.length > 4) {
+            int chance=Integer.parseInt(args[4]);
+            if (chance<0 || chance>100) throw new IllegalArgumentException("Truck percentage");
+            code.append("ONLY_KI5_TEST_TRUCK_CHANCE = ").append(chance).append("\n");
+        }
         try (var paths = Files.walk(lua)) {
             for (Path path : paths.filter(p -> p.toString().endsWith(".lua")).toList()) {
                 String name = path.getFileName().toString().replace(".lua", "");
@@ -37,7 +42,17 @@ public final class LuaPolicyCheck {
         owner.set(thread, Thread.currentThread());
         Object[] result = (Object[]) threadType.getMethod("pcall", Object.class, Object[].class)
             .invoke(thread, closure, new Object[0]);
-        if (!Boolean.TRUE.equals(result[0])) throw new AssertionError(Arrays.toString(result));
+        if (!Boolean.TRUE.equals(result[0])) {
+            String error=Arrays.toString(result);
+            var match=java.util.regex.Pattern.compile("only-ki5-policy-check:(\\d+)").matcher(error);
+            if (match.find()) {
+                int line=Integer.parseInt(match.group(1));
+                String[] lines=code.toString().split("\\n");
+                for (int i=Math.max(0,line-4);i<Math.min(lines.length,line+3);i++)
+                    System.err.println((i+1)+": "+lines[i]);
+            }
+            throw new AssertionError(error);
+        }
         System.out.println("PASS: production Lua policy callback regression checks (mocked game services, " + order + " zone order, " + trafficShape + " highway table).");
     }
 }

@@ -1,4 +1,8 @@
-# Release readiness - 0.3.2
+# Release readiness - 0.3.3
+
+The [0.3.3 audit](spawn-update-20261024.md) records four sandbox controls, default 0.025% original civilian weights, balanced highway/specialty pools, the regional skin-index guard and single-stall secret-base parking. All 23 production-Lua scenarios, 57 Lua compilations, 32 native signatures, six PowerShell parser checks and portable provenance checks pass. Complete native registries, actual sandbox input/preset reload and two-peer state/audio checks pass with clean exits and identical 291-file payloads. Representative natural visuals were reviewed; rejected final MP lightbar pictures leave new red/blue visual acceptance unverified. Exact observed frequency, every map/model, new full vehicle save/reload, Steam transport and human listening are not claimed. Publication receipts are recorded separately in [Workshop publication](workshop-publication.md).
+
+## Historical public 0.3.2 release
 
 The owner requested a fresh public item named **ONLY KI5: Vehicle Spawn & Skins** on 2026-10-24. [Public replacement status](public-release-20261024.md) records the new item 3825999183, description, fourteen-image gallery and retirement of item 3825545131. The prior 0.3.2 candidate passed focused native SP, two-client dedicated-server and full-restart checks. The public player payload changes only its two descriptor display names; canonical comparison proves all gameplay bytes unchanged. Existing acceptance limits below still apply to the public release.
 

@@ -55,7 +55,7 @@ def wait(predicate, seconds=180, label='native readiness'):
 
 
 class Session:
-    def __init__(self, run, effective=False, reuse=None, resume=None):
+    def __init__(self, run, effective=False, reuse=None, resume=None, extra_profile=None):
         self.run = run
         self.children = []
         self.clients = {}
@@ -65,11 +65,23 @@ class Session:
         self.effective = effective
         self.reuse = reuse
         self.resume = resume
+        self.extra_profile = extra_profile
 
     def prepare(self):
         self.run.mkdir(parents=True, exist_ok=False)
         profile = dict(line.split('=', 1) for line in (ROOT/'config/fleet-profile.ini').read_text().splitlines())
+        if self.extra_profile:
+            extra=self.extra_profile.resolve(strict=True)
+            if not extra.is_relative_to((ROOT/'config').resolve()):
+                raise ValueError('Optional test profile must be tracked project configuration')
+            values=dict(line.split('=',1) for line in extra.read_text('utf8').splitlines() if '=' in line)
+            for key in ('Mods','WorkshopItems'):
+                profile[key]+=';'+values[key]
         wanted = set(profile['Mods'].split(';')) | {'ZombieBuddy'}
+        if self.reuse:
+            if not (self.reuse/'finished.json').is_file():raise ValueError('Reuse requires a stopped owned lifetime')
+            prior=set(json.loads((self.reuse/'inputs.json').read_text('utf8'))['mods'])-{PREFIX,DEV}
+            if prior!=wanted:raise ValueError('Reuse dependency selection differs; use a fresh owned cache')
         folders = {}
         for wid in profile['WorkshopItems'].split(';') + ['3619862853']:
             for folder in (WORKSHOP/wid/'mods').iterdir():
@@ -148,7 +160,8 @@ public final class Pump {
                 target=cache/item.name
                 if item.is_dir():shutil.copytree(item,target)
                 else:shutil.copy2(item,target)
-        # Hard links are created only between two owned immutable test copies.
+        # Use real directory entries: dedicated-server checksum discovery does
+        # not support NTFS junctions. Hard links stay inside owned frozen copies.
         shutil.copytree(self.run/'inputs/mods',cache/'mods',copy_function=os.link)
         (cache/'mods/default.txt').write_text('VERSION = 1,\nmods\n{\n'+''.join(f' mod = {m},\n' for m in self.ids)+'}\nmaps\n{\n}\n')
         (cache/'mods/reset-mods-42_00.txt').touch()
@@ -217,7 +230,7 @@ public final class Pump {
             'SpawnPoint':'12580,2050,0','SaveWorldEveryMinutes':'0'}
         (directory/'onlyki5.ini').write_text(''.join(f'{k}={v}\n' for k,v in values.items()))
         if not self.resume:
-            (directory/'onlyki5_SandboxVars.lua').write_text('SandboxVars={VERSION=6,Zombies=5,VehicleEasyUse=true,ZombieConfig={PopulationMultiplier=0.0,PopulationStartMultiplier=0.0,PopulationPeakMultiplier=0.0},}\n')
+            (directory/'onlyki5_SandboxVars.lua').write_text('SandboxVars={VERSION=6,Zombies=6,VehicleEasyUse=true,ZombieConfig={PopulationMultiplier=0.0,PopulationStartMultiplier=0.0,PopulationPeakMultiplier=0.0},}\n')
         env={k:v for k,v in os.environ.items() if k not in ('JAVA_TOOL_OPTIONS','_JAVA_OPTIONS','JDK_JAVA_OPTIONS')}
         env['PATH']=str(GAME/'win64')+';'+str(GAME)+';'+env['PATH']
         args=[str(GAME/'jre64/bin/java.exe'),'-Xms128m','-Xmx1792m','-XX:MaxDirectMemorySize=128m',
@@ -246,8 +259,11 @@ public final class Pump {
         if action=='lua': return lua(record['port'],q['code'],q.get('timeout',15))
         if action=='capture':
             name=q['name']
-            lua(record['port'],f'MEMCNativeLab.capture("{name}.png"); return true')
-            image=Path(record['cache'])/'Screenshots'/f'{name}.png'
+            # Native capture is asynchronous. A unique cache filename prevents
+            # an earlier frame satisfying the readiness check during a retake.
+            capture_name=name+'-'+str(time.time_ns())
+            lua(record['port'],f'MEMCNativeLab.capture("{capture_name}.png"); return true')
+            image=Path(record['cache'])/'Screenshots'/f'{capture_name}.png'
             wait(lambda:image.exists(),15,'completed native frame')
             output=self.run/'captures'/f'{name}.png';output.parent.mkdir(exist_ok=True)
             shutil.copy2(image,output)
@@ -282,6 +298,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--run',required=True);p.add_argument('--minutes',type=int,default=35)
     p.add_argument('--effective',action='store_true');p.add_argument('--reuse');p.add_argument('--mp',action='store_true')
     p.add_argument('--resume')
+    p.add_argument('--extra-profile',type=Path)
     args=p.parse_args()
     if not args.run.replace('-','').isalnum(): raise ValueError('Run name')
     reuse=owned_run(args.reuse) if args.reuse else None
@@ -290,7 +307,7 @@ def main():
         if not (resume/'finished.json').is_file():raise ValueError('Resume requires a stopped owned lifetime')
         if args.mp and json.loads((resume/'server/exit.json').read_text())['exitCode']!=0:raise ValueError('Resume requires a clean server save/exit')
     NATIVE_ROOT.mkdir(parents=True,exist_ok=True)
-    s=Session(owned_run(args.run),args.effective,reuse,resume)
+    s=Session(owned_run(args.run),args.effective,reuse,resume,args.extra_profile)
     try:
         s.prepare()
         if args.mp:

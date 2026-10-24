@@ -92,6 +92,15 @@ local records = {
 Zones.register(records, true)
 Zones.register(records, true)
 assert(#registrations == 1 and registrations[1].x == 800)
+local row={name='military_vehicle',type='ParkingStall',x=5586,y=12447,z=0,width=5,height=25,properties={Direction='W'}}
+Zones.register({row},false)
+Zones.register({row},false)
+assert(#registrations==5,'spaced row registration/deduplication')
+for i=2,5 do
+    assert(registrations[i].y==12447+(i-2)*6)
+    assert(registrations[i].props.Direction=='W' and registrations[i].props.FaceDirection)
+end
+assert(row.height==25 and not row.properties.FaceDirection,'upstream row mutated')
 VehicleZoneDistribution = {
     military = {vehicles={MockCar={spawnChance=10}}},
     military_vehicle_light = {vehicles={MockCar={spawnChance=10}}},

@@ -21,7 +21,7 @@ release_metadata=json.loads((ROOT/'release/workshop/metadata.json').read_text('u
 check(release_metadata['title']==b42['name'] and release_metadata['visibility']=='public', 'Public title/visibility drift')
 check('Crashed cars too.' in (ROOT/'release/workshop/description.txt').read_text('utf8'), 'Missing requested KI5 crash-scene description')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.3.2' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(b42['modversion'] == '0.3.3' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')
@@ -54,8 +54,11 @@ for relative, entry in imported.items():
     check(path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256'], 'Imported content drift: '+relative)
     check(bool(entry['sources']) and all(s['workshopId'] in allowed_origins for s in entry['sources']), 'Unknown import origin: '+relative)
     check(not any(s['workshopId'] in {'3171167894', '3520758551', '3624971238'} for s in entry['sources']), 'External framework was bundled')
+    if extension := entry.get('authoredExtension'):
+        authored = ROOT/extension['path']
+        check(authored.is_file() and hashlib.sha256(authored.read_bytes()).hexdigest() == extension['sha256'], 'Authored sandbox extension drift: '+relative)
 authored_lua = [p for p in lua_files if p.relative_to(MOD).as_posix() not in imported]
-check(len(authored_lua) == 12, f'Unexpected authored runtime module count {len(authored_lua)}')
+check(len(authored_lua) == 13, f'Unexpected authored runtime module count {len(authored_lua)}')
 module_names = {p.stem for p in lua_files}
 for p in lua_files:
     text = p.read_text('utf-8')

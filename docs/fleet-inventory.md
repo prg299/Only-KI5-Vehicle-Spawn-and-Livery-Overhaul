@@ -12,16 +12,16 @@
 
 | Group | Scripts |
 | --- | ---: |
-| civilian | 32 |
+| civilian | 31 |
 | compact | 16 |
-| luxury | 13 |
+| luxury | 15 |
 | sports | 69 |
 | wagon | 18 |
-| pickup | 37 |
+| pickup | 36 |
 | van | 14 |
-| commercial | 140 |
+| commercial | 132 |
 | suv | 19 |
-| police | 89 |
+| police | 97 |
 | prison | 4 |
 | fire | 13 |
 | ranger | 8 |

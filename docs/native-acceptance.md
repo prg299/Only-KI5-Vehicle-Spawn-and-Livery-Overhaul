@@ -2,6 +2,12 @@
 
 Tested 2026-10-23 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521). The native checks below passed in disposable worlds and an ordinary dedicated server with two joined native clients. An unlisted Steam testing item is uploaded; public release remains pending and the limits below are not claimed as passed.
 
+## 0.3.3 spawn settings and registry follow-up
+
+The [dated audit](spawn-update-20261024.md) and [sanitized evidence](validation/native-20261024-spawn-pools/evidence.json) record the new original-weight multiplier and three service/military controls. Complete default, original-weight and server registries pass 93 map pools, 255 choice lists and 558 resolved IDs; the thirteen-entry uniqueness constraint is inventoried separately. All 291 payload files match the native-tested source. Native sandbox mouse/text, rejection and saved-preset reload checks pass. Both SP lifetimes and the dedicated server/two clients exit 0 without taking over the desktop.
+
+The ordinary peers match 83 natural vehicles each. Native police 0%/100% fixtures and active-siren positive controls pass with flashing modes retained and sirens stopped. Representative natural SP visuals were reviewed; sparse station views do not demonstrate every livery. The final MP lightbar frames were rejected and current red/blue visual acceptance remains unverified. No new full vehicle save/reload or Steam-transport acceptance is claimed; the separately dated earlier evidence below remains historical.
+
 ## 0.3.2 focused livery follow-up
 
 The only player-payload changes are the new SpawnSkins module, its call from the existing pre-creation router and the two version descriptors. The catalog, vehicle-class selection and military pools are unchanged. The running dedicated server reports 95.0% Humvee share in general military, light-military and highway military-car groups; both joined/rejoined checks assert those weights.

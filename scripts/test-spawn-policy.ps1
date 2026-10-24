@@ -7,11 +7,27 @@ New-Item -ItemType Directory -Path $testBuild -Force | Out-Null
 if ($LASTEXITCODE -ne 0) { throw 'Policy test runner compilation failed' }
 Push-Location $gameRoot
 try {
+    & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $projectRoot 'tools-src/tests/only-ki5-police-routing.lua') native shared
+    if ($LASTEXITCODE -ne 0) { throw 'Regional police skin-index regression failed' }
+    foreach ($authority in @('singleplayer','client')) {
+        & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-civilian-share.lua') native $authority
+        if ($LASTEXITCODE -ne 0) { throw "Fractional civilian share failed ($authority)" }
+    }
+    & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-traffic-policy.lua') native shared
+    if ($LASTEXITCODE -ne 0) { throw 'Default/opt-in civilian traffic policy regression failed' }
     foreach ($zoneOrder in @('native', 'ascending', 'descending')) {
         foreach ($trafficShape in @('shared', 'copied')) {
             & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-overhaul-policy.lua') $zoneOrder $trafficShape
             if ($LASTEXITCODE -ne 0) { throw "Lua policy tests failed ($zoneOrder zone order, $trafficShape highway table)" }
         }
+    }
+    foreach ($chance in @('0','37','100')) {
+        & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-overhaul-policy.lua') native $chance
+        if ($LASTEXITCODE -ne 0) { throw "Configurable Humvee policy failed ($chance percent)" }
+    }
+    foreach ($chance in @('0','37','100')) {
+        & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-overhaul-policy.lua') native shared $chance
+        if ($LASTEXITCODE -ne 0) { throw "Configurable military truck policy failed ($chance percent)" }
     }
     & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-integrated-content.lua') native shared
     if ($LASTEXITCODE -ne 0) { throw 'Integrated VMZ content/callback regression failed' }

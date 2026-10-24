@@ -9,7 +9,7 @@ PoliceRegions.liveries = {
     meade = { "Base.92fordCVPIMeade", "Base.92fordCVPI2Meade", "Base.91fordLTDpdMeade", "Base.93chevySuburbanpdMeade", "Base.89fordBroncoMeade", "Base.93fordF350pdMeade", "Base.85chevyImpalaSedanMCS", "Base.93chevySuburbanPoliceMCS", "Base.93chevySilveradoPoliceMCS" },
     westPoint = { "Base.92fordCVPIWestPoint", "Base.92fordCVPI2WestPoint", "Base.91fordLTDpdWestPoint", "Base.93chevySuburbanpdWestPoint", "Base.89fordBroncoWestPoint", "Base.93fordF350pdWestPoint", "Base.85chevyImpalaSedanWPPD", "Base.93chevySuburbanPoliceWPPD" },
     bulletin = { "Base.92fordCVPIBulletin", "Base.92fordCVPI2Bulletin", "Base.91fordLTDpdBulletin", "Base.93chevySuburbanpdBulletin", "Base.89fordBroncoBulletin", "Base.93fordF350pdBulletin", "Base.85chevyImpalaSedanBCS", "Base.93chevySuburbanPoliceBCS", "Base.93chevySilveradoPoliceBCS" },
-    airportSecurity = { "Base.93chevySilveradoCClongSecurity", "Base.93chevySilveradoAirport", "Base.93chevySuburbanAirportSec" },
+    airportSecurity = { "Base.93chevySilveradoCClongSecurity", "Base.93chevySilveradoAirport", "Base.93chevySuburbanAirportSec", "Base.93fordF350as", "Base.85chevyImpalaSedanAirport" },
     prisonTransport = { "Base.87fordB700Ksprison", "Base.93chevySuburbanPrison" },
 }
 

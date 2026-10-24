@@ -36,3 +36,20 @@ local off=vehicle();apply(off);assert(off.lights==0 and off.data['OnlyKI5Vehicle
 roll=0;local broken=vehicle();broken.condition=0;apply(broken);assert(broken.lights==0)
 local existing=vehicle();existing.lights=1;existing.siren=2;apply(existing);assert(existing.lights==1 and existing.siren==0)
 parkingName='ordinary';metaType='police';local legacy=vehicle();apply(legacy);assert(legacy.lights==0)
+parkingName='modified_trfjm';metaType='TownZone'
+for _,chance in ipairs({0,1,50,95,100}) do
+ SandboxVars={OnlyKI5={PoliceLightsChance=chance}}
+ for sample=0,99 do
+  roll=sample;local v=vehicle();v.siren=2;apply(v)
+  assert(v.siren==0 and v.lights==(sample<chance and 2 or 0),'Configured silent lightbar threshold')
+ end
+end
+SandboxVars={OnlyKI5={PoliceLightsChance=0}};roll=0;local saved=vehicle();apply(saved)
+SandboxVars.OnlyKI5.PoliceLightsChance=100;apply(saved)
+assert(saved.lights==0,'Changing the setting must not reroll a saved spawn decision')
+local P=require 'OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy'
+for _,case in ipairs({{-4,0},{105,100},{23.9,23},{'42',42},{'bad',50},{false,50}}) do
+ SandboxVars.OnlyKI5.PoliceLightsChance=case[1]
+ assert(P.percentOption('PoliceLightsChance',50)==case[2],'Invalid or out-of-range sandbox option')
+end
+SandboxVars=nil;assert(P.percentOption('PoliceLightsChance',50)==50 and P.humveeShare()==.95)

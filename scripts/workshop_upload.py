@@ -20,8 +20,8 @@ STEAMCMD=Path(os.environ.get('ONLY_KI5_STEAMCMD',str(Path(os.environ['LOCALAPPDA
 PROTECTED_IDS={'3806374180','3811728541','3825545131'}
 RELEASE_METADATA=json.loads((RELEASE/'metadata.json').read_text('utf-8'))
 TARGET_VISIBILITY={'public':0,'unlisted':3}[RELEASE_METADATA['visibility']]
-VERSION='0.3.2'
-NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-humvee'
+VERSION='0.3.3'
+NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-spawn-pools'
 
 def hashes(folder):
     return {p.relative_to(folder).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
@@ -59,23 +59,7 @@ def prepare(preserve_page=False):
     current={p.relative_to(SOURCE).as_posix():hashlib.sha256(
         p.read_bytes().replace(b'\r\n',b'\n') if p.suffix in {'.lua','.txt','.info','.md','.json'} else p.read_bytes()).hexdigest()
         for p in SOURCE.rglob('*') if p.is_file()}
-    # The public replacement changes only the two visible descriptor names.
-    # Compare each exact archived descriptor and every other canonical byte.
-    accepted=dict(current);metadata_delta=[]
-    if current!=canonical:
-        previous=RELEASE/'archive/20261024-replaced-3825545131/payload-descriptors'
-        for relative in ('mod.info','42/mod.info'):
-            old=(previous/relative).read_bytes().replace(b'\r\n',b'\n')
-            renamed=old.replace(b'name=Only KI5: Vehicle Spawn & Livery Overhaul\n',
-                                b'name=ONLY KI5: Vehicle Spawn & Skins\n')
-            actual=(SOURCE/relative).read_bytes().replace(b'\r\n',b'\n')
-            if hashlib.sha256(old).hexdigest()!=canonical[relative] or actual!=renamed or renamed==old:
-                raise ValueError('Descriptor delta exceeds the authorized display-name change')
-            accepted[relative]=canonical[relative];metadata_delta.append(relative)
-        if accepted!=canonical:raise ValueError('Gameplay payload differs from native-tested canonical payload')
-    write(ROOT/'docs/validation/public-20261024-metadata/canonical-payload.json',
-          dict(baseEvidence=NATIVE_EVIDENCE.relative_to(ROOT).as_posix(),metadataOnlyChanges=metadata_delta,
-               policy='Only exact descriptor display-name replacement; all gameplay bytes unchanged',files=current))
+    if current!=canonical:raise ValueError('Player payload differs from native-tested canonical payload')
     if not STEAMCMD.is_file():raise FileNotFoundError('SteamCMD executable missing')
     info=metadata(RELEASE/'workshop.txt')
     if info['visibility']!=RELEASE_METADATA['visibility']:raise ValueError('Unexpected release visibility')
@@ -117,7 +101,7 @@ def prepare(preserve_page=False):
             'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'descriptionSha256':hashlib.sha256(description.encode()).hexdigest(),'uploadAttempted':False,
             'pagePreserved':preserve_page,'nativeEvidence':NATIVE_EVIDENCE.relative_to(ROOT).as_posix(),
-            'nativeMetadataOnlyDelta':metadata_delta}
+            'nativeMetadataOnlyDelta':[]}
     if preserve_page:record['descriptionSha256']=hashlib.sha256(before['description'].replace('\r\n','\n').encode()).hexdigest()
     write(PRIVATE/'prepared.json',record)
     print('Prepared '+VERSION+': '+str(len(expected))+' native-tested payload files; '+info['visibility']+'; '+(item or 'new item'))

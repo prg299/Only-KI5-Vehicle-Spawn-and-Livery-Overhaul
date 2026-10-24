@@ -2,20 +2,21 @@
 
 These developer tools never ship in the player mod. They require the installed game, selected Workshop downloads, a local Real Vehicle Interiors checkout with its MIT test adapters/desktop keeper, and JDK 25. Set `PZ_GAME_DIR`, `PZ_WORKSHOP_DIR`, `ONLY_KI5_ACCEPTANCE_RVI_DIR` and `ONLY_KI5_JAVA_HOME` to override defaults. The test-only ZombieBuddy module must also be installed. It is not a player dependency.
 
-On the author's workstation, use the resolved Python executable rather than the WindowsApps alias, and keep the entire native lifetime under the resource guard:
+On the author's workstation, use the shared PZ test coordinator and its `games/project-zomboid/TESTING.md` instructions. It delegates to the resource guard and reserves the native turn across projects. Use the resolved Python executable rather than the WindowsApps alias:
 
 ```powershell
 $py = 'C:/Users/erika/AppData/Local/Python/pythoncore-3.14-64/python.exe'
-node C:/Users/erika/.codex/tools/run-heavy.mjs -- $py dev/native-session.py --run owned-mp-check --mp --minutes 35
+$coord = 'D:/Stuff/Projects/Game Mods/games/project-zomboid/tools/run-mod-test.mjs'
+node $coord run --kind multiplayer --name ki5-owned-mp -- $py dev/native-session.py --run owned-mp-check --mp --minutes 35
 ```
 
 Wait for `NATIVE_REVIEW_READY`. In another terminal, run each command sequentially. The parent owns the server, both inactive desktops and their process trees until stop or deadline:
 
 ```powershell
-node C:/Users/erika/.codex/tools/run-heavy.mjs -- $py dev/native-mp-connect.py owned-mp-check a
-node C:/Users/erika/.codex/tools/run-heavy.mjs -- $py dev/native-mp-connect.py owned-mp-check b
-node C:/Users/erika/.codex/tools/run-heavy.mjs -- $py dev/check-military-multiplayer.py owned-mp-check
-& $py dev/native-command.py owned-mp-check stop
+node $coord run --kind check --name ki5-connect-a --attach ki5-owned-mp -- $py dev/native-mp-connect.py owned-mp-check a
+node $coord run --kind check --name ki5-connect-b --attach ki5-owned-mp -- $py dev/native-mp-connect.py owned-mp-check b
+node $coord run --kind check --name ki5-military-check --attach ki5-owned-mp -- $py dev/check-military-multiplayer.py owned-mp-check
+node $coord run --kind check --name ki5-stop --attach ki5-owned-mp -- $py dev/native-command.py owned-mp-check stop
 ```
 
 `--reuse <stopped-run>` deliberately reuses frozen owned dependency copies; remove it to copy current downloads. Candidate source is always copied fresh. `--resume <stopped-run>` copies saved owned profiles, and requires a clean dedicated-server exit for MP. Connect both clients again, then use `check-military-reload.py <run> --baseline <previous-run>` to compare persistent scene/vehicle identities, translated names and actual mechanics UI. Never run overlapping broker commands: request/response files are intentionally serialized.
@@ -33,3 +34,10 @@ Raw caches, credentials, command queues and crash logs stay under ignored `build
 Set `ONLY_KI5_NATIVE_ROOT=C:/Users/erika/AppData/Local/GameMods/OnlyKI5/Native` on this workstation to use the owned C-drive cache when the project drive is low on space. Only this root or the project build/native root is allowed. Set the same environment variable for every broker command. Never point it at a real player profile. `scripts/export-workshop-gallery.py --capture-root <owned-run>` creates the titled derivatives; `scripts/export-gallery-evidence.py` exports the stopped, clean photo-session receipt and source hashes.
 
 `check-humvee-skins.py <run> --single-player` verifies natural checkpoint Humvees separately from 20 explicit native construction fixtures. Without that flag it compares the authoritative server with both joined clients. `--baseline <stopped-run>` verifies SQL identity, skin and mod-data persistence after restart. Never use transient runtime vehicle IDs across chunk unload/reload. Exact 95/4/1 weights are checked exhaustively in the production Lua fixture; small native samples do not prove population frequencies.
+
+
+## Whole-pool and four-setting acceptance (0.3.3)
+
+`check-settings-input.py` opens the owned sandbox fixture, then edits all four numeric controls through native mouse and text queues and commits through Next. `check-spawn-options.py` verifies invalid preset-name rejection preserves both drafts and authority, then saves the original-weight preset. `load-spawn-preset.py` reloads that preset after a process restart through the real popup and Next.
+
+`review-spawn-audit.py` inventories all final map/profession registries and captures natural locations at default vehicle abundance. The read-only snapshots include fractional profession weights and pre-multiplier custom weights. `check-configurable-spawns.py` checks loaded native catalog boundary percentages and actual police construction at 0/100% lights; it does not claim in-place runtime reconfiguration, which requires restarting the world. `check-spawn-pool-multiplayer.py` compares natural server vehicles with two peers at checkpoint, highway, secret base and West Point. Run all of these inside guarded owned lifetimes. The export script requires exact payload hashes and clean exits; preliminary runs are not final acceptance.

@@ -1,0 +1,12 @@
+{
+  "businessModules": ["76chevyKseriesExpanded", "85chevyStepVanexpanded", "86fordE150expanded", "93chevySuburbanExpanded", "MCV76chevyKseries", "MCV93fordFseries"],
+  "businessPattern": "(?i)(fossoil|mccoy|utilityDpw)",
+  "noveltyPattern": "(?i)(kitt|karr|bttf|ecto|mrbean|dnd$|valkyriesSpear|mesmerWagon|slideSpiffo|apocalypse|hippie|unionjack|ramaircustom)",
+  "customScripts": ["Base.65bansheeXP", "Base.67gt500e", "Base.69chargerDemon", "Base.69fordMustangEV6", "Base.69fordMustangTBC", "Base.69fordMustangUBC", "Base.69miniIJ", "Base.70dodgeBG", "Base.70dodgeOP", "Base.76chevyK10spirit", "Base.76chevyK20BigRed", "Base.76chryslerNewYorkerTPB", "Base.79camaroCloud", "Base.79camaroGhost", "Base.82porsche911rwb"],
+  "protectedScripts": ["Base.93fordF350as", "Base.85chevyImpalaSedanAirport", "Base.93chevySuburbanAirportSec", "Base.93chevySilveradoAirport"],
+  "optionalModels": {
+    "Base.93fordElgin": {"category": "specialty", "workshopId": "2969343830", "modId": "93fordElgin"},
+    "Base.93townCarLimo": {"category": "specialty", "workshopId": "2932547723", "modId": "93townCar"},
+    "Base.93townCar": {"category": "everyday", "workshopId": "2932547723", "modId": "93townCar"}
+  }
+}

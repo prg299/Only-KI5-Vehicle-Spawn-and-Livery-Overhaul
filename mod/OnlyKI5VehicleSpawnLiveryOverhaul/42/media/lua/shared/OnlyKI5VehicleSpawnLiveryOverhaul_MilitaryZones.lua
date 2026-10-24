@@ -67,9 +67,29 @@ local function replacedCell(x, y)
     return false
 end
 
+local function parkingRecords(record)
+    -- The two 25-tile secret-base rows otherwise use native three-tile stall
+    -- steps. A wide M62/APC pair can overlap after the parking jitter. Keep
+    -- four separated single stalls in each original row and fix their facing.
+    if record.name=='military_vehicle' and record.y==12447 and record.z==0
+        and (record.x==5586 or record.x==5599) and record.width==5 and record.height==25 then
+        local result={}
+        for offset=0,18,6 do
+            local properties={}
+            for key,value in pairs(record.properties or {}) do properties[key]=value end
+            properties.FaceDirection=true
+            result[#result+1]={name=record.name,type=record.type,x=record.x,y=record.y+offset,
+                z=record.z,width=5,height=3,properties=properties}
+        end
+        return result
+    end
+    return {record}
+end
+
 function Zones.register(records, respectMapOverrides)
     local world = getWorld()
-    for _, record in ipairs(records) do
+    for _, source in ipairs(records) do
+      for _, record in ipairs(parkingRecords(source)) do
         if record.type == "ParkingStall" then
             local key = table.concat({record.name, record.x, record.y, record.z,
                                       record.width, record.height}, ":")
@@ -79,6 +99,7 @@ function Zones.register(records, respectMapOverrides)
                 if zone then registered[key] = true end
             end
         end
+      end
     end
 end
 

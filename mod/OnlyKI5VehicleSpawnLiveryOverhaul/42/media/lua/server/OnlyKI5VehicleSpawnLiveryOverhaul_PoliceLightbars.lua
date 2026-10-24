@@ -5,7 +5,7 @@ if isClient and isClient() then
 end
 
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
-local LIGHTBAR_CHANCE_PERCENT = 50
+local TrafficPolicy = require 'OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy'
 local MOD_DATA_KEY = "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1"
 local stationZoneTypes = { police = true, fire = true, ambulance = true, prison = true, ranger = true, military = true }
 local stationZoneNames = { policegarage = 'police', firegarage = 'fire', firetruck = 'fire' }
@@ -65,7 +65,7 @@ local function applyLightbar(vehicle)
     if vehicle:getLightbarLightsMode() > 0 then data[MOD_DATA_KEY] = "preexisting"; return end
     local lightbarPart = vehicle:getPartById("lightbar")
     if lightbarPart and lightbarPart:getCondition() == 0 then data[MOD_DATA_KEY] = "broken"; return end
-    if ZombRand(100) >= LIGHTBAR_CHANCE_PERCENT then data[MOD_DATA_KEY] = "off"; return end
+    if ZombRand(100) >= TrafficPolicy.percentOption('PoliceLightsChance',50) then data[MOD_DATA_KEY] = "off"; return end
     vehicle:setLightbarLightsMode(2)
     data[MOD_DATA_KEY] = "on"
 end

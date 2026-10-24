@@ -1,4 +1,10 @@
 function isClient() return false end
+-- Legacy policy scenarios also verify that unchecking the new option restores
+-- custom civilian selection. Default-on suppression has its own whole-pool test.
+local configured=tonumber(ONLY_KI5_TEST_TRAFFIC_SHAPE)
+SandboxVars={OnlyKI5={CustomCivilianChance=100,HumveeSpawnChance=configured,AMGeneralTruckChance=ONLY_KI5_TEST_TRUCK_CHANCE}}
+local expectedHumvee=(configured or 95)/100
+local expectedTruck=(ONLY_KI5_TEST_TRUCK_CHANCE or 75)/100
 function ZombRand(n) return 0 end
 function ZombRandFloat(a, b) return a end
 local messages = {}
@@ -105,10 +111,10 @@ local function share(zone, names, preferred)
     assert(total > 0, "military candidates missing")
     return part / total
 end
-assert(math.abs(share(VehicleZoneDistribution.trafficjamn, C.groups.militaryCar, "Base.92amgeneralM998") - 0.95) < 0.00001)
+assert(math.abs(share(VehicleZoneDistribution.trafficjamn, C.groups.militaryCar, "Base.92amgeneralM998") - expectedHumvee) < 0.00001)
 for _, zoneName in ipairs({ "modified_trfjm", "trafficjamn", "trafficjams", "trafficjame", "trafficjamw" }) do
     local zone = VehicleZoneDistribution[zoneName]
-    assert(math.abs(share(zone, C.groups.militaryCar, "Base.92amgeneralM998") - 0.95) < 0.00001, zoneName)
+    assert(math.abs(share(zone, C.groups.militaryCar, "Base.92amgeneralM998") - expectedHumvee) < 0.00001, zoneName)
     local militaryTotal = 0
     for _, group in ipairs({ C.groups.militaryCar, C.groups.militaryTruck }) do
         for _, name in ipairs(group) do militaryTotal = militaryTotal + ((zone.vehicles[name] or {}).spawnChance or 0) end
@@ -117,9 +123,10 @@ for _, zoneName in ipairs({ "modified_trfjm", "trafficjamn", "trafficjams", "tra
     assert(zone.vehicles["Base.85chevyCaprice"].spawnChance == 100, "civilian control changed")
 end
 assert(not VehicleZoneDistribution.parkingstall.vehicles["Base.92amgeneralM998"], "military leaked into civilian parking")
-assert(math.abs(share(VehicleZoneDistribution.military_vehicle_light, C.groups.militaryCar, "Base.92amgeneralM998") - 0.95) < 0.00001)
-local before = VehicleZoneDistribution.trafficjamn.vehicles["Base.92amgeneralM998"].spawnChance
-local highwayBefore = VehicleZoneDistribution.modified_trfjm.vehicles["Base.92amgeneralM998"].spawnChance
+assert(math.abs(share(VehicleZoneDistribution.military_vehicle_light, C.groups.militaryCar, "Base.92amgeneralM998") - expectedHumvee) < 0.00001)
+local function humveeWeight(zone) return (zone.vehicles['Base.92amgeneralM998'] or {}).spawnChance or 0 end
+local before = humveeWeight(VehicleZoneDistribution.trafficjamn)
+local highwayBefore = humveeWeight(VehicleZoneDistribution.modified_trfjm)
 local truckTotal, amTotal, carTotal = 0, 0, 0
 for _, name in ipairs(C.groups.militaryTruck) do
     local chance = (VehicleZoneDistribution.modified_trfjm.vehicles[name] or {}).spawnChance or 0
@@ -129,18 +136,41 @@ end
 for _, name in ipairs(C.groups.militaryCar) do
     carTotal = carTotal + ((VehicleZoneDistribution.modified_trfjm.vehicles[name] or {}).spawnChance or 0)
 end
-assert(math.abs(amTotal / truckTotal - 0.75) < 0.00001, "highway AM General ratio")
+assert(math.abs(amTotal / truckTotal - expectedTruck) < 0.00001, "highway AM General ratio")
 assert(math.abs(carTotal / truckTotal - 0.5) < 0.00001, "shared jam lost its south-source car/truck budget")
 local highwayTelemetry = false
 for _, message in ipairs(messages) do
     if string.find(message, "loaded-zones", 1, true)
-        and string.find(message, "highwayHumveeShare=95.0%", 1, true)
-        and string.find(message, "highwayAMGeneralShare=75.0%", 1, true) then highwayTelemetry = true end
+        and string.find(message, string.format("highwayHumveeShare=%.1f%%",expectedHumvee*100), 1, true)
+        and string.find(message, string.format("highwayAMGeneralShare=%.1f%%",expectedTruck*100), 1, true) then highwayTelemetry = true end
 end
+local totalTruck,preferredTruck=0,0
+for _,name in ipairs(C.groups.militaryTruck) do
+ local w=C.weight('militaryTruck',name)
+ totalTruck=totalTruck+w
+ if string.find(name,'amgeneral',1,true) then preferredTruck=preferredTruck+w end
+end
+assert(math.abs(preferredTruck/totalTruck-expectedTruck)<.00001,'Catalog truck chance')
+local truckList=C.weightedCopy('militaryTruck');local countTruck=0
+for _,name in ipairs(truckList) do if string.find(name,'amgeneral',1,true) then countTruck=countTruck+1 end end
+assert(#truckList==1000 and math.abs(countTruck/#truckList-expectedTruck)<.00001,'Profession truck chance')
 assert(highwayTelemetry, "missing measured highway telemetry")
 Events.OnLoadedMapZones.fire()
-assert(math.abs(VehicleZoneDistribution.trafficjamn.vehicles["Base.92amgeneralM998"].spawnChance - before) < 0.00001, "finalization inflated military density")
-assert(math.abs(VehicleZoneDistribution.modified_trfjm.vehicles["Base.92amgeneralM998"].spawnChance - highwayBefore) < 0.00001, "finalization inflated highway density")
+assert(math.abs(humveeWeight(VehicleZoneDistribution.trafficjamn) - before) < 0.00001, "finalization inflated military density")
+assert(math.abs(humveeWeight(VehicleZoneDistribution.modified_trfjm) - highwayBefore) < 0.00001, "finalization inflated highway density")
+for _,wrecked in ipairs({false,true}) do
+ local group=wrecked and C.wreckedGroups.militaryCar or C.groups.militaryCar
+ local total,preferred=0,0
+ for _,name in ipairs(group) do
+  local w=wrecked and C.wreckedWeight('militaryCar',name) or C.weight('militaryCar',name)
+  total=total+w
+  if name==(wrecked and 'Base.92amgeneralM998Burnt' or 'Base.92amgeneralM998') then preferred=preferred+w end
+ end
+ assert(math.abs(preferred/total-expectedHumvee)<.00001,'Live/burnt catalog ignores sandbox chance')
+ local list=wrecked and C.wreckedWeightedCopy('militaryCar',1000) or C.weightedCopy('militaryCar')
+ local count=0;for _,name in ipairs(list) do if string.find(name,'92amgeneralM998',1,true) then count=count+1 end end
+ assert(#list==1000 and math.abs(count/#list-expectedHumvee)<.00001,'Profession slots ignore sandbox chance')
+end
 local function vehicle(name, created)
     local v = { name = name, changes = 0 }
     function v:isCreated() return created end

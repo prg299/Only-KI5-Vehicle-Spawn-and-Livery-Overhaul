@@ -12,7 +12,7 @@ if vehicles then
     while iterator:hasNext() do
         local v=iterator:next()
         local zone=getVehicleZoneAt(math.floor(v:getX()),math.floor(v:getY()),math.floor(v:getZ()))
-        result.vehicles[#result.vehicles+1]={id=v:getId(),sqlId=v:getSqlId(),script=v:getScriptName(),skin=v:getSkinIndex(),
+        result.vehicles[#result.vehicles+1]={id=v:getId(),sqlId=v:getSqlId(),script=v:getScriptName(),skin=v:getSkinIndex(),skinCount=v:getSkinCount(),
             x=v:getX(),y=v:getY(),z=v:getZ(),lights=v:getLightbarLightsMode(),siren=v:getLightbarSirenMode(),
             zone=zone and zone:getName(),created=v:isCreated(),data=v:getModData()}
     end

@@ -6,7 +6,7 @@ Install the vehicles separately from the [KI5 collection](https://steamcommunity
 Individual vehicle packs are not attached as Workshop requirements.
 **YAPZLib is not required.**
 
-The 0.3.2 full-fleet runtime profile still uses **87 external items / 102 modules**.
+The 0.3.3 full-fleet runtime profile still uses **87 external items / 102 modules**.
 The complete input inventory is retained below and in config/fleet-dependencies.json.
 The unchanged player descriptor requires those installed/enabled modules; this
 page-list cleanup does not replace or bundle the vehicle models.

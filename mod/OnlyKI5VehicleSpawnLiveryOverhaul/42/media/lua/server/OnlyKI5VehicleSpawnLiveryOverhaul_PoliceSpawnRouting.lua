@@ -70,6 +70,13 @@ local function routePoliceVehicleToRegion(vehicle)
         return
     end
 
+    -- ProfessionVehicles can already have selected the correct regional
+    -- script before this guard. Its old multi-skin index still needs checking
+    -- even when the livery below is accepted without another script change.
+    local currentScript=vehicle:getScript()
+    if currentScript and currentScript.getSkinCount and vehicle.getSkinIndex
+        and vehicle:getSkinIndex()>=currentScript:getSkinCount() then vehicle:setSkinIndex(0) end
+
     local liveryKey = PoliceRegions.liveryKeyFor(square:getSquareRegion())
     if not liveryKey and getWorld then
         local world = getWorld()
@@ -103,6 +110,10 @@ local function routePoliceVehicleToRegion(vehicle)
     if targetScript and targetScript ~= sourceScript then
         vehicle:setScriptName(targetScript)
         vehicle:scriptReloaded(true)
+        -- The source vehicle may have selected a multi-skin index already.
+        -- Regional scripts use their own livery; discard the source index so
+        -- the server and joining clients agree on the replacement texture.
+        vehicle:setSkinIndex(0)
     end
 end
 

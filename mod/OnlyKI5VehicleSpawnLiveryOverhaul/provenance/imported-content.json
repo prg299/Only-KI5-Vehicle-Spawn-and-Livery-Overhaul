@@ -782,8 +782,8 @@
     },
     {
       "targetPath": "42/media/lua/shared/Translate/EN/Sandbox.json",
-      "sha256": "a6a60b216745fe4018604f17ec07c650f0b108f059302317bb4400887bdba6e7",
-      "transform": "copied",
+      "sha256": "7279d5f167bebdfdd50f2cd517f7df3fde99497f6c2b2d218da2d1db6c408eb2",
+      "transform": "copied / authored ONLY KI5 sandbox extension",
       "sources": [
         {
           "workshopId": "3436499337",
@@ -793,7 +793,12 @@
           "author": "Пупсич",
           "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337"
         }
-      ]
+      ],
+      "authoredExtension": {
+        "path": "tools-src/sandbox-translations-only-ki5.json",
+        "sha256": "a1eb754d677fa303c08d789aa00bdd088e747e40b3fa1a880d4067f936feb91d",
+        "operation": "json"
+      }
     },
     {
       "targetPath": "42/media/lua/shared/Translate/RU/Sandbox.json",
@@ -827,8 +832,8 @@
     },
     {
       "targetPath": "42/media/sandbox-options.txt",
-      "sha256": "d1b815ee1f79201f428b0f3bc8fa682abe4d74df136ab6e51b80ac9f23a0be63",
-      "transform": "copied",
+      "sha256": "38edc9091bf6e7aa467fde510ce0f6143ceb1dfaeac3f91ea59b22fc2d26ccd5",
+      "transform": "copied / authored ONLY KI5 sandbox extension",
       "sources": [
         {
           "workshopId": "3436499337",
@@ -838,7 +843,12 @@
           "author": "Пупсич",
           "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337"
         }
-      ]
+      ],
+      "authoredExtension": {
+        "path": "tools-src/sandbox-options-only-ki5.txt",
+        "sha256": "0735416806d95a7f7fcda2063cf565d75d628191fde69fba9ef18da948464d62",
+        "operation": "append"
+      }
     },
     {
       "targetPath": "42/media/scripts/87fordB700Ksprison.txt",

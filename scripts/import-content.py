@@ -198,6 +198,24 @@ def main():
                     data = data.replace(b'\r\n', b'\n')
                 add('42/media/' + relative, data, [origin])
 
+    # Keep upstream VMZ bytes/provenance attributable, then append the authored
+    # option and merge its B42 JSON labels through this repeatable generator.
+    for target,source,kind in (
+        ('42/media/sandbox-options.txt','tools-src/sandbox-options-only-ki5.txt','append'),
+        ('42/media/lua/shared/Translate/EN/Sandbox.json','tools-src/sandbox-translations-only-ki5.json','json'),
+    ):
+        authored=(ROOT/source).read_bytes().replace(b'\r\n',b'\n')
+        if kind=='append':outputs[target]+=authored
+        else:
+            merged=json.loads(outputs[target].decode('utf8'))
+            additions=json.loads(authored.decode('utf8'))
+            if set(merged)&set(additions):raise ValueError('Authored sandbox translation collision')
+            merged.update(additions)
+            outputs[target]=(json.dumps(merged,indent=2,ensure_ascii=False)+'\n').encode('utf8')
+        records[target]['sha256']=sha(outputs[target])
+        records[target]['transform']+=' / authored ONLY KI5 sandbox extension'
+        records[target]['authoredExtension']={'path':source,'sha256':sha(authored),'operation':kind}
+
     actual_omissions = {(r['script'], r['modId']) for r in omitted}
     if actual_omissions != expected_omissions:
         raise ValueError(f'Expected/current MCV overlap drift: {actual_omissions ^ expected_omissions}')
