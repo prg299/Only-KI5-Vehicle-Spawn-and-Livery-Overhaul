@@ -2,7 +2,7 @@
 
 The Workshop page lists only **2 required items**: **that DAMN Library**
 and **More Car Features + Spawn Zones Expansion / WayMoreCars**.
-Choose any vehicles you want from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=2490220997) or their individual pages.
+Choose any vehicles you want from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=3652192243) or their individual pages.
 The collection is a browsing link, not an exhaustive requirements list. No vehicle pack is required.
 **YAPZLib is not required.**
 

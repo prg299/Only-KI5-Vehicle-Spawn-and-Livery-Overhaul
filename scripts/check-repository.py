@@ -85,7 +85,7 @@ dependencies = json.loads((ROOT/'release/workshop/dependencies.json').read_text(
 fleet_dependencies=json.loads((ROOT/'config/fleet-dependencies.json').read_text('utf-8'))
 check({d['workshopId'] for d in fleet_dependencies} == set(profile['WorkshopItems'].split(';')), 'Full fleet input inventory drift')
 check({d['workshopId'] for d in dependencies} == {'3171167894','3520758551'}, 'Workshop requirements must contain only damnlib and More Car Features')
-check('id=2490220997' in (ROOT/'release/workshop/description.txt').read_text('utf-8'), 'Missing requested KI5 collection installation link')
+check('id=3652192243' in (ROOT/'release/workshop/description.txt').read_text('utf-8'), 'Missing requested KI5 collection installation link')
 audit = json.loads((ROOT/'docs/permissions-audit.json').read_text('utf-8'))
 check({d['workshopId'] for d in dependencies} <= {i['workshopId'] for i in audit['items']}, 'Unaudited dependency')
 check((ROOT/'LICENSE').read_text().startswith('MIT License'), 'Missing MIT license')

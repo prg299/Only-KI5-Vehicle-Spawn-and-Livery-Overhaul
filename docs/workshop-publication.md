@@ -1,8 +1,14 @@
 # SteamCMD publication history
 
-## Source candidate 0.3.4 — not uploaded
+## 0.3.4 optional vehicles — uploaded 2026-10-24
 
-The optional-fleet candidate has a native-accepted 293-file stage and four clean native receipts. The mixed-fleet server/two-client test passes, including 63 natural observations on both peers, matching conditional variant schemas and 20 silent-lightbar fixtures with an active-siren positive control. The exact source payload matches all four runs; all owned native processes are closed. `workshop_upload.py` requires complete evidence and matching canonical hashes. Workshop item 3825999183 still serves 0.3.3 pending the authorized upload; no 0.3.4 page or content change has been sent yet. Current acceptance and visual limits are in [optional fleets](optional-fleets.md).
+The optional-fleet update has a native-accepted 293-file stage and four clean native receipts. The mixed-fleet server/two-client test passes, including 63 natural observations on both peers, matching conditional variant schemas and 20 silent-lightbar fixtures with an active-siren positive control. The exact source payload matches all four runs; all owned native processes are closed. Source/evidence commit 7825e648f902010ea604c7f7322807d1ad871c48 is pushed and [CI passes](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/actions/runs/40129458540). Current acceptance and visual limits are in [optional fleets](optional-fleets.md).
+
+SteamCMD exits 0 and confirms the content-only update to existing public item 3825999183. Official manifest **3488131128142833382** matches all **293 files / 46,713,406 bytes**, exactly matching source, stage and native-tested payloads. Owner queries before upload verify the title, public visibility, cover, fourteen-image gallery/order and exact damnlib/More Car Features requirements. All fourteen original CDN image hashes also match. The description update explains that every car pack is optional. The VDF contains only app/item IDs, content path and change note, preserving page/media/relationships.
+
+After upload, the owner requested KI5 collection **3652192243** instead of 2490220997. The current description, README, dependency generator/docs and portable contract use the new link. This changes no player payload bytes. SteamCMD disconnected the desktop API; after the owner reconnected, the description-only SDK update succeeded and fresh queries preserved all fourteen gallery images/order, title, cover, public visibility and the exact two requirements. The anonymous official API independently verifies the exact final description, new link, cover and matching manifest. The uploader receipt retains the original content-upload description hash; the final page receipt records the later description hash separately. No additional content upload was needed for the link correction.
+
+The earlier 0.3.3 receipts remain in [the pre-update source history](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/tree/7825e648f902010ea604c7f7322807d1ad871c48/release/workshop); current release receipts describe 0.3.4.
 
 ## Public 0.3.3 spawn-settings update — 2026-10-24
 

@@ -20,7 +20,7 @@ Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside 
 
 [b]No vehicle packs are required.[/b] Enable whichever KI5 vehicles fit your game; this mod automatically uses the enabled packs and skips missing cars and their skins. One pack, a selection, or the full fleet works. With no KI5 vehicles enabled, managed new-vehicle pools stay empty. No period-inappropriate car is forced on you.
 
-Browse the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] or individual vehicle pages. The collection is a browsing link, not a complete requirements list. Load your chosen packs before this mod. Missing specialist packs leave those service/military roles empty; ordinary body styles can use other installed ordinary KI5 cars.
+Browse the [url=https://steamcommunity.com/workshop/filedetails/?id=3652192243]KI5 collection[/url] or individual vehicle pages. The collection is a browsing link, not a complete requirements list. Load your chosen packs before this mod. Missing specialist packs leave those service/military roles empty; ordinary body styles can use other installed ordinary KI5 cars.
 
 [b]YAPZLib is not required.[/b] Internal helpers replace it.
 
@@ -37,7 +37,7 @@ Single-player, two-client multiplayer, silent lightbars and save/reload have bee
 [hr][/hr]
 [h2]Credits[/h2]
 [list]
-[*] [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5[/url] - original vehicles; external packs retain their creators' ownership.
+[*] [url=https://steamcommunity.com/workshop/filedetails/?id=3652192243]KI5[/url] - original vehicles; external packs retain their creators' ownership.
 [*] KI5 and bikinihorst - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3171167894]damnlib[/url].
 [*] GamestaMechanic - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3520758551]More Car Features[/url].
 [*] Пупсич - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136]More Car Variants[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3436499337]Vehicle Military Zones[/url]. VMZ's original [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3624971238]YAPZLib[/url] requirement is replaced here; no library source is bundled.
