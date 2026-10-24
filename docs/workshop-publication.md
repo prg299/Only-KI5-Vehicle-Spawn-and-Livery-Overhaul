@@ -1,4 +1,6 @@
-# SteamCMD publication
+# SteamCMD publication history
+
+The current public replacement is **ONLY KI5: Vehicle Spawn & Skins**, item **3825999183**. See [current public release status](public-release-20261024.md) for upload/download, gallery, requirements and old-item deletion. The unlisted history below concerns retired item 3825545131; its final receipts are archived under `release/workshop/archive/20261024-replaced-3825545131`.
 
 The owner requested a new **unlisted** testing item on 2026-10-23, with a description styled after Real Vehicle Interiors. This does not make the candidate a public release or close its remaining acceptance limits. The predecessor item 3806374180 and Real Vehicle Interiors 3811728541 are protected from this uploader.
 

@@ -1,7 +1,22 @@
 {
+  "verifiedUtc": "2026-10-24T09:43:25.695171+00:00",
   "workshopId": "3825999183",
+  "steamcmdUploadConfirmed": true,
+  "officialDownloadMatches": true,
   "visibilityConfigured": 0,
-  "steamcmdUploadConfirmed": false,
-  "officialDownloadMatches": false,
-  "blocker": "Fresh public identity allocated; publication is being prepared."
+  "visibilityOwnerVerified": true,
+  "requiredWorkshopItems": 2,
+  "requiredItemsVerified": true,
+  "descriptionVerifiedAgainstUpload": true,
+  "blocker": null,
+  "contentVersion": "0.3.2",
+  "manifest": "424093739917839501",
+  "publicMetadataVerified": true,
+  "galleryImages": 14,
+  "galleryOriginalsMatch": true,
+  "browserCarouselInputsVerified": true,
+  "browserEnlargementVerified": true,
+  "oldWorkshopItem": "3825545131",
+  "oldItemDeleted": true,
+  "oldItemAbsentVerified": true
 }

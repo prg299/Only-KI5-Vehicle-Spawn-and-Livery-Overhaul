@@ -163,7 +163,7 @@ class Steam:
             return dict(workshopId=ITEM, title=details.title.decode('utf-8', errors='replace'),
                         description=details.description.decode('utf-8', errors='replace'),
                         visibility=details.visibility, cover=main.value.decode(), previews=previews,
-                        dependencies=list(children), missingDependencies=[d for d in DEPENDENCIES if d not in children])
+                        dependencies=sorted(children), missingDependencies=[d for d in DEPENDENCIES if d not in children])
         finally:
             self.api.SteamAPI_ISteamUGC_ReleaseQueryUGCRequest(self.ugc, handle)
 

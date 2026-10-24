@@ -1,0 +1,20 @@
+{
+  "preparedUtc": "2026-10-24T09:35:54.067974+00:00",
+  "version": "0.3.2",
+  "workshopId": "3825999183",
+  "visibility": "public",
+  "payloadFiles": 290,
+  "payloadBytes": 46571542,
+  "previewSha256": "0b98f94db9f8751329680766fcbad92f5d5fe238e4a310dd230c2e6b62d93c66",
+  "sourceCommit": "009d0ae0607ab88fa9dc485cc60b7518b4980247",
+  "descriptionSha256": "634c0ab86cb839b059e66d125f98e02034551545f6f47bb361aa26ecda7d2e3a",
+  "uploadAttempted": true,
+  "pagePreserved": false,
+  "nativeEvidence": "docs/validation/native-20261024-humvee",
+  "nativeMetadataOnlyDelta": [
+    "mod.info",
+    "42/mod.info"
+  ],
+  "steamcmdExitCode": 0,
+  "steamcmdUploadConfirmed": true
+}

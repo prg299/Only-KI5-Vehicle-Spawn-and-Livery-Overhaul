@@ -88,11 +88,145 @@
     "bytesAfter": null
   },
   "browserCarousel": {
-    "workshopId": "3825545131",
-    "checkedUtc": "2026-10-23T23:17:18.742Z",
-    "checked": [],
-    "httpStatus": 429,
-    "title": "Steam Community",
-    "error": "Live browser returned HTTP 429"
-  }
+    "workshopId": "3825999183",
+    "checkedUtc": "2026-10-24T09:42:04.169Z",
+    "checked": [
+      {
+        "file": "only-ki5-location-01-louisville-police.jpg",
+        "src": "https://images.steamusercontent.com/ugc/10274519263307904050/835BC1785FEAFF14CACF3B0468052BEAFCD7C603/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-02-west-point-police.jpg",
+        "src": "https://images.steamusercontent.com/ugc/9605614745950560457/142ECA8D48053A629A97E9B5D6ED9C97E7A64F9F/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-03-muldraugh-police.jpg",
+        "src": "https://images.steamusercontent.com/ugc/15557114615412941151/C59F56CB911DC31A5E87B95BD13A9C9A37C2D9CC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-04-jefferson-police.jpg",
+        "src": "https://images.steamusercontent.com/ugc/18147312568406576267/7243441851DD1267ECD9B7300FDCE68B5AA0DFA4/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-05-meade-sheriff.jpg",
+        "src": "https://images.steamusercontent.com/ugc/10703155044213265279/6D2BE14FAB39E8FCDFC16EE638B9ADF733A58C12/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-06-state-police.jpg",
+        "src": "https://images.steamusercontent.com/ugc/17560575188780044752/46DBF9FA0C8A4270210E7F0C7C38B2A9BD331BC3/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-07-airport-security.jpg",
+        "src": "https://images.steamusercontent.com/ugc/13214129043663340035/7AA934A1CA5071A0703A38F0DDB052AF9D25D02A/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-08-louisville-military-checkpoint.jpg",
+        "src": "https://images.steamusercontent.com/ugc/9911732956131076758/0AA978EBE0279C2E8ABB3A71BFC1DA6E24CCB873/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-09-secret-military-base.jpg",
+        "src": "https://images.steamusercontent.com/ugc/9600551081862981672/211950E654F7F8AC2A8E46E2966C5D83FA7910EC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-10-louisville-highway.jpg",
+        "src": "https://images.steamusercontent.com/ugc/13549478727405979492/F770FAF5BA0B0D108E5F9305B90418B2F0CF78A6/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-11-rosewood-fire.jpg",
+        "src": "https://images.steamusercontent.com/ugc/17673803733297634059/E53F39B28684AE18DE1FF912A7F402D856371F38/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-12-riverside-town-centre.jpg",
+        "src": "https://images.steamusercontent.com/ugc/13215518312906248096/30A19182849FD762CAF4626384ABCDAE5BFF1656/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-13-muldraugh-industrial.jpg",
+        "src": "https://images.steamusercontent.com/ugc/17153170674623878059/DB9AE91DD185FBF4360A93FCDFC4AB2E4EEC1538/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      },
+      {
+        "file": "only-ki5-location-14-west-point-main-street.jpg",
+        "src": "https://images.steamusercontent.com/ugc/10969392572990787364/69510F2DDCF62D9BBCB9FAB2BD5D51CA1DF87BE0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true",
+        "naturalWidth": 637,
+        "naturalHeight": 358,
+        "displayWidth": 635,
+        "displayHeight": 357
+      }
+    ],
+    "httpStatus": 200,
+    "title": "Steam Workshop::ONLY KI5: Vehicle Spawn & Skins",
+    "thumbnailCount": 14,
+    "carouselInputsPassed": true,
+    "visibleEnlargements": [
+      {
+        "src": "https://images.steamusercontent.com/ugc/10969392572990787364/69510F2DDCF62D9BBCB9FAB2BD5D51CA1DF87BE0/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "width": 1024,
+        "height": 512
+      }
+    ],
+    "enlargementLoaded": true,
+    "visuallyReviewed": true,
+    "evidenceImages": [
+      {
+        "file": "workshop-gallery-page.png",
+        "sha256": "82800cec715ac2bdad8de3bea7517bf0bc7996a80dde634c9b8751c33a56d59b"
+      },
+      {
+        "file": "workshop-gallery-enlarged.png",
+        "sha256": "654c4748b0e0d2d9cce4181a94781d8e43e4a47e8c4210ad816f2d92bba9d862"
+      }
+    ]
+  },
+  "publicReplacementReusesAllImageBytes": true
 }

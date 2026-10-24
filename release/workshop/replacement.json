@@ -7,6 +7,8 @@
   "deletePreviousAuthorized": true,
   "newWorkshopId": "3825999183",
   "creationStatus": "created",
-  "previousDeleted": false,
-  "needsAgreement": false
+  "previousDeleted": true,
+  "needsAgreement": false,
+  "deletedUtc": "2026-10-24T09:41:08.893348+00:00",
+  "oldItemAbsentVerified": true
 }

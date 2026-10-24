@@ -1,0 +1,128 @@
+{
+  "workshopId": "3825999183",
+  "verified": true,
+  "verifiedUtc": "2026-10-24T09:41:00.648586+00:00",
+  "descriptionSha256": "634c0ab86cb839b059e66d125f98e02034551545f6f47bb361aa26ecda7d2e3a",
+  "galleryImages": 14,
+  "gallery": [
+    {
+      "index": 0,
+      "name": "only-ki5-location-01-louisville-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10274519263307904050/835BC1785FEAFF14CACF3B0468052BEAFCD7C603/",
+      "type": 0
+    },
+    {
+      "index": 1,
+      "name": "only-ki5-location-02-west-point-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9605614745950560457/142ECA8D48053A629A97E9B5D6ED9C97E7A64F9F/",
+      "type": 0
+    },
+    {
+      "index": 2,
+      "name": "only-ki5-location-03-muldraugh-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/15557114615412941151/C59F56CB911DC31A5E87B95BD13A9C9A37C2D9CC/",
+      "type": 0
+    },
+    {
+      "index": 3,
+      "name": "only-ki5-location-04-jefferson-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/18147312568406576267/7243441851DD1267ECD9B7300FDCE68B5AA0DFA4/",
+      "type": 0
+    },
+    {
+      "index": 4,
+      "name": "only-ki5-location-05-meade-sheriff.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10703155044213265279/6D2BE14FAB39E8FCDFC16EE638B9ADF733A58C12/",
+      "type": 0
+    },
+    {
+      "index": 5,
+      "name": "only-ki5-location-06-state-police.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17560575188780044752/46DBF9FA0C8A4270210E7F0C7C38B2A9BD331BC3/",
+      "type": 0
+    },
+    {
+      "index": 6,
+      "name": "only-ki5-location-07-airport-security.jpg",
+      "url": "https://images.steamusercontent.com/ugc/13214129043663340035/7AA934A1CA5071A0703A38F0DDB052AF9D25D02A/",
+      "type": 0
+    },
+    {
+      "index": 7,
+      "name": "only-ki5-location-08-louisville-military-checkpoint.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9911732956131076758/0AA978EBE0279C2E8ABB3A71BFC1DA6E24CCB873/",
+      "type": 0
+    },
+    {
+      "index": 8,
+      "name": "only-ki5-location-09-secret-military-base.jpg",
+      "url": "https://images.steamusercontent.com/ugc/9600551081862981672/211950E654F7F8AC2A8E46E2966C5D83FA7910EC/",
+      "type": 0
+    },
+    {
+      "index": 9,
+      "name": "only-ki5-location-10-louisville-highway.jpg",
+      "url": "https://images.steamusercontent.com/ugc/13549478727405979492/F770FAF5BA0B0D108E5F9305B90418B2F0CF78A6/",
+      "type": 0
+    },
+    {
+      "index": 10,
+      "name": "only-ki5-location-11-rosewood-fire.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17673803733297634059/E53F39B28684AE18DE1FF912A7F402D856371F38/",
+      "type": 0
+    },
+    {
+      "index": 11,
+      "name": "only-ki5-location-12-riverside-town-centre.jpg",
+      "url": "https://images.steamusercontent.com/ugc/13215518312906248096/30A19182849FD762CAF4626384ABCDAE5BFF1656/",
+      "type": 0
+    },
+    {
+      "index": 12,
+      "name": "only-ki5-location-13-muldraugh-industrial.jpg",
+      "url": "https://images.steamusercontent.com/ugc/17153170674623878059/DB9AE91DD185FBF4360A93FCDFC4AB2E4EEC1538/",
+      "type": 0
+    },
+    {
+      "index": 13,
+      "name": "only-ki5-location-14-west-point-main-street.jpg",
+      "url": "https://images.steamusercontent.com/ugc/10969392572990787364/69510F2DDCF62D9BBCB9FAB2BD5D51CA1DF87BE0/",
+      "type": 0
+    }
+  ],
+  "preserved": [
+    "title",
+    "visibility",
+    "cover",
+    "dependencies",
+    "content"
+  ],
+  "payloadUploadAttempted": false,
+  "quotaBefore": {
+    "totalBytes": 1000000,
+    "availableBytes": 998409
+  },
+  "batches": [
+    {
+      "files": [
+        "only-ki5-location-06-state-police.jpg",
+        "only-ki5-location-07-airport-security.jpg",
+        "only-ki5-location-08-louisville-military-checkpoint.jpg",
+        "only-ki5-location-09-secret-military-base.jpg",
+        "only-ki5-location-10-louisville-highway.jpg",
+        "only-ki5-location-11-rosewood-fire.jpg",
+        "only-ki5-location-12-riverside-town-centre.jpg"
+      ],
+      "bytes": 891748,
+      "availableBefore": 998409
+    },
+    {
+      "files": [
+        "only-ki5-location-13-muldraugh-industrial.jpg",
+        "only-ki5-location-14-west-point-main-street.jpg"
+      ],
+      "bytes": 316301,
+      "availableBefore": 998409
+    }
+  ]
+}
