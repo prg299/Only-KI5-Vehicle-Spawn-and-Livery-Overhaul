@@ -1,10 +1,11 @@
-[h1]Only KI5: Vehicle Spawn & Livery Overhaul[/h1]
+[h1]ONLY KI5: Vehicle Spawn & Skins[/h1]
 Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside scenes.
 
 [hr][/hr]
 [h2]How it works[/h2]
 [list]
 [*] [b]KI5 traffic.[/b] Replaces vanilla traffic, profession vehicles and roadside vehicle choices.
+[*] [b]Crashed cars too.[/b] Replaces vanilla vehicle selections in crash scenes with KI5 vehicles.
 [*] [b]Local police.[/b] Regional liveries for Louisville, Muldraugh, West Point and other jurisdictions.
 [*] [b]Silent lightbars.[/b] Eligible police spawns have a 50% flashing-light chance outside emergency parking. Lights on, siren off, in single-player and multiplayer.
 [*] [b]Military encounters.[/b] Military zones, checkpoint fleets and four roadside stories with consistent camo.
@@ -27,7 +28,7 @@ Changes appear in [b]fresh chunks[/b]; existing vehicles are not rewritten. Back
 
 Disable standalone MCV, Consistent Camo, police skins/B42 hotfix, VMZ, No Vanilla selection mods and the old Vehicle Suite integrations: their selected content is already included.
 
-[b]Unlisted test release.[/b] Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Further acceptance testing continues.
+Single-player, two-client multiplayer, silent lightbars and save/reload have been checked. Tested paths and known limits are recorded on GitHub.
 
 [hr][/hr]
 [h2]Credits[/h2]

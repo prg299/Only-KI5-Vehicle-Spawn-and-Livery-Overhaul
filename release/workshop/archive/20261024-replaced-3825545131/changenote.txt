@@ -1,0 +1,2 @@
+Only KI5 0.3.2 - weighted Humvee liveries.
+New Humvee spawns favour standard army paint (95%); medic 4%, JTF 1% in the eight-skin profile. Saved vehicles keep their skins. Military cars retain the 95% Humvee / 5% other-car pool. The Workshop page links the KI5 collection instead of requiring each vehicle pack, and has fourteen titled natural-location gameplay photographs.

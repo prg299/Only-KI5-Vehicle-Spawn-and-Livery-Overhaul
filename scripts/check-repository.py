@@ -16,7 +16,10 @@ def info(path):
 profile = info(ROOT / 'config/fleet-profile.ini')
 root_info, b42 = info(MOD / 'mod.info'), info(MOD / '42/mod.info')
 check(root_info == b42, 'Root and B42 descriptors differ')
-check(b42['name'] == 'Only KI5: Vehicle Spawn & Livery Overhaul', 'Wrong display name')
+check(b42['name'] == 'ONLY KI5: Vehicle Spawn & Skins', 'Wrong display name')
+release_metadata=json.loads((ROOT/'release/workshop/metadata.json').read_text('utf8'))
+check(release_metadata['title']==b42['name'] and release_metadata['visibility']=='public', 'Public title/visibility drift')
+check('Crashed cars too.' in (ROOT/'release/workshop/description.txt').read_text('utf8'), 'Missing requested KI5 crash-scene description')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
 check(b42['modversion'] == '0.3.2' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
@@ -101,7 +104,8 @@ check(hashlib.sha256(capture_path.read_bytes()).hexdigest() == capture_record['c
 gallery_path=ROOT/'release/workshop/gallery/manifest.json'
 if gallery_path.exists():
     gallery=json.loads(gallery_path.read_text('utf-8'))
-    check(gallery['workshopId']=='3825545131' and gallery['sceneGeneratedByAI'] is False, 'Gallery identity/source drift')
+    identity=json.loads((ROOT/'release/workshop/steamcmd-identity.json').read_text('utf8'))
+    check(gallery['workshopId']==identity['workshopId'] and gallery['workshopId'] not in {'3825545131','3806374180','3811728541'} and gallery['sceneGeneratedByAI'] is False, 'Gallery identity/source drift')
     check(len(gallery['images'])==14, 'Expected expanded fourteen-frame location gallery')
     check([i['category'] for i in gallery['images']] == ['regional-police']*7+['military']*2+['highway']+['civilian']*4, 'Gallery subjects differ from requested set')
     check(sum(bool(i.get('sheriffLocation')) for i in gallery['images'])==1, 'Expected just one sheriff location')

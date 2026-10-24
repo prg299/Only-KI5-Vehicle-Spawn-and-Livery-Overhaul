@@ -1,6 +1,7 @@
 {
-  "workshopId": "3825545131",
+  "workshopId": "3825999183",
   "appid": "108600",
   "modId": "OnlyKI5VehicleSpawnLiveryOverhaul",
-  "note": "Keep this identity across retries and future uploads; do not create duplicates."
+  "note": "Fresh public replacement; retain this identity across retries.",
+  "replaces": "3825545131"
 }

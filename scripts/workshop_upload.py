@@ -1,4 +1,4 @@
-"""Prepare by default; --upload --cached-login publishes the unlisted candidate.
+"""Prepare by default; --upload --cached-login publishes the configured release.
 
 Content uses SteamCMD. Native SteamUGC queries/adds requirements separately.
 Credentials are handled only by Steam's existing cache, outside this repository.
@@ -17,7 +17,9 @@ PRIVATE=ROOT/'build/steamcmd'
 VDF=PRIVATE/'only-ki5-item.vdf'
 IDENTITY=RELEASE/'steamcmd-identity.json'
 STEAMCMD=Path(os.environ.get('ONLY_KI5_STEAMCMD',str(Path(os.environ['LOCALAPPDATA'])/'GameMods/SteamCMD/steamcmd.exe')))
-PROTECTED_IDS={'3806374180','3811728541'}
+PROTECTED_IDS={'3806374180','3811728541','3825545131'}
+RELEASE_METADATA=json.loads((RELEASE/'metadata.json').read_text('utf-8'))
+TARGET_VISIBILITY={'public':0,'unlisted':3}[RELEASE_METADATA['visibility']]
 VERSION='0.3.2'
 NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-humvee'
 
@@ -57,11 +59,27 @@ def prepare(preserve_page=False):
     current={p.relative_to(SOURCE).as_posix():hashlib.sha256(
         p.read_bytes().replace(b'\r\n',b'\n') if p.suffix in {'.lua','.txt','.info','.md','.json'} else p.read_bytes()).hexdigest()
         for p in SOURCE.rglob('*') if p.is_file()}
-    if current!=canonical:raise ValueError('Candidate differs from native-tested canonical payload')
+    # The public replacement changes only the two visible descriptor names.
+    # Compare each exact archived descriptor and every other canonical byte.
+    accepted=dict(current);metadata_delta=[]
+    if current!=canonical:
+        previous=RELEASE/'archive/20261024-replaced-3825545131/payload-descriptors'
+        for relative in ('mod.info','42/mod.info'):
+            old=(previous/relative).read_bytes().replace(b'\r\n',b'\n')
+            renamed=old.replace(b'name=Only KI5: Vehicle Spawn & Livery Overhaul\n',
+                                b'name=ONLY KI5: Vehicle Spawn & Skins\n')
+            actual=(SOURCE/relative).read_bytes().replace(b'\r\n',b'\n')
+            if hashlib.sha256(old).hexdigest()!=canonical[relative] or actual!=renamed or renamed==old:
+                raise ValueError('Descriptor delta exceeds the authorized display-name change')
+            accepted[relative]=canonical[relative];metadata_delta.append(relative)
+        if accepted!=canonical:raise ValueError('Gameplay payload differs from native-tested canonical payload')
+    write(ROOT/'docs/validation/public-20261024-metadata/canonical-payload.json',
+          dict(baseEvidence=NATIVE_EVIDENCE.relative_to(ROOT).as_posix(),metadataOnlyChanges=metadata_delta,
+               policy='Only exact descriptor display-name replacement; all gameplay bytes unchanged',files=current))
     if not STEAMCMD.is_file():raise FileNotFoundError('SteamCMD executable missing')
     info=metadata(RELEASE/'workshop.txt')
-    if info['visibility']!='unlisted':raise ValueError('Only an unlisted upload is authorized')
-    if info['title']!='Only KI5: Vehicle Spawn & Livery Overhaul':raise ValueError('Unexpected title')
+    if info['visibility']!=RELEASE_METADATA['visibility']:raise ValueError('Unexpected release visibility')
+    if info['title']!='ONLY KI5: Vehicle Spawn & Skins':raise ValueError('Unexpected title')
     description=plain_quotes((RELEASE/'description.txt').read_text('utf-8-sig').strip())
     if info['description'].strip()!=description:raise ValueError('Description and native metadata differ; synchronize first')
     description+='\n\nMod ID: '+MOD_ID
@@ -78,9 +96,9 @@ def prepare(preserve_page=False):
     preview=RELEASE/'only-ki5-overhaul-preview.png'
     if preview.read_bytes()!=(STAGE/'preview.png').read_bytes():raise ValueError('Preview changed; restage explicitly')
     if preserve_page:
-        if item!='3825545131':raise ValueError('Page preservation requires the existing Only KI5 item')
+        if not item or item in PROTECTED_IDS:raise ValueError('Page preservation requires the current Only KI5 item')
         before=json.loads((RELEASE/'page-verified.json').read_text('utf-8'))
-        if before['visibility']!=3:raise ValueError('Expected verified unlisted page')
+        if before['visibility']!=TARGET_VISIBILITY:raise ValueError('Expected verified release visibility')
         fields={'appid':'108600','publishedfileid':item,
                 'contentfolder':(STAGE/'Contents').resolve().as_posix(),'changenote':note}
         VDF.write_text('\n'.join(['"workshopitem"','{',*[quote(k)+' '+quote(v) for k,v in fields.items()],'}','']),encoding='utf-8')
@@ -91,17 +109,18 @@ def prepare(preserve_page=False):
     if preserve_page:
         assert set(parsed)=={'appid','publishedfileid','contentfolder','changenote'}
     else:
-        assert parsed['description']==description and parsed['visibility']=='3'
+        assert parsed['description']==description and parsed['visibility']==str(TARGET_VISIBILITY)
     assert reconcile_ids(parsed['publishedfileid'])==item
     record={'preparedUtc':datetime.now(timezone.utc).isoformat(),'version':VERSION,'workshopId':item,
-            'visibility':'unlisted','payloadFiles':len(expected),'payloadBytes':sum(p.stat().st_size for p in SOURCE.rglob('*') if p.is_file()),
+            'visibility':info['visibility'],'payloadFiles':len(expected),'payloadBytes':sum(p.stat().st_size for p in SOURCE.rglob('*') if p.is_file()),
             'previewSha256':hashlib.sha256(preview.read_bytes()).hexdigest(),
             'sourceCommit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
             'descriptionSha256':hashlib.sha256(description.encode()).hexdigest(),'uploadAttempted':False,
-            'pagePreserved':preserve_page,'nativeEvidence':NATIVE_EVIDENCE.relative_to(ROOT).as_posix()}
+            'pagePreserved':preserve_page,'nativeEvidence':NATIVE_EVIDENCE.relative_to(ROOT).as_posix(),
+            'nativeMetadataOnlyDelta':metadata_delta}
     if preserve_page:record['descriptionSha256']=hashlib.sha256(before['description'].replace('\r\n','\n').encode()).hexdigest()
     write(PRIVATE/'prepared.json',record)
-    print('Prepared '+VERSION+': '+str(len(expected))+' native-tested payload files; unlisted; '+(item or 'new item'))
+    print('Prepared '+VERSION+': '+str(len(expected))+' native-tested payload files; '+info['visibility']+'; '+(item or 'new item'))
     return record
 
 def cached_username():
@@ -171,7 +190,7 @@ def verify(add_dependencies=False,remove_vehicle_dependencies=False):
     operations=[]
     try:
         before=steam.query()
-        if before['visibility']!=3:raise ValueError('Item is not unlisted; refusing dependency mutations')
+        if before['visibility']!=TARGET_VISIBILITY:raise ValueError('Unexpected release visibility; refusing dependency mutations')
         if before['title']!=metadata(RELEASE/'workshop.txt')['title']:raise ValueError('Unexpected live title')
         if add_dependencies:
             def record(operation):
@@ -194,16 +213,16 @@ def verify(add_dependencies=False,remove_vehicle_dependencies=False):
             publication=latest
         description_hash=hashlib.sha256(after['description'].replace('\r\n','\n').encode()).hexdigest()
         if description_hash!=publication['descriptionSha256']:raise ValueError('Live description differs from uploaded snapshot')
-        if after['visibility']!=3 or after['missingDependencies']:raise ValueError('Unlisted visibility or dependency verification is incomplete')
+        if after['visibility']!=TARGET_VISIBILITY or after['missingDependencies']:raise ValueError('Visibility or dependency verification is incomplete')
         if set(after['dependencies'])!=set(steam_ugc.DEPENDENCIES):raise ValueError('Unexpected live dependencies')
         if any(after[key]!=before[key] for key in ('title','cover','previews')):
             raise ValueError('Unexpected page/media change during dependency update')
         write(RELEASE/'page-verified.json',{'queriedUtc':datetime.now(timezone.utc).isoformat(),**after})
         write(RELEASE/'verification-status.json',{'verifiedUtc':datetime.now(timezone.utc).isoformat(),
             'workshopId':item,'steamcmdUploadConfirmed':True,'officialDownloadMatches':True,
-            'visibilityConfigured':3,'visibilityOwnerVerified':True,'requiredWorkshopItems':len(after['dependencies']),
+            'visibilityConfigured':TARGET_VISIBILITY,'visibilityOwnerVerified':True,'requiredWorkshopItems':len(after['dependencies']),
             'requiredItemsVerified':True,'descriptionVerifiedAgainstUpload':True,'blocker':None})
-        print('Verified: unlisted, complete description, '+str(len(after['dependencies']))+' required Workshop items')
+        print('Verified: '+RELEASE_METADATA['visibility']+', complete description, '+str(len(after['dependencies']))+' required Workshop items')
     finally:steam.api.SteamAPI_Shutdown()
 
 def main():

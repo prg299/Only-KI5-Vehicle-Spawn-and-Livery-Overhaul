@@ -1,4 +1,4 @@
-# Only KI5: Vehicle Spawn & Livery Overhaul catalogue
+# ONLY KI5: Vehicle Spawn & Skins catalogue
 
 - External vehicle providers: 89
 - Bundled MCV/police providers: 5

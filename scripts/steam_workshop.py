@@ -43,11 +43,11 @@ def quote(value):
 
 def make_vdf(app_id,info,content,preview,published_id=None,changenote=''):
     visibility = info.get('visibility')
-    if visibility not in ('unlisted', 'preserve'): raise ValueError('Use unlisted or preserve visibility.')
+    if visibility not in ('public', 'unlisted', 'preserve'): raise ValueError('Use public, unlisted or preserve visibility.')
     if visibility == 'preserve' and not item_id(published_id): raise ValueError('Only an existing item can preserve visibility.')
     fields={'appid':str(app_id),'publishedfileid':item_id(published_id) or '0',
         'contentfolder':Path(content).resolve().as_posix(),'previewfile':Path(preview).resolve().as_posix(),
-        **({'visibility':'3'} if visibility == 'unlisted' else {}),
+        **({'visibility':{'public':'0','unlisted':'3'}[visibility]} if visibility != 'preserve' else {}),
         'title':info['title'],'description':info['description'],
         'changenote':changenote}
     lines=['"workshopitem"','{']

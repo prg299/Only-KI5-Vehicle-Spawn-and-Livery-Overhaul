@@ -16,8 +16,8 @@ description = (ROOT/'release/workshop/description.txt').read_text('utf-8-sig')
 metadata = json.loads((ROOT/'release/workshop/metadata.json').read_text('utf-8'))
 identity = ROOT/'release/workshop/steamcmd-identity.json'
 workshop_id = json.loads(identity.read_text())['workshopId'] if identity.exists() else ''
-if metadata['visibility'] != 'unlisted':
-    raise ValueError('The current release is authorized as unlisted only')
+if metadata['visibility'] not in ('public','unlisted'):
+    raise ValueError('Unsupported release visibility')
 lines = ['version=1', 'id='+workshop_id, 'title='+metadata['title']]
 lines += ['description='+line for line in description.splitlines()]
 lines += ['visibility='+metadata['visibility'], 'tags='+';'.join(metadata['tags'])]

@@ -705,7 +705,7 @@ $provenance = [ordered]@{
 [IO.File]::WriteAllText($provenancePath, (($provenance | ConvertTo-Json -Depth 9) + [Environment]::NewLine), [Text.UTF8Encoding]::new($false))
 
 $report = [Text.StringBuilder]::new()
-[void] $report.AppendLine('# Only KI5: Vehicle Spawn & Livery Overhaul catalogue')
+[void] $report.AppendLine('# ONLY KI5: Vehicle Spawn & Skins catalogue')
 [void] $report.AppendLine('')
 [void] $report.AppendLine("- External vehicle providers: $(@($providers | Where-Object { -not $_.Bundled }).Count)")
 [void] $report.AppendLine("- Bundled MCV/police providers: $(@($providers | Where-Object Bundled).Count)")

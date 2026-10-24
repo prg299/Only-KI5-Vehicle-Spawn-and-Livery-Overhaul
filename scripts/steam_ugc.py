@@ -118,7 +118,7 @@ class Steam:
             raise RuntimeError(f'Steam operation failed, EResult={value.result}')
         return value
 
-    def query(self):
+    def query(self, allow_missing=False):
         ids = (U64 * 1)(ITEM)
         handle = self.api.SteamAPI_ISteamUGC_CreateQueryUGCDetailsRequest(self.ugc, ids, 1)
         if not handle or handle == 2**64 - 1:
@@ -133,11 +133,15 @@ class Steam:
             if not self.api.SteamAPI_ISteamUGC_SetAllowCachedResponse(self.ugc, handle, 0):
                 raise RuntimeError('Fresh query rejected')
             result = self.call(self.api.SteamAPI_ISteamUGC_SendQueryUGCRequest(self.ugc, handle), QueryResult, 3401)
+            if result.returned == 0 and allow_missing:
+                return dict(workshopId=ITEM,missing=True,queryResult=result.result)
             if result.returned != 1:
                 raise RuntimeError('Workshop item missing from query')
             details = ItemDetails()
             if not self.api.SteamAPI_ISteamUGC_GetQueryUGCResult(self.ugc, handle, 0, C.byref(details)):
                 raise RuntimeError('Workshop details query failed')
+            if details.item == ITEM and details.result == 9 and allow_missing:
+                return dict(workshopId=ITEM,missing=True,detailsResult=details.result)
             if details.item != ITEM or details.result != 1 or details.consumer_app != APP or details.owner != OWNER:
                 raise RuntimeError('Workshop identity or details layout could not be verified; refusing mutations')
             if details.children > 4096:
@@ -198,14 +202,14 @@ class Steam:
                 raise RuntimeError('Removal callback identity mismatch; query before retrying')
             completed(dict(operation='removeDependency',workshopId=child,status='complete',result=result.result))
 
-    def upload_page(self, files, existing, description=None, replace_gallery=False):
-        """RVI's preview updater, restricted to this already-unlisted item.
+    def upload_page(self, files, existing, description=None, replace_gallery=False, expected_visibility=3):
+        """RVI's preview updater, restricted to the caller's verified item.
 
         Does not set content, main cover, title, tags or visibility. Query before
         retrying after an unknown SubmitItemUpdate outcome.
         """
-        if existing['workshopId'] != ITEM or existing['visibility'] != 3:
-            raise ValueError('Page update requires the verified unlisted item')
+        if existing['workshopId'] != ITEM or existing['visibility'] != expected_visibility:
+            raise ValueError('Page update requires the verified release item and visibility')
         handle = self.api.SteamAPI_ISteamUGC_StartItemUpdate(self.ugc, APP, ITEM)
         if not handle or handle == 2**64 - 1:
             raise RuntimeError('Invalid item update')

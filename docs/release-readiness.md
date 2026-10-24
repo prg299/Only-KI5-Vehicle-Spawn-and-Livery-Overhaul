@@ -1,6 +1,6 @@
 # Release readiness - 0.3.2
 
-The source candidate passed focused native single-player, two-client dedicated-server and full-restart checks. The fourteen-image gallery and requested description/requirements edits are live on unlisted Workshop item 3825545131. SteamCMD committed the 0.3.2 content update, and its official download matches all 290 files (manifest 4804580298420381499). Post-content owner page verification awaits Steam desktop reconnection; publication/download records are in [publication](workshop-publication.md). Public release remains pending.
+The owner requested a fresh public item named **ONLY KI5: Vehicle Spawn & Skins** on 2026-10-24. [Public replacement status](public-release-20261024.md) records the new item 3825999183, description, fourteen-image gallery and retirement of item 3825545131. The prior 0.3.2 candidate passed focused native SP, two-client dedicated-server and full-restart checks. The public player payload changes only its two descriptor display names; canonical comparison proves all gameplay bytes unchanged. Existing acceptance limits below still apply to the public release.
 
 ## Verified candidate
 

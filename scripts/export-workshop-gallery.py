@@ -57,7 +57,8 @@ for n,location in enumerate(locations,1):
   composedMaster=composed.relative_to(ROOT).as_posix(),format='JPEG',opaque=True,jpegQuality=90,chromaSubsampling='4:4:4',
   bytes=target.stat().st_size,beforeTinyPngBytes=target.stat().st_size,sha256=sha(target),
   tinyPngCompression='pending',captureProvenance=record_path.relative_to(ROOT).as_posix()))
-manifest=dict(workshopId='3825545131',nativeGame='Project Zomboid 42.21.0',
+identity=json.loads((ROOT/'release/workshop/steamcmd-identity.json').read_text('utf8'))
+manifest=dict(workshopId=identity['workshopId'],nativeGame='Project Zomboid 42.21.0',
  source='Unposed natural world generation in owned native photo worlds',sceneGeneratedByAI=False,
  generatedContribution='Transparent location lettering only',dimensions=[1024,512],
  processing='Native footage crop and aspect-preserving downsample; separate title composite and JPEG encoding',

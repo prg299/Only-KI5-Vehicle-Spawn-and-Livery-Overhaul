@@ -11,7 +11,7 @@ import json
 from urllib.parse import urlparse
 from urllib.request import urlopen
 import steam_ugc
-from workshop_upload import RELEASE, PRIVATE, saved_id, write
+from workshop_upload import RELEASE, PRIVATE, saved_id, write, PROTECTED_IDS, TARGET_VISIBILITY
 
 
 def main():
@@ -29,8 +29,8 @@ def main():
     if args.replace_gallery and (not args.upload or args.description_only):
         parser.error('--replace-gallery requires --upload and cannot combine with --description-only')
     item = saved_id()
-    if item != '3825545131':
-        raise ValueError('Gallery tool is restricted to the new Only KI5 item')
+    if not item or item in PROTECTED_IDS:
+        raise ValueError('Gallery tool requires the current Only KI5 identity')
     steam_ugc.ITEM = int(item)
     steam_ugc.DEPENDENCIES = {int(d['workshopId']): d['name'] for d in
                              json.loads((RELEASE/'dependencies.json').read_text('utf-8'))}
@@ -59,8 +59,8 @@ def main():
             print('Steam CDN originals match all '+str(len(checks))+' reviewed gallery images byte for byte')
         if not args.upload:
             return
-        if before['visibility'] != 3 or set(before['dependencies']) != set(steam_ugc.DEPENDENCIES):
-            raise ValueError('Unlisted visibility and exact requirements must be verified first')
+        if before['visibility'] != TARGET_VISIBILITY or set(before['dependencies']) != set(steam_ugc.DEPENDENCIES):
+            raise ValueError('Release visibility and exact requirements must be verified first')
         manifest = json.loads((RELEASE/'gallery/manifest.json').read_text('utf-8'))
         files = []
         for record in manifest['images']:
@@ -98,7 +98,7 @@ def main():
         write(PRIVATE/'gallery-attempt.json', attempt)
         after=before;batches=[]
         if args.description_only or (cursor==len(files) and description is not None):
-            steam.upload_page([],after,description)
+            steam.upload_page([],after,description,expected_visibility=TARGET_VISIBILITY)
             after=steam.query()
         while cursor<len(files):
             available=steam.cloud_quota()['availableBytes']
@@ -108,7 +108,7 @@ def main():
                 if size+path.stat().st_size>budget:break
                 batch.append(path);size+=path.stat().st_size
             if not batch:raise ValueError('A reviewed image exceeds available staging quota; no quality reduction attempted')
-            steam.upload_page(batch,after,description if not batches else None,replace_first)
+            steam.upload_page(batch,after,description if not batches else None,replace_first,TARGET_VISIBILITY)
             replace_first=False;cursor+=len(batch);after=steam.query()
             if [p['name'] for p in after['previews']]!=names[:cursor]:
                 raise RuntimeError('Batch order verification pending; query before resuming')
@@ -136,7 +136,7 @@ def main():
         write(RELEASE/'page-update-verified.json', receipt)
         write(RELEASE/'page-verified.json', dict(queriedUtc=stamp, **after))
         write(PRIVATE/'gallery-attempt.json', dict(attempt, status='verified'))
-        print('Verified '+str(len(after['previews']))+' ordered gallery images; cover, unlisted visibility and requirements preserved')
+        print('Verified '+str(len(after['previews']))+' ordered gallery images; cover, release visibility and requirements preserved')
     finally:
         steam.api.SteamAPI_Shutdown()
 

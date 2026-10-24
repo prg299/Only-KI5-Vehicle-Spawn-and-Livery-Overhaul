@@ -1,12 +1,12 @@
-# Only KI5: Vehicle Spawn & Livery Overhaul
+# ONLY KI5: Vehicle Spawn & Skins
 
-Put KI5 on Kentucky's roads. **Only KI5: Vehicle Spawn & Livery Overhaul** brings KI5-only traffic, regional police liveries, profession vehicles, roadside stories and military fleet tuning together for **Project Zomboid Build 42.21**.
+Put KI5 on Kentucky's roads. **ONLY KI5: Vehicle Spawn & Skins** brings KI5-only traffic, regional police liveries, profession vehicles, roadside stories and military fleet tuning together for **Project Zomboid Build 42.21**.
 
-![Only KI5: Vehicle Spawn & Livery Overhaul](release/workshop/only-ki5-overhaul-preview.png)
+![ONLY KI5: Vehicle Spawn & Skins](release/workshop/only-ki5-overhaul-preview.png)
 
-The [Workshop gallery](https://steamcommunity.com/sharedfiles/filedetails/?id=3825545131) has fourteen location-labelled natural gameplay images: seven regional police/security scenes (one sheriff location), the two approved military scenes, Louisville highway and four civilian/profession scenes. [Capture sources, titles and publication checks](docs/workshop-gallery.md) are recorded separately from gameplay acceptance.
+The [new Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3825999183) is being published with the fourteen reviewed location-labelled natural gameplay images: seven regional police/security scenes (one sheriff location), the two approved military scenes, Louisville highway and four civilian/profession scenes. [Capture sources](docs/workshop-gallery.md) and [public replacement records](docs/public-release-20261024.md) are separate from gameplay acceptance.
 
-**0.3.2 — public source / unlisted Workshop testing candidate.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Native single-player and two-client dedicated-server results are recorded in [native acceptance](docs/native-acceptance.md). [Unlisted Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3825545131); see [publication verification](docs/workshop-publication.md) before installation.
+**0.3.2 — public release being published at the owner's request.** Community integration by Erika (prg299), based on the author's private Vehicle Suite 1.1.4. Includes attributed More Car Variants, Consistent Camo, police skins/hotfix, Vehicle Military Zones and No Vanilla duplicate-selection data. Original KI5 vehicles, damnlib and More Car Features remain external. Authored native world helpers replace YAPZLib; no separate support library is needed. Native single-player and two-client dedicated-server results are recorded in [native acceptance](docs/native-acceptance.md). The internal mod ID remains stable; only the two descriptor display names change in the player payload. The previous unlisted item 3825545131 will be deleted after the new public item is verified; the private predecessor 3806374180 is protected.
 
 ## What it does
 
