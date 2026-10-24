@@ -2451,7 +2451,5136 @@
         }
       },
       "frames": {}
+    },
+    "mixed-multiplayer": {
+      "run": "optional-034-mixed-verified",
+      "modules": [
+        "ZombieBuddy",
+        "damnlib",
+        "59meteor",
+        "80manKat1",
+        "92amgeneralM998",
+        "92fordCVPI",
+        "WayMoreCars",
+        "OnlyKI5VehicleSpawnLiveryOverhaul",
+        "OnlyKI5Acceptance_Dev"
+      ],
+      "cleanExits": {
+        "a": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "gameInJob": true,
+          "keeperInJob": true
+        },
+        "b": {
+          "exitCode": 0,
+          "desktopSwitched": false,
+          "gameInJob": true,
+          "keeperInJob": true
+        },
+        "server": {
+          "exitCode": 0
+        }
+      },
+      "records": {
+        "optional-fleet-acceptance": {
+          "menuOnly": false,
+          "checks": "Partial native server registry, 57 client/server variant schemas, natural vehicle peer states, silent-siren positive control and explicit asphalt-road visual fixture",
+          "transport": "No-Steam loopback; not a production Steam-hosting claim"
+        },
+        "optional-fleet-authority": {
+          "available": 28,
+          "groups": {
+            "civilian": 1,
+            "compact": 1,
+            "luxury": 1,
+            "sports": 1,
+            "wagon": 1,
+            "pickup": 1,
+            "van": 1,
+            "commercial": 1,
+            "suv": 1,
+            "police": 19,
+            "prison": 0,
+            "fire": 1,
+            "ranger": 0,
+            "ambulance": 1,
+            "taxi": 1,
+            "militaryCar": 1,
+            "militaryTruck": 1,
+            "militaryTrailer": 1,
+            "trailer": 0,
+            "policeGeneric": 8,
+            "commercialVan": 1,
+            "military": 3,
+            "modern": 1,
+            "normal": 1,
+            "offroad": 1,
+            "prisonPolice": 8,
+            "race": 1,
+            "suiteAlias_VanRadioJJ": 0,
+            "suiteAlias_Trailer": 0,
+            "suiteAlias_TrailerCover": 0,
+            "suiteAlias_TrailerAdvert": 0,
+            "suiteAlias_Trailer_Livestock": 0,
+            "suiteAlias_Trailer_Horsebox": 0
+          },
+          "zones": {
+            "parkingstall": 5,
+            "trailerpark": 2,
+            "bad": 3,
+            "medium": 2,
+            "good": 2,
+            "luxuryDealership": 2,
+            "sport": 2,
+            "junkyard": 6,
+            "trafficjamw": 10,
+            "trafficjame": 10,
+            "trafficjamn": 10,
+            "trafficjams": 10,
+            "police": 6,
+            "prison": 6,
+            "fire": 1,
+            "ranger": 0,
+            "mccoy": 1,
+            "carpenter": 1,
+            "postal": 1,
+            "spiffo": 1,
+            "ambulance": 1,
+            "radio": 1,
+            "fossoil": 1,
+            "scarlet": 1,
+            "massgenfac": 1,
+            "transit": 1,
+            "network3": 1,
+            "kyheralds": 1,
+            "lectromax": 1,
+            "knoxdisti": 1,
+            "advertising": 0,
+            "airportshuttle": 2,
+            "airportservice": 1,
+            "farm": 1,
+            "business": 1,
+            "business2": 1,
+            "business3": 1,
+            "business4": 1,
+            "business5": 1,
+            "business6": 1,
+            "business7": 1,
+            "business8": 1,
+            "business9": 1,
+            "business10": 1,
+            "business11": 1,
+            "business12": 1,
+            "normalburnt": 14,
+            "specialburnt": 11,
+            "trades": 1,
+            "delivery": 1,
+            "professional": 2,
+            "middleClass": 1,
+            "struggling": 1,
+            "evacuee": 1,
+            "racecar": 2,
+            "military": 4,
+            "army": 0,
+            "firegarage": 1,
+            "firetruck": 1,
+            "modified_trfjm": 10,
+            "special_prisonbus": 0,
+            "special_schoolbus": 0,
+            "special_boxtruck": 0,
+            "special_banktruck": 0,
+            "special_kntnr": 0,
+            "military_vehicles": 0,
+            "parallelstall": 5,
+            "special_gasstation": 5,
+            "usedcarsdealership": 4,
+            "knoxtelecomms": 1,
+            "military_burnt": 1,
+            "military_container": 0,
+            "military_container_angled": 0,
+            "military_trailer": 1,
+            "military_trailer_angled": 1,
+            "military_trailer_light": 1,
+            "military_trailer_light_angled": 1,
+            "military_trailer_heavy": 0,
+            "military_trailer_heavy_angled": 0,
+            "military_vehicle": 2,
+            "military_vehicle_angled": 2,
+            "military_vehicle_light": 1,
+            "military_vehicle_light_angled": 1,
+            "military_vehicle_heavy": 1,
+            "military_vehicle_heavy_angled": 1,
+            "only_ki5_overhaul_police_louisville": 2,
+            "only_ki5_overhaul_police_louisville_county": 0,
+            "only_ki5_overhaul_police_muldraugh": 4,
+            "only_ki5_overhaul_police_meade": 2,
+            "only_ki5_overhaul_police_westpoint": 2,
+            "only_ki5_overhaul_police_bulletin": 2,
+            "only_ki5_overhaul_police_airport_security": 0,
+            "only_ki5_overhaul_police_prison_transport": 0
+          },
+          "invalid": {},
+          "professionChoices": 51274,
+          "variants": {
+            "1": {
+              "name": "Base.93fordF250jplandscaping",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "2": {
+              "name": "Base.93fordF350airport",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "3": {
+              "name": "Base.93fordF350as",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "4": {
+              "name": "Base.93fordF350fossoil",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "5": {
+              "name": "Base.93fordF350mccoy",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "6": {
+              "name": "Base.76chevyK10calloway",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "7": {
+              "name": "Base.76chevyK10camille",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "8": {
+              "name": "Base.76chevyK10fossoil",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "9": {
+              "name": "Base.76chevyK10kentuckylumber",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "10": {
+              "name": "Base.76chevyK10yingswood",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "11": {
+              "name": "Base.76chevyK20kimble",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "12": {
+              "name": "Base.76chevyK20mccoy",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "13": {
+              "name": "Base.76chevyK20mrc",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "14": {
+              "name": "Base.76chevyK20utilityDpw",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "15": {
+              "name": "Base.76chevyK20utilityFossoil",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "16": {
+              "name": "Base.76chevyK20utilityMcCoy",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "17": {
+              "name": "Base.76chevyK30CCutilityDpw",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "18": {
+              "name": "Base.76chevyK30CCutilityFossoil",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "19": {
+              "name": "Base.76chevyK30CCutilityMcCoy",
+              "base": "76chevyKseries",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "20": {
+              "name": "Base.86chevyM1010ambulance",
+              "base": "86chevyCUCV",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "21": {
+              "name": "Base.67commandoRanger",
+              "base": "67commando",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "22": {
+              "name": "Base.87fordB700Ksprison",
+              "base": "87fordB700",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "23": {
+              "name": "Base.87fordF700Lswat",
+              "base": "87fordB700",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "24": {
+              "name": "Base.89fordBroncoBulletin",
+              "base": "89fordBronco",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "25": {
+              "name": "Base.89fordBroncoMeade",
+              "base": "89fordBronco",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "26": {
+              "name": "Base.89fordBroncoMuldraugh",
+              "base": "89fordBronco",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "27": {
+              "name": "Base.89fordBroncoWestPoint",
+              "base": "89fordBronco",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "28": {
+              "name": "Base.91fordLTDpdBulletin",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "29": {
+              "name": "Base.91fordLTDpdLCPD",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "30": {
+              "name": "Base.91fordLTDpdLouisville",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "31": {
+              "name": "Base.91fordLTDpdMeade",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "32": {
+              "name": "Base.91fordLTDpdMuldraugh",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "33": {
+              "name": "Base.91fordLTDpdWestPoint",
+              "base": "91fordLTD",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "34": {
+              "name": "Base.92amgeneralM998SWAT",
+              "base": "92amgeneralM998",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "35": {
+              "name": "Base.92fordCVPI2Bulletin",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "36": {
+              "name": "Base.92fordCVPI2Louisville",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "37": {
+              "name": "Base.92fordCVPI2Meade",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "38": {
+              "name": "Base.92fordCVPI2Muldraugh",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "39": {
+              "name": "Base.92fordCVPI2WestPoint",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "40": {
+              "name": "Base.92fordCVPIBulletin",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "41": {
+              "name": "Base.92fordCVPILouisville",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "42": {
+              "name": "Base.92fordCVPIMeade",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "43": {
+              "name": "Base.92fordCVPIMuldraugh",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "44": {
+              "name": "Base.92fordCVPIWestPoint",
+              "base": "92fordCVPI",
+              "enabled": true,
+              "skins": 1,
+              "parts": 55,
+              "available": true
+            },
+            "45": {
+              "name": "Base.93chevySilveradoCClongLouisville",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "46": {
+              "name": "Base.93chevySilveradoCClongMuldraugh",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "47": {
+              "name": "Base.93chevySilveradoCClongSecurity",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "48": {
+              "name": "Base.93chevySuburbanpdBulletin",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "49": {
+              "name": "Base.93chevySuburbanpdLouisville",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "50": {
+              "name": "Base.93chevySuburbanpdMeade",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "51": {
+              "name": "Base.93chevySuburbanpdMuldraugh",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "52": {
+              "name": "Base.93chevySuburbanpdWestPoint",
+              "base": "93chevySuburban",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "53": {
+              "name": "Base.93fordF350pdBulletin",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "54": {
+              "name": "Base.93fordF350pdLouisville",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "55": {
+              "name": "Base.93fordF350pdMeade",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "56": {
+              "name": "Base.93fordF350pdMuldraugh",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            },
+            "57": {
+              "name": "Base.93fordF350pdWestPoint",
+              "base": "93fordF350",
+              "enabled": false,
+              "skins": 0,
+              "parts": 0,
+              "available": false
+            }
+          },
+          "vehicles": {
+            "1": {
+              "id": 184,
+              "sqlId": 170,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1831.9949951171875
+            },
+            "2": {
+              "id": 195,
+              "sqlId": 161,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12578.7705078125,
+              "y": 1802.3621826171875
+            },
+            "3": {
+              "id": 118,
+              "sqlId": 143,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1776.0050048828125
+            },
+            "4": {
+              "id": 125,
+              "sqlId": 135,
+              "script": "Base.92fordCVPI2Louisville",
+              "available": true,
+              "skin": 0,
+              "lights": 2,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1736.0050048828125
+            },
+            "5": {
+              "id": 146,
+              "sqlId": 204,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12652.1142578125,
+              "y": 1799.93603515625
+            },
+            "6": {
+              "id": 161,
+              "sqlId": 186,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1846.0050048828125
+            },
+            "7": {
+              "id": 214,
+              "sqlId": 203,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12652.7626953125,
+              "y": 1796.0731201171875
+            },
+            "8": {
+              "id": 151,
+              "sqlId": 196,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12628.9609375,
+              "y": 1799.7884521484375
+            },
+            "9": {
+              "id": 135,
+              "sqlId": 124,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1731.9949951171875
+            },
+            "10": {
+              "id": 236,
+              "sqlId": 156,
+              "script": "Base.92fordCVPItaxi",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12566.267578125,
+              "y": 1802.8841552734375
+            },
+            "11": {
+              "id": 142,
+              "sqlId": 180,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1826.0050048828125
+            },
+            "12": {
+              "id": 190,
+              "sqlId": 166,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1821.9949951171875
+            },
+            "13": {
+              "id": 194,
+              "sqlId": 162,
+              "script": "Base.59meteor",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12584.6513671875,
+              "y": 1796.7955322265625
+            },
+            "14": {
+              "id": 156,
+              "sqlId": 193,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12616.142578125,
+              "y": 1802.38916015625
+            },
+            "15": {
+              "id": 167,
+              "sqlId": 184,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1841.0050048828125
+            },
+            "16": {
+              "id": 143,
+              "sqlId": 181,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1831.0050048828125
+            },
+            "17": {
+              "id": 232,
+              "sqlId": 155,
+              "script": "Base.92fordCVPILouisville",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12560.513671875,
+              "y": 1802.7701416015625
+            },
+            "18": {
+              "id": 128,
+              "sqlId": 132,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1781.9949951171875
+            },
+            "19": {
+              "id": 153,
+              "sqlId": 194,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12622.1162109375,
+              "y": 1802.8194580078125
+            },
+            "20": {
+              "id": 227,
+              "sqlId": 279,
+              "script": "Base.92fordCVPILouisville",
+              "available": true,
+              "skin": 0,
+              "lights": 2,
+              "siren": 0,
+              "x": 12590.5,
+              "y": 1796.5
+            },
+            "21": {
+              "id": 229,
+              "sqlId": 153,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12560.98046875,
+              "y": 1796.76708984375
+            },
+            "22": {
+              "id": 124,
+              "sqlId": 136,
+              "script": "Base.TaxiBurnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1736.0050048828125
+            },
+            "23": {
+              "id": 217,
+              "sqlId": 201,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12640.130859375,
+              "y": 1802.2122802734375
+            },
+            "24": {
+              "id": 155,
+              "sqlId": 189,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12660.5,
+              "y": 1784.06005859375
+            },
+            "25": {
+              "id": 230,
+              "sqlId": 208,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12664.8984375,
+              "y": 1799.1700439453125
+            },
+            "26": {
+              "id": 196,
+              "sqlId": 160,
+              "script": "Base.VanRadioBurnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12578.25,
+              "y": 1796.3310546875
+            },
+            "27": {
+              "id": 152,
+              "sqlId": 195,
+              "script": "Base.92fordCVPItaxi",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12628.49609375,
+              "y": 1796.238037109375
+            },
+            "28": {
+              "id": 133,
+              "sqlId": 126,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1746.9949951171875
+            },
+            "29": {
+              "id": 181,
+              "sqlId": 178,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1816.0050048828125
+            },
+            "30": {
+              "id": 193,
+              "sqlId": 163,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12587.3701171875,
+              "y": 1802.4085693359375
+            },
+            "31": {
+              "id": 131,
+              "sqlId": 129,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1761.9949951171875
+            },
+            "32": {
+              "id": 160,
+              "sqlId": 187,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1851.0050048828125
+            },
+            "33": {
+              "id": 126,
+              "sqlId": 134,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1731.0050048828125
+            },
+            "34": {
+              "id": 136,
+              "sqlId": 123,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12565.0595703125,
+              "y": 1775.5
+            },
+            "35": {
+              "id": 122,
+              "sqlId": 138,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1746.0050048828125
+            },
+            "36": {
+              "id": 157,
+              "sqlId": 190,
+              "script": "Base.59meteor",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12610.953125,
+              "y": 1796.444091796875
+            },
+            "37": {
+              "id": 192,
+              "sqlId": 164,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1811.9949951171875
+            },
+            "38": {
+              "id": 132,
+              "sqlId": 127,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1751.9949951171875
+            },
+            "39": {
+              "id": 185,
+              "sqlId": 169,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1831.9949951171875
+            },
+            "40": {
+              "id": 166,
+              "sqlId": 185,
+              "script": "Base.CarNormalBurnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1841.0050048828125
+            },
+            "41": {
+              "id": 252,
+              "sqlId": 149,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12548.1318359375,
+              "y": 1796.560302734375
+            },
+            "42": {
+              "id": 188,
+              "sqlId": 168,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1826.9949951171875
+            },
+            "43": {
+              "id": 158,
+              "sqlId": 188,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1851.0050048828125
+            },
+            "44": {
+              "id": 123,
+              "sqlId": 137,
+              "script": "Base.59ambulance",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1746.0050048828125
+            },
+            "45": {
+              "id": 203,
+              "sqlId": 175,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1801.0050048828125
+            },
+            "46": {
+              "id": 154,
+              "sqlId": 192,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12622.8623046875,
+              "y": 1796.8017578125
+            },
+            "47": {
+              "id": 116,
+              "sqlId": 145,
+              "script": "Base.SmallCar02Burnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1786.0050048828125
+            },
+            "48": {
+              "id": 129,
+              "sqlId": 131,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1776.9949951171875
+            },
+            "49": {
+              "id": 117,
+              "sqlId": 144,
+              "script": "Base.92fordCVPItaxi",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1776.0050048828125
+            },
+            "50": {
+              "id": 119,
+              "sqlId": 142,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1771.0050048828125
+            },
+            "51": {
+              "id": 240,
+              "sqlId": 157,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12562.0595703125,
+              "y": 1833.5
+            },
+            "52": {
+              "id": 115,
+              "sqlId": 146,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1786.0050048828125
+            },
+            "53": {
+              "id": 121,
+              "sqlId": 139,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1756.0050048828125
+            },
+            "54": {
+              "id": 191,
+              "sqlId": 165,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1821.9949951171875
+            },
+            "55": {
+              "id": 114,
+              "sqlId": 148,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1791.0050048828125
+            },
+            "56": {
+              "id": 147,
+              "sqlId": 206,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12658.5048828125,
+              "y": 1802.4329833984375
+            },
+            "57": {
+              "id": 197,
+              "sqlId": 159,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12572.13671875,
+              "y": 1802.5693359375
+            },
+            "58": {
+              "id": 189,
+              "sqlId": 167,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1826.9949951171875
+            },
+            "59": {
+              "id": 235,
+              "sqlId": 205,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12658.7421875,
+              "y": 1796.2786865234375
+            },
+            "60": {
+              "id": 173,
+              "sqlId": 182,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1836.0050048828125
+            },
+            "61": {
+              "id": 255,
+              "sqlId": 199,
+              "script": "Base.CarNormalBurnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12640.392578125,
+              "y": 1796.0025634765625
+            },
+            "62": {
+              "id": 176,
+              "sqlId": 173,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1851.9949951171875
+            },
+            "63": {
+              "id": 179,
+              "sqlId": 177,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1811.0050048828125
+            },
+            "64": {
+              "id": 182,
+              "sqlId": 172,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 1,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1846.9949951171875
+            },
+            "65": {
+              "id": 246,
+              "sqlId": 151,
+              "script": "Base.59meteor",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12554.5390625,
+              "y": 1796.4022216796875
+            },
+            "66": {
+              "id": 137,
+              "sqlId": 179,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1821.0050048828125
+            },
+            "67": {
+              "id": 130,
+              "sqlId": 130,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1771.9949951171875
+            },
+            "68": {
+              "id": 253,
+              "sqlId": 200,
+              "script": "Base.SmallCar02Burnt",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12646.875,
+              "y": 1796.2371826171875
+            },
+            "69": {
+              "id": 134,
+              "sqlId": 125,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1741.9949951171875
+            },
+            "70": {
+              "id": 254,
+              "sqlId": 198,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 5,
+              "lights": 0,
+              "siren": 0,
+              "x": 12634.3935546875,
+              "y": 1802.0343017578125
+            },
+            "71": {
+              "id": 127,
+              "sqlId": 133,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12594.5,
+              "y": 1791.9949951171875
+            },
+            "72": {
+              "id": 183,
+              "sqlId": 171,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12597.5,
+              "y": 1836.9949951171875
+            },
+            "73": {
+              "id": 178,
+              "sqlId": 174,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 7,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1796.0050048828125
+            },
+            "74": {
+              "id": 168,
+              "sqlId": 183,
+              "script": "Base.92fordCVPItaxi",
+              "available": true,
+              "skin": 0,
+              "lights": 0,
+              "siren": 0,
+              "x": 12603.5,
+              "y": 1836.0050048828125
+            },
+            "75": {
+              "id": 234,
+              "sqlId": 207,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 6,
+              "lights": 0,
+              "siren": 0,
+              "x": 12670.1611328125,
+              "y": 1796.1297607421875
+            },
+            "76": {
+              "id": 245,
+              "sqlId": 158,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12572.8310546875,
+              "y": 1796.6689453125
+            },
+            "77": {
+              "id": 120,
+              "sqlId": 140,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 2,
+              "lights": 0,
+              "siren": 0,
+              "x": 12600.5,
+              "y": 1761.0050048828125
+            },
+            "78": {
+              "id": 159,
+              "sqlId": 191,
+              "script": "Base.92fordCV",
+              "available": true,
+              "skin": 3,
+              "lights": 0,
+              "siren": 0,
+              "x": 12616.7099609375,
+              "y": 1796.6201171875
+            },
+            "79": {
+              "id": 187,
+              "sqlId": 152,
+              "script": "Base.59meteor",
+              "available": true,
+              "skin": 4,
+              "lights": 0,
+              "siren": 0,
+              "x": 12554.8740234375,
+              "y": 1802.8369140625
+            }
+          },
+          "menuOnly": false
+        },
+        "optional-fleet-client-schemas": {
+          "a": {
+            "available": 28,
+            "variants": {
+              "1": {
+                "name": "Base.93fordF250jplandscaping",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "2": {
+                "name": "Base.93fordF350airport",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "3": {
+                "name": "Base.93fordF350as",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "4": {
+                "name": "Base.93fordF350fossoil",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "5": {
+                "name": "Base.93fordF350mccoy",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "6": {
+                "name": "Base.76chevyK10calloway",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "7": {
+                "name": "Base.76chevyK10camille",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "8": {
+                "name": "Base.76chevyK10fossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "9": {
+                "name": "Base.76chevyK10kentuckylumber",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "10": {
+                "name": "Base.76chevyK10yingswood",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "11": {
+                "name": "Base.76chevyK20kimble",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "12": {
+                "name": "Base.76chevyK20mccoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "13": {
+                "name": "Base.76chevyK20mrc",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "14": {
+                "name": "Base.76chevyK20utilityDpw",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "15": {
+                "name": "Base.76chevyK20utilityFossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "16": {
+                "name": "Base.76chevyK20utilityMcCoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "17": {
+                "name": "Base.76chevyK30CCutilityDpw",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "18": {
+                "name": "Base.76chevyK30CCutilityFossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "19": {
+                "name": "Base.76chevyK30CCutilityMcCoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "20": {
+                "name": "Base.86chevyM1010ambulance",
+                "base": "86chevyCUCV",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "21": {
+                "name": "Base.67commandoRanger",
+                "base": "67commando",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "22": {
+                "name": "Base.87fordB700Ksprison",
+                "base": "87fordB700",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "23": {
+                "name": "Base.87fordF700Lswat",
+                "base": "87fordB700",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "24": {
+                "name": "Base.89fordBroncoBulletin",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "25": {
+                "name": "Base.89fordBroncoMeade",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "26": {
+                "name": "Base.89fordBroncoMuldraugh",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "27": {
+                "name": "Base.89fordBroncoWestPoint",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "28": {
+                "name": "Base.91fordLTDpdBulletin",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "29": {
+                "name": "Base.91fordLTDpdLCPD",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "30": {
+                "name": "Base.91fordLTDpdLouisville",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "31": {
+                "name": "Base.91fordLTDpdMeade",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "32": {
+                "name": "Base.91fordLTDpdMuldraugh",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "33": {
+                "name": "Base.91fordLTDpdWestPoint",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "34": {
+                "name": "Base.92amgeneralM998SWAT",
+                "base": "92amgeneralM998",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "35": {
+                "name": "Base.92fordCVPI2Bulletin",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "36": {
+                "name": "Base.92fordCVPI2Louisville",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "37": {
+                "name": "Base.92fordCVPI2Meade",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "38": {
+                "name": "Base.92fordCVPI2Muldraugh",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "39": {
+                "name": "Base.92fordCVPI2WestPoint",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "40": {
+                "name": "Base.92fordCVPIBulletin",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "41": {
+                "name": "Base.92fordCVPILouisville",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "42": {
+                "name": "Base.92fordCVPIMeade",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "43": {
+                "name": "Base.92fordCVPIMuldraugh",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "44": {
+                "name": "Base.92fordCVPIWestPoint",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "45": {
+                "name": "Base.93chevySilveradoCClongLouisville",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "46": {
+                "name": "Base.93chevySilveradoCClongMuldraugh",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "47": {
+                "name": "Base.93chevySilveradoCClongSecurity",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "48": {
+                "name": "Base.93chevySuburbanpdBulletin",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "49": {
+                "name": "Base.93chevySuburbanpdLouisville",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "50": {
+                "name": "Base.93chevySuburbanpdMeade",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "51": {
+                "name": "Base.93chevySuburbanpdMuldraugh",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "52": {
+                "name": "Base.93chevySuburbanpdWestPoint",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "53": {
+                "name": "Base.93fordF350pdBulletin",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "54": {
+                "name": "Base.93fordF350pdLouisville",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "55": {
+                "name": "Base.93fordF350pdMeade",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "56": {
+                "name": "Base.93fordF350pdMuldraugh",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "57": {
+                "name": "Base.93fordF350pdWestPoint",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              }
+            },
+            "authority": false
+          },
+          "b": {
+            "available": 28,
+            "variants": {
+              "1": {
+                "name": "Base.93fordF250jplandscaping",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "2": {
+                "name": "Base.93fordF350airport",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "3": {
+                "name": "Base.93fordF350as",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "4": {
+                "name": "Base.93fordF350fossoil",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "5": {
+                "name": "Base.93fordF350mccoy",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "6": {
+                "name": "Base.76chevyK10calloway",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "7": {
+                "name": "Base.76chevyK10camille",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "8": {
+                "name": "Base.76chevyK10fossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "9": {
+                "name": "Base.76chevyK10kentuckylumber",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "10": {
+                "name": "Base.76chevyK10yingswood",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "11": {
+                "name": "Base.76chevyK20kimble",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "12": {
+                "name": "Base.76chevyK20mccoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "13": {
+                "name": "Base.76chevyK20mrc",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "14": {
+                "name": "Base.76chevyK20utilityDpw",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "15": {
+                "name": "Base.76chevyK20utilityFossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "16": {
+                "name": "Base.76chevyK20utilityMcCoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "17": {
+                "name": "Base.76chevyK30CCutilityDpw",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "18": {
+                "name": "Base.76chevyK30CCutilityFossoil",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "19": {
+                "name": "Base.76chevyK30CCutilityMcCoy",
+                "base": "76chevyKseries",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "20": {
+                "name": "Base.86chevyM1010ambulance",
+                "base": "86chevyCUCV",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "21": {
+                "name": "Base.67commandoRanger",
+                "base": "67commando",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "22": {
+                "name": "Base.87fordB700Ksprison",
+                "base": "87fordB700",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "23": {
+                "name": "Base.87fordF700Lswat",
+                "base": "87fordB700",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "24": {
+                "name": "Base.89fordBroncoBulletin",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "25": {
+                "name": "Base.89fordBroncoMeade",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "26": {
+                "name": "Base.89fordBroncoMuldraugh",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "27": {
+                "name": "Base.89fordBroncoWestPoint",
+                "base": "89fordBronco",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "28": {
+                "name": "Base.91fordLTDpdBulletin",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "29": {
+                "name": "Base.91fordLTDpdLCPD",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "30": {
+                "name": "Base.91fordLTDpdLouisville",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "31": {
+                "name": "Base.91fordLTDpdMeade",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "32": {
+                "name": "Base.91fordLTDpdMuldraugh",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "33": {
+                "name": "Base.91fordLTDpdWestPoint",
+                "base": "91fordLTD",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "34": {
+                "name": "Base.92amgeneralM998SWAT",
+                "base": "92amgeneralM998",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "35": {
+                "name": "Base.92fordCVPI2Bulletin",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "36": {
+                "name": "Base.92fordCVPI2Louisville",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "37": {
+                "name": "Base.92fordCVPI2Meade",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "38": {
+                "name": "Base.92fordCVPI2Muldraugh",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "39": {
+                "name": "Base.92fordCVPI2WestPoint",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "40": {
+                "name": "Base.92fordCVPIBulletin",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "41": {
+                "name": "Base.92fordCVPILouisville",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "42": {
+                "name": "Base.92fordCVPIMeade",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "43": {
+                "name": "Base.92fordCVPIMuldraugh",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "44": {
+                "name": "Base.92fordCVPIWestPoint",
+                "base": "92fordCVPI",
+                "enabled": true,
+                "skins": 1,
+                "parts": 55,
+                "available": true
+              },
+              "45": {
+                "name": "Base.93chevySilveradoCClongLouisville",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "46": {
+                "name": "Base.93chevySilveradoCClongMuldraugh",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "47": {
+                "name": "Base.93chevySilveradoCClongSecurity",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "48": {
+                "name": "Base.93chevySuburbanpdBulletin",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "49": {
+                "name": "Base.93chevySuburbanpdLouisville",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "50": {
+                "name": "Base.93chevySuburbanpdMeade",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "51": {
+                "name": "Base.93chevySuburbanpdMuldraugh",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "52": {
+                "name": "Base.93chevySuburbanpdWestPoint",
+                "base": "93chevySuburban",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "53": {
+                "name": "Base.93fordF350pdBulletin",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "54": {
+                "name": "Base.93fordF350pdLouisville",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "55": {
+                "name": "Base.93fordF350pdMeade",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "56": {
+                "name": "Base.93fordF350pdMuldraugh",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              },
+              "57": {
+                "name": "Base.93fordF350pdWestPoint",
+                "base": "93fordF350",
+                "enabled": false,
+                "skins": 0,
+                "parts": 0,
+                "available": false
+              }
+            },
+            "authority": false
+          }
+        },
+        "optional-fleet-helper-exit": {
+          "exitCode": 0
+        },
+        "optional-fleet-police-photo": {
+          "id": 227,
+          "x": 12590.5,
+          "y": 1796.5,
+          "script": "Base.92fordCVPILouisville",
+          "skin": 0,
+          "lights": 2,
+          "siren": 0,
+          "floor": "blends_street_01_85",
+          "visualAcceptance": "Frames require human review; explicit construction is excluded from natural samples"
+        },
+        "audit-mp-comparison": {
+          "checkpoint": {
+            "naturalAuthority": [
+              {
+                "id": 147,
+                "sqlId": 119,
+                "script": "Base.80manKat1",
+                "skin": 1,
+                "skinCount": 5,
+                "x": 12570.5,
+                "y": 4223.9951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_MAN80LightGuards": "true",
+                  "defaultPartSet_DAMNGasCanOne": "true",
+                  "defaultPartSet_DAMNGasCanTwo": "true",
+                  "defaultPartSet_DAMNGasCanThree": "true",
+                  "defaultPartSet_DAMNGasCanFour": "true",
+                  "defaultPartSet_MAN80Tarp": "true",
+                  "defaultPartSet_MAN80Roofrack": "true"
+                }
+              },
+              {
+                "id": 150,
+                "sqlId": 116,
+                "script": "Base.92amgeneralM998",
+                "skin": 5,
+                "skinCount": 6,
+                "x": 12549.5,
+                "y": 4223.580078125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 5,
+                  "damnlib_migrated": true,
+                  "defaultPartSet_M998Roofrack": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_M998TrunkBarrier": "true",
+                  "defaultPartSet_M998BackCover": "true",
+                  "defaultPartSet_M998Muffler": "true",
+                  "defaultPartSet_DAMNBumperFront": "true"
+                }
+              },
+              {
+                "id": 146,
+                "sqlId": 120,
+                "script": "Base.80manKat1",
+                "skin": 1,
+                "skinCount": 5,
+                "x": 12573.5,
+                "y": 4223.9951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_MAN80LightGuards": "true",
+                  "defaultPartSet_DAMNGasCanOne": "true",
+                  "defaultPartSet_DAMNGasCanTwo": "true",
+                  "defaultPartSet_DAMNGasCanThree": "true",
+                  "defaultPartSet_DAMNGasCanFour": "true",
+                  "defaultPartSet_MAN80Tarp": "true",
+                  "defaultPartSet_MAN80Roofrack": "true"
+                }
+              },
+              {
+                "id": 148,
+                "sqlId": 118,
+                "script": "Base.80manKat1",
+                "skin": 0,
+                "skinCount": 5,
+                "x": 12564.5,
+                "y": 4223.9951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_MAN80LightGuards": "true",
+                  "defaultPartSet_DAMNGasCanOne": "true",
+                  "defaultPartSet_DAMNGasCanTwo": "true",
+                  "defaultPartSet_DAMNGasCanThree": "true",
+                  "defaultPartSet_DAMNGasCanFour": "true",
+                  "defaultPartSet_MAN80Tarp": "true",
+                  "defaultPartSet_MAN80Roofrack": "true"
+                }
+              },
+              {
+                "id": 149,
+                "sqlId": 117,
+                "script": "Base.92amgeneralM998",
+                "skin": 0,
+                "skinCount": 6,
+                "x": 12552.5,
+                "y": 4209.419921875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 0,
+                  "damnlib_migrated": true,
+                  "defaultPartSet_M998Roofrack": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_M998TrunkBarrier": "true",
+                  "defaultPartSet_M998BackCover": "true",
+                  "defaultPartSet_M998Muffler": "true",
+                  "defaultPartSet_DAMNBumperFront": "true"
+                }
+              }
+            ],
+            "peerMatches": {
+              "a": 5,
+              "b": 5
+            },
+            "suppressed": []
+          },
+          "highway": {
+            "naturalAuthority": [
+              {
+                "id": 220,
+                "sqlId": 160,
+                "script": "Base.VanRadioBurnt",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12578.25,
+                "y": 1796.3310546875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {}
+              },
+              {
+                "id": 188,
+                "sqlId": 140,
+                "script": "Base.92fordCV",
+                "skin": 2,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1761.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 146,
+                "sqlId": 190,
+                "script": "Base.59meteor",
+                "skin": 4,
+                "skinCount": 7,
+                "x": 12610.953125,
+                "y": 1796.444091796875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true"
+                }
+              },
+              {
+                "id": 197,
+                "sqlId": 131,
+                "script": "Base.92fordCV",
+                "skin": 5,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1776.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 144,
+                "sqlId": 195,
+                "script": "Base.92fordCVPItaxi",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12628.49609375,
+                "y": 1796.238037109375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 224,
+                "sqlId": 159,
+                "script": "Base.92fordCV",
+                "skin": 1,
+                "skinCount": 8,
+                "x": 12572.13671875,
+                "y": 1802.5693359375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 204,
+                "sqlId": 175,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1801.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 183,
+                "sqlId": 144,
+                "script": "Base.92fordCVPItaxi",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12603.5,
+                "y": 1776.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 150,
+                "sqlId": 194,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12622.1162109375,
+                "y": 1802.8194580078125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 205,
+                "sqlId": 177,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1811.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 147,
+                "sqlId": 191,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12616.7099609375,
+                "y": 1796.6201171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 201,
+                "sqlId": 180,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1826.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 174,
+                "sqlId": 153,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 12560.98046875,
+                "y": 1796.76708984375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 245,
+                "sqlId": 130,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12597.5,
+                "y": 1771.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 195,
+                "sqlId": 133,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1791.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 189,
+                "sqlId": 139,
+                "script": "Base.92fordCV",
+                "skin": 2,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1756.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 207,
+                "sqlId": 174,
+                "script": "Base.92fordCV",
+                "skin": 7,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1796.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 226,
+                "sqlId": 155,
+                "script": "Base.92fordCVPILouisville",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12560.513671875,
+                "y": 1802.7701416015625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "off",
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 225,
+                "sqlId": 158,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 12572.8310546875,
+                "y": 1796.6689453125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 236,
+                "sqlId": 127,
+                "script": "Base.92fordCV",
+                "skin": 2,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1751.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 218,
+                "sqlId": 162,
+                "script": "Base.59meteor",
+                "skin": 0,
+                "skinCount": 7,
+                "x": 12584.6513671875,
+                "y": 1796.7955322265625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true"
+                }
+              },
+              {
+                "id": 211,
+                "sqlId": 168,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12597.5,
+                "y": 1826.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 213,
+                "sqlId": 167,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1826.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 214,
+                "sqlId": 165,
+                "script": "Base.92fordCV",
+                "skin": 7,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1821.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 222,
+                "sqlId": 156,
+                "script": "Base.92fordCVPItaxi",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12566.267578125,
+                "y": 1802.8841552734375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 221,
+                "sqlId": 161,
+                "script": "Base.92fordCV",
+                "skin": 0,
+                "skinCount": 8,
+                "x": 12578.7705078125,
+                "y": 1802.3621826171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 145,
+                "sqlId": 196,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12628.9609375,
+                "y": 1799.7884521484375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 217,
+                "sqlId": 164,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1811.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 148,
+                "sqlId": 192,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 12622.8623046875,
+                "y": 1796.8017578125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 184,
+                "sqlId": 143,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1776.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 185,
+                "sqlId": 142,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1771.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 196,
+                "sqlId": 132,
+                "script": "Base.92fordCV",
+                "skin": 7,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1781.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 178,
+                "sqlId": 148,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1791.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 180,
+                "sqlId": 198,
+                "script": "Base.92fordCV",
+                "skin": 5,
+                "skinCount": 8,
+                "x": 12634.3935546875,
+                "y": 1802.0343017578125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 149,
+                "sqlId": 193,
+                "script": "Base.92fordCV",
+                "skin": 0,
+                "skinCount": 8,
+                "x": 12616.142578125,
+                "y": 1802.38916015625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 176,
+                "sqlId": 146,
+                "script": "Base.92fordCV",
+                "skin": 1,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1786.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 182,
+                "sqlId": 145,
+                "script": "Base.SmallCar02Burnt",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 12600.5,
+                "y": 1786.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {}
+              },
+              {
+                "id": 200,
+                "sqlId": 178,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12603.5,
+                "y": 1816.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 240,
+                "sqlId": 129,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 12594.5,
+                "y": 1761.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 219,
+                "sqlId": 163,
+                "script": "Base.92fordCV",
+                "skin": 1,
+                "skinCount": 8,
+                "x": 12587.3701171875,
+                "y": 1802.4085693359375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "rtrafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 216,
+                "sqlId": 166,
+                "script": "Base.92fordCV",
+                "skin": 5,
+                "skinCount": 8,
+                "x": 12597.5,
+                "y": 1821.9949951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 246,
+                "sqlId": 123,
+                "script": "Base.92fordCV",
+                "skin": 5,
+                "skinCount": 8,
+                "x": 12565.0595703125,
+                "y": 1775.5,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 202,
+                "sqlId": 179,
+                "script": "Base.92fordCV",
+                "skin": 7,
+                "skinCount": 8,
+                "x": 12600.5,
+                "y": 1821.0050048828125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "modified_trfjm",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              }
+            ],
+            "peerMatches": {
+              "a": 43,
+              "b": 43
+            },
+            "suppressed": []
+          },
+          "secret-base": {
+            "naturalAuthority": [
+              {
+                "id": 212,
+                "sqlId": 210,
+                "script": "Base.TrailerM101A3cargo",
+                "skin": 5,
+                "skinCount": 6,
+                "x": 5587.5,
+                "y": 12437.9951171875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military_trailer_light",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_M101A3Cover": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 247,
+                "sqlId": 211,
+                "script": "Base.92amgeneralM998",
+                "skin": 3,
+                "skinCount": 6,
+                "x": 5588.580078125,
+                "y": 12454.5,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military_vehicle",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 3,
+                  "damnlib_migrated": true,
+                  "defaultPartSet_M998Roofrack": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_M998TrunkBarrier": "true",
+                  "defaultPartSet_M998BackCover": "true",
+                  "defaultPartSet_M998Muffler": "true",
+                  "defaultPartSet_DAMNBumperFront": "true"
+                }
+              },
+              {
+                "id": 250,
+                "sqlId": 214,
+                "script": "Base.92fordCV",
+                "skin": 4,
+                "skinCount": 8,
+                "x": 5625.5,
+                "y": 12492.9404296875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 248,
+                "sqlId": 212,
+                "script": "Base.92fordCV",
+                "skin": 6,
+                "skinCount": 8,
+                "x": 5616.5,
+                "y": 12469.9404296875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 233,
+                "sqlId": 209,
+                "script": "Base.92amgeneralM998",
+                "skin": 3,
+                "skinCount": 6,
+                "x": 5578.9951171875,
+                "y": 12436.5,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "military",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.HumveeSkinV1": 3,
+                  "damnlib_migrated": true,
+                  "defaultPartSet_M998Roofrack": "true",
+                  "defaultPartSet_DAMNSpareTire": "true",
+                  "defaultPartSet_DAMNMudflaps": "true",
+                  "defaultPartSet_M998TrunkBarrier": "true",
+                  "defaultPartSet_M998BackCover": "true",
+                  "defaultPartSet_M998Muffler": "true",
+                  "defaultPartSet_DAMNBumperFront": "true"
+                }
+              }
+            ],
+            "peerMatches": {
+              "a": 5,
+              "b": 5
+            },
+            "suppressed": []
+          },
+          "west-point": {
+            "naturalAuthority": [
+              {
+                "id": 177,
+                "sqlId": 224,
+                "script": "Base.92fordCVPIWestPoint",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11811.5,
+                "y": 6796.93994140625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "prison",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison",
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 241,
+                "sqlId": 220,
+                "script": "Base.92fordCVPI2WestPoint",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11782.9404296875,
+                "y": 6801.5,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "police",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:police",
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 186,
+                "sqlId": 223,
+                "script": "Base.92fordCVPIWestPoint",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11802.5,
+                "y": 6786.93994140625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "prison",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison",
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 230,
+                "sqlId": 235,
+                "script": "Base.92fordCVPItaxi",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11771.986328125,
+                "y": 6830.8154296875,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjams",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 234,
+                "sqlId": 234,
+                "script": "Base.59meteor",
+                "skin": 0,
+                "skinCount": 7,
+                "x": 11771.0634765625,
+                "y": 6819.8037109375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjams",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true"
+                }
+              },
+              {
+                "id": 239,
+                "sqlId": 221,
+                "script": "Base.92fordCV",
+                "skin": 3,
+                "skinCount": 8,
+                "x": 11782.4951171875,
+                "y": 6834.3876953125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 237,
+                "sqlId": 222,
+                "script": "Base.92fordCV",
+                "skin": 0,
+                "skinCount": 8,
+                "x": 11788.75390625,
+                "y": 6834.33251953125,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjamw",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 227,
+                "sqlId": 237,
+                "script": "Base.59ambulance",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11768.5458984375,
+                "y": 6837.68603515625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNStretcher": "true",
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true"
+                }
+              },
+              {
+                "id": 235,
+                "sqlId": 233,
+                "script": "Base.92fordCV",
+                "skin": 0,
+                "skinCount": 8,
+                "x": 11756.0810546875,
+                "y": 6837.57568359375,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "trafficjame",
+                "created": true,
+                "data": {
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              },
+              {
+                "id": 180,
+                "sqlId": 225,
+                "script": "Base.92fordCVPIWestPoint",
+                "skin": 0,
+                "skinCount": 1,
+                "x": 11808.5,
+                "y": 6796.93994140625,
+                "z": 0,
+                "lights": 0,
+                "siren": 0,
+                "zone": "prison",
+                "created": true,
+                "data": {
+                  "OnlyKI5VehicleSpawnLiveryOverhaul.PoliceLightbarSpawnV1": "station:prison",
+                  "damnlib_migrated": true,
+                  "defaultPartSet_DAMNBumperFront": "true",
+                  "defaultPartSet_DAMNBumperRear": "true",
+                  "defaultPartSet_DAMNSpareTire": "true"
+                }
+              }
+            ],
+            "peerMatches": {
+              "a": 10,
+              "b": 10
+            },
+            "suppressed": []
+          }
+        },
+        "silent-lightbar-audio": {
+          "singlePlayer": false,
+          "vehicles": 20,
+          "before": {
+            "a": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ],
+            "b": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ]
+          },
+          "positiveControl": {
+            "a": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 2,
+                "active": true,
+                "sounding": true,
+                "audioManagerPresent": true,
+                "emitterEmpty": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ],
+            "b": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 2,
+                "active": true,
+                "sounding": true,
+                "audioManagerPresent": true,
+                "emitterEmpty": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ]
+          },
+          "after": {
+            "a": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": true,
+                "emitterEmpty": true,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ],
+            "b": [
+              {
+                "id": 162,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 163,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": true,
+                "emitterEmpty": true,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 161,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 164,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 165,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 166,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 167,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 168,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 169,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 170,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 171,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 172,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 173,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 143,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 142,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 141,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 140,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 0,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 139,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 138,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              },
+              {
+                "id": 137,
+                "script": "Base.92fordCVPILouisville",
+                "lights": 2,
+                "siren": 0,
+                "active": false,
+                "sounding": false,
+                "audioManagerPresent": false,
+                "engine": false,
+                "alarm": false
+              }
+            ]
+          },
+          "outputMuted": true,
+          "hearingAcceptance": false,
+          "nativeSirenStateVerified": true,
+          "nativeAudioManagerVerified": true,
+          "nativeJavaAudioProbeUsed": false,
+          "audioEvidence": {}
+        }
+      },
+      "frames": {
+        "audit-optional-police-a-1.png": "f42b3cc97f7d2f636e4c84e1c33e5055b27fcfb212d39113ad5298de2b748a20",
+        "audit-optional-police-a-2.png": "c8bfc4b9b55a8c46659c623d4741bae9fc8c9c6ef0f1f08aa49c4af7b070330a"
+      }
     }
   },
-  "complete": false
+  "complete": true
 }

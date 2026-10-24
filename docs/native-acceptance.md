@@ -4,7 +4,7 @@ Tested 2026-10-23–24 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 254
 
 ## 0.3.4 optional-fleet candidate
 
-The [0.3.4 optional-fleet candidate](optional-fleets.md) separately passes zero-pack, single-pack world and full-fleet initialization checks with exact source hashes and clean exits. Its mixed-fleet server/two-peer gate remains pending. The candidate has not replaced the published 0.3.3 payload; earlier multiplayer receipts below are not relabeled as optional-fleet MP acceptance.
+The [0.3.4 optional-fleet candidate](optional-fleets.md) passes zero-pack, single-pack world, full-fleet initialization and mixed-fleet server/two-peer checks with exact source hashes and clean exits. Both peers match 63 natural vehicles and all 57 conditional variant schemas. The 20-car native active-siren positive control passes while lights remain on. The server, clients and helper exit 0 without switching desktops; peak memory is 13.60 GiB. Native uploader validation accepts the 293-file stage. [Visual review](validation/native-20261024-optional-fleets/visual-review.md) confirms the police body/livery is visible but does not prove distinct flash phases. This is No-Steam loopback, without new complete vehicle save/reload or human listening acceptance. The candidate has not yet replaced the published 0.3.3 payload; earlier receipts below remain historical.
 
 ## 0.3.3 spawn settings and registry follow-up
 

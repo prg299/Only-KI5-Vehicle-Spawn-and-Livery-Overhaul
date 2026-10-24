@@ -4,7 +4,7 @@ Put KI5 on Kentucky's roads. **ONLY KI5: Vehicle Spawn & Skins** brings KI5-only
 
 ![ONLY KI5: Vehicle Spawn & Skins](release/workshop/only-ki5-overhaul-preview.png)
 
-**Source candidate 0.3.4:** optional vehicle packs are implemented here. Workshop still has 0.3.3 until the final mixed-fleet two-client test is complete. Zero-pack, single-pack and full-fleet native checks pass; [acceptance details](docs/optional-fleets.md) record the pending gate.
+**Source candidate 0.3.4:** optional vehicle packs pass zero-pack and single-pack worlds, full-fleet initialization and the mixed-fleet server/two-client test. The native uploader accepts the 293-file package. Workshop still has 0.3.3 pending upload; [acceptance details](docs/optional-fleets.md) separate gameplay, visual review and publication.
 
 The [public Workshop item](https://steamcommunity.com/sharedfiles/filedetails/?id=3825999183) has fourteen reviewed location-labelled natural gameplay images: seven regional police/security scenes (one sheriff location), the two approved military scenes, Louisville highway and four civilian/profession scenes. [Capture sources](docs/workshop-gallery.md) and [public replacement records](docs/public-release-20261024.md) are separate from gameplay acceptance.
 

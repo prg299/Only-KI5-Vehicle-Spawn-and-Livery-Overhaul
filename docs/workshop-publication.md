@@ -2,7 +2,7 @@
 
 ## Source candidate 0.3.4 — not uploaded
 
-The optional-fleet candidate has a fresh 293-file stage and three clean native receipts. Workshop item 3825999183 still serves 0.3.3. The mixed-fleet dedicated-server/two-client test is deferred while the player is using the game. `workshop_upload.py` refuses preparation until the optional-fleet evidence has all required runs and matching source hashes. The final native uploader stage validation also deferred at resource admission (exit 75); the stage is prepared, not yet accepted by that validator. No Steam description, gallery, cover, requirements or content changes were sent for 0.3.4. The owner read-only preflight confirmed public visibility, fourteen gallery images and adequate upload quota.
+The optional-fleet candidate has a native-accepted 293-file stage and four clean native receipts. The mixed-fleet server/two-client test passes, including 63 natural observations on both peers, matching conditional variant schemas and 20 silent-lightbar fixtures with an active-siren positive control. The exact source payload matches all four runs; all owned native processes are closed. `workshop_upload.py` requires complete evidence and matching canonical hashes. Workshop item 3825999183 still serves 0.3.3 pending the authorized upload; no 0.3.4 page or content change has been sent yet. Current acceptance and visual limits are in [optional fleets](optional-fleets.md).
 
 ## Public 0.3.3 spawn-settings update — 2026-10-24
 
