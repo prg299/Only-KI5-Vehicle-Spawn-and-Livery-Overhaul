@@ -1,6 +1,6 @@
 # 0.3.3 spawn settings and complete registry audit
 
-Candidate for the existing public item [3825999183](https://steamcommunity.com/sharedfiles/filedetails/?id=3825999183), ONLY KI5: Vehicle Spawn & Skins. Publication of this update is pending the final receipts below.
+Published to the existing public item [3825999183](https://steamcommunity.com/sharedfiles/filedetails/?id=3825999183), ONLY KI5: Vehicle Spawn & Skins. SteamCMD confirms the upload and its official download matches all 291 source files / 46,642,973 bytes, manifest **6908068842812541952**. Anonymous official metadata verifies public visibility, exact title, full description, unchanged cover and that content manifest. The source commit is `6213905879b142f37b1046cdc562333ed25f6f93`; [GitHub checks pass](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/actions/runs/40099680768).
 
 ## Settings
 
@@ -35,4 +35,4 @@ All three owned lifetimes ended cleanly: both SP clients, the dedicated server a
 
 Fourteen natural default-abundance SP location frames were opened and reviewed. Sparse station lots do not demonstrate every livery. The full [visual review](validation/native-20261024-spawn-pools/visual-review.md) separates those observations from complete registry coverage and explicit lightbar fixtures. Existing historical all-recipe, mechanics, save/reload and red/blue-clip evidence remains in [native acceptance](native-acceptance.md); it was not all repeated for this update. Additional maps, every model/armor/trailer interaction, Steam transport, long-run performance and human listening remain outside this acceptance.
 
-No real saves, subscriptions, launcher order, game install or Workshop source download was edited. Required Workshop items remain damnlib and More Car Features. Optional Town Car/limo and Elgin inputs are test-only. The approved fourteen-image gallery, main cover, public visibility and title must be preserved during publication.
+No real saves, subscriptions, launcher order, game install or Workshop source download was edited. Required Workshop items remain damnlib and More Car Features. Optional Town Car/limo and Elgin inputs are test-only. Immediately before uploading content, the owner query verifies the approved fourteen-image gallery/order, main cover, public visibility, exact two requirements and new description; all gallery CDN bytes were independently checked earlier in this update. The content-only VDF contains no page/media/relationship fields. The post-upload anonymous API confirms current public metadata, cover and manifest; this is separate from the pre-upload owner gallery/relationship query. The web-reader page fetch failed, so no new live carousel interaction is claimed.

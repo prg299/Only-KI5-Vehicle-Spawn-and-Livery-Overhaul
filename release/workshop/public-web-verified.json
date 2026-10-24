@@ -1,10 +1,12 @@
 {
-  "verifiedUtc": "2026-10-24T09:38:46.343125+00:00",
+  "verifiedUtc": "2026-10-24T13:49:41.379088+00:00",
   "workshopId": "3825999183",
   "title": "ONLY KI5: Vehicle Spawn & Skins",
   "visibility": 0,
-  "manifest": "424093739917839501",
-  "descriptionSha256": "634c0ab86cb839b059e66d125f98e02034551545f6f47bb361aa26ecda7d2e3a",
+  "manifest": "6908068842812541952",
+  "descriptionSha256": "97a4be64fe6571c8d471ae5cf06558e374db97866f353f804e5c634ce4ddb378",
   "crashSceneWordingVerified": true,
-  "officialPublicMetadataVerified": true
+  "officialPublicMetadataVerified": true,
+  "coverMatches": true,
+  "version": "0.3.3"
 }

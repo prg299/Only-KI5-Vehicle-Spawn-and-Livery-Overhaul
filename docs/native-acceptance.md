@@ -1,6 +1,6 @@
 # Native release acceptance
 
-Tested 2026-10-23 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521). The native checks below passed in disposable worlds and an ordinary dedicated server with two joined native clients. An unlisted Steam testing item is uploaded; public release remains pending and the limits below are not claimed as passed.
+Tested 2026-10-23–24 on Project Zomboid 42.21.0 (`4a0e9546ec`, Steam build 25485521) in disposable worlds and an ordinary dedicated server with two joined native clients. Version 0.3.3 is published on public item 3825999183. Current evidence and remaining limits are separated from the dated earlier acceptance below; publication is not exhaustive gameplay acceptance.
 
 ## 0.3.3 spawn settings and registry follow-up
 

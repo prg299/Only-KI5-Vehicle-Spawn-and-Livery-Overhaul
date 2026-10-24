@@ -1,5 +1,13 @@
 # SteamCMD publication history
 
+## Public 0.3.3 spawn-settings update — 2026-10-24
+
+Source commit `6213905879b142f37b1046cdc562333ed25f6f93` is pushed and [its repository/PowerShell CI passes](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/actions/runs/40099680768). [Native acceptance](spawn-update-20261024.md) records complete registries, actual sandbox input, original-weight preset reload, representative natural visual review and two-peer state/audio checks, including the rejected final MP lightbar frames and their visual acceptance gap.
+
+SteamCMD exits 0 and confirms the existing public item 3825999183 update. Its official download, manifest **6908068842812541952**, matches every source/stage hash: **291 files / 46,642,973 bytes**. The raw native payload also matches those source bytes, with a separate LF-normalized Git manifest. Publication, download and public-web receipts are under `release/workshop/`.
+
+The owner description-only update preserves the same fourteen-image gallery/order, cover, title, public visibility and exact damnlib/More Car Features requirements. A fresh owner query immediately before the content upload rechecks those values. The content VDF uses only app/item identity, content path and change note. Anonymous official GetPublishedFileDetails after downloading verifies the exact title/description hash, unchanged cover, visibility 0 and matching content manifest. `verification-status.json` distinguishes that current public check from the pre-upload owner gallery/requirements check. The web-reader page fetch failed; this update does not claim a new carousel interaction or change any gallery image.
+
 The current public replacement is **ONLY KI5: Vehicle Spawn & Skins**, item **3825999183**. See [current public release status](public-release-20261024.md) for upload/download, gallery, requirements and old-item deletion. The unlisted history below concerns retired item 3825545131; its final receipts are archived under `release/workshop/archive/20261024-replaced-3825545131`.
 
 The owner requested a new **unlisted** testing item on 2026-10-23, with a description styled after Real Vehicle Interiors. This does not make the candidate a public release or close its remaining acceptance limits. The predecessor item 3806374180 and Real Vehicle Interiors 3811728541 are protected from this uploader.
