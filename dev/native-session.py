@@ -55,7 +55,7 @@ def wait(predicate, seconds=180, label='native readiness'):
 
 
 class Session:
-    def __init__(self, run, effective=False, reuse=None, resume=None, extra_profile=None):
+    def __init__(self, run, effective=False, reuse=None, resume=None, extra_profile=None, fleet_profile=None):
         self.run = run
         self.children = []
         self.clients = {}
@@ -66,10 +66,13 @@ class Session:
         self.reuse = reuse
         self.resume = resume
         self.extra_profile = extra_profile
+        self.fleet_profile = fleet_profile or ROOT/'config/fleet-profile.ini'
 
     def prepare(self):
         self.run.mkdir(parents=True, exist_ok=False)
-        profile = dict(line.split('=', 1) for line in (ROOT/'config/fleet-profile.ini').read_text().splitlines())
+        selected=self.fleet_profile.resolve(strict=True)
+        if not selected.is_relative_to((ROOT/'config').resolve()):raise ValueError('Test fleet must be project configuration')
+        profile = dict(line.split('=', 1) for line in selected.read_text().splitlines() if '=' in line)
         if self.extra_profile:
             extra=self.extra_profile.resolve(strict=True)
             if not extra.is_relative_to((ROOT/'config').resolve()):
@@ -299,6 +302,8 @@ def main():
     p.add_argument('--effective',action='store_true');p.add_argument('--reuse');p.add_argument('--mp',action='store_true')
     p.add_argument('--resume')
     p.add_argument('--extra-profile',type=Path)
+    p.add_argument('--fleet-profile',type=Path)
+    p.add_argument('--accept-optional',action='store_true',help='Run the optional-fleet acceptance controls inside this guarded lifetime')
     args=p.parse_args()
     if not args.run.replace('-','').isalnum(): raise ValueError('Run name')
     reuse=owned_run(args.reuse) if args.reuse else None
@@ -307,22 +312,36 @@ def main():
         if not (resume/'finished.json').is_file():raise ValueError('Resume requires a stopped owned lifetime')
         if args.mp and json.loads((resume/'server/exit.json').read_text())['exitCode']!=0:raise ValueError('Resume requires a clean server save/exit')
     NATIVE_ROOT.mkdir(parents=True,exist_ok=True)
-    s=Session(owned_run(args.run),args.effective,reuse,resume,args.extra_profile)
+    s=Session(owned_run(args.run),args.effective,reuse,resume,args.extra_profile,args.fleet_profile)
+    acceptor=None
     try:
         s.prepare()
         if args.mp:
             s.start_server();s.client('a',18532);s.client('b',18533)
         else:s.client('sp',18531)
         print('NATIVE_REVIEW_READY',flush=True)
+        if args.accept_optional:
+            driver='accept-optional-multiplayer.py' if args.mp else 'accept-optional-session.py'
+            acceptor=subprocess.Popen([sys.executable,str(ROOT/'dev'/driver),args.run],cwd=ROOT)
         deadline=time.monotonic()+args.minutes*60
         while time.monotonic()<deadline:
+            if acceptor and acceptor.poll() is not None:
+                write(s.run/'optional-fleet-helper-exit.json',{'exitCode':acceptor.returncode})
+                if acceptor.returncode:raise RuntimeError('Owned optional-fleet acceptance failed; inspect its bounded output')
+                break
             request=s.run/'request.json'
             if not request.exists(): time.sleep(.2);continue
             q=json.loads(request.read_text('utf-8-sig'));request.unlink()
             if q['action']=='stop':break
             try:write(s.run/'response.json',{'id':q['id'],'ok':True,'result':s.command(q)})
             except Exception:write(s.run/'response.json',{'id':q['id'],'ok':False,'error':traceback.format_exc()})
-    finally:s.close()
+    finally:
+        if acceptor:
+            try:acceptor.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                subprocess.run(['taskkill','/PID',str(acceptor.pid),'/T','/F'],capture_output=True);acceptor.wait(timeout=10)
+            write(s.run/'optional-fleet-helper-exit.json',{'exitCode':acceptor.returncode})
+        s.close()
 
 
 if __name__=='__main__':main()

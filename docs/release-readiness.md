@@ -1,5 +1,9 @@
 # Release readiness - 0.3.3
 
+## 0.3.4 source candidate — optional vehicles
+
+No vehicle pack is a hard requirement in the candidate descriptor. The [optional-fleet audit](optional-fleets.md) records conditional variant initialization, provider filtering, compatible ordinary fallbacks and three clean native lifetimes: zero packs, one classic pack and full-fleet initialization. All 28 Lua scenarios, 59 compilations, 37 installed API contracts, six PowerShell parser checks and portable provenance checks pass. The 293-file stage is prepared; final native uploader validation deferred at resource admission (75). Mixed-fleet two-client MP is deferred while the player's game remains open; its receipt and publication remain pending. The uploader rejects incomplete optional-fleet evidence. The public Workshop payload remains 0.3.3.
+
 The [0.3.3 audit](spawn-update-20261024.md) records four sandbox controls, default 0.025% original civilian weights, balanced highway/specialty pools, the regional skin-index guard and single-stall secret-base parking. All 23 production-Lua scenarios, 57 Lua compilations, 32 native signatures, six PowerShell parser checks and portable provenance checks pass. Complete native registries, actual sandbox input/preset reload and two-peer state/audio checks pass with clean exits and identical 291-file payloads. Representative natural visuals were reviewed; rejected final MP lightbar pictures leave new red/blue visual acceptance unverified. Exact observed frequency, every map/model, new full vehicle save/reload, Steam transport and human listening are not claimed. Publication receipts are recorded separately in [Workshop publication](workshop-publication.md).
 
 ## Historical public 0.3.2 release

@@ -12,7 +12,8 @@ local function event()
 end
 Events = { OnLoadMapZones = event(), OnLoadedMapZones = event(),
     OnInitGlobalModData = event(), OnSpawnVehicleStart = event(), OnSpawnVehicleEnd = event() }
-function getActivatedMods() return { contains = function() return false end } end
+-- Full vehicle reference fleet, with unrelated map integrations disabled.
+function getActivatedMods() return { contains = function(_,id) return string.match(id,'^%d')~=nil or id=='KI5campers' or id=='KI5trailers' end } end
 local registrations = {}
 function getLotDirectories() return { size = function() return 0 end } end
 function getWorld() return { getMetaGrid = function() return nil end, registerVehiclesZone = function(_, name, kind, x, y)

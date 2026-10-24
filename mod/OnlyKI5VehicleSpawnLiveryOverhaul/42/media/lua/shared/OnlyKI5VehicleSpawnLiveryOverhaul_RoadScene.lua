@@ -1,5 +1,6 @@
 -- Authored scene operations over Project Zomboid's native world-story API. MIT.
 local Support = require "OnlyKI5VehicleSpawnLiveryOverhaul_WorldSupport"
+local Fleet = require "OnlyKI5VehicleSpawnLiveryOverhaul_Fleet"
 local Scene = {}
 Scene.__index = Scene
 
@@ -15,7 +16,7 @@ function Scene.getVehicleFromZone(zoneName, exclude, weighted, accept)
     for name, entry in pairs(zone and zone.vehicles or {}) do
         local weight = weighted and tonumber(entry.spawnChance) or 1
         if weight and weight > 0 and not contains(exclude, name)
-           and ScriptManager.instance:getVehicle(name) and (not accept or accept(name)) then
+           and Fleet.available(name) and ScriptManager.instance:getVehicle(name) and (not accept or accept(name)) then
             entries[#entries + 1] = { name = name, weight = weight }
         end
     end

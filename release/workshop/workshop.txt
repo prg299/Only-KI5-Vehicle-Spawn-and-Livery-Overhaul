@@ -21,7 +21,9 @@ description=[hr][/hr]
 description=[h2]Requirements[/h2]
 description=[b]Build 42.21[/b], damnlib and More Car Features / WayMoreCars.
 description=
-description=Install and enable the vehicles from the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] before this mod. Vehicle packs are installed separately and are not individual Workshop requirements here.
+description=[b]No vehicle packs are required.[/b] Enable whichever KI5 vehicles fit your game; this mod automatically uses the enabled packs and skips missing cars and their skins. One pack, a selection, or the full fleet works. With no KI5 vehicles enabled, managed new-vehicle pools stay empty. No period-inappropriate car is forced on you.
+description=
+description=Browse the [url=https://steamcommunity.com/workshop/filedetails/?id=2490220997]KI5 collection[/url] or individual vehicle pages. The collection is a browsing link, not a complete requirements list. Load your chosen packs before this mod. Missing specialist packs leave those service/military roles empty; ordinary body styles can use other installed ordinary KI5 cars.
 description=
 description=[b]YAPZLib is not required.[/b] Internal helpers replace it.
 description=

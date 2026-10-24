@@ -1,5 +1,5 @@
-Only KI5 0.3.3 - configurable spawns and whole-pool balance audit.
+Only KI5 0.3.4 - choose your KI5 vehicle packs.
 
-Custom civilian/novelty weights default to 0.025% of their originals; 0 disables them and 100 restores original weights. Police, military and emergency liveries stay enabled. New sandbox percentages: silent police lights 50%, Humvees within military light cars 95%, AM General within military trucks 75%.
+No vehicle packs are required. Enable whichever supported KI5 cars fit your game, including a small selection or a single pack. The Touran and other modern cars are optional. Only damnlib and More Car Features remain required. The collection is a browsing link rather than a complete installation list.
 
-Louisville highway favors ordinary traffic; optional limousines and sweepers are rarer. Corrected service-pool roles, malformed keys, prison escorts, secret-base parking spacing and regional replacements retaining an invalid source skin index. Existing vehicles remain unchanged.
+Missing vehicles and their integrated variants are excluded from map, profession, alias and military choices. Conditional variant initialization avoids references to missing templates/armor helpers. Compatible ordinary vehicles fill missing ordinary body styles; absent specialist families stay empty. With no KI5 packs enabled, all managed new-vehicle pools stay empty. Existing vehicles and the four spawn-setting defaults are unchanged.

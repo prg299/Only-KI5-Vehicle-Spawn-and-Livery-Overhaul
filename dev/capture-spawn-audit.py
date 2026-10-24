@@ -9,7 +9,7 @@ from native_lab import NativeLab,ROOT,rows
 
 p=argparse.ArgumentParser();p.add_argument('run');p.add_argument('location')
 p.add_argument('--client',default='sp');p.add_argument('--frame',type=float,nargs=2);a=p.parse_args()
-assert a.run.startswith('spawn-audit-')
+assert a.run.startswith(('spawn-audit-','optional-034-'))
 lab=NativeLab(a.run);call=lambda code:lab.client(code,a.client)
 locations=json.loads((ROOT/'config/workshop-gallery-locations.json').read_text('utf8'))
 location=next(x for x in locations if x['key']==a.location)

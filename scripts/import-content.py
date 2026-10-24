@@ -28,6 +28,36 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def defer_vehicles(data,source):
+    """Keep inert IDs in the native registry; apply full bodies only with a base.
+
+    Model declarations stay in the normal native load phase. Empty vehicles
+    have no external template references, skins, parts or selectable provider.
+    The existing VehicleScript.Load/Loaded API fills enabled variants in Lua.
+    """
+    text=data.decode('utf-8-sig')
+    clean=re.sub(r'//[^\n]*|/\*.*?\*/',lambda m:'\n'*m[0].count('\n'),text,flags=re.S)
+    entries=[];output=[];cursor=0
+    for match in re.finditer(r'(?m)^\s*vehicle\s+(\w+)\s*\{',clean):
+        start=match.start();opening=clean.index('{',match.start(),match.end());depth=1;end=opening+1
+        while depth:
+            if clean[end]=='{':depth+=1
+            elif clean[end]=='}':depth-=1
+            end+=1
+        name=match[1]
+        if source.startswith('MCV'):base='93fordF350' if source=='MCV93fordFseries' else source[3:]
+        elif name.startswith(('87fordB700','87fordF700')):base='87fordB700'
+        elif name.startswith('93chevySilverado'):base='93chevySuburban'
+        else:
+            found=re.match(r'(89fordBronco|91fordLTD|92amgeneralM998|92fordCVPI|93chevySuburban|93fordF350)',name)
+            if not found:raise ValueError('Missing optional base provider: '+name)
+            base=found[1]
+        entries.append({'script':'Base.'+name,'provider':base,'definition':clean[start:end]})
+        output.append(clean[cursor:start]+f'\nvehicle {name} {{ }}\n');cursor=end
+    output.append(clean[cursor:])
+    return ''.join(output).encode(),entries
+
+
 def read_json(path):
     return json.loads(path.read_text('utf-8-sig'))
 
@@ -50,6 +80,7 @@ def main():
     previous = read_json(MANIFEST) if MANIFEST.exists() else {'files': []}
     owned = {entry['targetPath']: entry['sha256'] for entry in previous['files']}
     outputs, records, omitted, translations = {}, {}, [], {}
+    optional_vehicles=[];optional_origins=[]
     translation_inputs = []
     layer_decisions = []
     module_maps = {}
@@ -192,11 +223,28 @@ def main():
                 header = (f"-- Integrated from {source['name']} ({source['modId']}).\n"
                           f"-- Original author: {source['author']}; {source['url']}\n"
                           "-- Third-party contribution; excluded from the project MIT license.\n")
+                # Optional base packs must not cause missing require() calls
+                # or armor-handler dereferences when their extensions load.
+                if source['modId'].startswith('MCV'):
+                    base = '93fordF350' if source['modId']=='MCV93fordFseries' else source['modId'][3:]
+                    header += f'if not require("{PREFIX}Fleet").active("{base}") then return end\n'
                 add(target, (header + text).replace('\r\n', '\n').encode('utf-8'), [origin], 'namespaced Lua / attributed')
             else:
                 if path.suffix.lower() in {'.txt', '.json', '.md'}:
                     data = data.replace(b'\r\n', b'\n')
-                add('42/media/' + relative, data, [origin])
+                transform='copied / attributed'
+                if relative.startswith('scripts/') and path.suffix=='.txt':
+                    data,entries=defer_vehicles(data,source['modId'])
+                    if entries:
+                        optional_vehicles.extend(entries);optional_origins.append(origin)
+                        transform='optional vehicle placeholders / native model declarations retained'
+                add('42/media/' + relative, data, [origin],transform)
+
+    encoded=['-- Attributed original variant bodies; enabled only with their optional base pack.','return {']
+    for entry in optional_vehicles:
+        encoded.append('{script='+json.dumps(entry['script'])+',provider='+json.dumps(entry['provider'])+',definition=[==['+entry['definition']+']==]},')
+    encoded.append('}\n')
+    add('42/media/lua/shared/'+PREFIX+'OptionalVehicles.lua','\n'.join(encoded).encode(),optional_origins,'deferred optional vehicle bodies / native Load and Loaded')
 
     # Keep upstream VMZ bytes/provenance attributable, then append the authored
     # option and merge its B42 JSON labels through this repeatable generator.

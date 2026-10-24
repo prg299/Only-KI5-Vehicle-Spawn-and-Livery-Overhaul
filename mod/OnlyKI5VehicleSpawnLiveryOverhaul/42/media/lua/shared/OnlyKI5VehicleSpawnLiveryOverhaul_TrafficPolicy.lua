@@ -1,6 +1,7 @@
 -- One selection policy for catalog, map/crash pools and profession stories.
 -- Does not edit vehicles, textures, player saves or other mods' source files.
 local Policy = {}
+local Fleet = require "OnlyKI5VehicleSpawnLiveryOverhaul_Fleet"
 local cachedCatalog, categories
 local noveltyWords = {'kitt','karr','bttf','ecto','mrbean','valkyriesspear','slidespiffo','apocalypse','hippie','unionjack','ramaircustom'}
 local businessZones = {mccoy=true,carpenter=true,postal=true,radio=true,fossoil=true,scarlet=true,
@@ -121,7 +122,10 @@ function Policy.weightOverride(C,group,name,zoneName)
 end
 
 function Policy.replacement(C,name)
-    return Policy.suppressed(C,name) and ((C.customCivilianFallbacks or {})[name] or 'Base.86fordE150') or name
+    if not Policy.suppressed(C,name) then return name end
+    local fallback=(C.customCivilianFallbacks or {})[name] or 'Base.86fordE150'
+    if Fleet.available(fallback) then return fallback end
+    return (C.groups.normal or C.groups.civilian or {})[1]
 end
 
 function Policy.category(C,name)
@@ -165,8 +169,7 @@ local function copy(value)
     return result
 end
 local function available(name)
-    if getScriptManager then return getScriptManager():getVehicle(name)~=nil end
-    return true -- production-Lua fixtures provide their own explicit catalog
+    return Fleet.available(name)
 end
 local function plainCandidates(C,role)
     local names=role=='military' and (C.groups.militaryCar or {})
@@ -211,9 +214,10 @@ function Policy.limitCustom(C,vehicles)
             local saved=customWeightSources[p]
             local original=saved and math.abs(p.spawnChance-saved.applied)<1e-10 and saved.original or p.spawnChance
             local fallback=(C.customCivilianFallbacks or {})[name] or 'Base.85chevyCapriceSedan'
+            if not available(fallback) then fallback=(C.groups.normal or C.groups.civilian or {})[1] end
             p.spawnChance=original*factor
             customWeightSources[p]={original=original,applied=p.spawnChance}
-            if plain<=0 then additions[fallback]=(additions[fallback] or 0)+original*(1-factor) end
+            if plain<=0 and fallback then additions[fallback]=(additions[fallback] or 0)+original*(1-factor) end
         end end
         for name,weight in pairs(additions) do
             if not vehicles[name] then vehicles[name]={index=-1,spawnChance=0} end
@@ -304,7 +308,7 @@ function Policy.balancePool(C,zoneName,zone)
         local name=Policy.canonical(source)
         local weight=type(p)=='table' and tonumber(p.spawnChance) or 0
         originalWeight=originalWeight+(weight or 0)
-        if Policy.suppressed(C,name) then removed=removed+1;removedWeight=removedWeight+(weight or 0)
+        if not available(name) or Policy.suppressed(C,name) then removed=removed+1;removedWeight=removedWeight+(weight or 0)
         elseif type(p)=='table' and weight and weight>0 then
             if vehicles[name] then vehicles[name].spawnChance=vehicles[name].spawnChance+weight
             else vehicles[name]=copy(p) end
@@ -382,8 +386,10 @@ local function filterProfession(C,value,seen,aliases)
     if numeric then
         local kept,weights={},{}
         for _,name in ipairs(source) do
-            local replacement=(aliases and aliases.resolve(name,true)) or Policy.replacement(C,name)
-            if replacement and available(replacement) then
+            local managed=aliases and (aliases.targets[name] or aliases.groups[name])
+            local replacement
+            if managed then replacement=aliases.resolve(name,true) else replacement=Policy.replacement(C,name) end
+            if C.availableFleetCount~=0 and replacement and available(replacement) then
                 kept[#kept+1]=replacement
                 if not weights[replacement] then weights[replacement]={index=-1,spawnChance=0} end
                 weights[replacement].spawnChance=weights[replacement].spawnChance+1
@@ -419,6 +425,7 @@ function Policy.apply(C,aliases)
     for name,zone in pairs(VehicleZoneDistribution or {}) do
         if type(zone)=='table' and type(zone.vehicles)=='table' then
             local balanced,record=Policy.balancePool(C,name,zone)
+            if C.availableFleetCount==0 then balanced.vehicles={} end
             VehicleZoneDistribution[name]=balanced;result.zones[name]=record
         end
     end

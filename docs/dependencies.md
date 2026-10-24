@@ -2,14 +2,17 @@
 
 The Workshop page lists only **2 required items**: **that DAMN Library**
 and **More Car Features + Spawn Zones Expansion / WayMoreCars**.
-Install the vehicles separately from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=2490220997).
-Individual vehicle packs are not attached as Workshop requirements.
+Choose any vehicles you want from the [KI5 collection](https://steamcommunity.com/workshop/filedetails/?id=2490220997) or their individual pages.
+The collection is a browsing link, not an exhaustive requirements list. No vehicle pack is required.
 **YAPZLib is not required.**
 
-The 0.3.3 full-fleet runtime profile still uses **87 external items / 102 modules**.
-The complete input inventory is retained below and in config/fleet-dependencies.json.
-The unchanged player descriptor requires those installed/enabled modules; this
-page-list cleanup does not replace or bundle the vehicle models.
+Version 0.3.4 detects enabled packs and valid native vehicle scripts at runtime.
+Use one, several, or none of the covered KI5 packs. Missing vehicles and their
+integrated variants are excluded; no suitable service/military pack leaves that
+role empty. With no KI5 vehicles enabled, new managed vehicle pools stay empty.
+Ordinary body styles can fall back to other installed ordinary KI5 cars.
+The **87 items / 102 modules** below describe only the
+development full-fleet reference profile, not player requirements.
 
 **Highly recommended, optional:** [KI5 Vehicle Performance Patch (Unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388) by lucygoosey.
 Follow its server/client setup instructions. It is not bundled or a required item,
@@ -18,8 +21,9 @@ and it was not included in the current native acceptance profile.
 KI5 base vehicles and selected vehicle expansion modules remain original external
 downloads. No private server configuration is used.
 
-Load all required original vehicle/library modules and WayMoreCars before
-OnlyKI5VehicleSpawnLiveryOverhaul. The descriptor declares those edges.
+Load damnlib, WayMoreCars and any selected vehicle packs before
+OnlyKI5VehicleSpawnLiveryOverhaul. Only the two support modules are hard requirements;
+optional vehicle ordering edges do not enable or require missing packs.
 
 ## Integrated content
 

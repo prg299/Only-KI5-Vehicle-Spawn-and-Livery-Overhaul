@@ -1,6 +1,7 @@
 -- One exact alias authority for pool, profession, direct-Lua and native spawns.
 -- No prefix matching: third-party KI5 scripts and existing vehicles are untouched.
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local Fleet = require "OnlyKI5VehicleSpawnLiveryOverhaul_Fleet"
 local TrafficPolicy = require "OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy"
 local Aliases = {}
 Aliases.targets = {
@@ -45,7 +46,7 @@ function Aliases.resolve(scriptName,originalWeights)
     if not string.find(scriptName, ".", 1, true) then scriptName = "Base." .. scriptName end
     if Aliases.targets[scriptName] then
         local target=TrafficPolicy.replacement(Catalog,Aliases.targets[scriptName])
-        if originalWeights or not TrafficPolicy.isCustom(Catalog,target) then return target end
+        if target and Fleet.available(target) and (originalWeights or not TrafficPolicy.isCustom(Catalog,target)) then return target end
         return TrafficPolicy.pickGroup(Catalog,Aliases.groups[scriptName],'direct-spawn')
     end
     local group = Aliases.groups[scriptName]

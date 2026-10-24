@@ -1,12 +1,14 @@
 """Compare natural authoritative spawns with two joined native peers."""
 import argparse,json,time
 from native_lab import NativeLab,ROOT,rows
-p=argparse.ArgumentParser();p.add_argument('run');a=p.parse_args();lab=NativeLab(a.run)
+p=argparse.ArgumentParser();p.add_argument('run');p.add_argument('--allow-empty',action='store_true');a=p.parse_args();lab=NativeLab(a.run)
 snapshot=(ROOT/'dev/snapshot.lua').read_text('utf8');results={}
 for name,x,y in [('checkpoint',12566,4215),('highway',12598,1788),('secret-base',5592,12458),('west-point',11788,6818)]:
     lab.move(x,y)
     records=lab.snapshot('audit-mp-'+name)
     authority=[v for v in rows(records['server']['vehicles']) if abs(v['x']-x)<40 and abs(v['y']-y)<40]
+    if not authority and a.allow_empty:
+        results[name]={'naturalAuthority':[],'peerMatches':{},'suppressed':[]};continue
     assert authority,name+' has no natural vehicles'
     expected={v['id']:v for v in authority};compared={}
     for v in authority:
@@ -26,4 +28,5 @@ return out''')
     assert not rows(suppressed),suppressed
     results[name]={'naturalAuthority':authority,'peerMatches':compared,'suppressed':rows(suppressed)}
 lab.write('audit-mp-comparison',results)
+assert any(r['naturalAuthority'] for r in results.values()),'No natural MP observations at any location'
 print(json.dumps({name:{'naturalVehicles':len(r['naturalAuthority']),'peerMatches':r['peerMatches']} for name,r in results.items()}))

@@ -498,6 +498,20 @@ $lua = [Text.StringBuilder]::new()
 [void] $lua.AppendLine('-- The catalog never contains Specific Loot (Workshop 3457132019).')
 [void] $lua.AppendLine('local TrafficPolicy = require "OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy"')
 [void] $lua.AppendLine('local Catalog = {')
+[void] $lua.AppendLine('    scriptProviders = {')
+foreach ($record in ($recordsByScript.Values | Sort-Object Script)) {
+    $provider = $record.ModId
+    if ($record.Bundled) {
+        if ($provider -eq 'MCV93fordFseries') { $provider = '93fordF350' }
+        elseif ($provider.StartsWith('MCV')) { $provider = $provider.Substring(3) }
+        elseif ($record.Script -match '^Base\.(87fordB700|87fordF700)') { $provider = '87fordB700' }
+        elseif ($record.Script -match '^Base\.(89fordBronco|91fordLTD|92amgeneralM998|92fordCVPI|93chevySuburban|93fordF350)') { $provider = $matches[1] }
+        elseif ($record.Script -match '^Base\.93chevySilverado') { $provider = '93chevySuburban' }
+        else { Fail "Missing optional base provider for $($record.Script)" }
+    }
+    [void] $lua.AppendLine(('        ["' + $record.Script + '"] = "' + $provider + '",'))
+}
+[void] $lua.AppendLine('    },')
 [void] $lua.AppendLine('    groups = {')
 foreach ($groupName in $allGroups) {
     [void] $lua.AppendLine("        $groupName = {")
@@ -597,6 +611,7 @@ foreach ($provider in $providers | Sort-Object ModId, Bundled) {
 [void] $lua.AppendLine('    },')
 [void] $lua.AppendLine('}')
 [void] $lua.AppendLine('')
+[void] $lua.AppendLine('require("OnlyKI5VehicleSpawnLiveryOverhaul_Fleet").activate(Catalog)')
 [void] $lua.AppendLine('local function union(...)')
 [void] $lua.AppendLine('    local result, seen = {}, {}')
 [void] $lua.AppendLine('    for index = 1, select("#", ...) do')
@@ -623,6 +638,7 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.weight(groupName, scriptName, zoneName)')
+[void] $lua.AppendLine('    if not require("OnlyKI5VehicleSpawnLiveryOverhaul_Fleet").available(scriptName) then return 0 end')
 [void] $lua.AppendLine('    local override=TrafficPolicy.weightOverride(Catalog,groupName,scriptName,zoneName)')
 [void] $lua.AppendLine('    if override~=nil then return override end')
 [void] $lua.AppendLine('    local weights = Catalog.weights[groupName]')
@@ -648,6 +664,7 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 [void] $lua.AppendLine('end')
 [void] $lua.AppendLine('')
 [void] $lua.AppendLine('function Catalog.wreckedWeight(groupName, scriptName, zoneName)')
+[void] $lua.AppendLine('    if not require("OnlyKI5VehicleSpawnLiveryOverhaul_Fleet").available(scriptName) then return 0 end')
 [void] $lua.AppendLine('    if TrafficPolicy.suppressed(Catalog,scriptName) then return 0 end')
 [void] $lua.AppendLine('    if groupName == "militaryCar" then')
 [void] $lua.AppendLine('        local override=TrafficPolicy.militaryCarWeight(Catalog,scriptName,true)')
@@ -751,15 +768,15 @@ foreach ($derivedName in $derivedGroups.Keys | Sort-Object) {
 New-Item -ItemType Directory -Force -Path (Split-Path -Parent $catalogPath) | Out-Null
 [IO.File]::WriteAllText($catalogPath, $lua.ToString(), [Text.UTF8Encoding]::new($false))
 
-$requiredModules = $externalMods
+$requiredModules = @('damnlib', 'WayMoreCars')
 foreach ($moduleId in $requiredModules) {
     if (-not $moduleLookup.ContainsKey($moduleId)) { Fail "Required external module is absent from current Workshop inputs: $moduleId" }
 }
 $requireValue = $requiredModules -join ','
 Set-DescriptorField $rootDescriptor 'require' $requireValue
 Set-DescriptorField $b42Descriptor 'require' $requireValue
-Set-DescriptorField $rootDescriptor 'loadModAfter' $requireValue
-Set-DescriptorField $b42Descriptor 'loadModAfter' $requireValue
+Set-DescriptorField $rootDescriptor 'loadModAfter' ($externalMods -join ',')
+Set-DescriptorField $b42Descriptor 'loadModAfter' ($externalMods -join ',')
 
 $finalRecords = @($recordsByScript.Values | Sort-Object ModId, Script)
 $provenance = [ordered]@{
@@ -768,6 +785,7 @@ $provenance = [ordered]@{
     sourceConfigurationHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $ServerConfig).Hash
     workshopAppId = '108600'
     externalRequiredModules = $requiredModules
+    optionalVehicleModules = @($externalMods | Where-Object { $_ -notin $requiredModules })
     bundledModuleIds = @($bundleManifest.bundledModuleIds | Sort-Object -Unique)
     providers = @($providers | Sort-Object ModId, Bundled)
     supportOnly = @($supportOnly | Sort-Object ModId)

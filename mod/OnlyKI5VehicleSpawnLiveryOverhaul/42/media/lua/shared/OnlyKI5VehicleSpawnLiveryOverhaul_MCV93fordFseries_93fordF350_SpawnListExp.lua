@@ -1,6 +1,7 @@
 -- Integrated from More Car Variants (KI5) (MCV93fordFseries).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136
 -- Third-party contribution; excluded from the project MIT license.
+if not require("OnlyKI5VehicleSpawnLiveryOverhaul_Fleet").active("93fordF350") then return end
 if not VehicleZoneDistribution then return end
 
 VehicleZoneDistribution.mccoy.vehicles["Base.93fordF350mccoy"] = {index = -1, spawnChance = 25};

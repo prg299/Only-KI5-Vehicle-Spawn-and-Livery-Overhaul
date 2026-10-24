@@ -77,6 +77,12 @@ PoliceRegions.regionPriority = {
 }
 
 local liveryMembership = {}
+local Fleet = require "OnlyKI5VehicleSpawnLiveryOverhaul_Fleet"
+require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+for key,list in pairs(PoliceRegions.liveries) do PoliceRegions.liveries[key]=Fleet.filter(list) end
+for key,list in pairs(PoliceRegions.allowedTactical) do PoliceRegions.allowedTactical[key]=Fleet.filter(list) end
+for key,list in pairs(PoliceRegions.patrolLiveries) do PoliceRegions.patrolLiveries[key]=Fleet.filter(list) end
+PoliceRegions.generalPatrol=Fleet.filter(PoliceRegions.generalPatrol)
 local prisonTransportMembership = {}
 for key, scripts in pairs(PoliceRegions.liveries) do
     for _, scriptName in ipairs(scripts) do

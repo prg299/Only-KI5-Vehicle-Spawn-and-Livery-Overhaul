@@ -5,6 +5,9 @@
   "workshopAppId": "108600",
   "externalRequiredModules": [
     "damnlib",
+    "WayMoreCars"
+  ],
+  "optionalVehicleModules": [
     "63Type2Van",
     "67commando",
     "69fordMustang",
@@ -104,8 +107,7 @@
     "96lancerEVO",
     "96saturnSseries",
     "98stagea",
-    "99fordCVPI",
-    "WayMoreCars"
+    "99fordCVPI"
   ],
   "bundledModuleIds": [
     "KI5Camo",

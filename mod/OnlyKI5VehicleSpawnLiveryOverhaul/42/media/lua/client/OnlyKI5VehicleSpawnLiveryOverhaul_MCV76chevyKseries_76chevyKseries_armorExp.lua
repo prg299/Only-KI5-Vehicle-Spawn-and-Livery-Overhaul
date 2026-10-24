@@ -1,6 +1,7 @@
 -- Integrated from More Car Variants (KI5) (MCV76chevyKseries).
 -- Original author: Пупсич; https://steamcommunity.com/sharedfiles/filedetails/?id=3455267136
 -- Third-party contribution; excluded from the project MIT license.
+if not require("OnlyKI5VehicleSpawnLiveryOverhaul_Fleet").active("76chevyKseries") then return end
 require "76chevyKseries_armor";
 
 DAMN.Armor:add("Base.76chevyK10calloway", CH76.activeArmor);

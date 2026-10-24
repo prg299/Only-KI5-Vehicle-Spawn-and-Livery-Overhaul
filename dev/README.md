@@ -27,6 +27,23 @@ Before the SP lightbar fixture, move the disposable player to an ordinary road s
 
 Raw caches, credentials, command queues and crash logs stay under ignored `build/native`. Do not publish them. `scripts/export-native-evidence.py` exports only the specific dated, whitelisted 2026-10-23 receipts and unmodified frames; it asserts clean exits and source/stage/native payload equality. It is not a new gameplay test. See [native acceptance](../docs/native-acceptance.md) for passes, failed probes and unverified paths.
 
+## Optional-fleet acceptance (0.3.4)
+
+`config/fleet-none.ini`, `fleet-one.ini` and `fleet-mixed.ini` select explicit development subsets without reading or changing a player configuration. `--fleet-profile` accepts only files inside this checkout's config folder. Omit it for the full reference profile.
+
+The bounded optional acceptance driver can run inside the same guarded native lifetime, avoiding a separate overlapping helper reservation:
+
+```powershell
+$env:ONLY_KI5_NATIVE_ROOT = 'C:/Users/erika/AppData/Local/GameMods/OnlyKI5/Native'
+node $coord run --kind multiplayer --name ki5-mixed-fleet-mp -- $py dev/native-session.py --run optional-034-mixed-verified --fleet-profile config/fleet-mixed.ini --mp --minutes 20 --accept-optional
+```
+
+Do not launch while the player's game is open, another project owns the native lane, or memory admission defers the run. Exit 75 means wait for an external state change. Never lower the estimate or bypass the coordinator to force admission. Run names must be fresh; failed caches remain diagnostic evidence.
+
+The driver joins both clients through the native UI, compares authority and both clients' 57 conditional variant schemas, checks natural vehicle replication at four locations and runs the active-siren positive control. Empty locations are valid for a small fleet but at least one natural vehicle observation is required. A separate explicit police fixture on asphalt supplies two photographs; open and review those frames before granting visual acceptance. This fixture is excluded from natural samples. No-Steam loopback does not prove Steam transport or human listening.
+
+`scripts/export-optional-fleet-evidence.py --available-only` exports only completed accepted lifetimes while a gate is pending. The default exporter requires all four named runs, clean exits, matching raw payloads and original variant skin counts. Read-only uploader validation and final publication remain separate gates. See [the candidate status](../docs/optional-fleets.md); an incomplete export cannot authorize upload.
+
 ## Natural gallery and weighted Humvee checks
 
 `dev/gallery-natural.py` observes only natural vehicles at the fourteen locations in `config/workshop-gallery-locations.json`; it does not call staged fixtures. Twelve replacement captures use the disposable Very High vehicle-abundance photo sandbox and `gallery-visibility.lua` / test-only `Photo.java` to enable native no-lighting visibility after normal boot. Foraging blur is disabled; recorded observer look-at points keep the featured vehicles in normal player view. No vehicle is created, repositioned, repaired, repainted or given light changes. The two approved military images retain their original bytes and default photo-world settings. These photographs do not establish spawn frequencies.

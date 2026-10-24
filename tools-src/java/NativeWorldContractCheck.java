@@ -56,6 +56,11 @@ public final class NativeWorldContractCheck {
         method("zombie.inventory.ItemContainer", "isEmpty");
         method("zombie.iso.zones.Zone", "setLastActionTimestamp", "int");
         method("zombie.iso.zones.Zone", "isRectangle");
+        method("zombie.scripting.ScriptManager", "getVehicle", "String");
+        method("zombie.scripting.objects.VehicleScript", "Load", "String", "String");
+        method("zombie.scripting.objects.VehicleScript", "Loaded");
+        method("zombie.scripting.objects.VehicleScript", "getSkinCount");
+        method("zombie.scripting.objects.VehicleScript", "getPartCount");
         System.out.println("PASS: " + checks + " installed-build native world API signatures; no game world modified.");
     }
 }

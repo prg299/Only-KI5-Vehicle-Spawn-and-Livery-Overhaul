@@ -11,7 +11,7 @@ public final class LuaPolicyCheck {
         if (!Set.of("native", "ascending", "descending").contains(order)) throw new IllegalArgumentException(order);
         code.append("ONLY_KI5_TEST_ZONE_ORDER = \"").append(order).append("\"\n");
         String trafficShape = args.length > 3 ? args[3] : "shared";
-        if (!Set.of("shared", "copied", "singleplayer", "client", "0", "37", "100").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
+        if (!Set.of("shared", "copied", "singleplayer", "client", "0", "37", "100", "fleet-none", "fleet-civilian", "fleet-police", "fleet-military", "fleet-mixed").contains(trafficShape)) throw new IllegalArgumentException(trafficShape);
         code.append("ONLY_KI5_TEST_TRAFFIC_SHAPE = \"").append(trafficShape).append("\"\n");
         if (args.length > 4) {
             int chance=Integer.parseInt(args[4]);

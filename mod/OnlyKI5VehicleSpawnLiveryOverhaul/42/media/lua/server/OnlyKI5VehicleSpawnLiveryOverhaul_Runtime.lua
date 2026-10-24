@@ -10,6 +10,7 @@ if isClient and isClient() then
 end
 
 local Catalog = require "OnlyKI5VehicleSpawnLiveryOverhaul_Catalog"
+local Fleet = require "OnlyKI5VehicleSpawnLiveryOverhaul_Fleet"
 local TrafficPolicy = require "OnlyKI5VehicleSpawnLiveryOverhaul_TrafficPolicy"
 local SpawnAliases = require "OnlyKI5VehicleSpawnLiveryOverhaul_SpawnAliases"
 local DuplicateScripts = require "OnlyKI5VehicleSpawnLiveryOverhaul_DuplicateScripts"
@@ -111,6 +112,7 @@ local function installDirectVanillaVehicleRedirect()
             if count >= 2 then arguments[2] = -1 end
             return originalAddVehicleDebug(scriptName, unpack(arguments, 1, count))
         end
+        if directVanillaSpawnGroups[scriptName] or SpawnAliases.groups[scriptName] or SpawnAliases.targets[scriptName] then return nil end
         return originalAddVehicleDebug(scriptName, ...)
     end
     rawset(_G, marker, true)
@@ -143,10 +145,6 @@ end
 emergencyKindByScript["Base.VanAmbulance"] = "ambulance"
 
 local function register(groupName, names)
-    local candidates = groups[groupName]
-    if type(candidates) ~= "table" or #candidates == 0 then
-        error(MOD_TAG .. " catalog group is empty: " .. tostring(groupName))
-    end
     for _, name in ipairs(names) do
         replacements[name] = groupName
     end

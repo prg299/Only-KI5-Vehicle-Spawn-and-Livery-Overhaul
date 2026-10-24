@@ -20,8 +20,8 @@ STEAMCMD=Path(os.environ.get('ONLY_KI5_STEAMCMD',str(Path(os.environ['LOCALAPPDA
 PROTECTED_IDS={'3806374180','3811728541','3825545131'}
 RELEASE_METADATA=json.loads((RELEASE/'metadata.json').read_text('utf-8'))
 TARGET_VISIBILITY={'public':0,'unlisted':3}[RELEASE_METADATA['visibility']]
-VERSION='0.3.3'
-NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-spawn-pools'
+VERSION='0.3.4'
+NATIVE_EVIDENCE=ROOT/'docs/validation/native-20261024-optional-fleets'
 
 def hashes(folder):
     return {p.relative_to(folder).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
@@ -56,6 +56,9 @@ def prepare(preserve_page=False):
     if hashes(package)!=expected:raise ValueError('Stage differs from source; prepare a clean stage first')
     if json.loads((STAGE/'payload-manifest.json').read_text(encoding='utf-8'))!=expected:raise ValueError('Payload manifest differs')
     canonical=json.loads((NATIVE_EVIDENCE/'canonical-payload.json').read_text(encoding='utf-8'))['files']
+    acceptance=json.loads((NATIVE_EVIDENCE/'evidence.json').read_text(encoding='utf-8'))
+    if acceptance.get('version')!=VERSION or not acceptance.get('complete'):
+        raise ValueError('Optional-fleet native acceptance is incomplete; publication deferred')
     current={p.relative_to(SOURCE).as_posix():hashlib.sha256(
         p.read_bytes().replace(b'\r\n',b'\n') if p.suffix in {'.lua','.txt','.info','.md','.json'} else p.read_bytes()).hexdigest()
         for p in SOURCE.rglob('*') if p.is_file()}

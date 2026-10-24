@@ -21,8 +21,8 @@ release_metadata=json.loads((ROOT/'release/workshop/metadata.json').read_text('u
 check(release_metadata['title']==b42['name'] and release_metadata['visibility']=='public', 'Public title/visibility drift')
 check('Crashed cars too.' in (ROOT/'release/workshop/description.txt').read_text('utf8'), 'Missing requested KI5 crash-scene description')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.3.3' and b42['versionMin'] == '42.21', 'Wrong release version')
-check(set(b42['require'].split(',')) == set(profile['Mods'].split(';')), 'Profile/dependency drift')
+check(b42['modversion'] == '0.3.4' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(set(b42['require'].split(',')) == {'damnlib','WayMoreCars'}, 'Vehicle packs must be optional')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')
 for name in ['icon', 'poster']:
@@ -58,7 +58,7 @@ for relative, entry in imported.items():
         authored = ROOT/extension['path']
         check(authored.is_file() and hashlib.sha256(authored.read_bytes()).hexdigest() == extension['sha256'], 'Authored sandbox extension drift: '+relative)
 authored_lua = [p for p in lua_files if p.relative_to(MOD).as_posix() not in imported]
-check(len(authored_lua) == 13, f'Unexpected authored runtime module count {len(authored_lua)}')
+check(len(authored_lua) == 14, f'Unexpected authored runtime module count {len(authored_lua)}')
 module_names = {p.stem for p in lua_files}
 for p in lua_files:
     text = p.read_text('utf-8')
