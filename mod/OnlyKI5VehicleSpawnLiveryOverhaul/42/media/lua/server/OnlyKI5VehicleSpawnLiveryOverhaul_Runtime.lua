@@ -147,6 +147,9 @@ emergencyKindByScript["Base.VanAmbulance"] = "ambulance"
 local function register(groupName, names)
     for _, name in ipairs(names) do
         replacements[name] = groupName
+        -- The same exact IDs must cover native stories and direct Lua spawns,
+        -- not just map pools. McCoy and ordinary native story cars bypass pools.
+        SpawnAliases.groups[name] = SpawnAliases.groups[name] or groupName
     end
 end
 
@@ -156,6 +159,7 @@ local function registerSmashed(groupName, prefixes)
         for _, direction in ipairs(directions) do
             local sourceKey = "Base." .. prefix .. "Smashed" .. direction
             replacements[sourceKey] = groupName
+            SpawnAliases.groups[sourceKey] = SpawnAliases.groups[sourceKey] or groupName
             smashedSources[sourceKey] = true
         end
     end

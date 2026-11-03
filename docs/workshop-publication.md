@@ -1,5 +1,9 @@
 # SteamCMD publication history
 
+## 0.3.5 candidate — not uploaded
+
+The [reported bug fixes](bugfixes-20261103.md) pass 29 Lua scenarios, 59 Lua compilations and 39 native API contracts. The native launcher deferred with 75 because a Steam-launched player game owns the lane. SP/MP physics, visual review and exact-payload native receipts remain required. The uploader targets new evidence under `docs/validation/native-20261103-road-fixes` and rejects incomplete acceptance. Preserve the current live description, cover, gallery and requirements when this candidate is ready; user-authored Workshop edits may be newer than the source description. Current Workshop content and receipts below remain 0.3.4.
+
 ## 0.3.4 optional vehicles — uploaded 2026-10-24
 
 The optional-fleet update has a native-accepted 293-file stage and four clean native receipts. The mixed-fleet server/two-client test passes, including 63 natural observations on both peers, matching conditional variant schemas and 20 silent-lightbar fixtures with an active-siren positive control. The exact source payload matches all four runs; all owned native processes are closed. Source/evidence commit 7825e648f902010ea604c7f7322807d1ad871c48 is pushed and [CI passes](https://github.com/prg299/Only-KI5-Vehicle-Spawn-and-Livery-Overhaul/actions/runs/40129458540). Current acceptance and visual limits are in [optional fleets](optional-fleets.md).

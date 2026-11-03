@@ -304,6 +304,7 @@ def main():
     p.add_argument('--extra-profile',type=Path)
     p.add_argument('--fleet-profile',type=Path)
     p.add_argument('--accept-optional',action='store_true',help='Run the optional-fleet acceptance controls inside this guarded lifetime')
+    p.add_argument('--accept-road-fixes',action='store_true',help='Run road-fix controls inside this guarded lifetime')
     args=p.parse_args()
     if not args.run.replace('-','').isalnum(): raise ValueError('Run name')
     reuse=owned_run(args.reuse) if args.reuse else None
@@ -320,9 +321,11 @@ def main():
             s.start_server();s.client('a',18532);s.client('b',18533)
         else:s.client('sp',18531)
         print('NATIVE_REVIEW_READY',flush=True)
-        if args.accept_optional:
-            driver='accept-optional-multiplayer.py' if args.mp else 'accept-optional-session.py'
-            acceptor=subprocess.Popen([sys.executable,str(ROOT/'dev'/driver),args.run],cwd=ROOT)
+        if args.accept_optional or args.accept_road_fixes:
+            driver='accept-road-fixes.py' if args.accept_road_fixes else ('accept-optional-multiplayer.py' if args.mp else 'accept-optional-session.py')
+            arguments=[sys.executable,str(ROOT/'dev'/driver),args.run]
+            if args.accept_road_fixes and args.mp:arguments.append('--mp')
+            acceptor=subprocess.Popen(arguments,cwd=ROOT)
         deadline=time.monotonic()+args.minutes*60
         while time.monotonic()<deadline:
             if acceptor and acceptor.poll() is not None:

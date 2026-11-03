@@ -192,3 +192,12 @@ assert(existing.changes == 0, "existing saved vehicles must not change")
 local control = vehicle("Base.TrailerKI5cargoSmall", false)
 Events.OnSpawnVehicleStart.fire(control)
 assert(control.changes == 0, "unrelated KI5 input must not change")
+for _,name in ipairs({"Base.PickUpVanMccoy","Base.PickUpTruckMccoy","Base.VanMccoy",
+                     "Base.CarNormal","Base.SmallCar","Base.CarStationWagon"}) do
+    local fresh=vehicle(name,false)
+    Events.OnSpawnVehicleStart.fire(fresh)
+    assert(fresh.name~=name and C.scriptProviders[fresh.name],"Native story leaked "..name)
+    local saved=vehicle(name,true)
+    Events.OnSpawnVehicleStart.fire(saved)
+    assert(saved.changes==0,"Saved vehicle changed: "..name)
+end

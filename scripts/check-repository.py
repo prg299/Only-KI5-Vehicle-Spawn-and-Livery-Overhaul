@@ -21,7 +21,7 @@ release_metadata=json.loads((ROOT/'release/workshop/metadata.json').read_text('u
 check(release_metadata['title']==b42['name'] and release_metadata['visibility']=='public', 'Public title/visibility drift')
 check('Crashed cars too.' in (ROOT/'release/workshop/description.txt').read_text('utf8'), 'Missing requested KI5 crash-scene description')
 check(b42['id'] == 'OnlyKI5VehicleSpawnLiveryOverhaul', 'Wrong mod identity')
-check(b42['modversion'] == '0.3.4' and b42['versionMin'] == '42.21', 'Wrong release version')
+check(b42['modversion'] == '0.3.5' and b42['versionMin'] == '42.21', 'Wrong release version')
 check(set(b42['require'].split(',')) == {'damnlib','WayMoreCars'}, 'Vehicle packs must be optional')
 check(set(b42['require'].split(',')) <= set(b42['loadModAfter'].split(',')), 'Missing load-order edges')
 check(not set(b42['require'].split(',')) & set(b42['incompatible'].split(',')), 'Dependency declared incompatible')

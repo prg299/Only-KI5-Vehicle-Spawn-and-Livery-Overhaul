@@ -24,6 +24,8 @@ The selected B42 version plus common/media determines catalog eligibility. Legac
 
 ## 0.3.4 optional vehicle packs
 
+The 0.3.5 candidate retires only this mod's pending version 1 road-story checkpoints. Existing scene objects, inventories and saved vehicles are preserved. Loaded historical completed scenes reserve their location in the new spacing ledger. The native story trailer helper is restricted to rear-hitch drawbars; fifth-wheel scripts remain available but are excluded from this helper. See the [bug-fix report](bugfixes-20261103.md).
+
 The candidate requires only damnlib and WayMoreCars. Vehicle packs are optional and retain ordering edges when enabled. Native script existence alone is insufficient: the shared availability boundary also checks the owning module, excluding inert bundled variants and disabled providers. Ordinary missing body styles can use available ordinary KI5 cars; missing specialist roles stay empty. With no KI5 packs all managed new-vehicle pools are empty. Existing saved vehicles are unchanged. Keep installed vehicle packs enabled for saves that already contain their models; this feature does not migrate removed models. The [optional-fleet audit](optional-fleets.md) separates passed zero/single/full initialization checks from the pending mixed-fleet multiplayer gate.
 
 ## 0.3.3 sandbox and final pool policy

@@ -1,4 +1,4 @@
-param([switch] $OptionalOnly)
+param([switch] $OptionalOnly, [switch] $WorldOnly)
 $ErrorActionPreference = 'Stop'
 $gameRoot = if ($env:PZ_GAME_DIR) { $env:PZ_GAME_DIR } else { 'C:\SteamLibrary\steamapps\common\ProjectZomboid' }
 $projectRoot = Split-Path -Parent $PSScriptRoot
@@ -8,7 +8,12 @@ New-Item -ItemType Directory -Path $testBuild -Force | Out-Null
 if ($LASTEXITCODE -ne 0) { throw 'Policy test runner compilation failed' }
 Push-Location $gameRoot
 try {
-    if (-not $OptionalOnly) {
+    if ($WorldOnly) {
+        & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $projectRoot 'tools-src/tests/only-ki5-native-world.lua') native shared
+        if ($LASTEXITCODE -ne 0) { throw 'Authored native world/scene regression failed' }
+    } elseif (-not $OptionalOnly) {
+    & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $projectRoot 'tools-src/tests/only-ki5-road-admission.lua') native shared
+    if ($LASTEXITCODE -ne 0) { throw 'Road story probability, spacing and player-safety regression failed' }
     & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $projectRoot 'tools-src/tests/only-ki5-police-routing.lua') native shared
     if ($LASTEXITCODE -ne 0) { throw 'Regional police skin-index regression failed' }
     foreach ($authority in @('singleplayer','client')) {
@@ -44,8 +49,8 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Silent lightbar authority regression failed ($authority)" }
     }
     }
-    foreach ($fleet in @('none','civilian','police','military','mixed')) {
+    if (-not $WorldOnly) { foreach ($fleet in @('none','civilian','police','military','mixed')) {
         & '.\jre64\bin\java.exe' -cp "$testBuild;.;projectzomboid.jar" LuaPolicyCheck (Join-Path $projectRoot 'mod\OnlyKI5VehicleSpawnLiveryOverhaul\42\media\lua') (Join-Path $PSScriptRoot '..\tools-src\tests\only-ki5-optional-fleet.lua') native "fleet-$fleet"
         if ($LASTEXITCODE -ne 0) { throw "Optional fleet regression failed ($fleet)" }
-    }
+    } }
 } finally { Pop-Location }

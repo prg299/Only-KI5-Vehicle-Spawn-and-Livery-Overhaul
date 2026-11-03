@@ -22,6 +22,8 @@ Events = {OnLoadMapZones = event(), OnLoadedMapZones = event(),
     OnSpawnVehicleStart = event(), OnSpawnVehicleEnd = event(), OnInitGlobalModData = event(),
     LoadChunk = event(), OnTick = event()}
 local randomQueue = {}
+local worldData={}
+ModData={getOrCreate=function(name) worldData[name]=worldData[name] or {};return worldData[name] end}
 function ZombRand(a, b) if b then return a end return 0 end
 function ZombRandFloat(a, b)
     if #randomQueue > 0 then return table.remove(randomQueue, 1) end
@@ -198,7 +200,13 @@ local function script(name)
     end,
     getExtents=function() return {z=function() return 6 end} end,
     getCenterOfMassOffset=function() return {z=function() return 0 end} end,
-    getAttachmentById=function() return nil end}
+    getAttachmentById=function(_,id)
+        if id~="trailer" then return nil end
+        return {getCanAttach=function() return {
+            size=function() return 1 end,
+            contains=function(_,target) return target==(name=="MockSemi" and "trailerfront" or "trailer") end,
+        } end}
+    end}
 end
 ScriptManager = {instance={getVehicle=function(_,name) return script(name) end}}
 local nativeWorld = {}
@@ -257,7 +265,12 @@ VehicleZoneDistribution.pick = {vehicles={MockCar={spawnChance=1},
 assert(Scene.getVehicleFromZone("pick",{"MockCar"},true) == "MockTruck")
 VehicleZoneDistribution.tow = {vehicles={MockSemi={spawnChance=10},MockSmall={spawnChance=1}}}
 assert(Scene.getAllowedTrailerFromZone("MockCar","tow",{"MockSmall"},true) == nil)
-assert(Scene.getAllowedTrailerFromZone("MockTruck","tow",{"MockSmall"},true) == "MockSemi")
+assert(Scene.getAllowedTrailerFromZone("MockTruck","tow",{"MockSmall"},true) == nil,
+    "The native rear-hitch helper must not place a fifth-wheel trailer, even behind a tractor")
+assert(Scene.getAllowedTrailerFromZone("MockTruck","tow",nil,true) == "MockSmall")
+local trailerBefore=sceneCalls.trailers
+scene:addTrailer("MockSemi",vehicleAt("MockTruck",20,20,0),7)
+assert(sceneCalls.trailers==trailerBefore,"Explicit recipe callers must not bypass coupling safety")
 local inventoryObject=worldObject(squareAt(30,30,0))
 Support.refillContainer(inventoryObject,"armytent","locker","LockerArmyBedroom",false)
 local lootBefore=sceneCalls.loot
@@ -281,6 +294,7 @@ VehicleZoneDistribution.military_trailer_heavy={vehicles={MockSemi={spawnChance=
 VehicleZoneDistribution.military_container={vehicles={MockContainer={spawnChance=10}}}
 local checkpointKey="OnlyKI5VehicleSpawnLiveryOverhaul_RoadStory"
 local function chunkAt(x,isNew)
+    x=x*10 -- independent recipe footprints stay outside the world spacing guard
     local stamp=0
     local zone={getType=function() return "Nav" end,getWidth=function() return 20 end,
         getHeight=function() return 1000 end,getX=function() return x-10 end,
@@ -319,7 +333,7 @@ local function selectStory(x,roll,name)
     return chunk,anchor,data
 end
 local chunk,anchor,data=selectStory(1300,0,"BiohazardCrash")
-missing="1299:100:0"
+missing="12999:100:0"
 local before=sceneCalls.vehicles
 tick()
 assert(data.state=="pending" and sceneCalls.vehicles==before)
@@ -344,7 +358,7 @@ end
 assert(sceneCalls.trailers>0 and sceneCalls.objects>0 and sceneCalls.floors>0
        and sceneCalls.zombies>0 and sceneCalls.corpses>0 and sceneCalls.loot>0)
 local blocked,bAnchor,bData=selectStory(1700,0,"BiohazardCrash")
-occupied="1700:100:0"
+occupied="17000:100:0"
 tick()
 assert(bData.state=="blocked")
 occupied=nil

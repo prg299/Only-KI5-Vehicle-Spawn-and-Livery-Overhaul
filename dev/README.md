@@ -27,6 +27,18 @@ Before the SP lightbar fixture, move the disposable player to an ordinary road s
 
 Raw caches, credentials, command queues and crash logs stay under ignored `build/native`. Do not publish them. `scripts/export-native-evidence.py` exports only the specific dated, whitelisted 2026-10-23 receipts and unmodified frames; it asserts clean exits and source/stage/native payload equality. It is not a new gameplay test. See [native acceptance](../docs/native-acceptance.md) for passes, failed probes and unverified paths.
 
+## Road-fix acceptance (0.3.5)
+
+Use fresh names and the explicit six-pack config. Wait for the player game to close and the shared lane to be free. SP reserves 8 GiB; two-client MP reserves 15 GiB based on the prior measured 13.60 GiB run plus heavy packs. The hard cap remains 16 GiB. Do not lower estimates or bypass a deferral.
+
+```powershell
+$env:ONLY_KI5_NATIVE_ROOT = 'C:/Users/erika/AppData/Local/GameMods/OnlyKI5/Native'
+node $coord run --kind native --peak-gib 8 --name ki5-road-fixes-sp -- $py dev/native-session.py --run road-fixes-035-sp --fleet-profile config/fleet-road-fixes.ini --minutes 18 --accept-road-fixes
+node $coord run --kind multiplayer --peak-gib 15 --name ki5-road-fixes-mp -- $py dev/native-session.py --run road-fixes-035-mp --fleet-profile config/fleet-road-fixes.ini --mp --minutes 20 --accept-road-fixes
+```
+
+Run sequentially. The helper uses native creation/connection UI, then separated construction/checkpoint fixtures. Open the resulting truck/trailer PNGs; state checks alone are not visual acceptance. `scripts/export-road-fix-evidence.py` requires both accepted, stopped lifetimes and exact source hashes. It exports sanitized state and raw frames, never private profiles/credentials or native implementation dumps. Preserve failed caches; use a fresh name and update the export mapping explicitly after repair.
+
 ## Optional-fleet acceptance (0.3.4)
 
 `config/fleet-none.ini`, `fleet-one.ini` and `fleet-mixed.ini` select explicit development subsets without reading or changing a player configuration. `--fleet-profile` accepts only files inside this checkout's config folder. Omit it for the full reference profile.

@@ -1,0 +1,11 @@
+{
+  "version": "0.3.5",
+  "game": "42.21.0",
+  "complete": false,
+  "runs": {},
+  "productionLuaScenarios": 29,
+  "compiledLuaFiles": 59,
+  "nativeApiContracts": 39,
+  "pending": ["Native SP and two-client MP", "Trailer physics and native alias fixtures", "Native frame review"],
+  "deferral": "The native launcher returned 75 because a Steam-launched player game owns the lane. No test game was launched."
+}

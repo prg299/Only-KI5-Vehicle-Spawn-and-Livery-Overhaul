@@ -1,5 +1,9 @@
 # Release readiness - 0.3.4
 
+## 0.3.5 source candidate — bug reports
+
+The [bug-fix report](bugfixes-20261103.md) records causes, candidate behavior and limits. All 29 Lua scenarios, 59 compilations and 39 native API contracts pass. Native SP/two-client physics and visual checks remain deferred because an external player game owns the lane. The uploader requires complete 0.3.5 evidence and exact hashes; previous receipts cannot authorize this release. Do not upload until those gates pass.
+
 ## 0.3.4 optional vehicles — uploaded
 
 No vehicle pack is a hard requirement in the descriptor. The [optional-fleet audit](optional-fleets.md) records conditional variant initialization, provider filtering and compatible ordinary fallbacks. Four clean native lifetimes cover zero packs, one classic pack, full-fleet initialization and a four-pack dedicated server/two clients. Both peers match all 63 natural vehicle observations and all 57 conditional variant schemas; the 20-car active-siren control passes with lights retained. All 28 Lua scenarios, 59 compilations, 37 installed API contracts, six PowerShell parser checks and portable provenance checks pass. The native uploader accepts the identical 293-file stage. All owned native processes close with exit 0 and release the lane. The daytime frames establish visible police body/livery, not two distinct flash phases. Steam transport, human listening and a new full vehicle save/reload remain outside this pass. SteamCMD confirms 0.3.4 on item 3825999183; the official download matches all 293 files / 46,713,406 bytes. The owner description-only correction and anonymous public API verify the new collection link, exact final description, unchanged title/cover, public visibility and matching manifest. Owner queries preserve fourteen gallery images/order and the two requirements.

@@ -31,14 +31,25 @@ function Scene.getVehicleFromZone(zoneName, exclude, weighted, accept)
     return entries[#entries].name
 end
 
-function Scene.getAllowedTrailerFromZone(towing, zoneName, exclude, weighted)
+function Scene.isTrailerCompatible(towing, name)
     local tractor = towing and ScriptManager.instance:getVehicle(towing)
-    if not tractor then return nil end
-    return Scene.getVehicleFromZone(zoneName, exclude, weighted, function(name)
-        local trailer = ScriptManager.instance:getVehicle(name)
-        return not trailer:getPartById("DAMNSemiTrailerHook")
-            or tractor:getPartById("DAMNSemiTrailerSaddle") ~= nil
-    end)
+    local trailer = name and ScriptManager.instance:getVehicle(name)
+    local hitch = trailer and trailer:getAttachmentById("trailer")
+    if not tractor or not hitch or not tractor:getAttachmentById("trailer") then return false end
+    local targets = hitch:getCanAttach()
+    -- Native RandomizedWorldBase.addTrailer/positionTrailer always joins the
+    -- two "trailer" points. KI5 fifth wheels require "trailerfront" instead;
+    -- using this drawbar helper for them overlaps bodies, even on a tractor.
+    -- Do not infer compatibility from optional DAMN parts that may not exist.
+    return not trailer:getPartById("DAMNSemiTrailerHook")
+        and (not targets or targets:size()==0 or targets:contains("trailer"))
+end
+
+function Scene.getAllowedTrailerFromZone(towing, zoneName, exclude, weighted)
+    local function accept(name) return Scene.isTrailerCompatible(towing,name) end
+    -- Recipes retrieve skins from this exact pool, so do not return a name
+    -- belonging to another pool when no compatible trailer exists here.
+    return Scene.getVehicleFromZone(zoneName,exclude,weighted,accept)
 end
 
 function Scene:calcOffset(x, y)
@@ -97,10 +108,10 @@ end
 
 function Scene:addTrailer(name, vehicle, _, skins)
     if not Support.isAuthority() or not name or not vehicle then return end
+    if not Scene.isTrailerCompatible(vehicle:getScriptName(),name) then return end
     local square = vehicle:getSquare()
     if not square then return end
-    -- Native placement computes the connection from the actual towing attachments.
-    -- Passing the explicit trailer script preserves the integrated fleet policy.
+    -- Only validated drawbar couplings reach the native rear-hitch helper.
     return self:native():addTrailer(vehicle, self.zone, square:getChunk(),
                                    "military_trailer", nil, name)
 end

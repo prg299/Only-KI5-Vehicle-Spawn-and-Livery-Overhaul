@@ -1,5 +1,7 @@
-Only KI5 0.3.4 - choose your KI5 vehicle packs.
+Only KI5 0.3.5 - military road story and vehicle replacement fixes.
 
-No vehicle packs are required. Enable whichever supported KI5 cars fit your game, including a small selection or a single pack. The Touran and other modern cars are optional. Only damnlib and More Car Features remain required. The collection is a browsing link rather than a complete installation list.
+The military road story multiplier now scales actual encounter probability, including fractional values such as 0.1. Military stories are rarer by default, respect the global Vehicle Stories frequency, and keep at least 500 tiles between newly reserved scenes. Deferred scenes are skipped if a player approaches within 64 tiles. Old pending checkpoints are retired without removing existing scenes or saved vehicles.
 
-Missing vehicles and their integrated variants are excluded from map, profession, alias and military choices. Conditional variant initialization avoids references to missing templates/armor helpers. Compatible ordinary vehicles fill missing ordinary body styles; absent specialist families stay empty. With no KI5 packs enabled, all managed new-vehicle pools stay empty. Existing vehicles and the four spawn-setting defaults are unchanged.
+Road stories only use validated rear-hitch drawbar trailers with the native placement helper. Fifth-wheel semitrailers are excluded from that helper to prevent truck/trailer overlap and physics launches. Original standalone semitrailer vehicles are not removed.
+
+Native/direct vanilla story selections, including McCoy logging vehicles and ordinary cars, now share the same exact replacement registry as map pools. Existing saved vehicles are unchanged; these fixes affect new spawns. KI5 packs remain optional and the two support dependencies are unchanged.

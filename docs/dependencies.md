@@ -6,7 +6,7 @@ Choose any vehicles you want from the [KI5 collection](https://steamcommunity.co
 The collection is a browsing link, not an exhaustive requirements list. No vehicle pack is required.
 **YAPZLib is not required.**
 
-Version 0.3.4 detects enabled packs and valid native vehicle scripts at runtime.
+Version 0.3.5 detects enabled packs and valid native vehicle scripts at runtime.
 Use one, several, or none of the covered KI5 packs. Missing vehicles and their
 integrated variants are excluded; no suitable service/military pack leaves that
 role empty. With no KI5 vehicles enabled, new managed vehicle pools stay empty.

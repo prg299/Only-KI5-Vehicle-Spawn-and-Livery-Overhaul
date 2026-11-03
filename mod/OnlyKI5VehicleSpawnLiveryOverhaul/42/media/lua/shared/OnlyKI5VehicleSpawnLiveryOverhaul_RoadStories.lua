@@ -7,6 +7,9 @@ local definitions, order, pending = {}, {}, {}
 local CHECKPOINT = "OnlyKI5VehicleSpawnLiveryOverhaul_RoadStory"
 local ticks = 0
 local queueCursor = 0
+local VERSION = 2
+local MIN_SEPARATION, PLAYER_CLEARANCE = 500, 64
+local LEDGER = "OnlyKI5VehicleSpawnLiveryOverhaul_RoadStoryLocationsV2"
 
 function Stories:derive(key)
     if not definitions[key] then order[#order + 1] = key end
@@ -31,11 +34,63 @@ local function storyFrequency()
         local option = getSandboxOptions():getOptionByName("VehicleStoryChance")
         if option then value = option:getValue() end
     end
-    return ({0, 1/80, 1/40, 1/24, 1/14, 1/4, 1})[value] or 0
+    local multiplier=tonumber(settings().RoadStoriesMultiplier) or 1
+    if multiplier~=multiplier then multiplier=1 end
+    multiplier=math.max(0,math.min(5,multiplier))
+    -- These four scenes are a rare subset of all vehicle stories. Applying
+    -- the multiplier only to their relative weights made every nonzero
+    -- multiplier equally frequent. Scale the actual admission probability.
+    return math.min(1,((({0, 1/800, 1/400, 1/240, 1/140, 1/40, 1/10})[value]) or 0)*multiplier)
+end
+
+local function nearPlayer(data)
+    local function close(player)
+        if not player or player:isDead() then return false end
+        local dx,dy=player:getX()-data.x,player:getY()-data.y
+        return dx*dx+dy*dy<PLAYER_CLEARANCE*PLAYER_CLEARANCE
+    end
+    if isServer and isServer() and getOnlinePlayers then
+        local players=getOnlinePlayers()
+        for i=0,players:size()-1 do if close(players:get(i)) then return true end end
+    elseif getNumActivePlayers and getSpecificPlayer then
+        for i=0,getNumActivePlayers()-1 do if close(getSpecificPlayer(i)) then return true end end
+    elseif getPlayer and close(getPlayer()) then return true end
+    return false
+end
+
+local function locations()
+    return ModData.getOrCreate(LEDGER)
+end
+
+local function hasNearbyLocation(x,y)
+    local ledger=locations()
+    local cx,cy=math.floor(x/MIN_SEPARATION),math.floor(y/MIN_SEPARATION)
+    for gx=cx-1,cx+1 do for gy=cy-1,cy+1 do
+        for _,point in ipairs(ledger[gx..":"..gy] or {}) do
+            local dx,dy=point.x-x,point.y-y
+            if dx*dx+dy*dy<MIN_SEPARATION*MIN_SEPARATION then return true end
+        end
+    end end
+    return false
+end
+
+local function rememberLocation(x,y)
+    local ledger=locations()
+    local key=math.floor(x/MIN_SEPARATION)..":"..math.floor(y/MIN_SEPARATION)
+    ledger[key]=ledger[key] or {}
+    for _,point in ipairs(ledger[key]) do if point.x==x and point.y==y then return end end
+    ledger[key][#ledger[key]+1]={x=x,y=y}
 end
 
 local function elapsedDays()
     return getGameTime():getWorldAgeHours() / 24
+end
+
+function Stories.getStatus()
+    local count=0
+    for _ in pairs(pending) do count=count+1 end
+    return {probability=storyFrequency(),minimumSeparation=MIN_SEPARATION,
+        playerClearance=PLAYER_CLEARANCE,pending=count,checkpointVersion=VERSION}
 end
 
 local function chooseDefinition(width, length)
@@ -79,7 +134,15 @@ function Stories.onLoadChunk(chunk)
     local modData = anchor:getModData()
     local checkpoint = modData[CHECKPOINT]
     if checkpoint ~= nil then
-        if type(checkpoint) == "table" and checkpoint.version == 1 and checkpoint.state == "pending"
+        if type(checkpoint)=="table" and type(checkpoint.x)=="number" and type(checkpoint.y)=="number"
+           and (checkpoint.state=="done" or checkpoint.state=="failed" or checkpoint.state=="spawning") then
+            rememberLocation(checkpoint.x,checkpoint.y)
+        end
+        if type(checkpoint)=="table" and checkpoint.version==1 and checkpoint.state=="pending" then
+            -- Retire the old over-dense backlog; never delete existing scenes.
+            checkpoint.state="retired"
+        end
+        if type(checkpoint) == "table" and checkpoint.version == VERSION and checkpoint.state == "pending"
            and definitions[checkpoint.story] and type(checkpoint.x) == "number"
            and type(checkpoint.y) == "number" and type(checkpoint.z) == "number"
            and type(checkpoint.width) == "number" and IsoDirections[checkpoint.direction] then
@@ -90,7 +153,7 @@ function Stories.onLoadChunk(chunk)
     if not chunk:isNewChunk() or not settings().RoadStories then return end
     local frequency = storyFrequency()
     if frequency == 0 then return end
-    modData[CHECKPOINT] = { version = 1, state = "checked" }
+    modData[CHECKPOINT] = { version = VERSION, state = "checked" }
     if ZombRandFloat(0, 1) >= frequency then return end
 
     -- getSquaresForLevel returns a Java array, not a Lua table. Use the
@@ -116,9 +179,11 @@ function Stories.onLoadChunk(chunk)
                 local direction
                 if horizontal then direction = ZombRand(2) == 0 and "E" or "W"
                 else direction = ZombRand(2) == 0 and "N" or "S" end
-                checkpoint = { version = 1, state = "pending", story = definition.storyKey,
+                checkpoint = { version = VERSION, state = "pending", story = definition.storyKey,
                     x = x, y = y, z = square:getZ(), width = width, direction = direction }
+                if nearPlayer(checkpoint) or hasNearbyLocation(x,y) then return end
                 modData[CHECKPOINT] = checkpoint
+                rememberLocation(x,y)
                 zone:setLastActionTimestamp(1)
                 enqueue(anchor, checkpoint)
                 return
@@ -168,8 +233,13 @@ function Stories.processPending()
             -- Retain the checkpoint while the setting is disabled.
         else
             local scene = sceneFor(data, definition)
-            local status = readiness(scene, definition)
-            if status == "blocked" then
+            local status = nearPlayer(data) and "player" or readiness(scene, definition)
+            if storyFrequency()==0 then
+                data.state,pending[key]="disabled",nil
+            elseif status=="player" then
+                -- Do not wait until a driver is inside a deferred roadblock.
+                data.state,pending[key]="skipped-player",nil
+            elseif status == "blocked" then
                 data.state, pending[key] = "blocked", nil
             elseif status == "ready" then
                 -- Commit before invoking the scene: partial native failures
