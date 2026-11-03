@@ -58,19 +58,12 @@ assert(not scene:addTrailer('Base.TrailerM127stake',truck,7))
 assert(getCell():getVehicles():size()==beforeSemi,'Rejected semi was created anyway')
 local trailer=assert(scene:addTrailer('Base.TrailerM101A3cargo',truck,3),'Compatible drawbar trailer was not constructed')
 assert(trailer:isCreated() and trailer:getPartCount()>0)
-assert(truck:getVehicleTowing()==trailer and trailer:getVehicleTowedBy()==truck,'Native towing relationship missing')
-local native=RandomizedWorldBase.new()
-local sources={}
-for _,source in ipairs({'Base.PickUpVanMccoy','Base.PickUpTruckMccoy','Base.VanMccoy','Base.CarNormal','Base.SmallCar'}) do
-    local ax,ay=spot(4,5);assert(ax,'No free alias fixture footprint')
-    local square=getCell():getGridSquare(ax,ay,0)
-    local v=assert(native:addVehicle(square:getZone(),ax+.5,ay+.5,0,0,'parkingstall',source,nil,nil))
-    assert(v:isCreated() and v:getScriptName()~=source and Catalog.scriptProviders[v:getScriptName()],source..' leaked vanilla')
-    sources[#sources+1]={source=source,script=v:getScriptName(),id=v:getId(),skin=v:getSkinIndex()}
-end
+assert(not truck:getVehicleTowing() and not trailer:getVehicleTowedBy(),'Road-scene trailer must be parked without an unsafe automatic constraint')
+truck:getModData().OnlyKI5RoadFixture='truck'
+trailer:getModData().OnlyKI5RoadFixture='drawbar'
 local function state(v)
-    return {id=v:getId(),script=v:getScriptName(),x=v:getX(),y=v:getY(),z=v:getZ(),parts=v:getPartCount(),speed=v:getCurrentSpeedKmHour()}
+    return {id=v:getId(),sqlId=v:getSqlId(),fixture=v:getModData().OnlyKI5RoadFixture,script=v:getScriptName(),x=v:getX(),y=v:getY(),z=v:getZ(),parts=v:getPartCount(),speed=v:getCurrentSpeedKmHour()}
 end
 OnlyKI5RoadPhysicsIds={truck:getId(),trailer:getId()}
-return {rates=rates,status=Stories.getStatus(),nearPlayer=close.state,legacy=legacy.state,rejectedSemis=rejected,
-    aliases=sources,physics={state(truck),state(trailer)},explicitConstruction=true}
+return {rates=rates,status=Stories.getStatus(),nearPlayer=close.state,legacy=legacy.state,rejectedSemis=rejected,parkedUnhitched=true,
+    physics={state(truck),state(trailer)},explicitConstruction=true}

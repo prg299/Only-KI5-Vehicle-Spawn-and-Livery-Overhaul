@@ -22,9 +22,9 @@ Put KI5 on Kentucky's roads. Regional police, military checkpoints and roadside 
 
 Browse the [url=https://steamcommunity.com/workshop/filedetails/?id=3652192243]KI5 collection[/url] or individual vehicle pages. The collection is a browsing link, not a complete requirements list. Load your chosen packs before this mod. Missing specialist packs leave those service/military roles empty; ordinary body styles can use other installed ordinary KI5 cars.
 
-[b]YAPZLib is not required.[/b] Internal helpers replace it.
+[b]Highly recommended:[/b] 
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388]KI5 Vehicle Performance Patch (Unofficial)[/url] by lucygoosey. Optional; follow its server/client setup instructions.
 
-[b]Highly recommended:[/b] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3808100388]KI5 Vehicle Performance Patch (Unofficial)[/url] by lucygoosey. Optional; follow its server/client setup instructions.
 
 [hr][/hr]
 [h2]Compatibility & saves[/h2]
@@ -47,6 +47,8 @@ Single-player, two-client multiplayer, silent lightbars and save/reload have bee
 [/list]
 
 If an original author reaches out, their integrated content will be removed and their mod moved to an external dependency, with credits retained. MIT covers authored contributions only; integrated content retains its original ownership.
+
+Please show the original mods some love and support not me!
 
 [hr][/hr]
 [h2]Info[/h2]

@@ -2,6 +2,6 @@ Only KI5 0.3.5 - military road story and vehicle replacement fixes.
 
 The military road story multiplier now scales actual encounter probability, including fractional values such as 0.1. Military stories are rarer by default, respect the global Vehicle Stories frequency, and keep at least 500 tiles between newly reserved scenes. Deferred scenes are skipped if a player approaches within 64 tiles. Old pending checkpoints are retired without removing existing scenes or saved vehicles.
 
-Road stories only use validated rear-hitch drawbar trailers with the native placement helper. Fifth-wheel semitrailers are excluded from that helper to prevent truck/trailer overlap and physics launches. Original standalone semitrailer vehicles are not removed.
+Military road scenes now park compatible small drawbar trailers behind trucks with a clear gap, without an automatic towing constraint. Native tests reproduced physics launches even with a compatible hitch. Fifth-wheel semitrailers are excluded from these scenes; original standalone semitrailer vehicles remain available.
 
 Native/direct vanilla story selections, including McCoy logging vehicles and ordinary cars, now share the same exact replacement registry as map pools. Existing saved vehicles are unchanged; these fixes affect new spawns. KI5 packs remain optional and the two support dependencies are unchanged.

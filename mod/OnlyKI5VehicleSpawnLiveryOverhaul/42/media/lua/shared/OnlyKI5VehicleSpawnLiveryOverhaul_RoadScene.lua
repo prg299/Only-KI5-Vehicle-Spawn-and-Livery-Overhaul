@@ -109,11 +109,25 @@ end
 function Scene:addTrailer(name, vehicle, _, skins)
     if not Support.isAuthority() or not name or not vehicle then return end
     if not Scene.isTrailerCompatible(vehicle:getScriptName(),name) then return end
-    local square = vehicle:getSquare()
-    if not square then return end
-    -- Only validated drawbar couplings reach the native rear-hitch helper.
-    return self:native():addTrailer(vehicle, self.zone, square:getChunk(),
-                                   "military_trailer", nil, name)
+    local script=ScriptManager.instance:getVehicle(name)
+    local tractor=ScriptManager.instance:getVehicle(vehicle:getScriptName())
+    local direction=vehicle:getDir()
+    local behind={N={0,1},S={0,-1},E={-1,0},W={1,0},
+        NE={-.7071,.7071},NW={.7071,.7071},SE={-.7071,-.7071},SW={.7071,-.7071}}
+    local offset=behind[tostring(direction)]
+    if not offset then return end
+    local distance=(tractor:getExtents():z()+script:getExtents():z())/2+2
+    local x,y=vehicle:getX()+offset[1]*distance,vehicle:getY()+offset[2]*distance
+    local radius=math.ceil(math.max(script:getExtents():x(),script:getExtents():z())/2)+1
+    for dx=-radius,radius do for dy=-radius,radius do
+        local square=getCell():getGridSquare(math.floor(x)+dx,math.floor(y)+dy,math.floor(vehicle:getZ()))
+        if not square or square:getBuilding() or square:isWaterSquare() or square:isVehicleIntersecting() then return end
+    end end
+    -- The native positionTrailer/addPointConstraint path also launches some
+    -- KI5 drawbars. These abandoned scenes park trailers with a clear gap and
+    -- no automatic constraint; normal player towing remains owned by KI5.
+    return self:native():addVehicle(self.zone,x,y,vehicle:getZ(),direction:ToVector():getDirection(),
+                                   "military_trailer",name,skinIndex(skins),nil)
 end
 
 function Scene:addZombiesOnVehicle(vehicle, count, outfit, femaleChance)

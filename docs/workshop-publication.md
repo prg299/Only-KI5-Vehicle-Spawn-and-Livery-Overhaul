@@ -2,7 +2,7 @@
 
 ## 0.3.5 candidate — not uploaded
 
-The [reported bug fixes](bugfixes-20261103.md) pass 29 Lua scenarios, 59 Lua compilations and 39 native API contracts. The native launcher deferred with 75 because a Steam-launched player game owns the lane. SP/MP physics, visual review and exact-payload native receipts remain required. The uploader targets new evidence under `docs/validation/native-20261103-road-fixes` and rejects incomplete acceptance. Preserve the current live description, cover, gallery and requirements when this candidate is ready; user-authored Workshop edits may be newer than the source description. Current Workshop content and receipts below remain 0.3.4.
+The [reported bug fixes](bugfixes-20261103.md) pass 29 Lua scenarios, 59 Lua compilations and 39 native API contracts. After the owner closed their game, native diagnostics exposed a compatible-trailer launch, leading to unhitched trailer parking in new military scenes. Final SP/MP physics, visual review and exact-payload native receipts remain required. The uploader targets new evidence under `docs/validation/native-20261103-road-fixes` and rejects incomplete acceptance. A read-only owner query on 2026-11-03 adopted the newer live description into source and verified the fourteen-image gallery, public visibility and exact two requirements. The subsequent content upload must preserve that current description, cover, gallery and requirements. Current Workshop content and receipts below remain 0.3.4.
 
 ## 0.3.4 optional vehicles — uploaded 2026-10-24
 

@@ -10,11 +10,11 @@ raw={f.relative_to(MOD).as_posix():hashlib.sha256(f.read_bytes()).hexdigest() fo
 canonical={f.relative_to(MOD).as_posix():hashlib.sha256(f.read_bytes().replace(b'\r\n',b'\n') if f.suffix in {'.lua','.txt','.info','.md','.json'} else f.read_bytes()).hexdigest() for f in MOD.rglob('*') if f.is_file()}
 evidence={}
 for mode in ('sp','mp'):
-    name='road-fixes-035-'+mode;run=owned_run(name)
+    name={'sp':'road-fixes-035-sp-f','mp':'road-fixes-035-mp'}[mode];run=owned_run(name)
     if a.available_only and not (run/'finished.json').is_file():continue
     assert (run/'finished.json').is_file(),name+' has not stopped'
     accepted=json.loads((run/'road-fixes-acceptance.json').read_text())
-    assert accepted['accepted'] and accepted['mode']==mode
+    assert accepted['accepted'] and accepted['mode']==mode and accepted['visualReview']
     inputs=json.loads((run/'inputs.json').read_text())
     assert {k.replace('\\','/'):v for k,v in inputs['payload'].items()}==raw,name+' payload differs'
     exits={}

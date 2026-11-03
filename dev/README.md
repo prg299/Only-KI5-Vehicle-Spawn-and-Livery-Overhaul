@@ -33,11 +33,11 @@ Use fresh names and the explicit six-pack config. Wait for the player game to cl
 
 ```powershell
 $env:ONLY_KI5_NATIVE_ROOT = 'C:/Users/erika/AppData/Local/GameMods/OnlyKI5/Native'
-node $coord run --kind native --peak-gib 8 --name ki5-road-fixes-sp -- $py dev/native-session.py --run road-fixes-035-sp --fleet-profile config/fleet-road-fixes.ini --minutes 18 --accept-road-fixes
+node $coord run --kind native --peak-gib 8 --name ki5-road-fixes-sp-1103-f -- $py dev/native-session.py --run road-fixes-035-sp-f --fleet-profile config/fleet-road-fixes.ini --minutes 18 --accept-road-fixes
 node $coord run --kind multiplayer --peak-gib 15 --name ki5-road-fixes-mp -- $py dev/native-session.py --run road-fixes-035-mp --fleet-profile config/fleet-road-fixes.ini --mp --minutes 20 --accept-road-fixes
 ```
 
-Run sequentially. The helper uses native creation/connection UI, then separated construction/checkpoint fixtures. Open the resulting truck/trailer PNGs; state checks alone are not visual acceptance. `scripts/export-road-fix-evidence.py` requires both accepted, stopped lifetimes and exact source hashes. It exports sanitized state and raw frames, never private profiles/credentials or native implementation dumps. Preserve failed caches; use a fresh name and update the export mapping explicitly after repair.
+Run sequentially. The helper uses native creation/connection UI, then separated construction/checkpoint fixtures. Small drawbars must remain parked unhitched; the native automatic attachment path launched a compatible drawbar in a diagnostic run. Observe the tagged truck/trailer pair for twelve seconds before creating the five separate alias fixtures. Open the resulting truck/trailer PNGs; state checks alone are not visual acceptance. `scripts/export-road-fix-evidence.py` requires both accepted, stopped lifetimes and exact source hashes. It exports sanitized state and raw frames, never private profiles/credentials or native implementation dumps. Preserve failed caches; use a fresh name and update the export mapping explicitly after repair.
 
 ## Optional-fleet acceptance (0.3.4)
 

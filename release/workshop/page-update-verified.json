@@ -1,8 +1,9 @@
 {
   "workshopId": "3825999183",
   "verified": true,
-  "verifiedUtc": "2026-10-24T20:31:02.294617+00:00",
-  "descriptionSha256": "736f706e3b6944ae7272016a1a09fca9f884387c28a83ba326293ad049407438",
+  "verifiedUtc": "2026-11-03T21:22:38.306123+00:00",
+  "operation": "read-only-owner-baseline",
+  "descriptionSha256": "22971989e4608373a25d81ff56fc6387667bad844aa2880bca38b6d26278179f",
   "galleryImages": 14,
   "gallery": [
     {
@@ -90,17 +91,5 @@
       "type": 0
     }
   ],
-  "preserved": [
-    "title",
-    "visibility",
-    "cover",
-    "dependencies",
-    "content"
-  ],
-  "payloadUploadAttempted": false,
-  "quotaBefore": {
-    "totalBytes": 1000000,
-    "availableBytes": 998409
-  },
-  "batches": []
+  "payloadUploadAttempted": false
 }

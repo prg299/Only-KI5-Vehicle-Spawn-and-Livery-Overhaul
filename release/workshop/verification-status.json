@@ -1,19 +1,12 @@
 {
-  "verifiedUtc": "2026-10-24T20:31:16.688780+00:00",
+  "verifiedUtc": "2026-11-03T21:22:38.318261+00:00",
   "workshopId": "3825999183",
   "steamcmdUploadConfirmed": true,
   "officialDownloadMatches": true,
   "visibilityConfigured": 0,
-  "visibilityPublicApiVerified": true,
-  "descriptionVerifiedAgainstUpload": false,
-  "descriptionVerifiedAgainstOwnerPage": true,
-  "manifestMatches": true,
-  "pagePreservedByContentOnlyUpload": true,
+  "visibilityOwnerVerified": true,
   "requiredWorkshopItems": 2,
-  "galleryImages": 14,
-  "relationshipsOwnerVerifiedBeforeUpload": true,
-  "galleryOwnerVerifiedBeforeUpload": true,
-  "postUploadOwnerQuery": true,
-  "note": "Anonymous official API verifies current public metadata, cover and content manifest against the recorded owner page. The content-only VDF contains no page/media/relationship fields. Any later owner description-only update separately verifies preserved gallery/order and requirements.",
+  "requiredItemsVerified": true,
+  "descriptionVerifiedAgainstUpload": true,
   "blocker": null
 }

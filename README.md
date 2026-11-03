@@ -4,7 +4,7 @@ Put KI5 on Kentucky's roads. **ONLY KI5: Vehicle Spawn & Skins** brings KI5-only
 
 ![ONLY KI5: Vehicle Spawn & Skins](release/workshop/only-ki5-overhaul-preview.png)
 
-**0.3.5 source candidate:** [Workshop bug fixes](docs/bugfixes-20261103.md) address military story frequency, nearby deferred scenes, unsafe semitrailers and native vanilla/McCoy replacements. Lua regression/API checks pass. Native physics and two-client acceptance are pending while the player's game owns the lane. Workshop remains on 0.3.4.
+**0.3.5 source candidate:** [Workshop bug fixes](docs/bugfixes-20261103.md) address military story frequency, nearby deferred scenes, unsafe automatic trailer attachment and native vanilla/McCoy replacements. Lua regression/API checks pass. Fresh native physics and two-client acceptance are in progress after the owner closed their game. Workshop remains on 0.3.4.
 
 **0.3.4 is public:** the official Steam download matches all 293 native-tested files. Optional packs pass zero-pack and single-pack worlds, full-fleet initialization and the mixed-fleet server/two-client test. The live description uses the requested KI5 collection, with the same cover, fourteen-image gallery and two support requirements. [Acceptance details](docs/optional-fleets.md) separate gameplay, visual review and publication.
 

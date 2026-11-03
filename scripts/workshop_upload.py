@@ -5,7 +5,7 @@ Credentials are handled only by Steam's existing cache, outside this repository.
 """
 from pathlib import Path
 from datetime import datetime,timezone
-import argparse,hashlib,json,os,re,shutil,subprocess,time
+import argparse,hashlib,json,os,re,shutil,subprocess,sys,time
 from steam_workshop import metadata,reconcile_ids,vdf_field,make_vdf,retain_id,plain_quotes,read_as_steamcmd,quote
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -69,7 +69,8 @@ def prepare(preserve_page=False):
     info=metadata(RELEASE/'workshop.txt')
     if info['visibility']!=RELEASE_METADATA['visibility']:raise ValueError('Unexpected release visibility')
     if info['title']!='ONLY KI5: Vehicle Spawn & Skins':raise ValueError('Unexpected title')
-    description=plain_quotes((RELEASE/'description.txt').read_text('utf-8-sig').strip())
+    description=(RELEASE/'description.txt').read_text('utf-8-sig').strip()
+    if not preserve_page:description=plain_quotes(description)
     if info['description'].strip()!=description:raise ValueError('Description and native metadata differ; synchronize first')
     description+='\n\nMod ID: '+MOD_ID
     info['description']=description
@@ -168,7 +169,7 @@ def download():
         'steamcmdExitCode':code,'allPayloadHashesMatch':True,'payloadSha256':actual})
     print('Official SteamCMD download matches all '+str(len(actual))+' payload files; manifest '+manifest)
 
-def verify(add_dependencies=False,remove_vehicle_dependencies=False):
+def verify(add_dependencies=False,remove_vehicle_dependencies=False,adopt_description=False):
     import steam_ugc
     item=saved_id()
     if not item:raise ValueError('No assigned Workshop item to query')
@@ -192,6 +193,21 @@ def verify(add_dependencies=False,remove_vehicle_dependencies=False):
                 operations.append(operation);write(PRIVATE/'dependency-removal-operations.json',operations)
             steam.remove_dependencies(before,allowed,record_removal)
         after=steam.query() if add_dependencies or remove_vehicle_dependencies else before
+        if after['visibility']!=TARGET_VISIBILITY or after['missingDependencies']:raise ValueError('Visibility or dependency verification is incomplete')
+        if set(after['dependencies'])!=set(steam_ugc.DEPENDENCIES):raise ValueError('Unexpected live dependencies')
+        if adopt_description:
+            if len(after['previews'])!=14 or any(p['type']!=0 for p in after['previews']):
+                raise ValueError('Review unexpected live gallery before adopting its description')
+            text=after['description'].replace('\r\n','\n')
+            footer='\n\nMod ID: '+MOD_ID
+            if not text.endswith(footer):raise ValueError('Unexpected description footer; review before adopting')
+            (RELEASE/'description.txt').write_text(text[:-len(footer)]+'\n','utf8')
+            subprocess.run([sys.executable,str(ROOT/'scripts/sync-release-metadata.py'),'--page-only'],cwd=ROOT,check=True)
+            write(RELEASE/'page-update-verified.json',dict(workshopId=item,verified=True,
+                verifiedUtc=datetime.now(timezone.utc).isoformat(),operation='read-only-owner-baseline',
+                descriptionSha256=hashlib.sha256(text.encode()).hexdigest(),
+                galleryImages=len(after['previews']),gallery=after['previews'],payloadUploadAttempted=False))
+            print('Recorded current owner description baseline; no Workshop page changes sent')
         publication=json.loads((RELEASE/'publication.json').read_text(encoding='utf-8'))
         if publication['workshopId']!=item:raise ValueError('Publication receipt targets another item')
         page_update=RELEASE/'page-update-verified.json'
@@ -220,14 +236,17 @@ def main():
     p.add_argument('--verify',action='store_true');p.add_argument('--add-dependencies',action='store_true')
     p.add_argument('--download',action='store_true')
     p.add_argument('--remove-vehicle-dependencies',action='store_true')
+    p.add_argument('--adopt-current-description',action='store_true',help='With --verify, record current owner page text without changing Steam')
     p.add_argument('--preserve-page',action='store_true',help='Content-only update preserving live description, title, gallery, cover, visibility and requirements')
     a=p.parse_args()
     if a.add_dependencies and not a.verify:p.error('--add-dependencies requires --verify')
     if a.remove_vehicle_dependencies and not a.verify:p.error('--remove-vehicle-dependencies requires --verify')
+    if a.adopt_current_description and (not a.verify or a.add_dependencies or a.remove_vehicle_dependencies):
+        p.error('--adopt-current-description requires a read-only --verify')
     if (a.upload or a.download) and not a.cached_login:p.error('Use --cached-login; credentials must be handled locally by Steam')
     if sum((a.upload,a.verify,a.download))>1:p.error('Choose only one of --upload, --verify or --download')
     if a.download:download()
-    elif a.verify:verify(a.add_dependencies,a.remove_vehicle_dependencies)
+    elif a.verify:verify(a.add_dependencies,a.remove_vehicle_dependencies,a.adopt_current_description)
     else:
         if a.preserve_page:verify()
         record=prepare(a.preserve_page)

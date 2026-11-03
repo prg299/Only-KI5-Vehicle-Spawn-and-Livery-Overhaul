@@ -198,7 +198,7 @@ local function script(name)
         if name == "MockSemi" and part == "DAMNSemiTrailerHook" then return {} end
         if name == "MockTruck" and part == "DAMNSemiTrailerSaddle" then return {} end
     end,
-    getExtents=function() return {z=function() return 6 end} end,
+    getExtents=function() return {z=function() return 6 end,x=function() return 2 end} end,
     getCenterOfMassOffset=function() return {z=function() return 0 end} end,
     getAttachmentById=function(_,id)
         if id~="trailer" then return nil end
@@ -223,19 +223,20 @@ local function vehicleAt(name,x,y,z)
         getAllSeatParts=function() return {size=function() return 3 end} end,
         getZombieType=function() return nil end,getRandomZombieType=function() return "ArmyCamoGreen" end,
         getScriptName=function() return name end,
+        getX=function() return x end,getY=function() return y end,getZ=function() return z end,
+        getDir=function() return IsoDirections.N end,
     }
 end
 function nativeWorld:addVehicle(zone,x,y,z,angle,zoneName,name,skin,specific)
     sceneCalls.vehicles = sceneCalls.vehicles + 1
+    if zoneName=='military_trailer' then sceneCalls.trailers=sceneCalls.trailers+1 end
     if failVehicle then error("simulated native rejection") end
     lastNativeName = name
     return vehicleAt(name,x,y,z)
 end
 function nativeWorld:addVehicleFlipped(...) return self:addVehicle(...) end
 function nativeWorld:addTrailer(vehicle,zone,chunk,zoneName,distribution,name)
-    assert(distribution == nil and name)
-    sceneCalls.trailers=sceneCalls.trailers+1
-    return {}
+    error('Unsafe native automatic trailer attachment must not be used')
 end
 function nativeWorld:addZombiesOnVehicle(count,outfit,female,vehicle)
     assert(count>0 and vehicle); sceneCalls.zombies=sceneCalls.zombies+count
