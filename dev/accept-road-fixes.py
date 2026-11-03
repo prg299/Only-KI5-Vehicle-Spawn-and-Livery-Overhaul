@@ -43,6 +43,13 @@ for who in peers:
     matches[who]=seen
 lab.write('road-fixes-physics',{'seconds':12,'authority':authority,'peers':matches})
 invoke('capture-road-fix-visuals.py',*(['--mp'] if a.mp else []),'--scene','parked')
+# Use a separate broad asphalt area for five disjoint replacement footprints.
+# A tighter truck parking lot need not have enough room for these test cars.
+if a.mp:lab.move(12558,2322)
+else:
+    call('getPlayer():teleportTo(12558,2322,0);return true')
+    lab.wait(lambda:call('return getCell():getGridSquare(12558,2322,0)~=nil'),bool,'alias fixture streaming')
+    time.sleep(5)
 aliases=rows(call((ROOT/'dev/probe-native-aliases.lua').read_text()))
 assert len(aliases)==5
 lab.write('road-fixes-aliases',aliases)
@@ -58,6 +65,7 @@ deadline=time.monotonic()+180
 while not review_path.is_file() and time.monotonic()<deadline:time.sleep(1)
 assert review_path.is_file(),'Native frames need actual visual review before acceptance'
 review=json.loads(review_path.read_text())
+frames={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in (lab.run/'captures').glob('road-fixes-*.png')}
 assert review['accepted'] and review['frames']==frames,'Visual receipt must cover these exact native frames'
 lab.write('road-fixes-acceptance',{'accepted':True,'mode':'mp' if a.mp else 'sp','transport':'No-Steam loopback' if a.mp else 'native SP',
     'visualReview':True,

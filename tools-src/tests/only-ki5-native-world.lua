@@ -140,7 +140,7 @@ client = false
 
 -- Native API spies used by the actual imported road-scene recipes.
 local sceneCalls = {vehicles=0, trailers=0, zombies=0, objects=0, floors=0, corpses=0, loot=0}
-local squares, missing, occupied = {}, nil, nil
+local squares, missing, occupied, solid = {}, nil, nil, nil
 local cell = {}
 local nativeChunk = {}
 local function container(empty)
@@ -166,6 +166,7 @@ local function squareAt(x,y,z)
             getCell=function() return cell end,getBuilding=function() return nil end,
             isWaterSquare=function() return false end,
             isVehicleIntersecting=function() return key == occupied end,
+            isFree=function() return key ~= solid end,
             spawnRandomGenerator=function() end,
             AddWorldInventoryItem=function() return {} end,
             AddTileObject=function() sceneCalls.objects=sceneCalls.objects+1 end,
@@ -270,6 +271,14 @@ assert(Scene.getAllowedTrailerFromZone("MockTruck","tow",{"MockSmall"},true) == 
     "The native rear-hitch helper must not place a fifth-wheel trailer, even behind a tractor")
 assert(Scene.getAllowedTrailerFromZone("MockTruck","tow",nil,true) == "MockSmall")
 local trailerBefore=sceneCalls.trailers
+local vehicleBefore=sceneCalls.vehicles
+solid='22:20:0'
+assert(not scene:addVehicle('MockTruck',0,0,0,nil,false))
+assert(sceneCalls.vehicles==vehicleBefore,'Solid scenery anywhere in the body footprint must block creation')
+solid='20:28:0'
+assert(not scene:addTrailer('MockSmall',vehicleAt('MockTruck',20,20,0),7))
+assert(sceneCalls.trailers==trailerBefore,'Trailer footprint must reject solid scenery')
+solid=nil
 scene:addTrailer("MockSemi",vehicleAt("MockTruck",20,20,0),7)
 assert(sceneCalls.trailers==trailerBefore,"Explicit recipe callers must not bypass coupling safety")
 local inventoryObject=worldObject(squareAt(30,30,0))

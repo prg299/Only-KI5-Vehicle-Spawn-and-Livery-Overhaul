@@ -33,11 +33,15 @@ Use fresh names and the explicit six-pack config. Wait for the player game to cl
 
 ```powershell
 $env:ONLY_KI5_NATIVE_ROOT = 'C:/Users/erika/AppData/Local/GameMods/OnlyKI5/Native'
-node $coord run --kind native --peak-gib 8 --name ki5-road-fixes-sp-1103-f -- $py dev/native-session.py --run road-fixes-035-sp-f --fleet-profile config/fleet-road-fixes.ini --minutes 18 --accept-road-fixes
-node $coord run --kind multiplayer --peak-gib 15 --name ki5-road-fixes-mp -- $py dev/native-session.py --run road-fixes-035-mp --fleet-profile config/fleet-road-fixes.ini --mp --minutes 20 --accept-road-fixes
+node $coord run --kind native --peak-gib 8 --name ki5-road-fixes-sp-1103-g -- $py dev/native-session.py --run road-fixes-035-sp-g --fleet-profile config/fleet-road-fixes.ini --minutes 18 --accept-road-fixes
+node $coord run --kind multiplayer --peak-gib 15 --name ki5-road-fixes-mp-b -- $py dev/native-session.py --run road-fixes-035-mp-b --fleet-profile config/fleet-road-fixes.ini --mp --minutes 20 --accept-road-fixes
 ```
 
 Run sequentially. The helper uses native creation/connection UI, then separated construction/checkpoint fixtures. Small drawbars must remain parked unhitched; the native automatic attachment path launched a compatible drawbar in a diagnostic run. Observe the tagged truck/trailer pair for twelve seconds before creating the five separate alias fixtures. Open the resulting truck/trailer PNGs; state checks alone are not visual acceptance. `scripts/export-road-fix-evidence.py` requires both accepted, stopped lifetimes and exact source hashes. It exports sanitized state and raw frames, never private profiles/credentials or native implementation dumps. Preserve failed caches; use a fresh name and update the export mapping explicitly after repair.
+
+At `ROAD_FIX_VISUAL_REVIEW_READY`, open the raw parked and police frames on every peer. The helper waits at most three minutes. After actual review, attach the bounded `dev/ack-road-fix-visuals.py <run> --note <specific observations and limits>` command to that session through the coordinator. It binds the decision to the exact PNG hashes and explicitly records that this is assistant review, not human acceptance. Unusable framing must be retaken with the attached capture helper while the acceptance helper is idle at this gate. Preserve the expected scene/peer filenames. A missing or mismatched review receipt fails acceptance.
+
+MP photographs retain ordinary player permissions and visibility on both peers. Do not apply `gallery-visibility.lua` to the guest: its CAN_SEE_EVERYONE flag correctly triggers the native Power permission check. The rejected `road-fixes-035-mp` diagnostic demonstrates this harness error; anti-cheat remains enabled in the final profile. Both peers must still be joined after each capture phase. Construction fixtures require a free footprint including solid scenery, keeping them off benches and fencing.
 
 ## Optional-fleet acceptance (0.3.4)
 

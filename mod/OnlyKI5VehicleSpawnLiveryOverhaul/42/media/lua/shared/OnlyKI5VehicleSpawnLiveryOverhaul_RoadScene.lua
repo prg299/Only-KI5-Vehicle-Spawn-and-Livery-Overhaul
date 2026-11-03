@@ -91,6 +91,19 @@ local function skinIndex(skins)
     return nil
 end
 
+local function vehicleAreaClear(script,x,y,z)
+    local extents=script:getExtents()
+    -- A conservative square also covers diagonal vehicle headings. Reject
+    -- solid scenery throughout the body, not just at the center tile.
+    local radius=math.ceil(math.max(extents:x(),extents:z())/2)+1
+    for dx=-radius,radius do for dy=-radius,radius do
+        local square=getCell():getGridSquare(math.floor(x)+dx,math.floor(y)+dy,math.floor(z))
+        if not square or square:getBuilding() or square:isWaterSquare()
+           or square:isVehicleIntersecting() or not square:isFree(false) then return false end
+    end end
+    return true
+end
+
 function Scene:addVehicle(name, x, y, angle, skins, flipped)
     if not Support.isAuthority() or not name or not ScriptManager.instance:getVehicle(name) then return end
     local square = self:getSquare(x, y, self.spawnPoint.z)
@@ -98,6 +111,7 @@ function Scene:addVehicle(name, x, y, angle, skins, flipped)
     local dx, dy = self:calcOffset(x, y)
     local heading = self.direction:ToVector():getDirection() + math.rad(angle or 0)
     local wx, wy, wz = self.spawnPoint.x + dx, self.spawnPoint.y + dy, self.spawnPoint.z
+    if not vehicleAreaClear(ScriptManager.instance:getVehicle(name),wx,wy,wz) then return end
     if flipped then
         return self:native():addVehicleFlipped(self.zone, wx, wy, wz, heading,
                                               "military", name, skinIndex(skins), nil)
@@ -118,11 +132,7 @@ function Scene:addTrailer(name, vehicle, _, skins)
     if not offset then return end
     local distance=(tractor:getExtents():z()+script:getExtents():z())/2+2
     local x,y=vehicle:getX()+offset[1]*distance,vehicle:getY()+offset[2]*distance
-    local radius=math.ceil(math.max(script:getExtents():x(),script:getExtents():z())/2)+1
-    for dx=-radius,radius do for dy=-radius,radius do
-        local square=getCell():getGridSquare(math.floor(x)+dx,math.floor(y)+dy,math.floor(vehicle:getZ()))
-        if not square or square:getBuilding() or square:isWaterSquare() or square:isVehicleIntersecting() then return end
-    end end
+    if not vehicleAreaClear(script,x,y,vehicle:getZ()) then return end
     -- The native positionTrailer/addPointConstraint path also launches some
     -- KI5 drawbars. These abandoned scenes park trailers with a clear gap and
     -- no automatic constraint; normal player towing remains owned by KI5.

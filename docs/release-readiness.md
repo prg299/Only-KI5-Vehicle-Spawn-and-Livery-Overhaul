@@ -2,7 +2,7 @@
 
 ## 0.3.5 source candidate — bug reports
 
-The [bug-fix report](bugfixes-20261103.md) records causes, candidate behavior and limits. All 29 Lua scenarios, 59 compilations and 39 native API contracts pass. Native SP/two-client physics and visual checks remain deferred because an external player game owns the lane. The uploader requires complete 0.3.5 evidence and exact hashes; previous receipts cannot authorize this release. Do not upload until those gates pass.
+The [bug-fix report](bugfixes-20261103.md) records causes, candidate behavior and limits. All 29 Lua scenarios, 59 compilations and 39 native API contracts pass. Native diagnostics found and repaired unsafe drawbar attachment and incomplete body clearance. Final native SP/two-client acceptance and raw-frame review remain required after the test-fixture repairs. The uploader requires complete 0.3.5 evidence and exact hashes; previous receipts cannot authorize this release. Do not upload until those gates pass.
 
 ## 0.3.4 optional vehicles — uploaded
 

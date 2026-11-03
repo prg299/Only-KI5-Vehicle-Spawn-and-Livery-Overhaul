@@ -38,7 +38,7 @@ assert(Scene.isTrailerCompatible('Base.78amgeneralM35A2','Base.TrailerM101A3carg
 local function free(x,y,px,py)
     for dx=-px,px do for dy=-py,py do
         local s=getCell():getGridSquare(x+dx,y+dy,0)
-        if not s or s:getBuilding() or s:isWaterSquare() or s:isVehicleIntersecting() then return false end
+        if not s or s:getBuilding() or s:isWaterSquare() or s:isVehicleIntersecting() or not s:isFree(false) then return false end
     end end
     return true
 end
