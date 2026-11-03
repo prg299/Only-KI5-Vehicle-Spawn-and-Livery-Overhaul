@@ -27,7 +27,8 @@ for who in peers:
     # grants CAN_SEE_EVERYONE and correctly triggers the server's Power check.
     # Use normal native visibility on both MP peers; never disable anti-cheat.
     if not a.mp:lab.client((ROOT/'dev/gallery-visibility.lua').read_text(),who)
-    lab.client('MELensMedia.cameraOff();getGameTime():setTimeOfDay(12);getCore():setAutoZoom(0,false);ISUIHandler.allUIVisible=false;ISUIHandler.setVisibleAllUI(false);MEMCNativeLab.holdKey(17,100);GameWindow.doRenderEvent(true);return true',who)
+    photo_time=21 if a.scene=='police' else 12
+    lab.client('MELensMedia.cameraOff();getGameTime():setTimeOfDay('+str(photo_time)+');getCore():setAutoZoom(0,false);ISUIHandler.allUIVisible=false;ISUIHandler.setVisibleAllUI(false);MEMCNativeLab.holdKey(17,100);GameWindow.doRenderEvent(true);return true',who)
     lab.client("getCore():setOptionZoomLevels1x('50;75;100;125;150;175;200');getCore():setOptionZoomLevels2x('50;75;100;125;150;175;200');getCore():zoomLevelsChanged();return true",who)
     for _ in range(8):
         zoom=lab.client('return getCore():getZoom(0)',who)
@@ -42,7 +43,7 @@ for who in peers:
     for phase in (1,2):
         lab.invoke('native-command.py','capture','--client',who,'--name',f'road-fixes-{a.scene}-{who}-{phase}')
         time.sleep(.25)
-lab.write('road-fixes-visual-'+a.scene,{'target':target,'observers':records,'vehiclesModified':False,'nativeMovementInput':True})
+lab.write('road-fixes-visual-'+a.scene,{'target':target,'observers':records,'timeOfDay':photo_time,'vehiclesModified':False,'nativeMovementInput':True})
 if a.mp:
     names=rows(lab.server('local r={};local ps=getOnlinePlayers();for i=0,ps:size()-1 do r[#r+1]=ps:get(i):getUsername() end;return r'))
     assert set(names)=={'OnlyKI5Admin','OnlyKI5Guest'},'Both peers must stay joined during capture'
