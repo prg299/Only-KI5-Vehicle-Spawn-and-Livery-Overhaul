@@ -1,5 +1,5 @@
 {
-  "verifiedUtc": "2026-11-04T19:44:28.421986+00:00",
+  "verifiedUtc": "2026-11-04T19:49:47.308962+00:00",
   "workshopId": "3825999183",
   "steamcmdUploadConfirmed": true,
   "officialDownloadMatches": true,
@@ -13,13 +13,18 @@
   "galleryImages": 14,
   "relationshipsOwnerVerifiedBeforeUpload": true,
   "galleryOwnerVerifiedBeforeUpload": true,
-  "postUploadOwnerQuery": false,
-  "note": "Official public API verifies the current public title, full description, cover and downloaded manifest. Every official download hash matches source, stage and final native-tested payload. Fresh owner preflight verified the fourteen-image gallery/order and exact two requirements; all fourteen original CDN images matched before upload. The content-only VDF omits page/media/relationship fields. The post-upload owner query could not run because Steam desktop was disconnected.",
+  "postUploadOwnerQuery": true,
+  "note": "Official public API verifies the title, full description, cover, visibility and downloaded manifest. Every official download hash matches frozen source, stage and final native-tested payload. All fourteen original CDN images matched before upload. After the owner reconnected again, a fresh post-upload owner query exactly matched the pre-upload title, full description, cover, fourteen gallery images/order, public visibility and exact two requirements. The earlier disconnected query remains recorded separately.",
   "blocker": null,
   "allFrozenPayloadHashesMatch": true,
   "galleryOriginalBytesVerifiedBeforeUpload": true,
   "galleryOriginalBytesVerifiedUtc": "2026-11-04T19:43:05.621575+00:00",
   "ownerPreflightUtc": "2026-11-04T19:43:25.845007+00:00",
-  "postUploadOwnerQueryAttemptedUtc": "2026-11-04T19:44:42.1253820Z",
-  "postUploadOwnerQueryBlocker": "Steam desktop disconnected after SteamCMD; no new owner gallery/requirements query is claimed."
+  "postUploadOwnerQueryAttemptedUtc": "2026-11-04T19:49:17.046494+00:00",
+  "postUploadOwnerQueryBlocker": null,
+  "priorPostUploadOwnerQueryAttemptedUtc": "2026-11-04T19:44:42.1253820Z",
+  "priorPostUploadOwnerQueryBlocker": "Steam desktop disconnected after SteamCMD; no new owner gallery/requirements query is claimed.",
+  "galleryOwnerVerifiedAfterUpload": true,
+  "relationshipsOwnerVerifiedAfterUpload": true,
+  "visibilityOwnerVerifiedAfterUpload": true
 }
